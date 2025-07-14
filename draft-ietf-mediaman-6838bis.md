@@ -416,9 +416,7 @@ For example, in the "application/foo+bar" media type "application" is the top-le
 
 Structured syntax suffixes are required to be registered before use by a media type registration; see {{suffix-procedures}}. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.
 
-Media types that make use of a structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing subtype names in the media type registry.
-
-Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated subtype name to register the new media type.
+Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Designated Expert are expected to reject a registration if they believe the semantics for a media type registration do not align with existing subtype names in the media type registry.
 
 ### Use Cases for Structured Syntax Suffixes
 
