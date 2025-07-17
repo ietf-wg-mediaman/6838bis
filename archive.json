@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-15T01:13:53.936693+00:00",
+  "timestamp": "2025-07-17T01:12:24.745585+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -458,7 +458,7 @@
       ],
       "body": "From Murray Kucherawy (mailing list Nov 8):\r\n\r\nRFC 6838 Section 5.3 creates an appeal process by referencing RFC 2026 Section 6.5.4 and saying that appeals go to the IESG.  That specific part of RFC 2026 suggest the appeal process being established appears to me to boil down to:\r\n\r\n* the appeal goes to the IESG, and there's no escalation available past that\r\n* the appeal must provide adequate detail\r\n* the appeal must be filed within two months of the DE's decision\r\n* the IESG has discretion to process the appeal however it wants\r\n* the IESG has to complete its review and deliver its decision in a reasonable amount of time\r\n\r\n...or at least that's how I read it.  Maybe I'm being too pedantic but I also note that RFC 2026 Section 6.5.4 is subordinate to Section 6.5, which says that it (and its subsections) apply to decisions that are made as part of the standards process using consensus development, and decisions of a DE do not meet that definition.  It doesn't look to me like 6.5.4 was meant to be referenced or incorporated in this way.\r\n\r\nI suggest this is something the WG should review and decide whether it wants to keep this as-is or perhaps say something more explicit and crisp.\r\n\r\n",
       "createdAt": "2024-11-20T11:12:17Z",
-      "updatedAt": "2025-06-06T20:07:46Z",
+      "updatedAt": "2025-07-16T15:10:34Z",
       "closedAt": null,
       "comments": [
         {
@@ -481,6 +481,13 @@
           "body": "Given that we haven't had any appeals yet and this appears to be workable at least on the face of it, close with no action?",
           "createdAt": "2025-05-21T04:45:05Z",
           "updatedAt": "2025-05-21T04:45:05Z"
+        },
+        {
+          "author": "aamelnikov",
+          "authorAssociation": "NONE",
+          "body": "My vague recollection is that the intent was to appeal to ART (well, Apps) ADs first, then to IESG, etc. This is probably slightly better than going to full IESG.\n",
+          "createdAt": "2025-07-16T15:10:34Z",
+          "updatedAt": "2025-07-16T15:10:34Z"
         }
       ]
     },
@@ -712,7 +719,7 @@
       ],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-07-07T16:35:58Z",
+      "updatedAt": "2025-07-16T11:59:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -770,6 +777,13 @@
           "body": "I like this direction, but would prefer a slightly different angle:\n\n\nWhen a change to a media type registration is requested, the Designated Expert will assure that the change controller approves the change. If the Designated Expert finds that the change controller is unresponsive or uncontactable for a reasonable period of time (no less than four weeks), and reasonable efforts have been made to contact them, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.\n\n\nHere, we don't depend on someone in the community noticing and invoking the process, but they can still suggest this to the DE.",
           "createdAt": "2025-07-07T16:35:58Z",
           "updatedAt": "2025-07-07T16:35:58Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Works for me - my thought was that I didn't want to make the DE responsible for knowing the list of change controllers and doing something when the status of someone on the list changes (death, company going away, SDO reorg...) - if there is no need to update the registration, nobody should need to care if the change controller is contactable.\n\nI think the DE should be free to suggest such a change if that person thinks it's needed, which is better in the last version.\n",
+          "createdAt": "2025-07-16T11:59:11Z",
+          "updatedAt": "2025-07-16T11:59:11Z"
         }
       ]
     },
@@ -1279,6 +1293,38 @@
           "updatedAt": "2025-06-09T13:18:37Z"
         }
       ]
+    },
+    {
+      "number": 42,
+      "id": "I_kwDOMdBaOc7A5gmJ",
+      "title": "Is there only a single media type reviewer and who appoints them?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/42",
+      "state": "OPEN",
+      "author": "aamelnikov",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In draft-ietf-mediaman-6838bis-05:\n\n5.3.  Review and Approval\n\n   With the exception of provisional standards-tree registrations,\n   registrations submitted to the IANA will be first given to the media\n   types reviewer, who is appointed by the IETF Applications Area\n   Director(s).\n\nFirstly, the text about media type reviewer was deleted elsewhere in the document.\n\nSecondly, there are not Application Area Directors anymore, as the area is now ART.\n",
+      "createdAt": "2025-07-16T14:55:37Z",
+      "updatedAt": "2025-07-16T14:55:37Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 43,
+      "id": "I_kwDOMdBaOc7A5qUL",
+      "title": "Non IETF Stream registration in Standards Tree approval by IESG",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/43",
+      "state": "OPEN",
+      "author": "aamelnikov",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "I don't see a separate ticket explaining this change. My apologies if I missed it.\n\nThe new text in -05 says:\n\n4.1.1.  Standards Tree\n\n   Registrations in the standards tree are either:\n\n   1.  approved directly by the IESG, or\n\nand later:\n\n   The first procedure is used for registrations from IETF Consensus\n   documents.  See Section 2.2 for publication requirements.\n\nI think there is one specific case that was lost in editing:\n\n  Registrations published in non-IETF RFC streams are also allowed, but require IESG approval.\n\nThese are not necessarily \"community formats\", at least not at the time of registration.",
+      "createdAt": "2025-07-16T15:06:29Z",
+      "updatedAt": "2025-07-16T15:06:29Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
