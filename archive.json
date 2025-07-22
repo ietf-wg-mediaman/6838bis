@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-20T01:18:42.693254+00:00",
+  "timestamp": "2025-07-22T01:12:21.660281+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -687,7 +687,7 @@
       ],
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
-      "updatedAt": "2025-07-08T06:32:26Z",
+      "updatedAt": "2025-07-21T06:50:15Z",
       "closedAt": null,
       "comments": [
         {
@@ -710,6 +710,13 @@
           "body": "IMHO other SDOs should be asked to submit at what stage they make registrations requests to the DEs through IANA. DEs should be able to take a call if this is appropriate (e.g. the SDO is not rushing to register) and if not bring they might bring it up in issues or at a meeting.",
           "createdAt": "2025-07-08T06:32:26Z",
           "updatedAt": "2025-07-08T06:32:26Z"
+        },
+        {
+          "author": "plehegar",
+          "authorAssociation": "NONE",
+          "body": "fyi, W3C follows [registration process] (https://www.w3.org/guide/editor/mediatypes.html#registration-process).  \n\ncc @simoneonofri",
+          "createdAt": "2025-07-21T06:46:53Z",
+          "updatedAt": "2025-07-21T06:50:15Z"
         }
       ]
     },
@@ -1456,7 +1463,47 @@
       "labels": [],
       "body": "Section 5.4 contains both the definition of the media types reviewer, the media types reviewer's role in the registration procedure, and the appeals procedure for decisions.\n\nThis could probably be broken into separate sections:\n\n- A section defining the media types reviewer, what its role is and who appoints people to the role (perhaps a part of section 2). We may want to call out that this is a \"designated expert\" in the terminology of RFC 8126 section 4.5 (IANA considerations guidelines). That's also a good place to say that \"there is one role, but the number of people filling it is at the discretion of the appointing body\".\n- A section on the role of the media types reviwer in the review process (section 5.4 is as good a place as anything)\n\nThe idea that decisions by the MTR can be appealed probably can go in either section.\n\n",
       "createdAt": "2025-07-18T12:12:07Z",
-      "updatedAt": "2025-07-18T12:12:07Z",
+      "updatedAt": "2025-07-21T13:53:50Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Cross-linking #42 since the subject matter overlaps.\n",
+          "createdAt": "2025-07-21T13:53:50Z",
+          "updatedAt": "2025-07-21T13:53:50Z"
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "id": "I_kwDOMdBaOc7BoYlt",
+      "title": "Should 6838bis use RFC8126 terminology for registration procedures?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/51",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I think our procedure for the standards tree is \"IETF review\", for other-SDO registration it is \"Specification Required\", and for the vnd. and prs. faceted registries it is \"Expert Review\". But we don't refer to that terminology, so we don't inherit the requirements from that RFC.\n\nShould we?\n",
+      "createdAt": "2025-07-21T13:02:46Z",
+      "updatedAt": "2025-07-21T13:02:46Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 52,
+      "id": "I_kwDOMdBaOc7BpCbZ",
+      "title": "Should 6838bis refer to RFC 7120 for \"early registration\"?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/52",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "It seems that a whole RFC exists talking about early registration.\nShould we refer to it?\n",
+      "createdAt": "2025-07-21T13:51:49Z",
+      "updatedAt": "2025-07-21T13:51:49Z",
       "closedAt": null,
       "comments": []
     }
