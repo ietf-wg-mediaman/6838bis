@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
-Intended status: Best Current Practice                      18 June 2025
-Expires: 20 December 2025
+Intended status: Best Current Practice    Episteme Technology Consulting
+Expires: 25 January 2026                                    24 July 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 December 2025.
+   This Internet-Draft will expire on 25 January 2026.
 
 Copyright Notice
 
@@ -113,9 +113,10 @@ Table of Contents
    8.  IANA Considerations
      8.1.  Top-Level Types Registry
    9.  Acknowledgments
-   10. References
-     10.1.  Normative References
-     10.2.  Informative References
+   10. Contributors
+   11. References
+     11.1.  Normative References
+     11.2.  Informative References
    Appendix A.  Historical Note
    Appendix B.  Grandfathered Media Types
    Authors' Addresses
@@ -1273,9 +1274,27 @@ Table of Contents
    Petch, Peter Saint-Andre, and Jeni Tennison provided many helpful
    review comments and suggestions.
 
-10.  References
+10.  Contributors
 
-10.1.  Normative References
+   Much of the text of this document is directly taken from [RFC6838]
+   and [RFC9694].  We acknowledge the following authors of those
+   documents as contributors to this:
+
+   Ned Freed
+
+   John C.  Klensin 1770 Massachusetts Ave, #322 Cambridge, MA 02140 USA
+   EMail: john+ietf@jck.com
+
+   Tony Hansen AT&T Laboratories 200 Laurel Ave. Middletown, NJ 07748
+   USA EMail: tony+mtsuffix@maillennium.att.com
+
+   Martin J.  Dürst Aoyama Gakuin University Fuchinobe 5-10-1, Chuo-ku,
+   Sagamihara, Kanagawa 252-5258 Japan Phone: +81 42 759 6329 Email:
+   duerst@it.aoyama.ac.jp URI: https://www.sw.it.aoyama.ac.jp/Dürst/
+
+11.  References
+
+11.1.  Normative References
 
    [RFC2045]  Freed, N. and N. Borenstein, "Multipurpose Internet Mail
               Extensions (MIME) Part One: Format of Internet Message
@@ -1336,7 +1355,7 @@ Table of Contents
               DOI 10.17487/RFC9110, June 2022,
               <https://www.rfc-editor.org/rfc/rfc9110>.
 
-10.2.  Informative References
+11.2.  Informative References
 
    [I-D.ietf-mediaman-haptics]
               Muthusamy, Y. K. and C. Ullrich, "The 'haptics' Top-level
@@ -1374,6 +1393,11 @@ Table of Contents
               Registration Procedures", RFC 4288, DOI 10.17487/RFC4288,
               December 2005, <https://www.rfc-editor.org/rfc/rfc4288>.
 
+   [RFC6838]  Freed, N., Klensin, J., and T. Hansen, "Media Type
+              Specifications and Registration Procedures", BCP 13,
+              RFC 6838, DOI 10.17487/RFC6838, January 2013,
+              <https://www.rfc-editor.org/rfc/rfc6838>.
+
    [RFC6839]  Hansen, T. and A. Melnikov, "Additional Media Type
               Structured Syntax Suffixes", RFC 6839,
               DOI 10.17487/RFC6839, January 2013,
@@ -1387,6 +1411,11 @@ Table of Contents
               for HTTP Header Field Parameters", RFC 8187,
               DOI 10.17487/RFC8187, September 2017,
               <https://www.rfc-editor.org/rfc/rfc8187>.
+
+   [RFC9694]  Dürst, M.J., "Guidelines for the Definition of New Top-
+              Level Media Types", BCP 13, RFC 9694,
+              DOI 10.17487/RFC9694, March 2025,
+              <https://www.rfc-editor.org/rfc/rfc9694>.
 
    [windowsClipboardNames]
               MicroSoft Inc., "Clipboard Formats", August 2020,
@@ -1441,4 +1470,5 @@ Authors' Addresses
 
 
    Pete Resnick
+   Episteme Technology Consulting
    Email: resnick@episteme.net
