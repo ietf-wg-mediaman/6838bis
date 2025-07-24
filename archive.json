@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-22T01:12:21.660281+00:00",
+  "timestamp": "2025-07-24T01:12:34.903310+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -887,7 +887,7 @@
       ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input is being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-07-17T21:54:28Z",
+      "updatedAt": "2025-07-23T08:31:32Z",
       "closedAt": null,
       "comments": [
         {
@@ -938,6 +938,20 @@
           "body": "I don't know if the change controller of the suffix is relevant.\nEither the description of the suffix is sufficiently clear that it is obvious to the Designated Expert that the suffix is correctly used (or not), or we have a more critical problem.\n\nThe only case I can think of is where the registration is doing something that is inconsistent with the suffix definition, but the registrant argues that that's because the suffix definition is buggy. In that case, the suffix description needs updating first.\n",
           "createdAt": "2025-07-17T21:54:28Z",
           "updatedAt": "2025-07-17T21:54:28Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "body": "I lean toward Harald's opinion here.\n\nI believe it is reasonable to expect the designated experts to be able to determine that one of the ~20 structured suffixes is being used correctly. To expect them to know whether one of the >1600 application media types is being used used correctly doesn't seem reasonable to me. In those cases, having the submitter indicate that they've consulted with the change controller of the base type seems like it would be helpful to the DEs.\n\nI'm also a bit concerned about the amount of times change controllers of suffixes would be consulted.\nMost base types that are used with suffixes only have a few of them (if they have any), but suffixes are often used dozens of times. For example, the +jwt suffix is used 17 times, and the +json suffix is used over 150 times. If this guidance had been in place from the beginning, that would have been a lot of consultations.\n\nThat said, I have no problem adjusting the language in the PR if folks prefer it changed.",
+          "createdAt": "2025-07-22T16:34:12Z",
+          "updatedAt": "2025-07-22T16:34:12Z"
+        },
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "I was trying, rather unsuccessfully, for a bit of reductio ad absurdum on the very concept of suggesting consultation or requiring consent.     ",
+          "createdAt": "2025-07-23T08:31:32Z",
+          "updatedAt": "2025-07-23T08:31:32Z"
         }
       ]
     },
