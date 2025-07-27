@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-24T01:12:34.903310+00:00",
+  "timestamp": "2025-07-27T01:19:11.165792+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -212,7 +212,7 @@
       "id": "I_kwDOMdBaOc6dKMYk",
       "title": "Grandfathering requirements should apply to all unregistered media-types",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/7",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "CxRes",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -221,8 +221,8 @@
       ],
       "body": "I find that the text in paragraph 2 of Appendix A is only targeting unfaceted subtypes that should be registered as faceted. There are unregistered or improperly registered unfaceted subtypes that might need to re-registered as unfaceted. Such as media-types mentioned in https://github.com/ietf-wg-mediaman/procedures/issues/6.\r\n\r\nThis text should therefore RECOMMEND that in all cases where the media-types are unregistered, missing a registration template or have unstructured templates, they should be re-registered if possible.",
       "createdAt": "2024-11-05T23:20:32Z",
-      "updatedAt": "2025-06-06T20:08:52Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-25T07:59:56Z",
+      "closedAt": "2025-07-25T07:59:56Z",
       "comments": [
         {
           "author": "mnot",
@@ -265,6 +265,13 @@
           "body": "For your (1), I think that's a matter of IANA-wide tooling/policy, not something that we want to do per-registry.\n\nFor your (2), I suspect that's too high a bar -- the purpose of the registry is to assure that it reflects reality, and anything that is a barrier to entry hurts that.",
           "createdAt": "2025-05-28T22:54:39Z",
           "updatedAt": "2025-05-28T22:54:39Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "No change needed (but see new issue on the term \"grandfather\").\n",
+          "createdAt": "2025-07-25T07:59:56Z",
+          "updatedAt": "2025-07-25T07:59:56Z"
         }
       ]
     },
@@ -449,7 +456,7 @@
       "id": "I_kwDOMdBaOc6feNsv",
       "title": "What's the correct appeals procedure for DE decisions?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/10",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -458,8 +465,8 @@
       ],
       "body": "From Murray Kucherawy (mailing list Nov 8):\r\n\r\nRFC 6838 Section 5.3 creates an appeal process by referencing RFC 2026 Section 6.5.4 and saying that appeals go to the IESG.  That specific part of RFC 2026 suggest the appeal process being established appears to me to boil down to:\r\n\r\n* the appeal goes to the IESG, and there's no escalation available past that\r\n* the appeal must provide adequate detail\r\n* the appeal must be filed within two months of the DE's decision\r\n* the IESG has discretion to process the appeal however it wants\r\n* the IESG has to complete its review and deliver its decision in a reasonable amount of time\r\n\r\n...or at least that's how I read it.  Maybe I'm being too pedantic but I also note that RFC 2026 Section 6.5.4 is subordinate to Section 6.5, which says that it (and its subsections) apply to decisions that are made as part of the standards process using consensus development, and decisions of a DE do not meet that definition.  It doesn't look to me like 6.5.4 was meant to be referenced or incorporated in this way.\r\n\r\nI suggest this is something the WG should review and decide whether it wants to keep this as-is or perhaps say something more explicit and crisp.\r\n\r\n",
       "createdAt": "2024-11-20T11:12:17Z",
-      "updatedAt": "2025-07-16T15:10:34Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-25T08:05:23Z",
+      "closedAt": "2025-07-25T08:05:22Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -488,6 +495,13 @@
           "body": "My vague recollection is that the intent was to appeal to ART (well, Apps) ADs first, then to IESG, etc. This is probably slightly better than going to full IESG.\n",
           "createdAt": "2025-07-16T15:10:34Z",
           "updatedAt": "2025-07-16T15:10:34Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Close with no action; IANABIS may want to consider general rules for appeals of DE decisions, including possible insertion of the relevant AD in the chain.\n\n",
+          "createdAt": "2025-07-25T08:05:23Z",
+          "updatedAt": "2025-07-25T08:05:23Z"
         }
       ]
     },
@@ -505,7 +519,7 @@
       ],
       "body": "Including authors of incorporated drafts",
       "createdAt": "2025-01-21T02:45:17Z",
-      "updatedAt": "2025-07-17T09:38:28Z",
+      "updatedAt": "2025-07-25T08:06:50Z",
       "closedAt": null,
       "comments": [
         {
@@ -514,6 +528,13 @@
           "body": "Also include authors of previous versions (RFC 2048, RFC 4288).\n",
           "createdAt": "2025-07-17T09:38:28Z",
           "updatedAt": "2025-07-17T09:38:28Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Authors have been included in #53 - keep open to include process contributors.\n",
+          "createdAt": "2025-07-25T08:06:50Z",
+          "updatedAt": "2025-07-25T08:06:50Z"
         }
       ]
     },
@@ -522,7 +543,7 @@
       "id": "I_kwDOMdBaOc6oxL9g",
       "title": "You might consider adding some override here, incase the existing change controller is not responsive.",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/15",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -531,8 +552,8 @@
       ],
       "body": "              You might consider adding some override here, incase the existing change controller is not responsive.\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r1941375260_\r\n            ",
       "createdAt": "2025-02-04T23:01:57Z",
-      "updatedAt": "2025-06-06T20:04:12Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-25T08:08:30Z",
+      "closedAt": "2025-07-25T08:08:30Z",
       "comments": [
         {
           "author": "mnot",
@@ -547,6 +568,13 @@
           "body": "Based on the side discussion in #9, my inclination is to close this with no action -- we already have procedures to recover from uncontactable folks, and collecting more information is likely to just increase the amount of bad information we have...",
           "createdAt": "2025-05-27T03:02:58Z",
           "updatedAt": "2025-05-27T03:02:58Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Decision: Close with no action.\n",
+          "createdAt": "2025-07-25T08:08:30Z",
+          "updatedAt": "2025-07-25T08:08:30Z"
         }
       ]
     },
@@ -586,7 +614,7 @@
       "id": "I_kwDOMdBaOc6s4U9p",
       "title": "Update Media Type registry to clearer indicate which media types do have RTP payload formats",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/18",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gloinul",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -595,8 +623,8 @@
       ],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-07-07T11:52:38Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-25T08:16:02Z",
+      "closedAt": "2025-07-25T08:16:02Z",
       "comments": [
         {
           "author": "mnot",
@@ -646,6 +674,13 @@
           "body": "On reading the text of -05, it seems to me that the description of the \"framed\" encoding type is adequate for the RTP formats, and can be easily extracted from the registration templates.\nLet's take that as a proposed resolution for the text - and leave the issue of updating those as a maintenance issue.\n",
           "createdAt": "2025-07-07T11:52:38Z",
           "updatedAt": "2025-07-07T11:52:38Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Decision: Close with no action (the \"framed\" encoding in the template is adequate).\n",
+          "createdAt": "2025-07-25T08:15:55Z",
+          "updatedAt": "2025-07-25T08:15:55Z"
         }
       ]
     },
@@ -661,7 +696,7 @@
       "labels": [],
       "body": "https://datatracker.ietf.org/doc/rfc6381/ defines parameters that are used to describe further properties of like codec capabilities of what is included in file formats that are so called bucket types, like the ISO based media file formats. \n\nShould there be a reference to these parameters and the consideration in the media type registry to ensure that this aspect is not forgotten. I can see that this could be either part of the relevant media top levels that commonly have these, or possibly under the parameter encoding section. \n\n",
       "createdAt": "2025-03-18T10:41:39Z",
-      "updatedAt": "2025-03-18T10:55:49Z",
+      "updatedAt": "2025-07-25T07:53:22Z",
       "closedAt": null,
       "comments": [
         {
@@ -670,6 +705,13 @@
           "body": "I would also note that RFC 8088 do comment some other parameters that RTP payload format has used with the same definition over multiple media types used to register RTP payload format. I don't know if these needs to be noted or referenced that they exist to help registrants to include them if applicable.  ",
           "createdAt": "2025-03-18T10:55:48Z",
           "updatedAt": "2025-03-18T10:55:48Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Seems to fit under \"advice on how to define parameters\".\n",
+          "createdAt": "2025-07-25T07:53:22Z",
+          "updatedAt": "2025-07-25T07:53:22Z"
         }
       ]
     },
@@ -682,12 +724,10 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [
-        "Blocking Last Call"
-      ],
+      "labels": [],
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
-      "updatedAt": "2025-07-21T06:50:15Z",
+      "updatedAt": "2025-07-25T08:41:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -714,9 +754,16 @@
         {
           "author": "plehegar",
           "authorAssociation": "NONE",
-          "body": "fyi, W3C follows [registration process] (https://www.w3.org/guide/editor/mediatypes.html#registration-process).  \n\ncc @simoneonofri",
+          "body": "fyi, W3C follows [registration process](https://www.w3.org/guide/editor/mediatypes.html#registration-process).  \n\ncc @simoneonofri",
           "createdAt": "2025-07-21T06:46:53Z",
-          "updatedAt": "2025-07-21T06:50:15Z"
+          "updatedAt": "2025-07-25T08:41:31Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Things to consider:\n- Notify the orgs on the \"recognized standards orgs list\" of 6838bis when it comes out\n- Point at W3C procedures and ask \"do you need something similar\"\n- Ask IANA what input they have on this point.\n\nNo change to this document contemplated.\nWill put a note into the document's IANA considerations and let it disappear on publication. (Pete's suggestion)\n",
+          "createdAt": "2025-07-25T08:23:03Z",
+          "updatedAt": "2025-07-25T08:23:03Z"
         }
       ]
     },
@@ -730,11 +777,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "Blocking Last Call"
+        "Ready for PR"
       ],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-07-16T11:59:11Z",
+      "updatedAt": "2025-07-25T08:27:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -799,6 +846,13 @@
           "body": "Works for me - my thought was that I didn't want to make the DE responsible for knowing the list of change controllers and doing something when the status of someone on the list changes (death, company going away, SDO reorg...) - if there is no need to update the registration, nobody should need to care if the change controller is contactable.\n\nI think the DE should be free to suggest such a change if that person thinks it's needed, which is better in the last version.\n",
           "createdAt": "2025-07-16T11:59:11Z",
           "updatedAt": "2025-07-16T11:59:11Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Decision: Adopt Mark's text, remove the parenthetical so as to not block the case of \"we know no contact can be made\".\n",
+          "createdAt": "2025-07-25T08:27:42Z",
+          "updatedAt": "2025-07-25T08:27:42Z"
         }
       ]
     },
@@ -847,7 +901,7 @@
       ],
       "body": "Standards tree says:\n\n> The \"owner\" of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWhat should it be for community formats?",
       "createdAt": "2025-05-06T23:22:32Z",
-      "updatedAt": "2025-06-22T08:18:01Z",
+      "updatedAt": "2025-07-25T08:40:16Z",
       "closedAt": null,
       "comments": [
         {
@@ -870,6 +924,13 @@
           "body": "As I remarked in another issue, having in this document more information about the way the IESG acts when it is a change-controller would be useful for people reading the document. Of course, it is possible to read about the IESG in other places but having one generic sentence here attracts confidence, I believe.\n\nI would like to suggest, in the sentence above of @mnot , something like \"the IESG should be listed as the owner of the registration which acts on it in a publicly visible forum\".\nWDYT?",
           "createdAt": "2025-06-22T08:18:01Z",
           "updatedAt": "2025-06-22T08:18:01Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Rough consensus seems to be to designate the IESG when the DE does not see an obvious choice for a change controller.\nSome feeling that asking the DE to make a judgment call without extensive guidance is not good.\n\nDecision: Needs further discussion.\n",
+          "createdAt": "2025-07-25T08:40:16Z",
+          "updatedAt": "2025-07-25T08:40:16Z"
         }
       ]
     },
@@ -885,9 +946,9 @@
       "labels": [
         "Blocking Last Call"
       ],
-      "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input is being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
+      "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input that had support from other participants is subsequently being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-07-23T08:31:32Z",
+      "updatedAt": "2025-07-25T10:00:33Z",
       "closedAt": null,
       "comments": [
         {
@@ -952,6 +1013,13 @@
           "body": "I was trying, rather unsuccessfully, for a bit of reductio ad absurdum on the very concept of suggesting consultation or requiring consent.     ",
           "createdAt": "2025-07-23T08:31:32Z",
           "updatedAt": "2025-07-23T08:31:32Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Do not tie the hands of the DE.\nMake language talk about what needs to be in the registration.\n",
+          "createdAt": "2025-07-25T08:52:13Z",
+          "updatedAt": "2025-07-25T08:52:13Z"
         }
       ]
     },
@@ -1246,11 +1314,11 @@
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [
-        "Ready to close"
+        "Ready for PR"
       ],
       "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
       "createdAt": "2025-05-27T02:59:57Z",
-      "updatedAt": "2025-07-08T06:29:03Z",
+      "updatedAt": "2025-07-25T08:57:06Z",
       "closedAt": null,
       "comments": [
         {
@@ -1287,6 +1355,13 @@
           "body": "From what I recall of the Bangkok meeting, most IETF participants, including DEs were unaware of the early allocation procedure.  Since IETF processes are more rigorous for a regular registration, we had an instance where another SDO was able to claim a registration as discussed in #8. \n\nAt a minimum, 6838bis should point to RFC7120 and an equivalent (or higher) bar be set for other SDOs to request an early allocation. Other SDOs should be asked to communicate their early allocation request requirements to the DEs through IANA. DEs can bring them up at a meeting/in issues if they feel the other SDOs request are inconsistent.",
           "createdAt": "2025-07-08T06:29:03Z",
           "updatedAt": "2025-07-08T06:29:03Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Needs a pointer to RFC 7120. (and ref IANABIS)\nMay need to mention relation to other SDOs.\n\n",
+          "createdAt": "2025-07-25T08:54:39Z",
+          "updatedAt": "2025-07-25T08:57:06Z"
         }
       ]
     },
@@ -1520,6 +1595,44 @@
       "updatedAt": "2025-07-21T13:51:49Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 54,
+      "id": "I_kwDOMdBaOc7Cc_SY",
+      "title": "consider a different/better term than \"Grandfathered\" [sic]",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/54",
+      "state": "OPEN",
+      "author": "bc-pi",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The term \u201cgrandfather clause\u201d or \"grandfathered\" is considered by some to be problematic because of its racist and oppressive connotations in U.S. history, particularly in the context of voter suppression after the Civil War.\n\n@peteresnick kindly volunteered to look into alternatives during the Madrid meeting ",
+      "createdAt": "2025-07-25T08:08:46Z",
+      "updatedAt": "2025-07-25T08:29:21Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "while I was typing... @OR13 agreed and @brentzundel found https://grammarhow.com/better-ways-to-say-grandfathered-in-business/",
+          "createdAt": "2025-07-25T08:11:17Z",
+          "updatedAt": "2025-07-25T08:11:17Z"
+        },
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "<img width=\"294\" height=\"275\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/245dddda-c264-419f-8515-df4a01dd9eb9\" />",
+          "createdAt": "2025-07-25T08:22:50Z",
+          "updatedAt": "2025-07-25T08:22:50Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "body": "Legacy works for me",
+          "createdAt": "2025-07-25T08:29:21Z",
+          "updatedAt": "2025-07-25T08:29:21Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -2244,13 +2357,150 @@
       "labels": [],
       "body": "This PR attempts to soften language in line with the comments in Issue 24.",
       "createdAt": "2025-07-14T16:09:07Z",
-      "updatedAt": "2025-07-14T16:11:58Z",
+      "updatedAt": "2025-07-25T09:13:28Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "80a658a9c55e02009bc70045003cfdeee248fc05",
       "headRepository": "brentzundel/6838bis",
       "headRefName": "issue-24",
-      "headRefOid": "8f23a38486236f215e92ff711c392ef5388e552a",
+      "headRefOid": "2a265008077bc43abe70490e839b5a01ae390230",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "body": "I've adjusted the language of the PR according to the conversation during the meeting at IETF 123",
+          "createdAt": "2025-07-25T09:13:28Z",
+          "updatedAt": "2025-07-25T09:13:28Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc62Ebul",
+          "commit": {
+            "abbreviatedOid": "8f23a38"
+          },
+          "author": "JonathanLennox",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-25T08:43:41Z",
+          "updatedAt": "2025-07-25T08:43:41Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Grammar: should be \"The Designated Expert is expected to...\"",
+              "createdAt": "2025-07-25T08:43:41Z",
+              "updatedAt": "2025-07-25T08:43:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc62EiD1",
+          "commit": {
+            "abbreviatedOid": "8f23a38"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-25T08:53:15Z",
+          "updatedAt": "2025-07-25T08:53:15Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\nMedia types that make use of a structured syntax, or similar separator such as a dash \"-\", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types \"application/foo+bar\" and \"application/foo+baz\", the expectation is that the semantics suggested by the subtype name \"application/foo\" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry.\r\n```",
+              "createdAt": "2025-07-25T08:53:15Z",
+              "updatedAt": "2025-07-25T08:53:15Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc62EnND",
+          "commit": {
+            "abbreviatedOid": "11b0a75"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-25T09:00:08Z",
+          "updatedAt": "2025-07-25T09:00:08Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\nA registration request for a media type that uses an existing subtype or suffix is expected to be coordinated with the change controller for the already registered media type.\r\n```",
+              "createdAt": "2025-07-25T09:00:08Z",
+              "updatedAt": "2025-07-25T09:00:08Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "id": "PR_kwDOMdBaOc6gfQwE",
+      "title": "Update draft-ietf-mediaman-6838bis.md",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/53",
+      "state": "MERGED",
+      "author": "peteresnick",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Change Pete's contact info.\r\nAdd Contributors section.",
+      "createdAt": "2025-07-24T16:33:33Z",
+      "updatedAt": "2025-07-24T19:09:44Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "80a658a9c55e02009bc70045003cfdeee248fc05",
+      "headRepository": "peteresnick/6838bis",
+      "headRefName": "main",
+      "headRefOid": "99ebbdda0754b69ed576fc6d0e67802b9718f9d4",
+      "closedAt": "2025-07-24T19:09:44Z",
+      "mergedAt": "2025-07-24T19:09:44Z",
+      "mergedBy": "alvestrand",
+      "mergeCommit": {
+        "oid": "378d21d850f0bdff91d9f5e700d029878baec651"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc6198JE",
+          "commit": {
+            "abbreviatedOid": "99ebbdd"
+          },
+          "author": "aj-stein",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-24T19:07:20Z",
+          "updatedAt": "2025-07-24T19:07:20Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "id": "PR_kwDOMdBaOc6gmEy7",
+      "title": "Change \"grandfathered\" to \"legacy\" throughout",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/55",
+      "state": "OPEN",
+      "author": "peteresnick",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "fixes #54 ",
+      "createdAt": "2025-07-25T09:02:41Z",
+      "updatedAt": "2025-07-25T09:02:42Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "378d21d850f0bdff91d9f5e700d029878baec651",
+      "headRepository": "peteresnick/6838bis",
+      "headRefName": "main",
+      "headRefOid": "a05f677dfe0c7b860eba5f5558d2ca1d9b23a8dc",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
