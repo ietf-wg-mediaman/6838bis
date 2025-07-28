@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 25 January 2026                                    24 July 2025
+Expires: 29 January 2026                                    28 July 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 January 2026.
+   This Internet-Draft will expire on 29 January 2026.
 
 Copyright Notice
 
@@ -118,7 +118,7 @@ Table of Contents
      11.1.  Normative References
      11.2.  Informative References
    Appendix A.  Historical Note
-   Appendix B.  Grandfathered Media Types
+   Appendix B.  Legacy Media Types
    Authors' Addresses
 
 1.  Introduction
@@ -690,7 +690,7 @@ Table of Contents
    The third case is described in Section 4.1.1.1.
 
    Media types in the standards tree do not have faceted subtype names,
-   unless they are grandfathered in using the process described in
+   unless they are given legacy status using the process described in
    Appendix B.
 
    The change controller of a media type registered in the standards
@@ -1444,7 +1444,7 @@ Appendix A.  Historical Note
    registrations in a systematic way.  See Section 2.10 for additional
    discussion.
 
-Appendix B.  Grandfathered Media Types
+Appendix B.  Legacy Media Types
 
    Some media types registered prior to 1996 with unfaceted subtype
    names, would, if registered under the guidelines in this document, be
