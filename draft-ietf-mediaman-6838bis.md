@@ -176,6 +176,8 @@ Parameter names are case-insensitive and no meaning is attached to the order in 
 
 There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary valued parameters, while permitted in some protocols, are best avoided.
 
+There exist parameters that are being reused across multiple media types definitions to provide a common functionality. The 'Codecs' and 'Profiles' Parameters for "Bucket" Media Types {{!RFC6381}} are one such example used to indicate which media codecs and their complexity are represented inside the data object identified by the media type. Another set of common parameters are used by RTP payload formats, see {{!RFC4855}}, and {{!RFC8851}}.
+
 Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME {{!RFC2045}} {{?RFC2231}} and HTTP {{!RFC9110}} {{?RFC8187}} allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.
 
 Types already registered in the standards tree should not have new functionality added through the definition of new parameters subsequent to the original registration. New parameters can be used to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.
