@@ -514,9 +514,8 @@ Media type registrations may not be deleted; media types that are no longer beli
 
 Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
-The change controller of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.
+When a change to a media type registration is requested, the Designated Expert will assure that the change controller approves the change. If the Designated Expert finds that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.
 
-The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.
 
 ## Registration Template
 
