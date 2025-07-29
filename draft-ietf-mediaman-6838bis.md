@@ -457,9 +457,6 @@ An attacker might append structured syntax suffixes in order to trick processors
 
 Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Processing of media types based only on the presence of a structured syntax suffix needs to ensure that further processing does not blindly trust the decoded data. For example,  proper magic header or file structure checking could mitigate this attack.
 
-### Additional Structured Syntax Suffixes
-
-The primary guideline for whether a structured syntax suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
 
 #  Media Type Registration Procedures {#procedures}
 
@@ -562,6 +559,8 @@ Provisional registration? (standards tree only):
 Limited-use media types should also note in the applications list whether or not that list is exhaustive.
 
 # Structured Syntax Suffix Registration Procedures {#suffix-procedures}
+
+Structured syntax suffixes must be described by a readily available description, preferably within a document published by an established standards-related organization, for which there's a reference that can be used in a Normative References section of an RFC.
 
 Someone wishing to define a "+suffix" name for a structured syntax for use with a new media type registration should:
 
