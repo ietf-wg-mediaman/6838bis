@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-27T01:19:11.165792+00:00",
+  "timestamp": "2025-07-29T01:20:53.495773+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1601,15 +1601,15 @@
       "id": "I_kwDOMdBaOc7Cc_SY",
       "title": "consider a different/better term than \"Grandfathered\" [sic]",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/54",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bc-pi",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
-      "body": "The term \u201cgrandfather clause\u201d or \"grandfathered\" is considered by some to be problematic because of its racist and oppressive connotations in U.S. history, particularly in the context of voter suppression after the Civil War.\n\n@peteresnick kindly volunteered to look into alternatives during the Madrid meeting ",
+      "body": "The term \u201cgrandfather clause\u201d or \"grandfathered\" is considered by some to be problematic because of its racist and oppressive connotations in U.S. history, particularly in the context of voter suppression after the Civil War.\n\nduring the Madrid meeting, @peteresnick kindly volunteered to look into alternatives ",
       "createdAt": "2025-07-25T08:08:46Z",
-      "updatedAt": "2025-07-25T08:29:21Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-28T14:52:06Z",
+      "closedAt": "2025-07-28T05:04:46Z",
       "comments": [
         {
           "author": "bc-pi",
@@ -2487,26 +2487,50 @@
       "id": "PR_kwDOMdBaOc6gmEy7",
       "title": "Change \"grandfathered\" to \"legacy\" throughout",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/55",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "peteresnick",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "fixes #54 ",
       "createdAt": "2025-07-25T09:02:41Z",
-      "updatedAt": "2025-07-25T09:02:42Z",
+      "updatedAt": "2025-07-28T14:52:53Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "378d21d850f0bdff91d9f5e700d029878baec651",
       "headRepository": "peteresnick/6838bis",
       "headRefName": "main",
-      "headRefOid": "a05f677dfe0c7b860eba5f5558d2ca1d9b23a8dc",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "headRefOid": "d3423b81a2ab259e6b580439a1c10093035ea53b",
+      "closedAt": "2025-07-28T05:04:45Z",
+      "mergedAt": "2025-07-28T05:04:45Z",
+      "mergedBy": "alvestrand",
+      "mergeCommit": {
+        "oid": "adc72e078297406e0e8269453938151bc8686861"
+      },
+      "comments": [
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "thanks @peteresnick ",
+          "createdAt": "2025-07-28T14:52:53Z",
+          "updatedAt": "2025-07-28T14:52:53Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc62YYYt",
+          "commit": {
+            "abbreviatedOid": "a05f677"
+          },
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-28T01:34:17Z",
+          "updatedAt": "2025-07-28T01:34:17Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
