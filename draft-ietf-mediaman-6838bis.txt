@@ -111,6 +111,7 @@ Table of Contents
    7.  Security Considerations
    8.  IANA Considerations
      8.1.  Top-Level Types Registry
+     8.2.  Recognized Standards Organisations
    9.  Acknowledgments
    10. Contributors
    11. References
@@ -1255,6 +1256,16 @@ Table of Contents
    In the Top-Level Media Types registry, IANA should link the reference
    field for each top-level type to the specific subsection in question,
    rather than just the relevant RFC.
+
+8.2.  Recognized Standards Organisations
+
+   IANA should notify recognized standards organisations when this
+   document is published (where feasible), and highlight the need to
+   consider how their processes interact with the registration
+   proceedure (see eg https://www.w3.org/guide/editor/
+   mediatypes.html#registration-process
+   (https://www.w3.org/guide/editor/mediatypes.html#registration-
+   process)).
 
 9.  Acknowledgments
 
