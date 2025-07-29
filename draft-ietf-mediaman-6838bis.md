@@ -634,6 +634,10 @@ Security requirements for both media type and media type suffix registrations ar
 
 In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
 
+## Recognized Standards Organisations
+
+IANA should notify recognized standards organisations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration proceedure (see eg <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
+
 
 #  Acknowledgments
 
