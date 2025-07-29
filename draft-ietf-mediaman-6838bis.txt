@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 29 January 2026                                    28 July 2025
+Expires: 30 January 2026                                    29 July 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 January 2026.
+   This Internet-Draft will expire on 30 January 2026.
 
 Copyright Notice
 
@@ -138,7 +138,7 @@ Table of Contents
    Section 5 outlines the procedures used to do so.  The location of the
    media type registry is:
 
-      http://www.iana.org/assignments/media-types/
+      https://www.iana.org/assignments/media-types/
 
    Section 6 outlines the procedures for managing the registry for
    structured syntax suffixes.  It is located at:
@@ -300,10 +300,10 @@ Table of Contents
    In some cases, a single media type may have been widely deployed
    using multiple names prior to registration.  In such cases, a
    preferred name MUST be chosen for the media type, and applications
-   are required use this to be compliant with the type's registration.
-   However, a list of deprecated aliases by which the type is known can
-   be supplied as additional information in order to assist applications
-   in processing the media type properly.
+   are required to use this to be compliant with the type's
+   registration.  However, a list of deprecated aliases by which the
+   type is known can be supplied as additional information in order to
+   assist applications in processing the media type properly.
 
 2.5.  Parameters
 
@@ -575,8 +575,7 @@ Table of Contents
       needed, but may be advisable in some cases.  There are examples of
       new top-level type definitions without a Working Group
       ([RFC2077]), with a short, dedicated WG ([RFC8081]), and with a
-      Working Group that included other related work
-      ([I-D.ietf-mediaman-haptics]).
+      Working Group that included other related work ([RFC9695]).
 
    *  The document defining the new top-level type should include
       initial registrations of actual subtypes.  The exception may be a
@@ -743,7 +742,7 @@ Table of Contents
    broadly in this context, and are considered equivalent.
 
    A registration may be placed in the vendor tree by anyone who needs
-   to interchange files associated with some product or set of products.
+   to interchange data associated with some product or set of products.
    However, the registration properly belongs to the vendor or
    organization producing the software that employs the type being
    registered, and that vendor or organization can at any time elect to
@@ -995,7 +994,7 @@ Table of Contents
    Registration requests can be sent to iana@iana.org.  A web form for
    registration requests is also available at:
 
-      http://www.iana.org/form/media-types
+      https://www.iana.org/form/media-types
 
 5.2.1.  Provisional Registrations
 
@@ -1357,13 +1356,6 @@ Table of Contents
 
 11.2.  Informative References
 
-   [I-D.ietf-mediaman-haptics]
-              Muthusamy, Y. K. and C. Ullrich, "The 'haptics' Top-level
-              Media Type", Work in Progress, Internet-Draft, draft-ietf-
-              mediaman-haptics-05, 27 July 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-
-              mediaman-haptics-05>.
-
    [MacOSUTIs]
               Apple Computer, Inc., "Framework: Uniform Type
               Identifiers", March 2024,
@@ -1416,6 +1408,10 @@ Table of Contents
               Level Media Types", BCP 13, RFC 9694,
               DOI 10.17487/RFC9694, March 2025,
               <https://www.rfc-editor.org/rfc/rfc9694>.
+
+   [RFC9695]  Muthusamy, Y. K. and C. Ullrich, "The 'haptics' Top-Level
+              Media Type", RFC 9695, DOI 10.17487/RFC9695, March 2025,
+              <https://www.rfc-editor.org/rfc/rfc9695>.
 
    [windowsClipboardNames]
               MicroSoft Inc., "Clipboard Formats", August 2020,
