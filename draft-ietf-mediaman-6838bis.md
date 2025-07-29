@@ -368,7 +368,7 @@ Note that such registrations still go through preliminary community review ({{pr
 
 The vendor tree is intended for media types associated with publicly available products. "Vendor" and "producer" are construed very broadly in this context, and are considered equivalent.
 
-A registration may be placed in the vendor tree by anyone who needs to interchange files associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See {{change}} for additional information.
+A registration may be placed in the vendor tree by anyone who needs to interchange data associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See {{change}} for additional information.
 
 When a third party registers a type on behalf of someone else, both entities should be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".
 
