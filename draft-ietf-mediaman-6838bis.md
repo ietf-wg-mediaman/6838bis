@@ -156,7 +156,7 @@ These requirements apply regardless of the registration tree involved.
 
 ### Aliases {#deprecated-aliases}
 
-In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications are required use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.
+In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications are required to use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.
 
 ## Parameters
 
