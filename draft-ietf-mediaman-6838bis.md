@@ -66,7 +66,7 @@ Those labels are known as media types. A media type consists of a top-level type
 
 {{requirements}} defines the criteria for registering media types. {{procedures}} outlines the procedures used to do so. The location of the media type registry is:
 
-> http://www.iana.org/assignments/media-types/
+> https://www.iana.org/assignments/media-types/
 
 {{suffix-procedures}} outlines the procedures for managing the registry for structured syntax suffixes. It is located at:
 
@@ -481,7 +481,7 @@ Standards-tree registrations by recognized standards-related organizations as we
 
 Registration requests can be sent to iana@iana.org. A web form for registration requests is also available at:
 
-> http://www.iana.org/form/media-types
+> https://www.iana.org/form/media-types
 
 ### Provisional Registrations {#provisional}
 
