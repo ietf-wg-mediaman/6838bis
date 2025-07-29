@@ -1259,9 +1259,6 @@ svg :is([fill="white"], [fill^="#fff"]) {
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2.2.3">
                     <p id="section-toc.1-1.4.2.2.2.3.1"><a href="#section-4.2.3" class="auto internal xref">4.2.3</a>.  <a href="#name-security-considerations-for" class="internal xref">Security Considerations for Structured Syntax Suffix Processing</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2.2.4">
-                    <p id="section-toc.1-1.4.2.2.2.4.1"><a href="#section-4.2.4" class="auto internal xref">4.2.4</a>.  <a href="#name-additional-structured-synta" class="internal xref">Additional Structured Syntax Suffixes</a></p>
-</li>
                 </ul>
 </li>
             </ul>
@@ -1894,14 +1891,6 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </div>
 </section>
 </div>
-<div id="additional-structured-syntax-suffixes">
-<section id="section-4.2.4">
-          <h4 id="name-additional-structured-synta">
-<a href="#section-4.2.4" class="section-number selfRef">4.2.4. </a><a href="#name-additional-structured-synta" class="section-name selfRef">Additional Structured Syntax Suffixes</a>
-          </h4>
-<p id="section-4.2.4-1">The primary guideline for whether a structured syntax suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.<a href="#section-4.2.4-1" class="pilcrow">¶</a></p>
-</section>
-</div>
 </section>
 </div>
 </section>
@@ -2093,43 +2082,44 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-structured-syntax-suffix-re">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-structured-syntax-suffix-re" class="section-name selfRef">Structured Syntax Suffix Registration Procedures</a>
       </h2>
-<p id="section-6-1">Someone wishing to define a "+suffix" name for a structured syntax for use with a new media type registration should:<a href="#section-6-1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-6-2">
-<li id="section-6-2.1">
-          <p id="section-6-2.1.1">Check IANA's registry of media type name suffixes to see whether or not there is already an entry for that well-defined structured syntax.<a href="#section-6-2.1.1" class="pilcrow">¶</a></p>
+<p id="section-6-1">Structured syntax suffixes must be described by a readily available description, preferably within a document published by an established standards-related organization, for which there's a reference that can be used in a Normative References section of an RFC.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">Someone wishing to define a "+suffix" name for a structured syntax for use with a new media type registration should:<a href="#section-6-2" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-6-3">
+<li id="section-6-3.1">
+          <p id="section-6-3.1.1">Check IANA's registry of media type name suffixes to see whether or not there is already an entry for that well-defined structured syntax.<a href="#section-6-3.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-6-2.2">
-          <p id="section-6-2.2.1">If there is no entry for their suffix scheme, fill out the template (specified in <a href="#suffix-template" class="auto internal xref">Section 6.2</a>) and include that with the media type registration. The template may be contained in an Internet Draft, alone or as part of some other protocol specification. The template may also be submitted in some other form (as part of another document or as a stand-alone document), but the contents will be treated as an "IETF Contribution" under the guidelines of BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span>.<a href="#section-6-2.2.1" class="pilcrow">¶</a></p>
+        <li id="section-6-3.2">
+          <p id="section-6-3.2.1">If there is no entry for their suffix scheme, fill out the template (specified in <a href="#suffix-template" class="auto internal xref">Section 6.2</a>) and include that with the media type registration. The template may be contained in an Internet Draft, alone or as part of some other protocol specification. The template may also be submitted in some other form (as part of another document or as a stand-alone document), but the contents will be treated as an "IETF Contribution" under the guidelines of BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span>.<a href="#section-6-3.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-6-2.3">
-          <p id="section-6-2.3.1">Send a copy of the template or a pointer to the containing document (with specific reference to the section with the template) to the mailing list media-types@ietf.org, requesting review. This may be combined with a request to review the media type registration. Allow a reasonable time for discussion and comments.<a href="#section-6-2.3.1" class="pilcrow">¶</a></p>
+        <li id="section-6-3.3">
+          <p id="section-6-3.3.1">Send a copy of the template or a pointer to the containing document (with specific reference to the section with the template) to the mailing list media-types@ietf.org, requesting review. This may be combined with a request to review the media type registration. Allow a reasonable time for discussion and comments.<a href="#section-6-3.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-6-2.4">
-          <p id="section-6-2.4.1">Respond to review comments and make revisions to the proposed registration as needed to bring it into line with the guidelines given in this document.<a href="#section-6-2.4.1" class="pilcrow">¶</a></p>
+        <li id="section-6-3.4">
+          <p id="section-6-3.4.1">Respond to review comments and make revisions to the proposed registration as needed to bring it into line with the guidelines given in this document.<a href="#section-6-3.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-6-2.5">
-          <p id="section-6-2.5.1">Submit the (possibly updated) registration template (or pointer to the document containing it) to IANA at iana@iana.org.<a href="#section-6-2.5.1" class="pilcrow">¶</a></p>
-</li>
-      </ol>
-<p id="section-6-3">Upon receipt of a structured syntax suffix registration request,<a href="#section-6-3" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-6-4">
-<li id="section-6-4.1">
-          <p id="section-6-4.1.1">IANA checks the submission for completeness; if sections are missing or citations are not correct, IANA rejects the registration request.<a href="#section-6-4.1.1" class="pilcrow">¶</a></p>
-</li>
-        <li id="section-6-4.2">
-          <p id="section-6-4.2.1">IANA checks the current registry for an entry with the same name; if such a registry exists, IANA rejects the registration request.<a href="#section-6-4.2.1" class="pilcrow">¶</a></p>
-</li>
-        <li id="section-6-4.3">
-          <p id="section-6-4.3.1">IANA requests Expert Review of the registration request against the corresponding guidelines.<a href="#section-6-4.3.1" class="pilcrow">¶</a></p>
-</li>
-        <li id="section-6-4.4">
-          <p id="section-6-4.4.1">The Designated Expert may request additional review or discussion, as necessary.<a href="#section-6-4.4.1" class="pilcrow">¶</a></p>
-</li>
-        <li id="section-6-4.5">
-          <p id="section-6-4.5.1">If Expert Review recommends registration, IANA adds the registration to the appropriate registry.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
+        <li id="section-6-3.5">
+          <p id="section-6-3.5.1">Submit the (possibly updated) registration template (or pointer to the document containing it) to IANA at iana@iana.org.<a href="#section-6-3.5.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
-<p id="section-6-5">The initial registry content specification <span>[<a href="#RFC6839" class="cite xref">RFC6839</a>]</span> provides examples of structured syntax suffix registrations.<a href="#section-6-5" class="pilcrow">¶</a></p>
+<p id="section-6-4">Upon receipt of a structured syntax suffix registration request,<a href="#section-6-4" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-6-5">
+<li id="section-6-5.1">
+          <p id="section-6-5.1.1">IANA checks the submission for completeness; if sections are missing or citations are not correct, IANA rejects the registration request.<a href="#section-6-5.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-6-5.2">
+          <p id="section-6-5.2.1">IANA checks the current registry for an entry with the same name; if such a registry exists, IANA rejects the registration request.<a href="#section-6-5.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-6-5.3">
+          <p id="section-6-5.3.1">IANA requests Expert Review of the registration request against the corresponding guidelines.<a href="#section-6-5.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-6-5.4">
+          <p id="section-6-5.4.1">The Designated Expert may request additional review or discussion, as necessary.<a href="#section-6-5.4.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-6-5.5">
+          <p id="section-6-5.5.1">If Expert Review recommends registration, IANA adds the registration to the appropriate registry.<a href="#section-6-5.5.1" class="pilcrow">¶</a></p>
+</li>
+      </ol>
+<p id="section-6-6">The initial registry content specification <span>[<a href="#RFC6839" class="cite xref">RFC6839</a>]</span> provides examples of structured syntax suffix registrations.<a href="#section-6-6" class="pilcrow">¶</a></p>
 <div id="change-procedures">
 <section id="section-6.1">
         <h3 id="name-change-procedures-2">
