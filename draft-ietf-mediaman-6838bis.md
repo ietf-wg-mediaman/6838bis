@@ -492,9 +492,9 @@ Provisional registrations can be updated or abandoned at any time. When the regi
 
 ## Review and Approval {#review}
 
-With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the media types reviewer, who is appointed by the IETF Applications Area Director(s). The media types reviewer examines registration requests to make sure they meet the requirements set forth in this document.
+With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the media types reviewer(s), who are appointed by the IETF Applications Area Director(s). The media types reviewer(s) examine registration requests to make sure they meet the requirements set forth in this document.
 
-Decisions made by the media types reviewer may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
+Decisions made by the media types reviewer(s) may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
 
 Once a media type registration has passed review, the IANA will register the media type and make the media type registration available to the community.
 
@@ -502,9 +502,9 @@ In the case of standards-tree registrations from other standards-related organiz
 
 ## Comments on Media Type Registrations {#comments}
 
-Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer and then passed on to the change controller of the media type if possible.
+Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer(s) and then passed on to the change controller of the media type if possible.
 
-Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer, approves, the comment will be made accessible in conjunction with the type registration.
+Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer(s), approves, the comment will be made accessible in conjunction with the type registration.
 
 ## Change Procedures {#change}
 
