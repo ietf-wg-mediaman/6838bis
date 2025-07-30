@@ -82,6 +82,8 @@ This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234
 
 Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree ({{trees}}).
 
+Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
+
 Additional requirements specific to the registration of XML media types are specified in {{!RFC7303}}.
 
 ## Functionality
@@ -89,16 +91,6 @@ Additional requirements specific to the registration of XML media types are spec
 Media types MUST function as actual media formats. Registration of things that are better thought of as a transfer encoding, as a charset, or as a collection of separate entities of another type, is not allowed. For example, although applications exist to decode the base64 transfer encoding {{!RFC2045}}, base64 cannot be registered as a media type.
 
 This requirement applies regardless of the registration tree involved.
-
-## Publication {#publication}
-
-Media types registered in the standards tree by the IETF MUST be published as RFCs. Media types registered in the vendor and personal trees can be published as RFCs, but this is not required.
-
-Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
-
-Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
-
-Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
 
 ### Specification Availability
 
@@ -268,6 +260,8 @@ Top-level types can place various restrictions on the media types that use them.
 
 In some cases, a new media type may not be easily classified under any currently defined top-level type names. Such cases are expected to be quite rare. However, if such a case does arise, a new top-level type can be defined to accommodate it.
 
+Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
+
 ### Required Criteria
 
 Definitions of new top-level types are required to fulfil the following criteria:
@@ -336,11 +330,13 @@ Registrations in the standards tree are either:
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
-The first procedure is used for registrations from IETF Consensus documents on the IETF stream, and can be used for RFCs from other streams. See {{publication}} for publication requirements.
+The first procedure is used for registrations from IETF Consensus documents on the IETF stream, and can be used for RFCs from other streams.
 
 In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}. The format is required to be described by a formal specification produced by the submitting standards-related organization.
 
 The third case is described in {{community}}.
+
+Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
 
 Media types in the standards tree do not have faceted subtype names, unless they are given legacy status using the process described in {{legacy}}.
 
