@@ -176,7 +176,7 @@ Parameter names are case-insensitive and no meaning is attached to the order in 
 
 There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary valued parameters, while permitted in some protocols, are best avoided.
 
-Some parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for "Bucket" Media Types {{!RFC6381}} identify media codecs used inside the container and their parameters. RTP payload formats has several common parameters: see {{!RFC4855}}, and {{!RFC8851}}.
+Some parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for "Bucket" Media Types {{!RFC6381}} identify media codecs used inside the container and their parameters. RTP payload formats have several common parameters: see {{!RFC4855}}, and {{!RFC8851}}.
 
 Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME {{!RFC2045}} {{?RFC2231}} and HTTP {{!RFC9110}} {{?RFC8187}} allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.
 
