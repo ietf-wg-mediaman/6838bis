@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 30 January 2026                                    29 July 2025
+Expires: 31 January 2026                                    30 July 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 January 2026.
+   This Internet-Draft will expire on 31 January 2026.
 
 Copyright Notice
 
@@ -68,18 +68,17 @@ Table of Contents
      1.1.  Conventions Used in This Document
    2.  Media Type Registration Requirements
      2.1.  Functionality
-     2.2.  Publication
-       2.2.1.  Specification Availability
-       2.2.2.  Intellectual Property
-     2.3.  Canonicalization and Interoperability
-     2.4.  Naming
-       2.4.1.  Aliases
-     2.5.  Parameters
-     2.6.  Encoding
-     2.7.  Fragment Identifiers
-     2.8.  Security
-     2.9.  Additional Information
-     2.10. Non-Requirements
+       2.1.1.  Specification Availability
+       2.1.2.  Intellectual Property
+     2.2.  Canonicalization and Interoperability
+     2.3.  Naming
+       2.3.1.  Aliases
+     2.4.  Parameters
+     2.5.  Encoding
+     2.6.  Fragment Identifiers
+     2.7.  Security
+     2.8.  Additional Information
+     2.9.  Non-Requirements
    3.  Top-Level Media Types
      3.1.  Additional Top-Level Types
        3.1.1.  Required Criteria
@@ -164,6 +163,11 @@ Table of Contents
    requirements can vary depending on the registration tree
    (Section 4.1).
 
+   Other than IETF registrations in the standards tree, the registration
+   of a media type does not imply endorsement, approval, or
+   recommendation by the IANA or the IETF or even certification that the
+   specification is adequate.
+
    Additional requirements specific to the registration of XML media
    types are specified in [RFC7303].
 
@@ -179,25 +183,7 @@ Table of Contents
    This requirement applies regardless of the registration tree
    involved.
 
-2.2.  Publication
-
-   Media types registered in the standards tree by the IETF MUST be
-   published as RFCs.  Media types registered in the vendor and personal
-   trees can be published as RFCs, but this is not required.
-
-   Standards-tree registrations for media types defined by other
-   standards-related organizations MUST be described by a formal
-   specification produced by that organization.
-
-   Other than IETF registrations in the standards tree, the registration
-   of a media type does not imply endorsement, approval, or
-   recommendation by the IANA or the IETF or even certification that the
-   specification is adequate.
-
-   Registration of a new top-level type requires Standards Action in the
-   IETF and, hence, the publication of a RFC on the Standards Track.
-
-2.2.1.  Specification Availability
+2.1.1.  Specification Availability
 
    A permanent and readily available public specification of the format
    for the media type MUST exist for all types registered in the
@@ -213,7 +199,7 @@ Table of Contents
    between having a name reserved and having the potential for useful
    interoperation.
 
-2.2.2.  Intellectual Property
+2.1.2.  Intellectual Property
 
    The registration of media types involving patented technology is
    permitted.  However, the restrictions set forth in BCP 79 [RFC8179]
@@ -230,7 +216,7 @@ Table of Contents
    Copyright on the registration template needs to allow the IANA to
    copy it into the IANA registry.
 
-2.3.  Canonicalization and Interoperability
+2.2.  Canonicalization and Interoperability
 
    All registered media types MUST employ a single, canonical data
    format, regardless of registration tree.
@@ -250,7 +236,7 @@ Table of Contents
    The recommendations in this subsection apply regardless of the
    registration tree involved.
 
-2.4.  Naming
+2.3.  Naming
 
    All registered media types MUST be assigned top-level type and
    subtype names.  The combination of these names serves to uniquely
@@ -295,7 +281,7 @@ Table of Contents
    These requirements apply regardless of the registration tree
    involved.
 
-2.4.1.  Aliases
+2.3.1.  Aliases
 
    In some cases, a single media type may have been widely deployed
    using multiple names prior to registration.  In such cases, a
@@ -305,7 +291,7 @@ Table of Contents
    type is known can be supplied as additional information in order to
    assist applications in processing the media type properly.
 
-2.5.  Parameters
+2.4.  Parameters
 
    Media types can be defined to allow or require use of media type
    parameters.  Additionally, some parameters may be automatically made
@@ -355,7 +341,7 @@ Table of Contents
    managed in the same manner as other changes to the media type; see
    Section 5.5.
 
-2.6.  Encoding
+2.5.  Encoding
 
    Some transports impose restrictions on the type of data they can
    carry.  For example, Internet mail traditionally was limited to 7bit
@@ -390,7 +376,7 @@ Table of Contents
    Additional restrictions on 7bit and 8bit text are given in
    Section 4.1.1 of [RFC2046].
 
-2.7.  Fragment Identifiers
+2.6.  Fragment Identifiers
 
    Media type registrations can specify how applications should
    interpret fragment identifiers (specified in Section 3.5 of
@@ -402,7 +388,7 @@ Table of Contents
    follow whatever fragment identifier rules are given in the structured
    syntax suffix registration.
 
-2.8.  Security
+2.7.  Security
 
    All registrations of types in the standards tree MUST include an
    analysis of security issues.  A similar analysis for media types
@@ -464,7 +450,7 @@ Table of Contents
       environment.  Types should always document whether or not they
       need such services in their security considerations.
 
-2.9.  Additional Information
+2.8.  Additional Information
 
    The following optional information should be included in the
    specification of a media type if it is available:
@@ -493,7 +479,7 @@ Table of Contents
    type format.  It is suggested that this be done by incorporating the
    IANA media type registration form into the specification itself.
 
-2.10.  Non-Requirements
+2.9.  Non-Requirements
 
    Universal support and implementation of a media type are NOT a
    requirement for registration.
@@ -533,6 +519,9 @@ Table of Contents
    any currently defined top-level type names.  Such cases are expected
    to be quite rare.  However, if such a case does arise, a new top-
    level type can be defined to accommodate it.
+
+   Registration of a new top-level type requires Standards Action in the
+   IETF and, hence, the publication of a RFC on the Standards Track.
 
 3.1.1.  Required Criteria
 
@@ -678,7 +667,7 @@ Table of Contents
 
    The first procedure is used for registrations from IETF Consensus
    documents on the IETF stream, and can be used for RFCs from other
-   streams.  See Section 2.2 for publication requirements.
+   streams.
 
    In the second case, the IESG makes a one-time decision on whether the
    registration submitter represents a recognized standards-related
@@ -688,6 +677,11 @@ Table of Contents
    organization.
 
    The third case is described in Section 4.1.1.1.
+
+   Media types registered by the IETF in the standards tree MUST be
+   published as RFCs.  Standards-tree registrations for media types
+   defined by other standards-related organizations MUST be described by
+   a formal specification produced by that organization.
 
    Media types in the standards tree do not have faceted subtype names,
    unless they are given legacy status using the process described in
@@ -1213,7 +1207,7 @@ Table of Contents
       A full citation to a section in a specification that provides
       general guidance regarding encoding considerations for any type
       employing this syntax.  The same requirements for media type
-      encoding considerations given in Section 2.6 apply here.
+      encoding considerations given in Section 2.5 apply here.
 
    Interoperability considerations
       A full citation to a section in a specification that documents any
@@ -1232,7 +1226,7 @@ Table of Contents
       A full citation to a section in a specification that provides
       security considerations shared by media types employing this
       structured syntax must be specified here.  The same requirements
-      for media type security considerations given in Section 2.8 apply
+      for media type security considerations given in Section 2.7 apply
       here, with the exception that the option of not assessing the
       security considerations is not available for suffix registrations.
 
@@ -1247,7 +1241,7 @@ Table of Contents
 7.  Security Considerations
 
    Security requirements for both media type and media type suffix
-   registrations are discussed in Section 2.8.
+   registrations are discussed in Section 2.7.
 
 8.  IANA Considerations
 
@@ -1445,7 +1439,7 @@ Appendix A.  Historical Note
    It may be desirable to restrict the use of media types to specific
    environments or to prohibit their use in other environments.  This
    specification incorporates such restrictions into media type
-   registrations in a systematic way.  See Section 2.10 for additional
+   registrations in a systematic way.  See Section 2.9 for additional
    discussion.
 
 Appendix B.  Legacy Media Types
