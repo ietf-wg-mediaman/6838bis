@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-29T01:20:53.495773+00:00",
+  "timestamp": "2025-07-31T01:13:43.251574+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -696,7 +696,7 @@
       "labels": [],
       "body": "https://datatracker.ietf.org/doc/rfc6381/ defines parameters that are used to describe further properties of like codec capabilities of what is included in file formats that are so called bucket types, like the ISO based media file formats. \n\nShould there be a reference to these parameters and the consideration in the media type registry to ensure that this aspect is not forgotten. I can see that this could be either part of the relevant media top levels that commonly have these, or possibly under the parameter encoding section. \n\n",
       "createdAt": "2025-03-18T10:41:39Z",
-      "updatedAt": "2025-07-25T07:53:22Z",
+      "updatedAt": "2025-07-29T11:58:13Z",
       "closedAt": null,
       "comments": [
         {
@@ -712,6 +712,20 @@
           "body": "Seems to fit under \"advice on how to define parameters\".\n",
           "createdAt": "2025-07-25T07:53:22Z",
           "updatedAt": "2025-07-25T07:53:22Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@gloinul could you suggest some text?",
+          "createdAt": "2025-07-29T10:35:11Z",
+          "updatedAt": "2025-07-29T10:35:11Z"
+        },
+        {
+          "author": "gloinul",
+          "authorAssociation": "NONE",
+          "body": "@mnot proposal in #56.\n\n\n",
+          "createdAt": "2025-07-29T11:58:13Z",
+          "updatedAt": "2025-07-29T11:58:13Z"
         }
       ]
     },
@@ -720,15 +734,15 @@
       "id": "I_kwDOMdBaOc6uiD2p",
       "title": "Instructions for other SDOs on how to maintain registrations",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/20",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
-      "updatedAt": "2025-07-25T08:41:31Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-29T10:32:31Z",
+      "closedAt": "2025-07-29T10:32:31Z",
       "comments": [
         {
           "author": "mnot",
@@ -772,7 +786,7 @@
       "id": "I_kwDOMdBaOc6wnwnN",
       "title": "More detailed change procedures?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/21",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -781,8 +795,8 @@
       ],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-07-25T08:27:59Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-29T10:38:06Z",
+      "closedAt": "2025-07-29T10:38:06Z",
       "comments": [
         {
           "author": "mnot",
@@ -1424,40 +1438,70 @@
       "labels": [],
       "body": "In draft-ietf-mediaman-6838bis-05:\n\n5.3.  Review and Approval\n\n   With the exception of provisional standards-tree registrations,\n   registrations submitted to the IANA will be first given to the media\n   types reviewer, who is appointed by the IETF Applications Area\n   Director(s).\n\nFirstly, the text about media type reviewer was deleted elsewhere in the document.\n\nSecondly, there are not Application Area Directors anymore, as the area is now ART.\n",
       "createdAt": "2025-07-16T14:55:37Z",
-      "updatedAt": "2025-07-16T14:55:37Z",
+      "updatedAt": "2025-07-29T15:16:00Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Firstly, the text about media type reviewer was deleted elsewhere in the document.\n\nSpecifically?\n\n> Secondly, there are not Application Area Directors anymore, as the area is now ART.\n\nWe could go with \"Apps and Realtime\", or we could just say \"IESG\" if we aren't sure there won't be another readjustment. Given that WIT also has a stake in this, I prefer the latter. Thoughts?",
+          "createdAt": "2025-07-29T10:47:37Z",
+          "updatedAt": "2025-07-29T10:47:37Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I would go with \"the Area Director that the IESG has given responsibility for media type registrations\", leaving the IESG to assign one. I'm sure there will be a new adjustment before another decade passes (but IESG is referenced so much that I doubt that IESG will be renamed or cease to exist as long as the IETF lives...)\n",
+          "createdAt": "2025-07-29T13:32:45Z",
+          "updatedAt": "2025-07-29T13:32:45Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Note - if we punt this to RFC 8126 section 5.3, as I suggested in #50, this issue goes away.\n",
+          "createdAt": "2025-07-29T15:16:00Z",
+          "updatedAt": "2025-07-29T15:16:00Z"
+        }
+      ]
     },
     {
       "number": 43,
       "id": "I_kwDOMdBaOc7A5qUL",
       "title": "Non IETF Stream registration in Standards Tree approval by IESG",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/43",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "aamelnikov",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "I don't see a separate ticket explaining this change. My apologies if I missed it.\n\nThe new text in -05 says:\n\n4.1.1.  Standards Tree\n\n   Registrations in the standards tree are either:\n\n   1.  approved directly by the IESG, or\n\nand later:\n\n   The first procedure is used for registrations from IETF Consensus\n   documents.  See Section 2.2 for publication requirements.\n\nI think there is one specific case that was lost in editing:\n\n  Registrations published in non-IETF RFC streams are also allowed, but require IESG approval.\n\nThese are not necessarily \"community formats\", at least not at the time of registration.",
       "createdAt": "2025-07-16T15:06:29Z",
-      "updatedAt": "2025-07-16T15:06:29Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-07-29T10:21:16Z",
+      "closedAt": "2025-07-29T10:21:11Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@aamelnikov PTAL.",
+          "createdAt": "2025-07-29T10:21:16Z",
+          "updatedAt": "2025-07-29T10:21:16Z"
+        }
+      ]
     },
     {
       "number": 44,
       "id": "I_kwDOMdBaOc7BCn47",
       "title": "Nit: Use https:// URLs consistently",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/44",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "In section 1 and section 5.2, there are HTTP URLs. These should be https: URLs.\n(both URLs sensibly redirect to the https: pages.)\n",
       "createdAt": "2025-07-17T08:41:58Z",
-      "updatedAt": "2025-07-17T08:41:58Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-29T10:08:16Z",
+      "closedAt": "2025-07-29T10:08:16Z",
       "comments": []
     },
     {
@@ -1465,31 +1509,53 @@
       "id": "I_kwDOMdBaOc7BCq6o",
       "title": "Nit: Remove standards-tree discussion from 2.2",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/45",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Section 2.2 specifies rules for how standards tree registrations are documented. This belongs in section 4.1.1 \"Standards tree\". In particular, 2.2 misses the community specification carve-out.\n\nSugestion: Delete the text in 2.2 prior to section 2.2.2.\n\n",
       "createdAt": "2025-07-17T08:45:33Z",
-      "updatedAt": "2025-07-17T08:45:33Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-07-30T00:54:44Z",
+      "closedAt": "2025-07-30T00:54:13Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Which text specifically are you referring to?",
+          "createdAt": "2025-07-29T10:34:10Z",
+          "updatedAt": "2025-07-29T10:34:10Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "\"Media types registered in the standards tree by the IETF MUST be published as RFCs. Media types registered in the vendor and personal trees can be published as RFCs, but this is not required.\n\nStandards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.\n\nOther than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.\"\n\nThese paragraphs would actually improve section 4.1.1 (which doesn't mention publication requirements), but referring to the special rules for the standards tree before you define the registration trees seems out of sequence.\n\n\n",
+          "createdAt": "2025-07-29T15:03:45Z",
+          "updatedAt": "2025-07-29T15:03:45Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Moved. I had them under \"Registration Requirements\" because that's what they are, but don't feel strongly about it.",
+          "createdAt": "2025-07-30T00:54:44Z",
+          "updatedAt": "2025-07-30T00:54:44Z"
+        }
+      ]
     },
     {
       "number": 46,
       "id": "I_kwDOMdBaOc7BCuUR",
       "title": "Nit: Grammar in 2.4.1",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/46",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "\"are required use\" -> \"are required to use\".\n",
       "createdAt": "2025-07-17T08:49:28Z",
-      "updatedAt": "2025-07-17T08:49:28Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-29T10:08:15Z",
+      "closedAt": "2025-07-29T10:08:15Z",
       "comments": []
     },
     {
@@ -1497,15 +1563,15 @@
       "id": "I_kwDOMdBaOc7BDCPR",
       "title": "Nit: Haptics is now RFC 9695",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/47",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "but the I-D form is referenced in section 3.1.2\n\n",
       "createdAt": "2025-07-17T09:15:43Z",
-      "updatedAt": "2025-07-17T09:15:43Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-29T10:08:15Z",
+      "closedAt": "2025-07-29T10:08:15Z",
       "comments": []
     },
     {
@@ -1513,15 +1579,15 @@
       "id": "I_kwDOMdBaOc7BDHZ-",
       "title": "Nit: Replace \"files\" with \"data\" in 4.1.2 vendor tree",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/48",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Current text:\n\nA registration may be placed in the vendor tree by anyone who needs to interchange files associated with some product or set of products.\n\nSuggested text:\n\nA registration may be placed in the vendor tree by anyone who needs to interchange data associated with some product or set of products.\n\nJustification: A lot of the stuff that MIME types are used for never hits a file.\n",
       "createdAt": "2025-07-17T09:22:40Z",
-      "updatedAt": "2025-07-17T09:22:40Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-29T10:08:15Z",
+      "closedAt": "2025-07-29T10:08:15Z",
       "comments": []
     },
     {
@@ -1529,15 +1595,15 @@
       "id": "I_kwDOMdBaOc7BDORQ",
       "title": "Nit: Move section 4.2.4 (\"Additional Structured Syntax Suffixes\") into section 6, or delete",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/49",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This section seems to be about registration, not about what a structured syntax suffix is.\n\nIt would serve well as an introductory paragrahp to section 6.\n\n",
       "createdAt": "2025-07-17T09:31:17Z",
-      "updatedAt": "2025-07-17T09:31:17Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-29T10:23:50Z",
+      "closedAt": "2025-07-29T10:23:50Z",
       "comments": []
     },
     {
@@ -1552,7 +1618,7 @@
       "labels": [],
       "body": "Section 5.4 contains both the definition of the media types reviewer, the media types reviewer's role in the registration procedure, and the appeals procedure for decisions.\n\nThis could probably be broken into separate sections:\n\n- A section defining the media types reviewer, what its role is and who appoints people to the role (perhaps a part of section 2). We may want to call out that this is a \"designated expert\" in the terminology of RFC 8126 section 4.5 (IANA considerations guidelines). That's also a good place to say that \"there is one role, but the number of people filling it is at the discretion of the appointing body\".\n- A section on the role of the media types reviwer in the review process (section 5.4 is as good a place as anything)\n\nThe idea that decisions by the MTR can be appealed probably can go in either section.\n\n",
       "createdAt": "2025-07-18T12:12:07Z",
-      "updatedAt": "2025-07-21T13:53:50Z",
+      "updatedAt": "2025-07-29T15:12:47Z",
       "closedAt": null,
       "comments": [
         {
@@ -1561,6 +1627,13 @@
           "body": "Cross-linking #42 since the subject matter overlaps.\n",
           "createdAt": "2025-07-21T13:53:50Z",
           "updatedAt": "2025-07-21T13:53:50Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "In addition: At the moment, we have ~6 occurences of \"Media types reviewer\" (mostly in 5.3) and ~6 occurences of \"Designated Expert\". We might want to use one term.\n\nRFC 8126 uses \"designated expert\" for the role and \"expert review\" for what the expert does, and seems to be consistent about it.\n\nAlso, [that document](https://datatracker.ietf.org/doc/html/rfc8126#section-5.2.1) has language for appointing designated experts and appealing their decisions, which would allow us to avoid having to respecify that part.",
+          "createdAt": "2025-07-29T15:12:47Z",
+          "updatedAt": "2025-07-29T15:12:47Z"
         }
       ]
     },
@@ -1585,16 +1658,24 @@
       "id": "I_kwDOMdBaOc7BpCbZ",
       "title": "Should 6838bis refer to RFC 7120 for \"early registration\"?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/52",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "It seems that a whole RFC exists talking about early registration.\nShould we refer to it?\n",
       "createdAt": "2025-07-21T13:51:49Z",
-      "updatedAt": "2025-07-21T13:51:49Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-07-29T10:48:59Z",
+      "closedAt": "2025-07-29T10:48:59Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Duplicate of #38.",
+          "createdAt": "2025-07-29T10:25:42Z",
+          "updatedAt": "2025-07-29T10:25:42Z"
+        }
+      ]
     },
     {
       "number": 54,
@@ -2529,6 +2610,141 @@
           "createdAt": "2025-07-28T01:34:17Z",
           "updatedAt": "2025-07-28T01:34:17Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "id": "PR_kwDOMdBaOc6hKWpc",
+      "title": "Proposal for text addressing Bucket Types and other common parameter",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/56",
+      "state": "OPEN",
+      "author": "gloinul",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This text proposal attempts to address issue #19 ",
+      "createdAt": "2025-07-29T11:51:05Z",
+      "updatedAt": "2025-07-30T09:21:20Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "9e333b64310894df31860fdeac5a7db51b7c012f",
+      "headRepository": "gloinul/6838bis",
+      "headRefName": "issue19",
+      "headRefOid": "8bdafd9eac88ea68b412e11819c205dcb6b3789b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "gloinul",
+          "authorAssociation": "NONE",
+          "body": "Thanks for the suggestions, simplified the last sentence also to make it more straightforward. \r\n\r\n@alvestrand do think anything should be done about the charset for text/* media types? If you do do you have a sentence?",
+          "createdAt": "2025-07-30T08:50:27Z",
+          "updatedAt": "2025-07-30T08:50:27Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc622vuK",
+          "commit": {
+            "abbreviatedOid": "9a1cae9"
+          },
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-29T14:18:58Z",
+          "updatedAt": "2025-07-29T14:18:59Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "The most well known \"common\" parameter is probably \"charset\" from the text/ top level type.\r\n",
+              "createdAt": "2025-07-29T14:18:59Z",
+              "updatedAt": "2025-07-29T14:18:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc629aM-",
+          "commit": {
+            "abbreviatedOid": "9a1cae9"
+          },
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-30T00:17:44Z",
+          "updatedAt": "2025-07-30T00:17:44Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\nSome parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for \"Bucket\" Media Types {{!RFC6381}} identify media codecs used inside the container and their parameters. Another example is used with RTP payload formats: see {{!RFC4855}}, and {{!RFC8851}}.\r\n```\r\n\r\nEditorial nits above. I don't know what \"indicate which media codecs and their complexity are represented inside the data object identified by the media type\" means, though.\r\n",
+              "createdAt": "2025-07-30T00:17:44Z",
+              "updatedAt": "2025-07-30T07:02:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc62_OdX",
+          "commit": {
+            "abbreviatedOid": "9a1cae9"
+          },
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-30T06:18:23Z",
+          "updatedAt": "2025-07-30T06:18:23Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "That should probably be replaced with \"identify media codecs used inside the container and their parameters\" - registration procedures shouldn't be concerned with what the parameters indicate.\r\n",
+              "createdAt": "2025-07-30T06:18:23Z",
+              "updatedAt": "2025-07-30T06:18:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc62_tla",
+          "commit": {
+            "abbreviatedOid": "9a1cae9"
+          },
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-30T07:02:35Z",
+          "updatedAt": "2025-07-30T07:02:35Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Done.",
+              "createdAt": "2025-07-30T07:02:35Z",
+              "updatedAt": "2025-07-30T07:02:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc63BKsu",
+          "commit": {
+            "abbreviatedOid": "09f45a2"
+          },
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-30T09:05:12Z",
+          "updatedAt": "2025-07-30T09:05:12Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\nSome parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for \"Bucket\" Media Types {{!RFC6381}} identify media codecs used inside the container and their parameters. RTP payload formats have several common parameters: see {{!RFC4855}}, and {{!RFC8851}}.\r\n```",
+              "createdAt": "2025-07-30T09:05:12Z",
+              "updatedAt": "2025-07-30T09:05:13Z"
+            }
+          ]
         }
       ]
     }
