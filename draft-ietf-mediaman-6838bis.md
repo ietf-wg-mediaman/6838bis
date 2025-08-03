@@ -336,7 +336,7 @@ In the second case, the IESG makes a one-time decision on whether the registrati
 
 The third case is described in {{community}}.
 
-Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
+Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization. Note that in both cases, the early allocation process described in {{!RFC7120}} is available.
 
 Media types in the standards tree do not have faceted subtype names, unless they are given legacy status using the process described in {{legacy}}.
 
