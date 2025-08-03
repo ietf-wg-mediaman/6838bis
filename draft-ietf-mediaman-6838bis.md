@@ -32,7 +32,7 @@ author:
  -
     ins: P. Resnick
     name: Pete Resnick
-    organization:
+    organization: Episteme Technology Consulting
     email: resnick@episteme.net
 
 informative:
@@ -66,7 +66,7 @@ Those labels are known as media types. A media type consists of a top-level type
 
 {{requirements}} defines the criteria for registering media types. {{procedures}} outlines the procedures used to do so. The location of the media type registry is:
 
-> http://www.iana.org/assignments/media-types/
+> https://www.iana.org/assignments/media-types/
 
 {{suffix-procedures}} outlines the procedures for managing the registry for structured syntax suffixes. It is located at:
 
@@ -82,6 +82,8 @@ This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234
 
 Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree ({{trees}}).
 
+Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
+
 Additional requirements specific to the registration of XML media types are specified in {{!RFC7303}}.
 
 ## Functionality
@@ -89,16 +91,6 @@ Additional requirements specific to the registration of XML media types are spec
 Media types MUST function as actual media formats. Registration of things that are better thought of as a transfer encoding, as a charset, or as a collection of separate entities of another type, is not allowed. For example, although applications exist to decode the base64 transfer encoding {{!RFC2045}}, base64 cannot be registered as a media type.
 
 This requirement applies regardless of the registration tree involved.
-
-## Publication {#publication}
-
-Media types registered in the standards tree by the IETF MUST be published as RFCs. Media types registered in the vendor and personal trees can be published as RFCs, but this is not required.
-
-Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
-
-Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
-
-Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
 
 ### Specification Availability
 
@@ -156,7 +148,7 @@ These requirements apply regardless of the registration tree involved.
 
 ### Aliases {#deprecated-aliases}
 
-In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications are required use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.
+In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications are required to use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.
 
 ## Parameters
 
@@ -268,6 +260,8 @@ Top-level types can place various restrictions on the media types that use them.
 
 In some cases, a new media type may not be easily classified under any currently defined top-level type names. Such cases are expected to be quite rare. However, if such a case does arise, a new top-level type can be defined to accommodate it.
 
+Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
+
 ### Required Criteria
 
 Definitions of new top-level types are required to fulfil the following criteria:
@@ -288,7 +282,7 @@ Additional considerations for the definition of a new top-level type include:
 
 * Existing wide use of an unregistered top-level type may be an indication of a need, and therefore an argument for formally defining a new top-level type. On the other hand, the use of unregistered top-level types is highly discouraged.
 
-* Use of an IETF Working Group to define a new top-level type is not needed, but may be advisable in some cases. There are examples of new top-level type definitions without a Working Group ({{?RFC2077}}), with a short, dedicated WG ({{?RFC8081}}), and with a Working Group that included other related work ({{?I-D.ietf-mediaman-haptics}}).
+* Use of an IETF Working Group to define a new top-level type is not needed, but may be advisable in some cases. There are examples of new top-level type definitions without a Working Group ({{?RFC2077}}), with a short, dedicated WG ({{?RFC8081}}), and with a Working Group that included other related work ({{?RFC9695}}).
 
 * The document defining the new top-level type should include initial registrations of actual subtypes. The exception may be a top-level type similar to 'example'. This will help to show the need for the new top-level type, will allow checking the appropriateness of the definition of the new top-level type, will avoid separate work for registering an initial slate of subtypes, and will provide examples of what is considered a valid subtype for future subtype registrations.
 
@@ -322,7 +316,7 @@ To increase the efficiency and flexibility of the registration process, differen
 
 For example, a subtype that is recommended for wide support and implementation by the Internet community would be registered in the standards tree and not have a prefix, while a subtype that is used to move files associated with proprietary software would be registered in the vendor tree, and so its subtype name would begin with a "vnd." prefix.
 
-Note that some previously defined media types do not conform to the naming conventions described below; see {{grandfather}}.
+Note that some previously defined media types do not conform to the naming conventions described below; see {{legacy}}.
 
 ### Standards Tree
 
@@ -336,13 +330,15 @@ Registrations in the standards tree are either:
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
-The first procedure is used for registrations from IETF Consensus documents. See {{publication}} for publication requirements.
+The first procedure is used for registrations from IETF Consensus documents on the IETF stream, and can be used for RFCs from other streams.
 
 In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}. The format is required to be described by a formal specification produced by the submitting standards-related organization.
 
 The third case is described in {{community}}.
 
-Media types in the standards tree do not have faceted subtype names, unless they are grandfathered in using the process described in {{grandfather}}.
+Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
+
+Media types in the standards tree do not have faceted subtype names, unless they are given legacy status using the process described in {{legacy}}.
 
 The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. In the case of IETF standards, the change controller is normally the IESG.
 
@@ -368,7 +364,7 @@ Note that such registrations still go through preliminary community review ({{pr
 
 The vendor tree is intended for media types associated with publicly available products. "Vendor" and "producer" are construed very broadly in this context, and are considered equivalent.
 
-A registration may be placed in the vendor tree by anyone who needs to interchange files associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See {{change}} for additional information.
+A registration may be placed in the vendor tree by anyone who needs to interchange data associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See {{change}} for additional information.
 
 When a third party registers a type on behalf of someone else, both entities should be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".
 
@@ -396,7 +392,7 @@ Subtype names with "x." as the first facet are intended exclusively for use in p
 
 The low barrier to registration in the vendor and personal trees means it should rarely, if ever, be necessary to use unregistered types. Therefore, use of types in the "x." tree is strongly discouraged.
 
-Note that types with subtype names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly uses an "x-" subtype name prefix, it can be registered in an alternative tree by following the procedure defined in {{grandfather}}.
+Note that types with subtype names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly uses an "x-" subtype name prefix, it can be registered in an alternative tree by following the procedure defined in {{legacy}}.
 
 ### Additional Registration Trees
 
@@ -457,9 +453,6 @@ An attacker might append structured syntax suffixes in order to trick processors
 
 Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Processing of media types based only on the presence of a structured syntax suffix needs to ensure that further processing does not blindly trust the decoded data. For example,  proper magic header or file structure checking could mitigate this attack.
 
-### Additional Structured Syntax Suffixes
-
-The primary guideline for whether a structured syntax suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
 
 #  Media Type Registration Procedures {#procedures}
 
@@ -481,7 +474,7 @@ Standards-tree registrations by recognized standards-related organizations as we
 
 Registration requests can be sent to iana@iana.org. A web form for registration requests is also available at:
 
-> http://www.iana.org/form/media-types
+> https://www.iana.org/form/media-types
 
 ### Provisional Registrations {#provisional}
 
@@ -495,9 +488,9 @@ Provisional registrations can be updated or abandoned at any time. When the regi
 
 ## Review and Approval {#review}
 
-With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the media types reviewer, who is appointed by the IETF Applications Area Director(s). The media types reviewer examines registration requests to make sure they meet the requirements set forth in this document.
+With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the media types reviewer(s), who are appointed by the IETF Applications Area Director(s). The media types reviewer(s) examine registration requests to make sure they meet the requirements set forth in this document.
 
-Decisions made by the media types reviewer may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
+Decisions made by the media types reviewer(s) may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
 
 Once a media type registration has passed review, the IANA will register the media type and make the media type registration available to the community.
 
@@ -505,9 +498,9 @@ In the case of standards-tree registrations from other standards-related organiz
 
 ## Comments on Media Type Registrations {#comments}
 
-Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer and then passed on to the change controller of the media type if possible.
+Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer(s) and then passed on to the change controller of the media type if possible.
 
-Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer, approves, the comment will be made accessible in conjunction with the type registration.
+Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer(s), approves, the comment will be made accessible in conjunction with the type registration.
 
 ## Change Procedures {#change}
 
@@ -517,9 +510,8 @@ Media type registrations may not be deleted; media types that are no longer beli
 
 Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
-The change controller of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.
+When a change to a media type registration is requested, the Designated Expert will assure that the change controller approves the change. If the Designated Expert finds that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.
 
-The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.
 
 ## Registration Template
 
@@ -562,6 +554,8 @@ Provisional registration? (standards tree only):
 Limited-use media types should also note in the applications list whether or not that list is exhaustive.
 
 # Structured Syntax Suffix Registration Procedures {#suffix-procedures}
+
+Structured syntax suffixes must be described by a readily available description, preferably within a document published by an established standards-related organization, for which there's a reference that can be used in a Normative References section of an RFC.
 
 Someone wishing to define a "+suffix" name for a structured syntax for use with a new media type registration should:
 
@@ -635,12 +629,45 @@ Security requirements for both media type and media type suffix registrations ar
 
 In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
 
+## Recognized Standards Organisations
+
+IANA should notify recognized standards organisations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration proceedure (see eg <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
+
 
 #  Acknowledgments
 
 The current authors would like to acknowledge their debt to the late Dr. Jon Postel, whose general model of IANA registration procedures and specific contributions shaped the predecessors of this document {{?RFC2048}} {{?RFC4288}}. We hope that the current version is one with which he would have agreed but, as it is impossible to verify that agreement, we have regretfully removed his name as a co-author.
 
 Randy Bush, Francis Dupont, Bjoern Hoehrmann, Barry Leiba, Murray Kucherawy, Alexey Melnikov, S. Moonesamy, Mark Nottingham, Tom Petch, Peter Saint-Andre, and Jeni Tennison provided many helpful review comments and suggestions.
+
+# Contributors
+
+Much of the text of this document is directly taken from {{?RFC6838}} and {{?RFC9694}}. We acknowledge the following authors of those documents as contributors to this:
+
+Ned Freed
+
+John C. Klensin
+1770 Massachusetts Ave, #322
+Cambridge, MA  02140
+USA
+EMail: john+ietf@jck.com
+
+
+Tony Hansen
+AT&T Laboratories
+200 Laurel Ave.
+Middletown, NJ  07748
+USA
+EMail: tony+mtsuffix@maillennium.att.com
+
+Martin J. Dürst
+Aoyama Gakuin University
+Fuchinobe 5-10-1, Chuo-ku, Sagamihara, Kanagawa
+252-5258
+Japan
+Phone: +81 42 759 6329
+Email: duerst@it.aoyama.ac.jp
+URI: https://www.sw.it.aoyama.ac.jp/Dürst/
 
 --- back
 
@@ -650,7 +677,7 @@ The media type registration process was initially defined for registering media 
 
 It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See {{non-requirements}} for additional discussion.
 
-# Grandfathered Media Types {#grandfather}
+# Legacy Media Types {#legacy}
 
 Some media types registered prior to 1996 with unfaceted subtype names, would, if registered under the guidelines in this document, be given a faceted name and placed into either the vendor or personal trees. Reregistration of those types to reflect the appropriate trees is encouraged but not required. Ownership and change control principles outlined in this document apply to those types as if they had been registered in those trees.
 
