@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-31T01:13:43.251574+00:00",
+  "timestamp": "2025-08-05T01:15:50.740967+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -618,12 +618,10 @@
       "author": "gloinul",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [
-        "Blocking Last Call"
-      ],
+      "labels": [],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-07-25T08:16:02Z",
+      "updatedAt": "2025-08-04T07:53:36Z",
       "closedAt": "2025-07-25T08:16:02Z",
       "comments": [
         {
@@ -1646,12 +1644,22 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "I think our procedure for the standards tree is \"IETF review\", for other-SDO registration it is \"Specification Required\", and for the vnd. and prs. faceted registries it is \"Expert Review\". But we don't refer to that terminology, so we don't inherit the requirements from that RFC.\n\nShould we?\n",
       "createdAt": "2025-07-21T13:02:46Z",
-      "updatedAt": "2025-07-21T13:02:46Z",
+      "updatedAt": "2025-08-03T06:39:18Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We do use that terminology and refer to that spec; see the trees section. ",
+          "createdAt": "2025-08-03T06:38:58Z",
+          "updatedAt": "2025-08-03T06:38:58Z"
+        }
+      ]
     },
     {
       "number": 52,
@@ -2438,13 +2446,13 @@
       "labels": [],
       "body": "This PR attempts to soften language in line with the comments in Issue 24.",
       "createdAt": "2025-07-14T16:09:07Z",
-      "updatedAt": "2025-07-25T09:13:28Z",
+      "updatedAt": "2025-08-03T07:01:54Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
-      "baseRefOid": "80a658a9c55e02009bc70045003cfdeee248fc05",
+      "baseRefOid": "5ed5c2dfe9569d0675a2a2312ea61fdb0ff3f171",
       "headRepository": "brentzundel/6838bis",
       "headRefName": "issue-24",
-      "headRefOid": "2a265008077bc43abe70490e839b5a01ae390230",
+      "headRefOid": "ee90138079d104d14367ece751ccd720aa0e13f1",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -2625,7 +2633,7 @@
       "labels": [],
       "body": "This text proposal attempts to address issue #19 ",
       "createdAt": "2025-07-29T11:51:05Z",
-      "updatedAt": "2025-07-30T09:21:20Z",
+      "updatedAt": "2025-08-03T06:29:44Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "9e333b64310894df31860fdeac5a7db51b7c012f",
@@ -2745,8 +2753,80 @@
               "updatedAt": "2025-07-30T09:05:13Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc63r9t7",
+          "commit": {
+            "abbreviatedOid": "8bdafd9"
+          },
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-03T06:29:44Z",
+          "updatedAt": "2025-08-03T06:29:44Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\nSome parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for \"Bucket\" Media Types {{?RFC6381}} identify media codecs used inside the container and their parameters. RTP payload formats have several common parameters: see {{?RFC4855}}, and {{?RFC8851}}.\r\n```\r\n\r\nDon't think these should be a normative refs...",
+              "createdAt": "2025-08-03T06:29:44Z",
+              "updatedAt": "2025-08-03T06:30:07Z"
+            }
+          ]
         }
       ]
+    },
+    {
+      "number": 57,
+      "id": "PR_kwDOMdBaOc6h3lPZ",
+      "title": "Media type reviewer -> Designated Expert",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/57",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #50; Fixes #42.",
+      "createdAt": "2025-08-03T06:37:59Z",
+      "updatedAt": "2025-08-03T06:37:59Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "5ed5c2dfe9569d0675a2a2312ea61fdb0ff3f171",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/50",
+      "headRefOid": "0313daeb78ae73e08b32edc590060320cfdb7bf2",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 58,
+      "id": "PR_kwDOMdBaOc6h3oWH",
+      "title": "Note early allocation availability",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/58",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #38.",
+      "createdAt": "2025-08-03T07:00:59Z",
+      "updatedAt": "2025-08-03T07:01:00Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "5ed5c2dfe9569d0675a2a2312ea61fdb0ff3f171",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/38",
+      "headRefOid": "10d1d5ba680386887c3931112e25bf7b51dd842b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
