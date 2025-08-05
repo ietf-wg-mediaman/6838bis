@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 31 January 2026                                    30 July 2025
+Expires: 6 February 2026                                   5 August 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 January 2026.
+   This Internet-Draft will expire on 6 February 2026.
 
 Copyright Notice
 
@@ -725,7 +725,9 @@ Table of Contents
 
    The Designated Expert(s) have discretion in applying these criteria;
    in rare cases, they might judge it best to register an entry that
-   fails one or more.
+   fails one or more.  The intent is to assure that successfully
+   deployed community formats have registered media types.  As such, the
+   criteria above are designed to preclude anticipatory registrations.
 
    Note that such registrations still go through preliminary community
    review (Section 5.1), and decisions can be appealed (Section 5.3).
