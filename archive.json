@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-07T01:14:37.447638+00:00",
+  "timestamp": "2025-08-10T01:17:59.165772+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -960,7 +960,7 @@
       ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input that had support from other participants is subsequently being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-07-25T10:00:33Z",
+      "updatedAt": "2025-08-08T03:57:44Z",
       "closedAt": null,
       "comments": [
         {
@@ -1032,6 +1032,13 @@
           "body": "Do not tie the hands of the DE.\nMake language talk about what needs to be in the registration.\n",
           "createdAt": "2025-07-25T08:52:13Z",
           "updatedAt": "2025-07-25T08:52:13Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@alvestrand should the PR be merged?",
+          "createdAt": "2025-08-08T03:57:43Z",
+          "updatedAt": "2025-08-08T03:57:43Z"
         }
       ]
     },
@@ -1330,7 +1337,7 @@
       ],
       "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
       "createdAt": "2025-05-27T02:59:57Z",
-      "updatedAt": "2025-07-25T08:57:06Z",
+      "updatedAt": "2025-08-08T03:55:42Z",
       "closedAt": null,
       "comments": [
         {
@@ -1374,6 +1381,13 @@
           "body": "Needs a pointer to RFC 7120. (and ref IANABIS)\nMay need to mention relation to other SDOs.\n\n",
           "createdAt": "2025-07-25T08:54:39Z",
           "updatedAt": "2025-07-25T08:57:06Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@alvestrand does the PR need more discussion or can it be merged?",
+          "createdAt": "2025-08-08T03:55:42Z",
+          "updatedAt": "2025-08-08T03:55:42Z"
         }
       ]
     },
@@ -2446,7 +2460,7 @@
       "labels": [],
       "body": "This PR attempts to soften language in line with the comments in Issue 24.",
       "createdAt": "2025-07-14T16:09:07Z",
-      "updatedAt": "2025-08-06T10:27:48Z",
+      "updatedAt": "2025-08-08T03:57:20Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "4992e6866f2ff1a93f0eb74bcbef11de595149c1",
@@ -2464,6 +2478,13 @@
           "body": "I've adjusted the language of the PR according to the conversation during the meeting at IETF 123",
           "createdAt": "2025-07-25T09:13:28Z",
           "updatedAt": "2025-07-25T09:13:28Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Fixes #24.",
+          "createdAt": "2025-08-08T03:57:20Z",
+          "updatedAt": "2025-08-08T03:57:20Z"
         }
       ],
       "reviews": [
