@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-10T01:17:59.165772+00:00",
+  "timestamp": "2025-08-12T01:07:09.071740+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -691,10 +691,12 @@
       "author": "gloinul",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "https://datatracker.ietf.org/doc/rfc6381/ defines parameters that are used to describe further properties of like codec capabilities of what is included in file formats that are so called bucket types, like the ISO based media file formats. \n\nShould there be a reference to these parameters and the consideration in the media type registry to ensure that this aspect is not forgotten. I can see that this could be either part of the relevant media top levels that commonly have these, or possibly under the parameter encoding section. \n\n",
       "createdAt": "2025-03-18T10:41:39Z",
-      "updatedAt": "2025-07-29T11:58:13Z",
+      "updatedAt": "2025-08-10T21:48:28Z",
       "closedAt": null,
       "comments": [
         {
@@ -1333,11 +1335,11 @@
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [
-        "Ready for PR"
+        "Ready to close"
       ],
       "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
       "createdAt": "2025-05-27T02:59:57Z",
-      "updatedAt": "2025-08-08T03:55:42Z",
+      "updatedAt": "2025-08-10T21:49:13Z",
       "closedAt": null,
       "comments": [
         {
@@ -1447,10 +1449,12 @@
       "author": "aamelnikov",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "In draft-ietf-mediaman-6838bis-05:\n\n5.3.  Review and Approval\n\n   With the exception of provisional standards-tree registrations,\n   registrations submitted to the IANA will be first given to the media\n   types reviewer, who is appointed by the IETF Applications Area\n   Director(s).\n\nFirstly, the text about media type reviewer was deleted elsewhere in the document.\n\nSecondly, there are not Application Area Directors anymore, as the area is now ART.\n",
       "createdAt": "2025-07-16T14:55:37Z",
-      "updatedAt": "2025-07-29T15:16:00Z",
+      "updatedAt": "2025-08-10T21:49:27Z",
       "closedAt": null,
       "comments": [
         {
@@ -1627,10 +1631,12 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "Section 5.4 contains both the definition of the media types reviewer, the media types reviewer's role in the registration procedure, and the appeals procedure for decisions.\n\nThis could probably be broken into separate sections:\n\n- A section defining the media types reviewer, what its role is and who appoints people to the role (perhaps a part of section 2). We may want to call out that this is a \"designated expert\" in the terminology of RFC 8126 section 4.5 (IANA considerations guidelines). That's also a good place to say that \"there is one role, but the number of people filling it is at the discretion of the appointing body\".\n- A section on the role of the media types reviwer in the review process (section 5.4 is as good a place as anything)\n\nThe idea that decisions by the MTR can be appealed probably can go in either section.\n\n",
       "createdAt": "2025-07-18T12:12:07Z",
-      "updatedAt": "2025-07-29T15:12:47Z",
+      "updatedAt": "2025-08-10T21:49:38Z",
       "closedAt": null,
       "comments": [
         {
