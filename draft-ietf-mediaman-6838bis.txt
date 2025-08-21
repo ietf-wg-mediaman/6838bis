@@ -536,12 +536,12 @@ Table of Contents
       this new top-level type to the registry of top-level types.
 
    *  The criteria for what types do and do not fall under the new top-
-      level type are defined clearly.  This will help expert reviewers
-      to evaluate whether a subtype belongs below the new type or not,
-      and whether the registration template for a subtype contains the
-      appropriate information.  If the criteria cannot be defined
-      clearly, this is a strong indication that whatever is being talked
-      about is not suitable as a top-level type.
+      level type are defined clearly.  This will help the Designated
+      Expert(s) to evaluate whether a subtype belongs below the new type
+      or not, and whether the registration template for a subtype
+      contains the appropriate information.  If the criteria cannot be
+      defined clearly, this is a strong indication that whatever is
+      being talked about is not suitable as a top-level type.
 
    *  The RFC clearly documents security considerations applying to all
       or a significant subset of subtypes.
@@ -1013,13 +1013,12 @@ Table of Contents
 5.3.  Review and Approval
 
    With the exception of provisional standards-tree registrations,
-   registrations submitted to the IANA will be first given to the media
-   types reviewer(s), who are appointed by the IETF Applications Area
-   Director(s).  The media types reviewer(s) examine registration
-   requests to make sure they meet the requirements set forth in this
-   document.
+   registrations submitted to the IANA will be first given to the
+   Designated Expert(s), who are appointed by the IETF Applications Area
+   Director(s).  Designated Expert(s) examine registration requests to
+   make sure they meet the requirements set forth in this document.
 
-   Decisions made by the media types reviewer(s) may be appealed to the
+   Decisions made by the Designated Expert(s) may be appealed to the
    IESG using the procedure specified in Section 6.5.4 of [RFC2026].
 
    Once a media type registration has passed review, the IANA will
@@ -1037,12 +1036,12 @@ Table of Contents
 
    Comments on registered media types may be submitted by members of the
    community to the IANA at iana@iana.org.  These comments will be
-   reviewed by the media types reviewer(s) and then passed on to the
-   change controller of the media type if possible.
+   reviewed by the Designated Expert(s) and then passed on to the change
+   controller of the media type if possible.
 
    Submitters of comments may request that their comment be attached to
    the media type registration itself; if the IANA, in consultation with
-   the media types reviewer(s), approves, the comment will be made
+   the Designated Expert(s), approves, the comment will be made
    accessible in conjunction with the type registration.
 
 5.5.  Change Procedures
@@ -1063,13 +1062,13 @@ Table of Contents
    definition invalid under the new definition.
 
    When a change to a media type registration is requested, the
-   Designated Expert will assure that the change controller approves the
-   change.  If the Designated Expert finds that the change controller is
-   unresponsive or uncontactable for a reasonable period of time and
-   reasonable efforts have been made to contact the change controller,
-   they may recommend to the IESG that the change controller be updated.
-   The IESG makes the final decision regarding updates to change
-   controllers.
+   Designated Expert(s) will assure that the change controller approves
+   the change.  If the Designated Expert(s) find that the change
+   controller is unresponsive or uncontactable for a reasonable period
+   of time and reasonable efforts have been made to contact the change
+   controller, they may recommend to the IESG that the change controller
+   be updated.  The IESG makes the final decision regarding updates to
+   change controllers.
 
 5.6.  Registration Template
 
