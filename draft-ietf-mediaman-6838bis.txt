@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 6 February 2026                                   5 August 2025
+Expires: 22 February 2026                                 21 August 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 February 2026.
+   This Internet-Draft will expire on 22 February 2026.
 
 Copyright Notice
 
@@ -681,7 +681,9 @@ Table of Contents
    Media types registered by the IETF in the standards tree MUST be
    published as RFCs.  Standards-tree registrations for media types
    defined by other standards-related organizations MUST be described by
-   a formal specification produced by that organization.
+   a formal specification produced by that organization.  Note that in
+   both cases, the early allocation process described in [RFC7120] is
+   available.
 
    Media types in the standards tree do not have faceted subtype names,
    unless they are given legacy status using the process described in
@@ -1338,6 +1340,10 @@ Table of Contents
               Application Protocols", BCP 178, RFC 6648,
               DOI 10.17487/RFC6648, June 2012,
               <https://www.rfc-editor.org/rfc/rfc6648>.
+
+   [RFC7120]  Cotton, M., "Early IANA Allocation of Standards Track Code
+              Points", BCP 100, RFC 7120, DOI 10.17487/RFC7120, January
+              2014, <https://www.rfc-editor.org/rfc/rfc7120>.
 
    [RFC7303]  Thompson, H. and C. Lilley, "XML Media Types", RFC 7303,
               DOI 10.17487/RFC7303, July 2014,
