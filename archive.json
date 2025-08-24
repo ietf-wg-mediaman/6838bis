@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-12T01:07:09.071740+00:00",
+  "timestamp": "2025-08-24T01:11:19.534321+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -687,21 +687,21 @@
       "id": "I_kwDOMdBaOc6uhdt7",
       "title": "Should the bucket format parameters from RFC 6381 be noted as something to consider?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/19",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gloinul",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
         "Ready to close"
       ],
       "body": "https://datatracker.ietf.org/doc/rfc6381/ defines parameters that are used to describe further properties of like codec capabilities of what is included in file formats that are so called bucket types, like the ISO based media file formats. \n\nShould there be a reference to these parameters and the consideration in the media type registry to ensure that this aspect is not forgotten. I can see that this could be either part of the relevant media top levels that commonly have these, or possibly under the parameter encoding section. \n\n",
       "createdAt": "2025-03-18T10:41:39Z",
-      "updatedAt": "2025-08-10T21:48:28Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-21T04:15:07Z",
+      "closedAt": "2025-08-21T04:15:07Z",
       "comments": [
         {
           "author": "gloinul",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I would also note that RFC 8088 do comment some other parameters that RTP payload format has used with the same definition over multiple media types used to register RTP payload format. I don't know if these needs to be noted or referenced that they exist to help registrants to include them if applicable.  ",
           "createdAt": "2025-03-18T10:55:48Z",
           "updatedAt": "2025-03-18T10:55:48Z"
@@ -722,10 +722,17 @@
         },
         {
           "author": "gloinul",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "@mnot proposal in #56.\n\n\n",
           "createdAt": "2025-07-29T11:58:13Z",
           "updatedAt": "2025-07-29T11:58:13Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Merged.",
+          "createdAt": "2025-08-21T04:15:07Z",
+          "updatedAt": "2025-08-21T04:15:07Z"
         }
       ]
     },
@@ -958,11 +965,12 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
+        "Ready to close",
         "Blocking Last Call"
       ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input that had support from other participants is subsequently being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-08-08T03:57:44Z",
+      "updatedAt": "2025-08-21T04:17:10Z",
       "closedAt": null,
       "comments": [
         {
@@ -995,7 +1003,7 @@
         },
         {
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I raised #41 as a starting point toward drafting language that can find consensus.",
           "createdAt": "2025-07-14T16:10:17Z",
           "updatedAt": "2025-07-14T16:10:17Z"
@@ -1016,7 +1024,7 @@
         },
         {
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I lean toward Harald's opinion here.\n\nI believe it is reasonable to expect the designated experts to be able to determine that one of the ~20 structured suffixes is being used correctly. To expect them to know whether one of the >1600 application media types is being used used correctly doesn't seem reasonable to me. In those cases, having the submitter indicate that they've consulted with the change controller of the base type seems like it would be helpful to the DEs.\n\nI'm also a bit concerned about the amount of times change controllers of suffixes would be consulted.\nMost base types that are used with suffixes only have a few of them (if they have any), but suffixes are often used dozens of times. For example, the +jwt suffix is used 17 times, and the +json suffix is used over 150 times. If this guidance had been in place from the beginning, that would have been a lot of consultations.\n\nThat said, I have no problem adjusting the language in the PR if folks prefer it changed.",
           "createdAt": "2025-07-22T16:34:12Z",
           "updatedAt": "2025-07-22T16:34:12Z"
@@ -1041,6 +1049,13 @@
           "body": "@alvestrand should the PR be merged?",
           "createdAt": "2025-08-08T03:57:43Z",
           "updatedAt": "2025-08-08T03:57:43Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "PR merged; absent other discussion this should be closed.",
+          "createdAt": "2025-08-21T04:16:58Z",
+          "updatedAt": "2025-08-21T04:16:58Z"
         }
       ]
     },
@@ -1330,7 +1345,7 @@
       "id": "I_kwDOMdBaOc64Upcv",
       "title": "Early Allocation",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/38",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -1339,12 +1354,12 @@
       ],
       "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
       "createdAt": "2025-05-27T02:59:57Z",
-      "updatedAt": "2025-08-10T21:49:13Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-21T04:13:27Z",
+      "closedAt": "2025-08-21T04:13:27Z",
       "comments": [
         {
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "So, an early allocation procedure would enable specifications under development to set a placeholder for media types they intend to register once the specifications are finished?",
           "createdAt": "2025-06-04T17:36:10Z",
           "updatedAt": "2025-06-04T17:36:10Z"
@@ -1358,7 +1373,7 @@
         },
         {
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Oh yeah, I remember reading that once.\nThe existing text works for me, though I don't know if it has ever been used.",
           "createdAt": "2025-06-06T15:57:59Z",
           "updatedAt": "2025-06-06T15:57:59Z"
@@ -1390,6 +1405,13 @@
           "body": "@alvestrand does the PR need more discussion or can it be merged?",
           "createdAt": "2025-08-08T03:55:42Z",
           "updatedAt": "2025-08-08T03:55:42Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Not having heard any further feedback, merging.",
+          "createdAt": "2025-08-21T04:13:18Z",
+          "updatedAt": "2025-08-21T04:13:18Z"
         }
       ]
     },
@@ -1445,7 +1467,7 @@
       "id": "I_kwDOMdBaOc7A5gmJ",
       "title": "Is there only a single media type reviewer and who appoints them?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/42",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "aamelnikov",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -1454,8 +1476,8 @@
       ],
       "body": "In draft-ietf-mediaman-6838bis-05:\n\n5.3.  Review and Approval\n\n   With the exception of provisional standards-tree registrations,\n   registrations submitted to the IANA will be first given to the media\n   types reviewer, who is appointed by the IETF Applications Area\n   Director(s).\n\nFirstly, the text about media type reviewer was deleted elsewhere in the document.\n\nSecondly, there are not Application Area Directors anymore, as the area is now ART.\n",
       "createdAt": "2025-07-16T14:55:37Z",
-      "updatedAt": "2025-08-10T21:49:27Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-21T04:14:06Z",
+      "closedAt": "2025-08-21T04:14:06Z",
       "comments": [
         {
           "author": "mnot",
@@ -1627,7 +1649,7 @@
       "id": "I_kwDOMdBaOc7BTMHC",
       "title": "Media types reviewer could use more language",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/50",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1636,8 +1658,8 @@
       ],
       "body": "Section 5.4 contains both the definition of the media types reviewer, the media types reviewer's role in the registration procedure, and the appeals procedure for decisions.\n\nThis could probably be broken into separate sections:\n\n- A section defining the media types reviewer, what its role is and who appoints people to the role (perhaps a part of section 2). We may want to call out that this is a \"designated expert\" in the terminology of RFC 8126 section 4.5 (IANA considerations guidelines). That's also a good place to say that \"there is one role, but the number of people filling it is at the discretion of the appointing body\".\n- A section on the role of the media types reviwer in the review process (section 5.4 is as good a place as anything)\n\nThe idea that decisions by the MTR can be appealed probably can go in either section.\n\n",
       "createdAt": "2025-07-18T12:12:07Z",
-      "updatedAt": "2025-08-10T21:49:38Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-21T04:14:06Z",
+      "closedAt": "2025-08-21T04:14:06Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -1660,7 +1682,7 @@
       "id": "I_kwDOMdBaOc7BoYlt",
       "title": "Should 6838bis use RFC8126 terminology for registration procedures?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/51",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1669,8 +1691,8 @@
       ],
       "body": "I think our procedure for the standards tree is \"IETF review\", for other-SDO registration it is \"Specification Required\", and for the vnd. and prs. faceted registries it is \"Expert Review\". But we don't refer to that terminology, so we don't inherit the requirements from that RFC.\n\nShould we?\n",
       "createdAt": "2025-07-21T13:02:46Z",
-      "updatedAt": "2025-08-03T06:39:18Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-21T04:15:39Z",
+      "closedAt": "2025-08-21T04:15:39Z",
       "comments": [
         {
           "author": "mnot",
@@ -1678,6 +1700,13 @@
           "body": "We do use that terminology and refer to that spec; see the trees section. ",
           "createdAt": "2025-08-03T06:38:58Z",
           "updatedAt": "2025-08-03T06:38:58Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closing absent further feedback.",
+          "createdAt": "2025-08-21T04:15:39Z",
+          "updatedAt": "2025-08-21T04:15:39Z"
         }
       ]
     },
@@ -2459,28 +2488,30 @@
       "id": "PR_kwDOMdBaOc6e1HmR",
       "title": "attempting softer language for Issue 24",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/41",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "brentzundel",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This PR attempts to soften language in line with the comments in Issue 24.",
       "createdAt": "2025-07-14T16:09:07Z",
-      "updatedAt": "2025-08-08T03:57:20Z",
+      "updatedAt": "2025-08-22T13:36:49Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "4992e6866f2ff1a93f0eb74bcbef11de595149c1",
       "headRepository": "brentzundel/6838bis",
       "headRefName": "issue-24",
       "headRefOid": "250d0eddf2ab6063dfce79eced2a3ea721b8cf17",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-21T04:16:35Z",
+      "mergedAt": "2025-08-21T04:16:35Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "e72821f1c15a29df353afe5a5abdd4f19e5d9ca6"
+      },
       "comments": [
         {
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I've adjusted the language of the PR according to the conversation during the meeting at IETF 123",
           "createdAt": "2025-07-25T09:13:28Z",
           "updatedAt": "2025-07-25T09:13:28Z"
@@ -2520,7 +2551,7 @@
             "abbreviatedOid": "8f23a38"
           },
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-25T08:53:15Z",
@@ -2540,7 +2571,7 @@
             "abbreviatedOid": "11b0a75"
           },
           "author": "brentzundel",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-25T09:00:08Z",
@@ -2653,28 +2684,30 @@
       "id": "PR_kwDOMdBaOc6hKWpc",
       "title": "Proposal for text addressing Bucket Types and other common parameter",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/56",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "gloinul",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This text proposal attempts to address issue #19 ",
       "createdAt": "2025-07-29T11:51:05Z",
-      "updatedAt": "2025-08-03T06:29:44Z",
+      "updatedAt": "2025-08-21T04:14:52Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "9e333b64310894df31860fdeac5a7db51b7c012f",
       "headRepository": "gloinul/6838bis",
       "headRefName": "issue19",
-      "headRefOid": "8bdafd9eac88ea68b412e11819c205dcb6b3789b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "237b69bcaad3ff005fcff56cebe89b956b97da8e",
+      "closedAt": "2025-08-21T04:14:52Z",
+      "mergedAt": "2025-08-21T04:14:52Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "b0d1aa6cc1cb5a9493a871b3510e772e84d442af"
+      },
       "comments": [
         {
           "author": "gloinul",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Thanks for the suggestions, simplified the last sentence also to make it more straightforward. \r\n\r\n@alvestrand do think anything should be done about the charset for text/* media types? If you do do you have a sentence?",
           "createdAt": "2025-07-30T08:50:27Z",
           "updatedAt": "2025-07-30T08:50:27Z"
@@ -2808,24 +2841,26 @@
       "id": "PR_kwDOMdBaOc6h3lPZ",
       "title": "Media type reviewer -> Designated Expert",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/57",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Fixes #50; Fixes #42.",
       "createdAt": "2025-08-03T06:37:59Z",
-      "updatedAt": "2025-08-03T06:37:59Z",
+      "updatedAt": "2025-08-21T04:14:07Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "5ed5c2dfe9569d0675a2a2312ea61fdb0ff3f171",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "mnot/50",
       "headRefOid": "0313daeb78ae73e08b32edc590060320cfdb7bf2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-21T04:14:06Z",
+      "mergedAt": "2025-08-21T04:14:06Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "d1547e7044984447a94b0314a6683296b8eade0e"
+      },
       "comments": [],
       "reviews": []
     },
@@ -2834,24 +2869,26 @@
       "id": "PR_kwDOMdBaOc6h3oWH",
       "title": "Note early allocation availability",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/58",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Fixes #38.",
       "createdAt": "2025-08-03T07:00:59Z",
-      "updatedAt": "2025-08-05T04:21:37Z",
+      "updatedAt": "2025-08-21T04:13:28Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "5ed5c2dfe9569d0675a2a2312ea61fdb0ff3f171",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "mnot/38",
       "headRefOid": "10d1d5ba680386887c3931112e25bf7b51dd842b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-21T04:13:26Z",
+      "mergedAt": "2025-08-21T04:13:26Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "b95475de15d917a288a30ee0d9b2d23244aff932"
+      },
       "comments": [],
       "reviews": [
         {
