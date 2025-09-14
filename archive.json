@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-24T01:11:19.534321+00:00",
+  "timestamp": "2025-09-14T01:05:01.049111+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -519,7 +519,7 @@
       ],
       "body": "Including authors of incorporated drafts",
       "createdAt": "2025-01-21T02:45:17Z",
-      "updatedAt": "2025-07-25T08:06:50Z",
+      "updatedAt": "2025-09-11T11:35:17Z",
       "closedAt": null,
       "comments": [
         {
@@ -535,6 +535,13 @@
           "body": "Authors have been included in #53 - keep open to include process contributors.\n",
           "createdAt": "2025-07-25T08:06:50Z",
           "updatedAt": "2025-07-25T08:06:50Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Suggest moving the list of previous authors in the \"contributors\" section to just after the eulogy to Jon Postel, before the list of \"minor contributors\". No need to include their contact information, but may want to mention which RFCs they contributed to.\nIf we need to call out the previous editors in their own sections, I suggest that it should be a subsection of \"Acknowledgements\".\n\nThe relevant \"mainline\" RFCs are:\n- 1521 - Borenstein/Freed - 822ext\n- 1590 - Jon Postel - no WG\n- 2048 - Ned Freed, John Klensin, Jon Postel - 822ext (1991-1993, datatracker does not mention chairs)\n- 4288 - Ned Freed, John Klensin - no WG\n- 6838 - Ned Freed, John Klensin, Tony Hansen - appsawg (Murray, Alexey when it closed)\n\nWe may want to call out the WG chairs of the groups that produced the old versions, where relevant.\n",
+          "createdAt": "2025-09-11T11:35:17Z",
+          "updatedAt": "2025-09-11T11:35:17Z"
         }
       ]
     },
@@ -922,7 +929,7 @@
       ],
       "body": "Standards tree says:\n\n> The \"owner\" of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWhat should it be for community formats?",
       "createdAt": "2025-05-06T23:22:32Z",
-      "updatedAt": "2025-07-25T08:40:16Z",
+      "updatedAt": "2025-09-11T06:31:37Z",
       "closedAt": null,
       "comments": [
         {
@@ -952,6 +959,34 @@
           "body": "Rough consensus seems to be to designate the IESG when the DE does not see an obvious choice for a change controller.\nSome feeling that asking the DE to make a judgment call without extensive guidance is not good.\n\nDecision: Needs further discussion.\n",
           "createdAt": "2025-07-25T08:40:16Z",
           "updatedAt": "2025-07-25T08:40:16Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "There's an argument here that the price you pay for avoiding the standards process but still getting access to the standards tree is that change control remains with a standards body (IESG) rather than the community that 'owns' the format. After all, if it's not able / organised enough to generate a standard for their format, it's reasonable to start from the position that they may not be organised enough to serve as a responsible change controller.",
+          "createdAt": "2025-09-11T03:20:06Z",
+          "updatedAt": "2025-09-11T03:20:06Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I fully agree that the IESG's automatic naming as a change controller is the \"defacto choice\" if there is no visible organized organization to name otherwise. \n\nTo me this extra responsibility should be granted by having a sentence or two or the methods of change-management that IESG will apply. Simply stating public visibility would be probably enough. E.g. one could add the following: \n\n\"When one cannot be identified or contacted, the IESG should be listed as the owner of the registration. The IESG will make any change visible in a public forum.\"",
+          "createdAt": "2025-09-11T06:09:25Z",
+          "updatedAt": "2025-09-11T06:09:25Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think we should say somewhere that \"all changes to registrations follow the review process\" (which includes IANA, at least, messaging the ietf-types@iana mailing list). I'm not sure we do that now, but it's nice and uniform to do so.\n\nIESG shouldn't have a special \"out\" for that.\n",
+          "createdAt": "2025-09-11T06:12:30Z",
+          "updatedAt": "2025-09-11T06:12:30Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "If this is done then it is fine for a reader that just drops by.\n(I trust this is sufficiently done now but was worried about a reader that just reads it)",
+          "createdAt": "2025-09-11T06:31:37Z",
+          "updatedAt": "2025-09-11T06:31:37Z"
         }
       ]
     },
@@ -960,7 +995,7 @@
       "id": "I_kwDOMdBaOc61dBjD",
       "title": "Should coordination with previous registrar of +-suffixed types be required?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/24",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bc-pi",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -970,8 +1005,8 @@
       ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input that had support from other participants is subsequently being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-08-21T04:17:10Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-11T11:16:55Z",
+      "closedAt": "2025-09-11T11:16:55Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -1056,6 +1091,13 @@
           "body": "PR merged; absent other discussion this should be closed.",
           "createdAt": "2025-08-21T04:16:58Z",
           "updatedAt": "2025-08-21T04:16:58Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing per discussion.\n",
+          "createdAt": "2025-09-11T11:16:55Z",
+          "updatedAt": "2025-09-11T11:16:55Z"
         }
       ]
     },
@@ -1771,6 +1813,22 @@
           "updatedAt": "2025-07-25T08:29:21Z"
         }
       ]
+    },
+    {
+      "number": 59,
+      "id": "I_kwDOMdBaOc7LB0Jm",
+      "title": "2119 language - need to restore some?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/59",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is raised to address concerns with https://github.com/ietf-wg-mediaman/6838bis/pull/34, which removed many occurences of 2119 language.\n\nI think we should put a statement under \"Conventions\" saying that RFC 2119 language is  used to describe the requirements put on the registrant in the registration process. The other parties (reviewer, IANA, IESG) are governed by other types of agreements, and don't need to have their responsibilities codified using 2119 language.\n\nIn particular, notes from PR 34:\n\n2.1.2 - \"Copyright on the registration template MUST allow the IANA to copy it\". While the whole paragraph seems a bit silly to me, this is a hard requirement on the registrant, and MUST is appropriate.\n\n2.4 - \"Media types can be defined to allow...\" - suggest MAY is appropriate here.\n\"the names, values and meanings of any parameters are required to be fully specified....\" - MUST is appropriate here,\nlowercase \"are required\" is not clear enough.\n\n4.1.2 - \"when a third party register a type on behalf of someone else, both entities SHOULD be noted...\" - this is a requirement on the registrant, where 2119 is appropriate.\n\n5.1 - \"Notice of a potential media type registration in the standards tree should be sent...\" this is unclear about who is required to do the sending, I think the registrant is the right entity to send it, and it should be a MUST (was a SHOULD).\n\n5.2.1 - \"provisional registration ... can be submitted to IANA\". Here, I think MUST is appropriate - because you get a registration if you submit this to IANA, you don't get a registration otherwise (for instance by posting on media-types) - and the requirement is on the registrant.\n\nWhen reviewing for this language, I found a few places where it was unclear who does an action (too much passive voice). I'll raise a separate issue on that.\n\n",
+      "createdAt": "2025-09-11T12:05:50Z",
+      "updatedAt": "2025-09-11T12:05:50Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
