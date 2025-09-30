@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-14T01:05:01.049111+00:00",
+  "timestamp": "2025-09-30T01:02:00.064779+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1141,7 +1141,7 @@
       ],
       "body": "The spec uses MUST/MAY/SHOULD throughout to indicate registration requirements, not interoperability requirements.",
       "createdAt": "2025-05-07T01:36:56Z",
-      "updatedAt": "2025-06-18T01:11:41Z",
+      "updatedAt": "2025-09-28T13:32:49Z",
       "closedAt": "2025-06-18T01:11:41Z",
       "comments": [
         {
@@ -1171,6 +1171,13 @@
           "body": "Timely:\n  https://datatracker.ietf.org/doc/statement-iesg-statement-on-clarifying-the-use-of-bcp-14-key-words/\n\nI read that as discouraging such use, but I can see an argument that it doesn't explicitly address this case.",
           "createdAt": "2025-05-18T22:10:14Z",
           "updatedAt": "2025-05-18T22:10:14Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "From the quoted guidance: \"Notably, BCP 14 recommends these key words be used \u201csparingly\u201d and mandates they not be used unless they are \u201cactually required for interoperation or to limit behavior which has potential for causing harm.\u201d\"\n\nIf a registrant is required to do a particular thing in order to get a registration correctly processed, I see that as \"required for interoperation\" (with the registry) and has \"potential for causing harm\" (by delaying registration if the reviewers catch it, or by having inadequate or inappropriate registrations if the reviewers don't).\n\nYMMV.\n\n",
+          "createdAt": "2025-09-28T13:32:49Z",
+          "updatedAt": "2025-09-28T13:32:49Z"
         }
       ]
     },
@@ -1826,9 +1833,45 @@
       "labels": [],
       "body": "This is raised to address concerns with https://github.com/ietf-wg-mediaman/6838bis/pull/34, which removed many occurences of 2119 language.\n\nI think we should put a statement under \"Conventions\" saying that RFC 2119 language is  used to describe the requirements put on the registrant in the registration process. The other parties (reviewer, IANA, IESG) are governed by other types of agreements, and don't need to have their responsibilities codified using 2119 language.\n\nIn particular, notes from PR 34:\n\n2.1.2 - \"Copyright on the registration template MUST allow the IANA to copy it\". While the whole paragraph seems a bit silly to me, this is a hard requirement on the registrant, and MUST is appropriate.\n\n2.4 - \"Media types can be defined to allow...\" - suggest MAY is appropriate here.\n\"the names, values and meanings of any parameters are required to be fully specified....\" - MUST is appropriate here,\nlowercase \"are required\" is not clear enough.\n\n4.1.2 - \"when a third party register a type on behalf of someone else, both entities SHOULD be noted...\" - this is a requirement on the registrant, where 2119 is appropriate.\n\n5.1 - \"Notice of a potential media type registration in the standards tree should be sent...\" this is unclear about who is required to do the sending, I think the registrant is the right entity to send it, and it should be a MUST (was a SHOULD).\n\n5.2.1 - \"provisional registration ... can be submitted to IANA\". Here, I think MUST is appropriate - because you get a registration if you submit this to IANA, you don't get a registration otherwise (for instance by posting on media-types) - and the requirement is on the registrant.\n\nWhen reviewing for this language, I found a few places where it was unclear who does an action (too much passive voice). I'll raise a separate issue on that.\n\n",
       "createdAt": "2025-09-11T12:05:50Z",
-      "updatedAt": "2025-09-11T12:05:50Z",
+      "updatedAt": "2025-09-29T19:31:25Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'd like to get some clarity from the IESG on this -- as noted in #26, their statement _can_ be read to discourage use of 2119 terms for process concerns, but it's not crystal.",
+          "createdAt": "2025-09-28T09:14:14Z",
+          "updatedAt": "2025-09-28T09:14:14Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Tagging our AD @anewton1998 for further guidance in interpreting IESG guidance.\n",
+          "createdAt": "2025-09-28T13:34:09Z",
+          "updatedAt": "2025-09-28T13:34:09Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks.\n\n@anewton1998 the context here is whether 2119 requirements are appropriate for process-related guidelines, or whether they should be limited to interoperability. IME depending on who you talk to in the IETF you can get either view (and we may be facing a vi vs emacs type situation here :)",
+          "createdAt": "2025-09-28T14:55:09Z",
+          "updatedAt": "2025-09-28T14:55:09Z"
+        },
+        {
+          "author": "anewton1998",
+          "authorAssociation": "NONE",
+          "body": "vi obsly!\n\nI chatted briefly with the some other ADs, and the consensus was that 2119 language is acceptable for process docs. The changes suggest above by @alvestrand all seem reasonable to me.\n\nMy interpretation of that IESG statement (I think it was published 2 days before I got my dot) is that 2119 doesn't always need to be used where the normative instructions are obvious, such as \"The JSON object always contains the following properties...\" and that 2119 words are often used where they can't be normative: \"Implementers MUST be aware of DDoS threats...\" Neither seem to apply here.\n\nWRT this doc, the part of the IESG statement that seems most relevant are the instructions about IANA.",
+          "createdAt": "2025-09-29T14:38:15Z",
+          "updatedAt": "2025-09-29T14:38:15Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Got it, thanks!",
+          "createdAt": "2025-09-29T19:31:25Z",
+          "updatedAt": "2025-09-29T19:31:25Z"
+        }
+      ]
     }
   ],
   "pulls": [
