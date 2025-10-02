@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-30T01:02:00.064779+00:00",
+  "timestamp": "2025-10-02T00:59:58.359226+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1833,7 +1833,7 @@
       "labels": [],
       "body": "This is raised to address concerns with https://github.com/ietf-wg-mediaman/6838bis/pull/34, which removed many occurences of 2119 language.\n\nI think we should put a statement under \"Conventions\" saying that RFC 2119 language is  used to describe the requirements put on the registrant in the registration process. The other parties (reviewer, IANA, IESG) are governed by other types of agreements, and don't need to have their responsibilities codified using 2119 language.\n\nIn particular, notes from PR 34:\n\n2.1.2 - \"Copyright on the registration template MUST allow the IANA to copy it\". While the whole paragraph seems a bit silly to me, this is a hard requirement on the registrant, and MUST is appropriate.\n\n2.4 - \"Media types can be defined to allow...\" - suggest MAY is appropriate here.\n\"the names, values and meanings of any parameters are required to be fully specified....\" - MUST is appropriate here,\nlowercase \"are required\" is not clear enough.\n\n4.1.2 - \"when a third party register a type on behalf of someone else, both entities SHOULD be noted...\" - this is a requirement on the registrant, where 2119 is appropriate.\n\n5.1 - \"Notice of a potential media type registration in the standards tree should be sent...\" this is unclear about who is required to do the sending, I think the registrant is the right entity to send it, and it should be a MUST (was a SHOULD).\n\n5.2.1 - \"provisional registration ... can be submitted to IANA\". Here, I think MUST is appropriate - because you get a registration if you submit this to IANA, you don't get a registration otherwise (for instance by posting on media-types) - and the requirement is on the registrant.\n\nWhen reviewing for this language, I found a few places where it was unclear who does an action (too much passive voice). I'll raise a separate issue on that.\n\n",
       "createdAt": "2025-09-11T12:05:50Z",
-      "updatedAt": "2025-09-29T19:31:25Z",
+      "updatedAt": "2025-10-01T05:54:46Z",
       "closedAt": null,
       "comments": [
         {
@@ -1870,8 +1870,54 @@
           "body": "Got it, thanks!",
           "createdAt": "2025-09-29T19:31:25Z",
           "updatedAt": "2025-09-29T19:31:25Z"
+        },
+        {
+          "author": "aj-stein",
+          "authorAssociation": "COLLABORATOR",
+          "body": "If we would like to propose insert of 2119 language for other process requirements for consideration by authors in the WG, would it be preferable to add them as a comment here or propose them in one or more PRs?",
+          "createdAt": "2025-09-30T03:41:03Z",
+          "updatedAt": "2025-09-30T03:41:03Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This issue is about those 2119 requirements that were removed -- if you want to propose new ones, please open separate issues.\n\nIn general I think 2119 makes sense for the most important requirements - sprinkling MUSTs, MAYs and SHOULDs throughout the text just makes it harder to read.",
+          "createdAt": "2025-10-01T05:54:45Z",
+          "updatedAt": "2025-10-01T05:54:45Z"
         }
       ]
+    },
+    {
+      "number": 60,
+      "id": "I_kwDOMdBaOc7OrCVM",
+      "title": "Meaning of an implied certification of a spec",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/60",
+      "state": "OPEN",
+      "author": "aj-stein",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As I re-read the current draft, I found the ordering and usage of \"certification\" as an implied consequence of a registraton confusing. Does it have an essential meaning to this part of the document? Can we consider removing it?\n\nhttps://github.com/ietf-wg-mediaman/6838bis/blob/e72821f1c15a29df353afe5a5abdd4f19e5d9ca6/draft-ietf-mediaman-6838bis.md?plain=1#L85",
+      "createdAt": "2025-09-30T03:35:22Z",
+      "updatedAt": "2025-09-30T03:35:30Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 61,
+      "id": "I_kwDOMdBaOc7OrDnW",
+      "title": "Use of the qualifier \"somewhat\"",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/61",
+      "state": "OPEN",
+      "author": "aj-stein",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In the current draft, there are two uses of the qualifier somewhat. Although the usage is idiomatic, does it add essential meaning to either statement? To me, it does not further clarify the meaning in either cases, and I typically use this word to \"walk back\" a valid argument and defend it from criticism. Both places it is used are strong and I see no need for its use, if the authors use it like I do. Would we consider removing it?",
+      "createdAt": "2025-09-30T03:38:56Z",
+      "updatedAt": "2025-09-30T03:38:56Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
