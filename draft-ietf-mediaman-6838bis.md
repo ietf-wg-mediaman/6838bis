@@ -447,7 +447,7 @@ The relationship between a media type that employs a structured syntax suffix an
 
 This uncertainty extends to fragment identifier processing: per the rules in {{suffix-frag}}, a fragment identifier that might be valid for an "application/foo+bar" document might not be applicable to another "+bar" document, because media-type specific fragment identifier resolution might be used.
 
-Likewise, the security characteristics that a processor needs to consider may change depending upon whether it is solely processing the structured syntax suffix or the entire media type. For example, a processor cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
+Likewise, the security characteristics that a processor needs to consider may change depending upon whether it is solely processing the structured syntax suffix or the entire media type. For example, a processor cannot presume that the security characteristics for a "application/baz+bar" document will be the same as for a "application/foo+bar" document.
 
 #### Partial Processing
 
@@ -512,7 +512,7 @@ Media type registrations may not be deleted; media types that are no longer beli
 
 Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
-When a change to a media type registration is requested, the Designated Expert(s) will assure that the change controller approves the change. If the Designated Expert(s) find that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.
+When a change to a media type registration is requested, the Designated Expert(s) will enssure that the change controller approves the change. If the Designated Expert(s) find that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.
 
 
 ## Registration Template
@@ -683,6 +683,4 @@ It may be desirable to restrict the use of media types to specific environments 
 
 Some media types registered prior to 1996 with unfaceted subtype names, would, if registered under the guidelines in this document, be given a faceted name and placed into either the vendor or personal trees. Reregistration of those types to reflect the appropriate trees is encouraged but not required. Ownership and change control principles outlined in this document apply to those types as if they had been registered in those trees.
 
-There may also be cases where a media type with an unfaceted subtype name has been widely deployed without being registered. In these cases, the community format registration process ({{community}}) ought be considered.
-
-
+There may also be cases where a media type with an unfaceted subtype name has been widely deployed without being registered. In these cases, the community format registration process ({{community}}) ought to be considered.
