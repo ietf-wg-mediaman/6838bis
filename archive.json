@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-02T00:59:58.359226+00:00",
+  "timestamp": "2025-10-05T01:06:49.768644+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -929,7 +929,7 @@
       ],
       "body": "Standards tree says:\n\n> The \"owner\" of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWhat should it be for community formats?",
       "createdAt": "2025-05-06T23:22:32Z",
-      "updatedAt": "2025-09-11T06:31:37Z",
+      "updatedAt": "2025-10-02T10:42:01Z",
       "closedAt": null,
       "comments": [
         {
@@ -987,6 +987,13 @@
           "body": "If this is done then it is fine for a reader that just drops by.\n(I trust this is sufficiently done now but was worried about a reader that just reads it)",
           "createdAt": "2025-09-11T06:31:37Z",
           "updatedAt": "2025-09-11T06:31:37Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Section 5.5 says that \"the same procedure that would be appropriate for the original registration request is used to process a change request\". I think that's adequate for ensuring that there's public review.\n\nSection 4.1.1.1 doesn't mention considerations for defaulting the change controller yet - I think that would be a good change to make.\n\n ",
+          "createdAt": "2025-10-02T10:42:01Z",
+          "updatedAt": "2025-10-02T10:42:01Z"
         }
       ]
     },
@@ -1918,6 +1925,174 @@
       "updatedAt": "2025-09-30T03:38:56Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 63,
+      "id": "I_kwDOMdBaOc7PP2mH",
+      "title": "Do we need to define \"readily available\"?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/63",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In the case of registering audio/SCIP and video/SCIP, there was a long debate about whether the specification was readily enough available.\nIn the end, \"anyone can get a copy by requesting one from the listed address\" was seen as \"available enough\".\n\nShould we incorporate this into section 2.1.1 \"Specification availability\" somehow?\n",
+      "createdAt": "2025-10-02T10:50:45Z",
+      "updatedAt": "2025-10-02T10:50:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 64,
+      "id": "I_kwDOMdBaOc7PP49r",
+      "title": "Syntax in 2.3 - forbid multiple + signs?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/64",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Section 2.3 says that the final + in a subtype name introduces a structured syntax specifier suffix.\n\nSection 4.2 says that the structured syntax suffix is defined as all of the characters to the right of the left-most \"+\" sign, and cannot contain any more \"+\" signs.\n\nTogether, these rules outlaw more than one + sign, but the seeming conflict looks strange.\nShould we replace \"the final +\" with \"A + in a subtype name introduces... only one is allowed\"?\n\n\n",
+      "createdAt": "2025-10-02T10:53:52Z",
+      "updatedAt": "2025-10-02T10:53:52Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 65,
+      "id": "I_kwDOMdBaOc7PP7jw",
+      "title": "Incorporation of media type - passive voice?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/65",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Currrent text in 2.8 is:\n\nIn the case of a registration in the standards tree, this additional information can be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the specification itself.\n\nIt's not clear who is suggesting or who it is being suggested to. Also, this is only appropriate when the media type and the spec co-evolve; if registering an existing format as a media type, this can't happen.\n\nSuggested replacement:\n\nIn the case of a specification where the registration is part of creating the specification, the IANA media type registration form can usefully be incorporated in the specification itself. This ensures that references between the registration form and the specification are consistent.\n",
+      "createdAt": "2025-10-02T10:57:21Z",
+      "updatedAt": "2025-10-02T10:57:21Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 66,
+      "id": "I_kwDOMdBaOc7PP84r",
+      "title": "IANA approval for \"designation of the producer's name\" is not specified",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/66",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "If there's an existing process for registration of producers' names with IANA, we should point to it.\n\nIf there's not, we should either create it or say that \"the Designated Expert will review whether the designation of the producer's name is appropriate\" (ie leave IANA off the hook).\n\n",
+      "createdAt": "2025-10-02T10:59:07Z",
+      "updatedAt": "2025-10-02T10:59:07Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 67,
+      "id": "I_kwDOMdBaOc7PP97O",
+      "title": "Delete arguments for additional registration trees?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/67",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "4.1.5 says \"It is explicitly assumed that these trees might be created for external registration and management by well-known permanent organizations; for example  scientific societies might register media types specific to the sciences they cover.\"\n\nGiven that this has never occured so far, I suggest that this text is speculative, and we should delete it.\n",
+      "createdAt": "2025-10-02T11:00:27Z",
+      "updatedAt": "2025-10-02T11:00:27Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 68,
+      "id": "I_kwDOMdBaOc7PP_dW",
+      "title": "Coordination with previous registrants - passive voice?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/68",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The current text is:\n\nA registration request for a media type that uses an existing subtype or suffix is expected to be coordinated with the change controller for the already registered media type\n\nIt's not clear who's doing the expectation or who's doing the coordination. Suggested replacement text?\n\nThe Designated Expert will, when reviewing the registration request, check for documentation that the submitter has coordinated with the change controller for the already registered media type.\n",
+      "createdAt": "2025-10-02T11:02:23Z",
+      "updatedAt": "2025-10-02T11:02:23Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 69,
+      "id": "I_kwDOMdBaOc7PQA55",
+      "title": "Preliminary community review: should, SHOULD or MUST?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/69",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Current text in 5.1:\n\nNotice of a potential media type registration in the standards tree should be sent to the media-types@ietf.org mailing list for review. \n\nIt doesn't say who sends it, and doesn't mandate such sending.\nSuggesting alternate text:\n\nThe registrant SHOULD (or MUST) send a notice of a potential media tyep registration in the standards tree to the media-types@ietf.org mailing list for review.\n",
+      "createdAt": "2025-10-02T11:04:08Z",
+      "updatedAt": "2025-10-02T11:04:08Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 70,
+      "id": "I_kwDOMdBaOc7PQC1z",
+      "title": "Effect of a provisional registration is not specified",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/70",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
+      "createdAt": "2025-10-02T11:06:38Z",
+      "updatedAt": "2025-10-02T11:06:38Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 71,
+      "id": "I_kwDOMdBaOc7PQFok",
+      "title": "Guidance on contact information (and possibly other fields)",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/71",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We've had discussions about what should be in the contact information field (may be a WG or a mailing list) and in the change controller fields (IESG or appropriate other standards body for standards tree). Should this guidance be captured?\n",
+      "createdAt": "2025-10-02T11:10:09Z",
+      "updatedAt": "2025-10-02T11:10:09Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 73,
+      "id": "I_kwDOMdBaOc7PpkB5",
+      "title": "Followup on issue #5: update template",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/73",
+      "state": "OPEN",
+      "author": "polx",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As part of the [issue #5](https://github.com/ietf-wg-mediaman/6838bis/issues/5), the description of the additional information replaced Macintosh file type code with macOS Uniform Type Identifiers and Windows clipboard names. Thanks.\n\nHowever, the template was not updated and still, today, contains the Macintosh file type code.\n",
+      "createdAt": "2025-10-04T14:12:17Z",
+      "updatedAt": "2025-10-04T14:13:05Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Please merge [PR#72](https://github.com/ietf-wg-mediaman/6838bis/pull/72) for this.\nthanks!\nPaul",
+          "createdAt": "2025-10-04T14:13:05Z",
+          "updatedAt": "2025-10-04T14:13:05Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -3052,6 +3227,79 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 62,
+      "id": "PR_kwDOMdBaOc6rveas",
+      "title": "Spelling changes, and use a full type name",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/62",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I hope these are worth incorporating without filing bugs.",
+      "createdAt": "2025-10-02T10:48:49Z",
+      "updatedAt": "2025-10-03T16:40:52Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "e72821f1c15a29df353afe5a5abdd4f19e5d9ca6",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "spelling-nits",
+      "headRefOid": "4f910bfd2bdc6c4e90d44036eddd6dbb77e62ea7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc7EsDOz",
+          "commit": {
+            "abbreviatedOid": "4f910bf"
+          },
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-03T16:40:51Z",
+          "updatedAt": "2025-10-03T16:40:52Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\r\nWhen a change to a media type registration is requested, the Designated Expert(s) will ensure that the change controller approves the change. If the Designated Expert(s) find that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.\r\n```",
+              "createdAt": "2025-10-03T16:40:51Z",
+              "updatedAt": "2025-10-03T16:40:52Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 72,
+      "id": "PR_kwDOMdBaOc6sGC5_",
+      "title": "Update the template's \"additional information\"",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/72",
+      "state": "OPEN",
+      "author": "polx",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Update the template too. \r\nLast bit for https://github.com/ietf-wg-mediaman/6838bis/issues/5 .",
+      "createdAt": "2025-10-04T14:09:16Z",
+      "updatedAt": "2025-10-04T14:09:17Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "e72821f1c15a29df353afe5a5abdd4f19e5d9ca6",
+      "headRepository": "polx/6838bis",
+      "headRefName": "patch-1",
+      "headRefOid": "8c6be61f4ca994d2afc315ef241ecdc22f8eb344",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
