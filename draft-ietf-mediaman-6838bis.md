@@ -512,7 +512,7 @@ Media type registrations may not be deleted; media types that are no longer beli
 
 Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
-When a change to a media type registration is requested, the Designated Expert(s) will enssure that the change controller approves the change. If the Designated Expert(s) find that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.
+When a change to a media type registration is requested, the Designated Expert(s) will ensure that the change controller approves the change. If the Designated Expert(s) find that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.
 
 
 ## Registration Template
