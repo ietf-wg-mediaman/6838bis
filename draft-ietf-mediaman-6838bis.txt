@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 22 February 2026                                 21 August 2025
+Expires: 8 April 2026                                     5 October 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 February 2026.
+   This Internet-Draft will expire on 8 April 2026.
 
 Copyright Notice
 
@@ -931,8 +931,8 @@ Table of Contents
    consider may change depending upon whether it is solely processing
    the structured syntax suffix or the entire media type.  For example,
    a processor cannot presume that the security characteristics for a
-   "+bar" document will be the same as for a "application/foo+bar"
-   document.
+   "application/baz+bar" document will be the same as for a
+   "application/foo+bar" document.
 
 4.2.3.2.  Partial Processing
 
@@ -1066,7 +1066,7 @@ Table of Contents
    definition invalid under the new definition.
 
    When a change to a media type registration is requested, the
-   Designated Expert(s) will assure that the change controller approves
+   Designated Expert(s) will ensure that the change controller approves
    the change.  If the Designated Expert(s) find that the change
    controller is unresponsive or uncontactable for a reasonable period
    of time and reasonable efforts have been made to contact the change
@@ -1475,7 +1475,7 @@ Appendix B.  Legacy Media Types
    There may also be cases where a media type with an unfaceted subtype
    name has been widely deployed without being registered.  In these
    cases, the community format registration process (Section 4.1.1.1)
-   ought be considered.
+   ought to be considered.
 
 Authors' Addresses
 
