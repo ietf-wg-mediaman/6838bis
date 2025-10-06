@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 8 April 2026                                     5 October 2025
+Expires: 9 April 2026                                     6 October 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 April 2026.
+   This Internet-Draft will expire on 9 April 2026.
 
 Copyright Notice
 
@@ -1101,9 +1101,11 @@ Table of Contents
 
       Magic number(s):
 
-      File extension(s):
+      File name extension(s):
 
-      Macintosh file type code(s):
+      macOS Uniform Type Identifier(s):
+
+      Windows clipboard name(s):
 
    Person & email address to contact for further information:
 
