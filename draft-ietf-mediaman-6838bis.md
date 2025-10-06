@@ -533,9 +533,11 @@ Additional information:
 
   Magic number(s):
 
-  File extension(s):
+  File name extension(s):
 
-  Macintosh file type code(s):
+  macOS Uniform Type Identifier(s):
+
+  Windows clipboard name(s):
 {:vspace}
 Person & email address to contact for further information:
 Intended usage:
