@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-07T01:00:53.249721+00:00",
+  "timestamp": "2025-10-14T01:01:35.121709+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -3335,6 +3335,48 @@
           "body": "",
           "createdAt": "2025-10-05T19:35:24Z",
           "updatedAt": "2025-10-05T19:35:24Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 74,
+      "id": "PR_kwDOMdBaOc6tgYKb",
+      "title": "Fix postscript media type in security section",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/74",
+      "state": "OPEN",
+      "author": "aj-stein",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "aj-stein"
+      ],
+      "labels": [],
+      "body": "In the security section, there is an errant space in `application/ postscript`, which should be `application/postscript`. This commit removes the errant space.",
+      "createdAt": "2025-10-13T17:16:57Z",
+      "updatedAt": "2025-10-13T21:26:38Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "bc7a6de116715b8536148a3171e4f0c2dd4f56ad",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "aj-stein-patch-1",
+      "headRefOid": "92255277a67e946d08717a76f79d5a99ec66e197",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc7GqrpK",
+          "commit": {
+            "abbreviatedOid": "9225527"
+          },
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-13T21:26:38Z",
+          "updatedAt": "2025-10-13T21:26:38Z",
           "comments": []
         }
       ]
