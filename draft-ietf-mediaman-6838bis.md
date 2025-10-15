@@ -218,7 +218,7 @@ Issues that need to be described in a security analysis of a media type include:
 
 * Any security analysis MUST state whether or not the format employs such "active content"; if it does, it MUST state what steps have been taken (or are required be taken by applications) of the media type to protect users of the media type.
 
-* Processing of complex media types might institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/ postscript media type illustrates how such directives can be handled.
+* Processing of complex media types might institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/postscript media type illustrates how such directives can be handled.
 
 * A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types should state whether or not they employ compression; if they do, they should discuss what steps need to be taken to avoid such attacks.
 
