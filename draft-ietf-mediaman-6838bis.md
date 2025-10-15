@@ -104,7 +104,7 @@ The registration of media types involving patented technology is permitted. Howe
 
 Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.
 
-Copyright on the registration template needs to allow the IANA to copy it into the IANA registry.
+Copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
 
 ## Canonicalization and Interoperability
 
@@ -154,7 +154,7 @@ In some cases, a single media type may have been widely deployed using multiple 
 
 Media types can be defined to allow or require use of media type parameters. Additionally, some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes.
 
-In either case, the names, values, and meanings of any parameters are required to be fully specified when a media type is registered in the standards tree, and should be specified as completely as possible when media types are registered in the vendor or personal trees.
+In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and should be specified as completely as possible when media types are registered in the vendor or personal trees.
 
 Parameter names have the same syntax as media type names and values:
 
@@ -368,7 +368,7 @@ The vendor tree is intended for media types associated with publicly available p
 
 A registration may be placed in the vendor tree by anyone who needs to interchange data associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See {{change}} for additional information.
 
-When a third party registers a type on behalf of someone else, both entities should be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".
+When a third party registers a type on behalf of someone else, both entities SHOULD be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".
 
 Vendor tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).
 
@@ -464,7 +464,7 @@ Normal IETF processes need to be followed for all IETF registrations in the stan
 
 ##  Preliminary Community Review {#preliminary-review}
 
-Notice of a potential media type registration in the standards tree should be sent to the media-types@ietf.org mailing list for review. Registrations in other trees can be sent to the list for review as well; doing so is entirely optional, but is strongly encouraged.
+Notice of a potential media type registration in the standards tree MUST be sent to the media-types@ietf.org mailing list for review. Registrations in other trees can be sent to the list for review as well; doing so is entirely optional, but is strongly encouraged.
 
 The purpose of this notification is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.
 
