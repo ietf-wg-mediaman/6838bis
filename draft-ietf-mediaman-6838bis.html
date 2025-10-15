@@ -1049,7 +1049,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham &amp; Resnick</td>
-<td class="center">Expires 9 April 2026</td>
+<td class="center">Expires 18 April 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc[6838" class="eref">[6838</a>, <a href="https://www.rfc-editor.org/rfc/rfc9694]" class="eref">9694]</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-10-06" class="published">6 October 2025</time>
+<time datetime="2025-10-15" class="published">15 October 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-04-09">9 April 2026</time></dd>
+<dd class="expires"><time datetime="2026-04-18">18 April 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1120,7 +1120,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 18 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1379,7 +1379,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-media-type-registration-req" class="section-name selfRef">Media Type Registration Requirements</a>
       </h2>
 <p id="section-2-1">Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree (<a href="#trees" class="auto internal xref">Section 4.1</a>).<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-2">Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF, and does not indicate that the specification is adequate for any particular purpose.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3">Additional requirements specific to the registration of XML media types are specified in <span>[<a href="#RFC7303" class="cite xref">RFC7303</a>]</span>.<a href="#section-2-3" class="pilcrow">¶</a></p>
 <div id="functionality">
 <section id="section-2.1">
@@ -1404,7 +1404,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
           </h4>
 <p id="section-2.1.2-1">The registration of media types involving patented technology is permitted. However, the restrictions set forth in BCP 79 <span>[<a href="#RFC8179" class="cite xref">RFC8179</a>]</span> and BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span> on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.<a href="#section-2.1.2-1" class="pilcrow">¶</a></p>
 <p id="section-2.1.2-2">Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.<a href="#section-2.1.2-2" class="pilcrow">¶</a></p>
-<p id="section-2.1.2-3">Copyright on the registration template needs to allow the IANA to copy it into the IANA registry.<a href="#section-2.1.2-3" class="pilcrow">¶</a></p>
+<p id="section-2.1.2-3">Copyright on the registration template MUST allow the IANA to copy it into the IANA registry.<a href="#section-2.1.2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1442,7 +1442,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
                                ; specify a structured syntax suffix
 </pre><a href="#section-2.3-3" class="pilcrow">¶</a>
 </div>
-<p id="section-2.3-4">Note that this syntax is somewhat more restrictive than what is allowed by <span><a href="https://rfc-editor.org/rfc/rfc2045#section-5.1" class="relref">Section 5.1</a> of [<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> or <span><a href="https://rfc-editor.org/rfc/rfc4288#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC4288" class="cite xref">RFC4288</a>]</span>. Also note that while this syntax allows type and subtype names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.<a href="#section-2.3-4" class="pilcrow">¶</a></p>
+<p id="section-2.3-4">Note that this syntax is more restrictive than what is allowed by <span><a href="https://rfc-editor.org/rfc/rfc2045#section-5.1" class="relref">Section 5.1</a> of [<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> or <span><a href="https://rfc-editor.org/rfc/rfc4288#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC4288" class="cite xref">RFC4288</a>]</span>. Also note that while this syntax allows type and subtype names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.<a href="#section-2.3-4" class="pilcrow">¶</a></p>
 <p id="section-2.3-5">Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means that facet-less standards tree registrations cannot use periods in the subtype name.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
 <p id="section-2.3-6">Similarly, the final "+" in a subtype name introduces a structured syntax specifier suffix. Structured syntax suffix requirements are specified in <a href="#suffixes" class="auto internal xref">Section 4.2</a>.<a href="#section-2.3-6" class="pilcrow">¶</a></p>
 <p id="section-2.3-7">While it is possible for a given media type to be assigned more than one name, the use of different names to identify the same media type is discouraged.<a href="#section-2.3-7" class="pilcrow">¶</a></p>
@@ -1463,14 +1463,14 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-2.4" class="section-number selfRef">2.4. </a><a href="#name-parameters" class="section-name selfRef">Parameters</a>
         </h3>
 <p id="section-2.4-1">Media types can be defined to allow or require use of media type parameters. Additionally, some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
-<p id="section-2.4-2">In either case, the names, values, and meanings of any parameters are required to be fully specified when a media type is registered in the standards tree, and should be specified as completely as possible when media types are registered in the vendor or personal trees.<a href="#section-2.4-2" class="pilcrow">¶</a></p>
+<p id="section-2.4-2">In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and should be specified as completely as possible when media types are registered in the vendor or personal trees.<a href="#section-2.4-2" class="pilcrow">¶</a></p>
 <p id="section-2.4-3">Parameter names have the same syntax as media type names and values:<a href="#section-2.4-3" class="pilcrow">¶</a></p>
 <div class="lang-abnf sourcecode" id="section-2.4-4">
 <pre>
     parameter-name = restricted-name
 </pre><a href="#section-2.4-4" class="pilcrow">¶</a>
 </div>
-<p id="section-2.4-5">Note that this syntax is somewhat more restrictive than what is allowed by the ABNF in <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> and amended by <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span>.<a href="#section-2.4-5" class="pilcrow">¶</a></p>
+<p id="section-2.4-5">Note that this syntax is more restrictive than what is allowed by the ABNF in <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> and amended by <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span>.<a href="#section-2.4-5" class="pilcrow">¶</a></p>
 <p id="section-2.4-6">Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.<a href="#section-2.4-6" class="pilcrow">¶</a></p>
 <p id="section-2.4-7">There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary valued parameters, while permitted in some protocols, are best avoided.<a href="#section-2.4-7" class="pilcrow">¶</a></p>
 <p id="section-2.4-8">Some parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for "Bucket" Media Types <span>[<a href="#RFC6381" class="cite xref">RFC6381</a>]</span> identify media codecs used inside the container and their parameters. RTP payload formats have several common parameters: see <span>[<a href="#RFC4855" class="cite xref">RFC4855</a>]</span>, and <span>[<a href="#RFC8851" class="cite xref">RFC8851</a>]</span>.<a href="#section-2.4-8" class="pilcrow">¶</a></p>
@@ -1769,7 +1769,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
           </h4>
 <p id="section-4.1.2-1">The vendor tree is intended for media types associated with publicly available products. "Vendor" and "producer" are construed very broadly in this context, and are considered equivalent.<a href="#section-4.1.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.1.2-2">A registration may be placed in the vendor tree by anyone who needs to interchange data associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See <a href="#change" class="auto internal xref">Section 5.5</a> for additional information.<a href="#section-4.1.2-2" class="pilcrow">¶</a></p>
-<p id="section-4.1.2-3">When a third party registers a type on behalf of someone else, both entities should be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".<a href="#section-4.1.2-3" class="pilcrow">¶</a></p>
+<p id="section-4.1.2-3">When a third party registers a type on behalf of someone else, both entities SHOULD be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".<a href="#section-4.1.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.1.2-4">Vendor tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).<a href="#section-4.1.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.1.2-5">While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.<a href="#section-4.1.2-5" class="pilcrow">¶</a></p>
 <p id="section-4.1.2-6">Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review <span><a href="https://rfc-editor.org/rfc/rfc8126#section-4.5" class="relref">Section 4.5</a> of [<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> prior to approval.<a href="#section-4.1.2-6" class="pilcrow">¶</a></p>
@@ -1803,7 +1803,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-4.1.5" class="section-number selfRef">4.1.5. </a><a href="#name-additional-registration-tre" class="section-name selfRef">Additional Registration Trees</a>
           </h4>
 <p id="section-4.1.5-1">New top-level registration trees may be created by IETF Standards Action.<a href="#section-4.1.5-1" class="pilcrow">¶</a></p>
-<p id="section-4.1.5-2">It is explicitly assumed that these trees might be created for external registration and management by well-known permanent organizations; for example, scientific societies might register media types specific to the sciences they cover. In general, the quality of review of specifications for one of these additional registration trees is expected to be equivalent to registrations in the standards tree by a recognized standards-related organization.<a href="#section-4.1.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.1.5-2">In general, the quality of review of specifications for one of these additional registration trees is expected to be equivalent to registrations in the standards tree by a recognized standards-related organization.<a href="#section-4.1.5-2" class="pilcrow">¶</a></p>
 <p id="section-4.1.5-3">When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.<a href="#section-4.1.5-3" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1900,7 +1900,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-preliminary-community-revie">
 <a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-preliminary-community-revie" class="section-name selfRef">Preliminary Community Review</a>
         </h3>
-<p id="section-5.1-1">Notice of a potential media type registration in the standards tree should be sent to the media-types@ietf.org mailing list for review. Registrations in other trees can be sent to the list for review as well; doing so is entirely optional, but is strongly encouraged.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.1-1">Notice of a potential media type registration in the standards tree MUST be sent to the media-types@ietf.org mailing list for review. Registrations in other trees can be sent to the list for review as well; doing so is entirely optional, but is strongly encouraged.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
 <p id="section-5.1-2">The purpose of this notification is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>

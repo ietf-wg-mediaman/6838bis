@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 9 April 2026                                     6 October 2025
+Expires: 18 April 2026                                   15 October 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 April 2026.
+   This Internet-Draft will expire on 18 April 2026.
 
 Copyright Notice
 
@@ -165,8 +165,8 @@ Table of Contents
 
    Other than IETF registrations in the standards tree, the registration
    of a media type does not imply endorsement, approval, or
-   recommendation by the IANA or the IETF or even certification that the
-   specification is adequate.
+   recommendation by the IANA or the IETF, and does not indicate that
+   the specification is adequate for any particular purpose.
 
    Additional requirements specific to the registration of XML media
    types are specified in [RFC7303].
@@ -213,8 +213,8 @@ Table of Contents
    Intellectual Property Rights (IPR) disclosures for registrations in
    the vendor and personal trees are encouraged but not required.
 
-   Copyright on the registration template needs to allow the IANA to
-   copy it into the IANA registry.
+   Copyright on the registration template MUST allow the IANA to copy it
+   into the IANA registry.
 
 2.2.  Canonicalization and Interoperability
 
@@ -258,10 +258,10 @@ Table of Contents
      restricted-name-chars =/ "+" ; Characters after last plus always
                                   ; specify a structured syntax suffix
 
-   Note that this syntax is somewhat more restrictive than what is
-   allowed by Section 5.1 of [RFC2045] or Section 4.2 of [RFC4288].
-   Also note that while this syntax allows type and subtype names of up
-   to 127 characters, implementation limits may make such long names
+   Note that this syntax is more restrictive than what is allowed by
+   Section 5.1 of [RFC2045] or Section 4.2 of [RFC4288].  Also note that
+   while this syntax allows type and subtype names of up to 127
+   characters, implementation limits may make such long names
    problematic.  For this reason, 'type-name' and 'subtype-name' SHOULD
    be limited to 64 characters.
 
@@ -299,8 +299,8 @@ Table of Contents
    type that defines a set of parameters applicable to any of its
    subtypes.
 
-   In either case, the names, values, and meanings of any parameters are
-   required to be fully specified when a media type is registered in the
+   In either case, the names, values, and meanings of any parameters
+   MUST be fully specified when a media type is registered in the
    standards tree, and should be specified as completely as possible
    when media types are registered in the vendor or personal trees.
 
@@ -308,8 +308,8 @@ Table of Contents
 
        parameter-name = restricted-name
 
-   Note that this syntax is somewhat more restrictive than what is
-   allowed by the ABNF in [RFC2045] and amended by [RFC2231].
+   Note that this syntax is more restrictive than what is allowed by the
+   ABNF in [RFC2045] and amended by [RFC2231].
 
    Parameter names are case-insensitive and no meaning is attached to
    the order in which they appear.  It is an error for a specific
@@ -757,7 +757,7 @@ Table of Contents
    information.
 
    When a third party registers a type on behalf of someone else, both
-   entities should be noted in the Change Controller field in the
+   entities SHOULD be noted in the Change Controller field in the
    registration.  One possible format for this would be "Foo, on behalf
    of Bar".
 
@@ -822,13 +822,10 @@ Table of Contents
    New top-level registration trees may be created by IETF Standards
    Action.
 
-   It is explicitly assumed that these trees might be created for
-   external registration and management by well-known permanent
-   organizations; for example, scientific societies might register media
-   types specific to the sciences they cover.  In general, the quality
-   of review of specifications for one of these additional registration
-   trees is expected to be equivalent to registrations in the standards
-   tree by a recognized standards-related organization.
+   In general, the quality of review of specifications for one of these
+   additional registration trees is expected to be equivalent to
+   registrations in the standards tree by a recognized standards-related
+   organization.
 
    When the IETF performs such review, it needs to consider the greater
    expertise of the requesting organization with respect to the subject
@@ -964,7 +961,7 @@ Table of Contents
 5.1.  Preliminary Community Review
 
    Notice of a potential media type registration in the standards tree
-   should be sent to the media-types@ietf.org mailing list for review.
+   MUST be sent to the media-types@ietf.org mailing list for review.
    Registrations in other trees can be sent to the list for review as
    well; doing so is entirely optional, but is strongly encouraged.
 
