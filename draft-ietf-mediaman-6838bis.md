@@ -136,7 +136,7 @@ Type and subtype names MUST conform to the following ABNF:
                                ; specify a structured syntax suffix
 ~~~
 
-Note that this syntax is somewhat more restrictive than what is allowed by {{Section 5.1 of !RFC2045}} or {{Section 4.2 of ?RFC4288}}. Also note that while this syntax allows type and subtype names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.
+Note that this syntax is more restrictive than what is allowed by {{Section 5.1 of !RFC2045}} or {{Section 4.2 of ?RFC4288}}. Also note that while this syntax allows type and subtype names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.
 
 Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means that facet-less standards tree registrations cannot use periods in the subtype name.
 
@@ -162,7 +162,7 @@ Parameter names have the same syntax as media type names and values:
     parameter-name = restricted-name
 ~~~
 
-Note that this syntax is somewhat more restrictive than what is allowed by the ABNF in {{!RFC2045}} and amended by {{?RFC2231}}.
+Note that this syntax is more restrictive than what is allowed by the ABNF in {{!RFC2045}} and amended by {{?RFC2231}}.
 
 Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.
 
