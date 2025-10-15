@@ -659,8 +659,10 @@ Table of Contents
 
    The standards tree is intended for those media types that require a
    substantive review and approval process in a recognized standards-
-   related organization.  For media types that do not require such a
-   process, see the vendor and personal trees.
+   related organization (published at https://www.iana.org/assignments/
+   iesg-recognized-organizations (https://www.iana.org/assignments/iesg-
+   recognized-organizations)).  For media types that do not require such
+   a process, see the vendor and personal trees.
 
    Registrations in the standards tree are either:
 
@@ -1261,11 +1263,10 @@ Table of Contents
 
    IANA should notify recognized standards organisations when this
    document is published (where feasible), and highlight the need to
-   consider how their processes interact with the registration
-   proceedure (see eg https://www.w3.org/guide/editor/
-   mediatypes.html#registration-process
-   (https://www.w3.org/guide/editor/mediatypes.html#registration-
-   process)).
+   consider how their processes interact with the registration procedure
+   (see eg https://www.w3.org/guide/editor/mediatypes.html#registration-
+   process (https://www.w3.org/guide/editor/
+   mediatypes.html#registration-process)).
 
 9.  Acknowledgments
 
