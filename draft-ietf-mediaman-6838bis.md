@@ -322,7 +322,7 @@ Note that some previously defined media types do not conform to the naming conve
 
 ### Standards Tree
 
-The standards tree is intended for those media types that require a substantive review and approval process in a recognized standards-related organization (published at <https://www.iana.org/assignments/iesg-recognized-organizations>). For media types that do not require such a process, see the vendor and personal trees.
+The standards tree is intended for those media types that require a substantive review and approval process in a recognized standards-related organization (as defined by <https://www.iana.org/assignments/iesg-recognized-organizations>). For media types that do not require such a process, see the vendor and personal trees.
 
 Registrations in the standards tree are either:
 
