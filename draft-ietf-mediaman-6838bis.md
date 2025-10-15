@@ -416,7 +416,7 @@ Structured syntax suffixes are required to be registered before use by a media t
 
 Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry.
 
-A registration request for a media type that uses an existing subtype or suffix is expected to be coordinated with the change controller for the already registered media type.
+A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.
 
 ### Use Cases for Structured Syntax Suffixes
 
