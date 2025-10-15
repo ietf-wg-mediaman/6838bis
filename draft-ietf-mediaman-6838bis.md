@@ -276,7 +276,7 @@ Definitions of new top-level types are required to fulfil the following criteria
 
 * The RFC clearly documents security considerations applying to all or a significant subset of subtypes.
 
-* At the minimum, one subtype is described. A top-level type without any subtype serves no purpose. Please note that the 'example' top-level describes a subtype 'example'.
+* At the minimum, one subtype (not including a potential 'example' subtype) is described. A top-level type without any subtype serves no purpose. The only exception is the 'example' top-level type, which disallows registration of subtypes.
 
 ### Additional Considerations
 
