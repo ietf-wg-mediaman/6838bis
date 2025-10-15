@@ -438,7 +438,7 @@ Table of Contents
       while not directly harmful to the recipient, may result in
       disclosure of information that either facilitates a subsequent
       attack or else violates a recipient's privacy in some way.  Again,
-      the registration of the application/ postscript media type
+      the registration of the application/postscript media type
       illustrates how such directives can be handled.
 
    *  A media type that employs compression may provide an opportunity
