@@ -1069,8 +1069,7 @@ Table of Contents
    controller is unresponsive or uncontactable for a reasonable period
    of time and reasonable efforts have been made to contact the change
    controller, they may recommend to the IESG that the change controller
-   be updated.  The IESG makes the final decision regarding updates to
-   change controllers.
+   be updated.
 
 5.6.  Registration Template
 
