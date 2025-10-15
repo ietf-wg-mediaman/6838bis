@@ -635,7 +635,7 @@ In the Top-Level Media Types registry, IANA should link the reference field for 
 
 ## Recognized Standards Organisations
 
-IANA should notify recognized standards organisations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration proceedure (see eg <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
+IANA should notify recognized standards organisations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration procedure (see eg <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
 
 
 #  Acknowledgments
