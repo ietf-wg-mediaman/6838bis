@@ -82,7 +82,7 @@ This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234
 
 Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree ({{trees}}).
 
-Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
+Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF, and does not indicate that the specification is adequate for any particular purpose.
 
 Additional requirements specific to the registration of XML media types are specified in {{!RFC7303}}.
 
