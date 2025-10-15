@@ -481,10 +481,10 @@ Table of Contents
       related platforms (see [windowsClipboardNames] for definitions and
       syntax).
 
-   In the case of a registration in the standards tree, this additional
-   information can be provided in the formal specification of the media
-   type format.  It is suggested that this be done by incorporating the
-   IANA media type registration form into the specification itself.
+   When registering a media type in the standards tree, specification
+   authors can provide this information in the formal specification of
+   the format, by incorporating the IANA media type registration form
+   into the specification itself.
 
 2.9.  Non-Requirements
 
@@ -861,9 +861,9 @@ Table of Contents
    both media types.  Registrations are expected to align with existing
    subtype or suffix names in the media type registry.
 
-   A registration request for a media type that uses an existing subtype
-   or suffix is expected to be coordinated with the change controller
-   for the already registered media type.
+   A party requesting registration of a media type that adds a suffix to
+   an existing subtype is expected to coordinate with the change
+   controller(s) for the already registered media type.
 
 4.2.1.  Use Cases for Structured Syntax Suffixes
 

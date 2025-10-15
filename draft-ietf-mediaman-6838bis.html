@@ -1569,7 +1569,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-2.8-2.4.1">Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see <span>[<a href="#windowsClipboardNames" class="cite xref">windowsClipboardNames</a>]</span> for definitions and syntax).<a href="#section-2.8-2.4.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-2.8-3">In the case of a registration in the standards tree, this additional information can be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the specification itself.<a href="#section-2.8-3" class="pilcrow">¶</a></p>
+<p id="section-2.8-3">When registering a media type in the standards tree, specification authors can provide this information in the formal specification of the format, by incorporating the IANA media type registration form into the specification itself.<a href="#section-2.8-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="non-requirements">
@@ -1819,7 +1819,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-4.2-3">For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.2-4">Structured syntax suffixes are required to be registered before use by a media type registration; see <a href="#suffix-procedures" class="auto internal xref">Section 6</a>. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.2-5">Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
-<p id="section-4.2-6">A registration request for a media type that uses an existing subtype or suffix is expected to be coordinated with the change controller for the already registered media type.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
+<p id="section-4.2-6">A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
 <div id="use-cases-for-structured-syntax-suffixes">
 <section id="section-4.2.1">
           <h4 id="name-use-cases-for-structured-sy">
