@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-14T01:01:35.121709+00:00",
+  "timestamp": "2025-10-16T01:02:28.589601+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -27,6 +27,11 @@
       "name": "Blocking Last Call",
       "description": "Needs to be resolved before WG Last Call",
       "color": "eb4208"
+    },
+    {
+      "name": "Links to IANABIS",
+      "description": null,
+      "color": "aaaaaa"
     }
   ],
   "issues": [
@@ -1837,10 +1842,12 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "This is raised to address concerns with https://github.com/ietf-wg-mediaman/6838bis/pull/34, which removed many occurences of 2119 language.\n\nI think we should put a statement under \"Conventions\" saying that RFC 2119 language is  used to describe the requirements put on the registrant in the registration process. The other parties (reviewer, IANA, IESG) are governed by other types of agreements, and don't need to have their responsibilities codified using 2119 language.\n\nIn particular, notes from PR 34:\n\n2.1.2 - \"Copyright on the registration template MUST allow the IANA to copy it\". While the whole paragraph seems a bit silly to me, this is a hard requirement on the registrant, and MUST is appropriate.\n\n2.4 - \"Media types can be defined to allow...\" - suggest MAY is appropriate here.\n\"the names, values and meanings of any parameters are required to be fully specified....\" - MUST is appropriate here,\nlowercase \"are required\" is not clear enough.\n\n4.1.2 - \"when a third party register a type on behalf of someone else, both entities SHOULD be noted...\" - this is a requirement on the registrant, where 2119 is appropriate.\n\n5.1 - \"Notice of a potential media type registration in the standards tree should be sent...\" this is unclear about who is required to do the sending, I think the registrant is the right entity to send it, and it should be a MUST (was a SHOULD).\n\n5.2.1 - \"provisional registration ... can be submitted to IANA\". Here, I think MUST is appropriate - because you get a registration if you submit this to IANA, you don't get a registration otherwise (for instance by posting on media-types) - and the requirement is on the registrant.\n\nWhen reviewing for this language, I found a few places where it was unclear who does an action (too much passive voice). I'll raise a separate issue on that.\n\n",
       "createdAt": "2025-09-11T12:05:50Z",
-      "updatedAt": "2025-10-01T05:54:46Z",
+      "updatedAt": "2025-10-15T10:58:41Z",
       "closedAt": null,
       "comments": [
         {
@@ -1891,6 +1898,20 @@
           "body": "This issue is about those 2119 requirements that were removed -- if you want to propose new ones, please open separate issues.\n\nIn general I think 2119 makes sense for the most important requirements - sprinkling MUSTs, MAYs and SHOULDs throughout the text just makes it harder to read.",
           "createdAt": "2025-10-01T05:54:45Z",
           "updatedAt": "2025-10-01T05:54:45Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I've done most of the above. \n\n> 5.2.1 - \"provisional registration ... can be submitted to IANA\". Here, I think MUST is appropriate - because you get a registration if you submit this to IANA, you don't get a registration otherwise (for instance by posting on media-types) - and the requirement is on the registrant.\n\nI don't agree. The resulting language would be:\n\n> Accordingly, provisional registrations of media type names in the standards tree MUST be submitted to IANA.\n\nwhich isn't helpful -- of course IANA needs to be informed, but there are situations where they are submitted to the expert directly, or on the mailing list and then forwarded by the expert. Specifying this level of process in the RFC with 2119 language only makes it more difficult for the experts and/or IANA to adjust their submission process in the future. ",
+          "createdAt": "2025-10-15T01:07:10Z",
+          "updatedAt": "2025-10-15T01:07:10Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Wonder if it would be better to say \"Accordingly, registrants can submit provisional registrations of media type names in the standards tree to IANA\".\n\nThe \"can be submitted\" can be misinterpreted as \".... or they can submit them somewhere else\", which doesn't make sense.",
+          "createdAt": "2025-10-15T10:58:41Z",
+          "updatedAt": "2025-10-15T10:58:41Z"
         }
       ]
     },
@@ -1899,31 +1920,39 @@
       "id": "I_kwDOMdBaOc7OrCVM",
       "title": "Meaning of an implied certification of a spec",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/60",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "aj-stein",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "As I re-read the current draft, I found the ordering and usage of \"certification\" as an implied consequence of a registraton confusing. Does it have an essential meaning to this part of the document? Can we consider removing it?\n\nhttps://github.com/ietf-wg-mediaman/6838bis/blob/e72821f1c15a29df353afe5a5abdd4f19e5d9ca6/draft-ietf-mediaman-6838bis.md?plain=1#L85",
       "createdAt": "2025-09-30T03:35:22Z",
-      "updatedAt": "2025-09-30T03:35:30Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-10-15T01:04:39Z",
+      "closedAt": "2025-10-15T01:04:39Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Changing to:\n\n> Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF, and does not indicate that the specification is adequate for any particular purpose.",
+          "createdAt": "2025-10-15T01:00:26Z",
+          "updatedAt": "2025-10-15T01:00:26Z"
+        }
+      ]
     },
     {
       "number": 61,
       "id": "I_kwDOMdBaOc7OrDnW",
       "title": "Use of the qualifier \"somewhat\"",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/61",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "aj-stein",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "In the current draft, there are two uses of the qualifier somewhat. Although the usage is idiomatic, does it add essential meaning to either statement? To me, it does not further clarify the meaning in either cases, and I typically use this word to \"walk back\" a valid argument and defend it from criticism. Both places it is used are strong and I see no need for its use, if the authors use it like I do. Would we consider removing it?",
       "createdAt": "2025-09-30T03:38:56Z",
-      "updatedAt": "2025-09-30T03:38:56Z",
-      "closedAt": null,
+      "updatedAt": "2025-10-15T01:04:39Z",
+      "closedAt": "2025-10-15T01:04:38Z",
       "comments": []
     },
     {
@@ -1935,12 +1964,30 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close",
+        "Links to IANABIS"
+      ],
       "body": "In the case of registering audio/SCIP and video/SCIP, there was a long debate about whether the specification was readily enough available.\nIn the end, \"anyone can get a copy by requesting one from the listed address\" was seen as \"available enough\".\n\nShould we incorporate this into section 2.1.1 \"Specification availability\" somehow?\n",
       "createdAt": "2025-10-02T10:50:45Z",
-      "updatedAt": "2025-10-02T10:50:45Z",
+      "updatedAt": "2025-10-15T10:54:16Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This issue applies to much more than the media type registry - suggest waiting for IANAbis to clarify it, rather than doing it as a one-off.",
+          "createdAt": "2025-10-15T01:07:55Z",
+          "updatedAt": "2025-10-15T01:07:55Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "It seems like https://www.ietf.org/archive/id/draft-baber-ianabis-rfc8126bis-02.html#name-specification-required discusses \"permanent and readily available\" in some detail, but has the cop-out of \"clear guidance to the designated expert should be provided when defining the registry\".\n",
+          "createdAt": "2025-10-15T10:53:03Z",
+          "updatedAt": "2025-10-15T10:53:03Z"
+        }
+      ]
     },
     {
       "number": 64,
@@ -1963,15 +2010,15 @@
       "id": "I_kwDOMdBaOc7PP7jw",
       "title": "Incorporation of media type - passive voice?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/65",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Currrent text in 2.8 is:\n\nIn the case of a registration in the standards tree, this additional information can be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the specification itself.\n\nIt's not clear who is suggesting or who it is being suggested to. Also, this is only appropriate when the media type and the spec co-evolve; if registering an existing format as a media type, this can't happen.\n\nSuggested replacement:\n\nIn the case of a specification where the registration is part of creating the specification, the IANA media type registration form can usefully be incorporated in the specification itself. This ensures that references between the registration form and the specification are consistent.\n",
       "createdAt": "2025-10-02T10:57:21Z",
-      "updatedAt": "2025-10-02T10:57:21Z",
-      "closedAt": null,
+      "updatedAt": "2025-10-15T01:15:29Z",
+      "closedAt": "2025-10-15T01:15:29Z",
       "comments": []
     },
     {
@@ -1995,15 +2042,15 @@
       "id": "I_kwDOMdBaOc7PP97O",
       "title": "Delete arguments for additional registration trees?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/67",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "4.1.5 says \"It is explicitly assumed that these trees might be created for external registration and management by well-known permanent organizations; for example  scientific societies might register media types specific to the sciences they cover.\"\n\nGiven that this has never occured so far, I suggest that this text is speculative, and we should delete it.\n",
       "createdAt": "2025-10-02T11:00:27Z",
-      "updatedAt": "2025-10-02T11:00:27Z",
-      "closedAt": null,
+      "updatedAt": "2025-10-15T01:04:39Z",
+      "closedAt": "2025-10-15T01:04:39Z",
       "comments": []
     },
     {
@@ -2011,32 +2058,62 @@
       "id": "I_kwDOMdBaOc7PP_dW",
       "title": "Coordination with previous registrants - passive voice?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/68",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The current text is:\n\nA registration request for a media type that uses an existing subtype or suffix is expected to be coordinated with the change controller for the already registered media type\n\nIt's not clear who's doing the expectation or who's doing the coordination. Suggested replacement text?\n\nThe Designated Expert will, when reviewing the registration request, check for documentation that the submitter has coordinated with the change controller for the already registered media type.\n",
       "createdAt": "2025-10-02T11:02:23Z",
-      "updatedAt": "2025-10-02T11:02:23Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-10-15T01:15:30Z",
+      "closedAt": "2025-10-15T01:15:30Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "That suggestion trips up against very strong concerns previously expressed that the bar was too high. Going with:\n\n> A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.",
+          "createdAt": "2025-10-15T01:15:18Z",
+          "updatedAt": "2025-10-15T01:15:18Z"
+        }
+      ]
     },
     {
       "number": 69,
       "id": "I_kwDOMdBaOc7PQA55",
       "title": "Preliminary community review: should, SHOULD or MUST?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/69",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Current text in 5.1:\n\nNotice of a potential media type registration in the standards tree should be sent to the media-types@ietf.org mailing list for review. \n\nIt doesn't say who sends it, and doesn't mandate such sending.\nSuggesting alternate text:\n\nThe registrant SHOULD (or MUST) send a notice of a potential media tyep registration in the standards tree to the media-types@ietf.org mailing list for review.\n",
       "createdAt": "2025-10-02T11:04:08Z",
-      "updatedAt": "2025-10-02T11:04:08Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-10-15T10:30:43Z",
+      "closedAt": "2025-10-15T01:16:47Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Already updated to MUST as part of #59 ",
+          "createdAt": "2025-10-15T01:16:47Z",
+          "updatedAt": "2025-10-15T01:16:47Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "... and as elsewhere, it's not necessarily the registrant who sends it, depending on how the request comes in.",
+          "createdAt": "2025-10-15T01:17:27Z",
+          "updatedAt": "2025-10-15T01:17:27Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks, MUST closes the issue.\n\nOne of my worries with passive language is that it's hard for the registrant to see who'll take responsibility.\nIt's easy to assume that IANA will take care of sending notifications, since they currently do for vnd. registrations that come directly to them, but it seems like the wrong assignment of responsibility; the registrant should (in my mind) be the one with the responsibility that the registration is sent. We could say \"The registrant (or their delegates) MUST send\" to allow multiple paths, but still stick the responsibility in one place.\n\n",
+          "createdAt": "2025-10-15T10:30:43Z",
+          "updatedAt": "2025-10-15T10:30:43Z"
+        }
+      ]
     },
     {
       "number": 70,
@@ -2063,12 +2140,30 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close",
+        "Links to IANABIS"
+      ],
       "body": "We've had discussions about what should be in the contact information field (may be a WG or a mailing list) and in the change controller fields (IESG or appropriate other standards body for standards tree). Should this guidance be captured?\n",
       "createdAt": "2025-10-02T11:10:09Z",
-      "updatedAt": "2025-10-02T11:10:09Z",
+      "updatedAt": "2025-10-15T10:54:35Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Is this better handled by IANAbis?",
+          "createdAt": "2025-10-15T01:40:16Z",
+          "updatedAt": "2025-10-15T01:40:16Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "https://www.ietf.org/archive/id/draft-baber-ianabis-rfc8126bis-02.html#name-contact-person-vs-assignee- explicitly punts all discussion of what the contact person is or should mean to the registry description. Not sure if that's a consensus discussion or just the status quo ante.\n\nIANABIS still doesn't seem to have an issue tracker up.\n",
+          "createdAt": "2025-10-15T10:24:29Z",
+          "updatedAt": "2025-10-15T10:24:29Z"
+        }
+      ]
     },
     {
       "number": 73,
@@ -2093,6 +2188,120 @@
           "updatedAt": "2025-10-04T14:13:05Z"
         }
       ]
+    },
+    {
+      "number": 75,
+      "id": "I_kwDOMdBaOc7RkhYH",
+      "title": "Windows Clipboard Name",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/75",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From IANA:\n\nSection 5.6:\n\nSection 2.8 indicates that \"Windows clipboard name\" is going to be included in the template's \"Additional Information\" section, but it doesn't appear here.  ",
+      "createdAt": "2025-10-15T01:20:20Z",
+      "updatedAt": "2025-10-15T01:50:03Z",
+      "closedAt": "2025-10-15T01:50:03Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Already fixed.",
+          "createdAt": "2025-10-15T01:50:03Z",
+          "updatedAt": "2025-10-15T01:50:03Z"
+        }
+      ]
+    },
+    {
+      "number": 76,
+      "id": "I_kwDOMdBaOc7Rkhlj",
+      "title": "IESG and change controllers",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/76",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "Ready to close"
+      ],
+      "body": "From IANA:\n\nSection 5.5:\n\n\"The IESG makes the final decision regarding updates to change controllers\" suggests that even if the current change controller does approve its own replacement, IANA would have to ask the IESG to approve. Can this be changed to something like \"In this case, the IESG [...]\"? Also, can you confirm that you want us to escalate to the IESG for vendor- and personal-tree registrations as well as standards-tree?",
+      "createdAt": "2025-10-15T01:20:46Z",
+      "updatedAt": "2025-10-15T01:43:57Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think the last sentence can be deleted, since the previous sentence already makes it clear the IESG is making the decision.\n\nI think it makes sense to escalate to the IESG for all trees. ",
+          "createdAt": "2025-10-15T01:43:24Z",
+          "updatedAt": "2025-10-15T01:43:24Z"
+        }
+      ]
+    },
+    {
+      "number": 77,
+      "id": "I_kwDOMdBaOc7Rkhxv",
+      "title": "Recognised Organisations URL",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/77",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From IANA:\n\nSection 5.3:\n\nIf you want the URL for the IESG-approved list: https://www.iana.org/assignments/iesg-recognized-organizations\n\n(FWIW, I think we'd like to ask the ADs/experts to revisit the note at the top of that page, but that text doesn't appear in 6838 and probably doesn't need to be addressed within the context of this document.)",
+      "createdAt": "2025-10-15T01:21:17Z",
+      "updatedAt": "2025-10-15T01:46:53Z",
+      "closedAt": "2025-10-15T01:46:53Z",
+      "comments": []
+    },
+    {
+      "number": 78,
+      "id": "I_kwDOMdBaOc7Rkh_S",
+      "title": "Provisional Media Types URL",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/78",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From IANA:\n\nSection 5.2:\n\nIf you want to add the URL: https://www.iana.org/assignments/provisional-standard-media-types\n\nShould the provisional registration option be mentioned in Section 4.1.1's discussion of early allocation?\n",
+      "createdAt": "2025-10-15T01:21:43Z",
+      "updatedAt": "2025-10-15T01:21:43Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 79,
+      "id": "I_kwDOMdBaOc7Rkidr",
+      "title": "IETF Change Controller",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/79",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From IANA:\n\n\"In the case of IETF standards, the change controller is normally the IESG\": The IESG prefers that the IETF be named here instead, unless an older RFC requires otherwise. (Right now this is mentioned only at https://www.iana.org/help/protocol-registration, linked from 8126.)",
+      "createdAt": "2025-10-15T01:22:56Z",
+      "updatedAt": "2025-10-15T01:49:28Z",
+      "closedAt": "2025-10-15T01:49:28Z",
+      "comments": []
+    },
+    {
+      "number": 80,
+      "id": "I_kwDOMdBaOc7RkjJN",
+      "title": "Early Allocation",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/80",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From IANA:\n\n\"Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization. Note that in both cases, the early allocation process described in [RFC7120] is available\": The last sentence isn't correct. The RFC 7120 process is available for Specification Required registrations, but only when that specification is an I-D in the IETF stream.\n\nHowever, we are planning to specify in 8126bis that a kind of early allocation is possible for SDO specs, although we haven't worked out the details. (We would prefer to avoid an overhead-heavy 7120-style process that involves multiple approvals, monthly expiration reports, escalation to the IESG after a certain number of renewals [or perhaps renewals at all], etc.)\n\nIt might be worth noting RFC 8392 gets around the absence of any current text to that effect by saying, \"to allow for the allocation of values prior to publication, the Designated Experts may approve registration once they are satisfied that such a specification will be published.\"\n\nCould an SDO use the community format (it wouldn't conflict with SDO work, presumably) and modify the registration later to add itself as a change controller?\n\nNote: I couldn't tell you whether the experts have approved media types associated with specs that were available online, but not yet published in their final form. The reason I haven't tracked it is that we haven't made a practice of copying URLs from the registration template into the registry's \"Reference\" field. Do you want to use the IANA Considerations section to tell IANA to populate registry fields in a specific way, or to add fields? (We have a couple of thousand somewhat-free-form registration templates, so we might not be able to populate these fields immediately upon document approval.)",
+      "createdAt": "2025-10-15T01:24:52Z",
+      "updatedAt": "2025-10-15T01:24:52Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -3344,7 +3553,7 @@
       "id": "PR_kwDOMdBaOc6tgYKb",
       "title": "Fix postscript media type in security section",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/74",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "aj-stein",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3353,17 +3562,19 @@
       "labels": [],
       "body": "In the security section, there is an errant space in `application/ postscript`, which should be `application/postscript`. This commit removes the errant space.",
       "createdAt": "2025-10-13T17:16:57Z",
-      "updatedAt": "2025-10-13T21:26:38Z",
+      "updatedAt": "2025-10-15T01:38:58Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "bc7a6de116715b8536148a3171e4f0c2dd4f56ad",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "aj-stein-patch-1",
       "headRefOid": "92255277a67e946d08717a76f79d5a99ec66e197",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-15T01:38:56Z",
+      "mergedAt": "2025-10-15T01:38:56Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "b97272f400244f2ff565db382f048bd6c5bbc828"
+      },
       "comments": [],
       "reviews": [
         {
