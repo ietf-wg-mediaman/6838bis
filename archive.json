@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-16T01:02:28.589601+00:00",
+  "timestamp": "2025-10-19T01:09:53.339665+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -760,7 +760,7 @@
       "labels": [],
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
-      "updatedAt": "2025-07-29T10:32:31Z",
+      "updatedAt": "2025-10-16T09:39:58Z",
       "closedAt": "2025-07-29T10:32:31Z",
       "comments": [
         {
@@ -797,6 +797,13 @@
           "body": "Things to consider:\n- Notify the orgs on the \"recognized standards orgs list\" of 6838bis when it comes out\n- Point at W3C procedures and ask \"do you need something similar\"\n- Ask IANA what input they have on this point.\n\nNo change to this document contemplated.\nWill put a note into the document's IANA considerations and let it disappear on publication. (Pete's suggestion)\n",
           "createdAt": "2025-07-25T08:23:03Z",
           "updatedAt": "2025-07-25T08:23:03Z"
+        },
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "From 5.3:\n\n\"If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG needs to be obtained before a standards-tree registration can proceed.\"\n\nIs there a pointer to such a process that can be linked here?",
+          "createdAt": "2025-10-16T09:39:58Z",
+          "updatedAt": "2025-10-16T09:39:58Z"
         }
       ]
     },
@@ -2267,9 +2274,17 @@
       "labels": [],
       "body": "From IANA:\n\nSection 5.2:\n\nIf you want to add the URL: https://www.iana.org/assignments/provisional-standard-media-types\n\nShould the provisional registration option be mentioned in Section 4.1.1's discussion of early allocation?\n",
       "createdAt": "2025-10-15T01:21:43Z",
-      "updatedAt": "2025-10-15T01:21:43Z",
+      "updatedAt": "2025-10-16T09:32:33Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "Yes, please!\n\nI never bothered looking here, even though it is linked from the main registry.\n\nAlso, the Sub-Parameter registry: <https://www.iana.org/assignments/media-type-sub-parameters/media-type-sub-parameters.xhtml>",
+          "createdAt": "2025-10-16T09:32:33Z",
+          "updatedAt": "2025-10-16T09:32:33Z"
+        }
+      ]
     },
     {
       "number": 79,
@@ -2283,9 +2298,17 @@
       "labels": [],
       "body": "From IANA:\n\n\"In the case of IETF standards, the change controller is normally the IESG\": The IESG prefers that the IETF be named here instead, unless an older RFC requires otherwise. (Right now this is mentioned only at https://www.iana.org/help/protocol-registration, linked from 8126.)",
       "createdAt": "2025-10-15T01:22:56Z",
-      "updatedAt": "2025-10-15T01:49:28Z",
+      "updatedAt": "2025-10-16T09:50:48Z",
       "closedAt": "2025-10-15T01:49:28Z",
-      "comments": []
+      "comments": [
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "Will IESG continue to be the change controller for older standards or just act as redirection agent to IETF. Should this change be made explicit in the document?",
+          "createdAt": "2025-10-16T09:50:48Z",
+          "updatedAt": "2025-10-16T09:50:48Z"
+        }
+      ]
     },
     {
       "number": 80,
