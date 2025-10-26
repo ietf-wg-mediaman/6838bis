@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-19T01:09:53.339665+00:00",
+  "timestamp": "2025-10-26T01:08:21.947230+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2148,12 +2148,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "Ready to close",
         "Links to IANABIS"
       ],
       "body": "We've had discussions about what should be in the contact information field (may be a WG or a mailing list) and in the change controller fields (IESG or appropriate other standards body for standards tree). Should this guidance be captured?\n",
       "createdAt": "2025-10-02T11:10:09Z",
-      "updatedAt": "2025-10-15T10:54:35Z",
+      "updatedAt": "2025-10-23T10:45:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -2325,6 +2324,78 @@
       "updatedAt": "2025-10-15T01:24:52Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 81,
+      "id": "I_kwDOMdBaOc7TP9A4",
+      "title": "Registration rules for namespaces?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/81",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "What should be the use of namespaces (microsoft- or vnd.goog.) in type names? Should namespaces be registered?\r\n",
+      "createdAt": "2022-11-30T13:19:36Z",
+      "updatedAt": "2025-10-23T10:55:10Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 82,
+      "id": "I_kwDOMdBaOc7TirVK",
+      "title": "Who appoints Designated Expert(s)?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/82",
+      "state": "OPEN",
+      "author": "aamelnikov",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In Section 5.3 (\"Review and Approval\"):\n\n   With the exception of provisional standards-tree registrations,\n   registrations submitted to the IANA will be first given to the\n   Designated Expert(s), who are appointed by the IETF Applications Area\n   Director(s).\n\nThere is no such thing as \"Applications Area Director\" anymore. This must be changed to something like \"ART Area Director\" (to reflect the current IESG areas) or even IESG to allow for future IESG restructuring without the need to update this document.\n",
+      "createdAt": "2025-10-24T11:51:43Z",
+      "updatedAt": "2025-10-24T11:58:29Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 83,
+      "id": "I_kwDOMdBaOc7Ti2Fv",
+      "title": "Who checks for semantical alignment of media types?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/83",
+      "state": "OPEN",
+      "author": "aamelnikov",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In Section 4.2 (\"Structured Syntax Suffixes\"), next to the last paragraph:\n\n   Media types that make use of a structured syntax, or similar\n   separator such as a dash \"-\", SHOULD be semantically aligned, from a\n   data model perspective, with existing subtype names in the media type\n   registry.\n\nUse of passive voice makes it unclear whose responsibility it is to check for this.\n\nI prefer for IANA to tell designated experts whether or not there are existing media types in the registry which might be related.\n",
+      "createdAt": "2025-10-24T12:02:36Z",
+      "updatedAt": "2025-10-24T12:02:36Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 84,
+      "id": "I_kwDOMdBaOc7TjYyq",
+      "title": "Ability for a change controller to pass responsibility to another entity was lost",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/84",
+      "state": "OPEN",
+      "author": "aamelnikov",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In Section 5.5 (\"Change Procedures\"), last paragraph:\n\n   When a change to a media type registration is requested, the\n   Designated Expert(s) will assure that the change controller approves\n   the change.  If the Designated Expert(s) find that the change\n   controller is unresponsive or uncontactable for a reasonable period\n   of time and reasonable efforts have been made to contact the change\n   controller, they may recommend to the IESG that the change controller\n   be updated.  The IESG makes the final decision regarding updates to\n   change controllers.\n\nIn the latest version the following text was deleted. (It looks like this text was lost during discussion of #21)\n\n   The change controller of a media type may pass responsibility to\n   another person or agency by informing the IANA; this can be done\n   without discussion or review.\n\nCan somebody tell me why was this dropped? Passing responsibility without changing any other fields in a media type registration seems like a special case that doesn't need involving Designated Expert(s) or IESG. The current text requires full Designated Expert review.\n\nAnd if there are cases where we want to disallow such transfers of responsibilities, I would like to hear them!\n\nI think we need both the current paragraph and restoration of the paragraph about passing responsibilities.",
+      "createdAt": "2025-10-24T12:33:50Z",
+      "updatedAt": "2025-10-24T12:54:01Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The only case I can imagine where transfer of responsibility would require review would be when a departing employee decides to transfer change control to his new employer without the consent of the former employer. However, it's hard to imagine that DE review would be the adequate mechanism for handling that kind of situation.\n\n\"The IESG makes the final decision regarding updates to change controllers\" seems to leave adequate leeway to fix unexpected situations like that.",
+          "createdAt": "2025-10-24T12:54:01Z",
+          "updatedAt": "2025-10-24T12:54:01Z"
+        }
+      ]
     }
   ],
   "pulls": [
