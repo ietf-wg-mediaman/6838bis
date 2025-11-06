@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-26T01:08:21.947230+00:00",
+  "timestamp": "2025-11-06T01:05:41.535823+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -941,7 +941,7 @@
       ],
       "body": "Standards tree says:\n\n> The \"owner\" of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWhat should it be for community formats?",
       "createdAt": "2025-05-06T23:22:32Z",
-      "updatedAt": "2025-10-02T10:42:01Z",
+      "updatedAt": "2025-11-05T17:25:32Z",
       "closedAt": null,
       "comments": [
         {
@@ -1006,6 +1006,13 @@
           "body": "Section 5.5 says that \"the same procedure that would be appropriate for the original registration request is used to process a change request\". I think that's adequate for ensuring that there's public review.\n\nSection 4.1.1.1 doesn't mention considerations for defaulting the change controller yet - I think that would be a good change to make.\n\n ",
           "createdAt": "2025-10-02T10:42:01Z",
           "updatedAt": "2025-10-02T10:42:01Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Dicussed in Montreal; sense of the room was to use IETF as change controller for community process registrations.",
+          "createdAt": "2025-11-05T17:25:32Z",
+          "updatedAt": "2025-11-05T17:25:32Z"
         }
       ]
     },
@@ -1977,7 +1984,7 @@
       ],
       "body": "In the case of registering audio/SCIP and video/SCIP, there was a long debate about whether the specification was readily enough available.\nIn the end, \"anyone can get a copy by requesting one from the listed address\" was seen as \"available enough\".\n\nShould we incorporate this into section 2.1.1 \"Specification availability\" somehow?\n",
       "createdAt": "2025-10-02T10:50:45Z",
-      "updatedAt": "2025-10-15T10:54:16Z",
+      "updatedAt": "2025-11-05T17:27:39Z",
       "closedAt": null,
       "comments": [
         {
@@ -1993,6 +2000,13 @@
           "body": "It seems like https://www.ietf.org/archive/id/draft-baber-ianabis-rfc8126bis-02.html#name-specification-required discusses \"permanent and readily available\" in some detail, but has the cop-out of \"clear guidance to the designated expert should be provided when defining the registry\".\n",
           "createdAt": "2025-10-15T10:53:03Z",
           "updatedAt": "2025-10-15T10:53:03Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussed in Montreal; sense of the room is to point to 8126bis (normative reference) and ask IANATRANS to ensure that the text allows us to just point to it and say nothing more.\n",
+          "createdAt": "2025-11-05T17:27:38Z",
+          "updatedAt": "2025-11-05T17:27:38Z"
         }
       ]
     },
@@ -2008,9 +2022,17 @@
       "labels": [],
       "body": "Section 2.3 says that the final + in a subtype name introduces a structured syntax specifier suffix.\n\nSection 4.2 says that the structured syntax suffix is defined as all of the characters to the right of the left-most \"+\" sign, and cannot contain any more \"+\" signs.\n\nTogether, these rules outlaw more than one + sign, but the seeming conflict looks strange.\nShould we replace \"the final +\" with \"A + in a subtype name introduces... only one is allowed\"?\n\n\n",
       "createdAt": "2025-10-02T10:53:52Z",
-      "updatedAt": "2025-10-02T10:53:52Z",
+      "updatedAt": "2025-11-05T17:29:07Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in Montreal; need this difference for robust parsing but we need to clarify that it's not registrable. May need to update ABNF.",
+          "createdAt": "2025-11-05T17:29:07Z",
+          "updatedAt": "2025-11-05T17:29:07Z"
+        }
+      ]
     },
     {
       "number": 65,
@@ -2033,16 +2055,24 @@
       "id": "I_kwDOMdBaOc7PP84r",
       "title": "IANA approval for \"designation of the producer's name\" is not specified",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/66",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "If there's an existing process for registration of producers' names with IANA, we should point to it.\n\nIf there's not, we should either create it or say that \"the Designated Expert will review whether the designation of the producer's name is appropriate\" (ie leave IANA off the hook).\n\n",
       "createdAt": "2025-10-02T10:59:07Z",
-      "updatedAt": "2025-10-02T10:59:07Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-11-05T17:30:31Z",
+      "closedAt": "2025-11-05T17:30:31Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in Montreal; duplicate of #81.",
+          "createdAt": "2025-11-05T17:30:31Z",
+          "updatedAt": "2025-11-05T17:30:31Z"
+        }
+      ]
     },
     {
       "number": 67,
@@ -2134,9 +2164,17 @@
       "labels": [],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2025-10-02T11:06:38Z",
+      "updatedAt": "2025-11-05T17:49:07Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in Montreal; intent is that a provisional registration creates a check for continuity of ownership of the name when permanent registration happens.\n\nIntersection between provisional and early registration noted. Early registration is for registration of a permanent registration; provisional registration is not that. Also some intersection with the natures of the different trees.\n\nPossibilities:\n1. Allow early registration and close the provisional registry (dealing with its contents)\n2. Keep provisional and disallow early registration\n\n",
+          "createdAt": "2025-11-05T17:49:07Z",
+          "updatedAt": "2025-11-05T17:49:07Z"
+        }
+      ]
     },
     {
       "number": 71,
@@ -2224,7 +2262,7 @@
       "id": "I_kwDOMdBaOc7Rkhlj",
       "title": "IESG and change controllers",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/76",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -2233,8 +2271,8 @@
       ],
       "body": "From IANA:\n\nSection 5.5:\n\n\"The IESG makes the final decision regarding updates to change controllers\" suggests that even if the current change controller does approve its own replacement, IANA would have to ask the IESG to approve. Can this be changed to something like \"In this case, the IESG [...]\"? Also, can you confirm that you want us to escalate to the IESG for vendor- and personal-tree registrations as well as standards-tree?",
       "createdAt": "2025-10-15T01:20:46Z",
-      "updatedAt": "2025-10-15T01:43:57Z",
-      "closedAt": null,
+      "updatedAt": "2025-11-05T17:51:31Z",
+      "closedAt": "2025-11-05T17:51:31Z",
       "comments": [
         {
           "author": "mnot",
@@ -2334,12 +2372,22 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Links to IANABIS"
+      ],
       "body": "What should be the use of namespaces (microsoft- or vnd.goog.) in type names? Should namespaces be registered?\r\n",
       "createdAt": "2022-11-30T13:19:36Z",
-      "updatedAt": "2025-10-23T10:55:10Z",
+      "updatedAt": "2025-11-05T17:18:52Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in Montreal: may need to create a registry / procedures -- check with IANA.",
+          "createdAt": "2025-11-05T17:18:52Z",
+          "updatedAt": "2025-11-05T17:18:52Z"
+        }
+      ]
     },
     {
       "number": 82,
@@ -2353,9 +2401,24 @@
       "labels": [],
       "body": "In Section 5.3 (\"Review and Approval\"):\n\n   With the exception of provisional standards-tree registrations,\n   registrations submitted to the IANA will be first given to the\n   Designated Expert(s), who are appointed by the IETF Applications Area\n   Director(s).\n\nThere is no such thing as \"Applications Area Director\" anymore. This must be changed to something like \"ART Area Director\" (to reflect the current IESG areas) or even IESG to allow for future IESG restructuring without the need to update this document.\n",
       "createdAt": "2025-10-24T11:51:43Z",
-      "updatedAt": "2025-10-24T11:58:29Z",
+      "updatedAt": "2025-11-05T17:53:36Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in Montreal; IESG.",
+          "createdAt": "2025-11-05T17:52:50Z",
+          "updatedAt": "2025-11-05T17:52:50Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "and the IESG may delegate responsibility to a specific AD or area's directors - that doesn't need to be mentioned here.",
+          "createdAt": "2025-11-05T17:53:36Z",
+          "updatedAt": "2025-11-05T17:53:36Z"
+        }
+      ]
     },
     {
       "number": 83,
@@ -2369,9 +2432,17 @@
       "labels": [],
       "body": "In Section 4.2 (\"Structured Syntax Suffixes\"), next to the last paragraph:\n\n   Media types that make use of a structured syntax, or similar\n   separator such as a dash \"-\", SHOULD be semantically aligned, from a\n   data model perspective, with existing subtype names in the media type\n   registry.\n\nUse of passive voice makes it unclear whose responsibility it is to check for this.\n\nI prefer for IANA to tell designated experts whether or not there are existing media types in the registry which might be related.\n",
       "createdAt": "2025-10-24T12:02:36Z",
-      "updatedAt": "2025-10-24T12:02:36Z",
+      "updatedAt": "2025-11-05T17:59:13Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in Montreal; we want IANA to tell the DE about any potential clashes (without judgement), and give the DE the flexibility to use that information without requiring them to act in a certain way.",
+          "createdAt": "2025-11-05T17:59:13Z",
+          "updatedAt": "2025-11-05T17:59:13Z"
+        }
+      ]
     },
     {
       "number": 84,
@@ -2385,7 +2456,7 @@
       "labels": [],
       "body": "In Section 5.5 (\"Change Procedures\"), last paragraph:\n\n   When a change to a media type registration is requested, the\n   Designated Expert(s) will assure that the change controller approves\n   the change.  If the Designated Expert(s) find that the change\n   controller is unresponsive or uncontactable for a reasonable period\n   of time and reasonable efforts have been made to contact the change\n   controller, they may recommend to the IESG that the change controller\n   be updated.  The IESG makes the final decision regarding updates to\n   change controllers.\n\nIn the latest version the following text was deleted. (It looks like this text was lost during discussion of #21)\n\n   The change controller of a media type may pass responsibility to\n   another person or agency by informing the IANA; this can be done\n   without discussion or review.\n\nCan somebody tell me why was this dropped? Passing responsibility without changing any other fields in a media type registration seems like a special case that doesn't need involving Designated Expert(s) or IESG. The current text requires full Designated Expert review.\n\nAnd if there are cases where we want to disallow such transfers of responsibilities, I would like to hear them!\n\nI think we need both the current paragraph and restoration of the paragraph about passing responsibilities.",
       "createdAt": "2025-10-24T12:33:50Z",
-      "updatedAt": "2025-10-24T12:54:01Z",
+      "updatedAt": "2025-11-05T18:00:54Z",
       "closedAt": null,
       "comments": [
         {
@@ -2394,6 +2465,13 @@
           "body": "The only case I can imagine where transfer of responsibility would require review would be when a departing employee decides to transfer change control to his new employer without the consent of the former employer. However, it's hard to imagine that DE review would be the adequate mechanism for handling that kind of situation.\n\n\"The IESG makes the final decision regarding updates to change controllers\" seems to leave adequate leeway to fix unexpected situations like that.",
           "createdAt": "2025-10-24T12:54:01Z",
           "updatedAt": "2025-10-24T12:54:01Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in Montreal; will address.",
+          "createdAt": "2025-11-05T18:00:53Z",
+          "updatedAt": "2025-11-05T18:00:53Z"
         }
       ]
     }
