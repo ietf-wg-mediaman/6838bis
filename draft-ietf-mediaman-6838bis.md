@@ -482,7 +482,7 @@ Registration requests can be sent to iana@iana.org. A web form for registration 
 
 Standardization processes often take considerable time to complete. In order to facilitate prototyping and testing, it is often helpful to assign media types early in the process. This way, identifiers used during standards development can remain unchanged once the process is complete, and implementations and documentation do not have to be updated.
 
-Accordingly, provisional registrations of media type names in the standards tree can be submitted to IANA. The only required fields in such registrations are the media type name and contact information (including the standards-related organization name).
+Accordingly, registrants can submit provisional registrations of media type names in the standards tree to IANA. The only required fields in such registrations are the media type name and contact information (including the standards-related organization name).
 
 Upon receipt of a provisional registration, IANA will check the name and contact information, then publish the registration in a distinct, publicly-visible provisional registration list.
 
