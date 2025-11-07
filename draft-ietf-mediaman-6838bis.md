@@ -490,7 +490,7 @@ Provisional registrations can be updated or abandoned at any time. When the regi
 
 ## Review and Approval {#review}
 
-With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IETF Applications Area Director(s). Designated Expert(s) examine registration requests to make sure they meet the requirements set forth in this document.
+With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. Designated Expert(s) examine registration requests to make sure they meet the requirements set forth in this document.
 
 Decisions made by the Designated Expert(s) may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
 
