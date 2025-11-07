@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 18 April 2026                                   15 October 2025
+Expires: 11 May 2026                                     7 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 April 2026.
+   This Internet-Draft will expire on 11 May 2026.
 
 Copyright Notice
 
@@ -701,8 +701,8 @@ Table of Contents
 
    The change controller of a media type registered in the standards
    tree is assumed to be the standards-related organization itself.  In
-   the case of IETF standards, the change controller is normally the
-   IETF.
+   the case of IETF standards and community formats (see
+   Section 4.1.1.1), the change controller is normally the IETF.
 
    Modification or alteration of the specification uses the same level
    of processing (e.g., a registration submitted on Standards Track can
