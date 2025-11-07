@@ -342,7 +342,7 @@ Media types registered by the IETF in the standards tree MUST be published as RF
 
 Media types in the standards tree do not have faceted subtype names, unless they are given legacy status using the process described in {{legacy}}.
 
-The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. In the case of IETF standards, the change controller is normally the IETF.
+The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. In the case of IETF standards and community formats (see {{community}}), the change controller is normally the IETF.
 
 Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
 
