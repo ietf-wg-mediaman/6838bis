@@ -414,7 +414,7 @@ For example, in the "application/foo+bar" media type "application" is the top-le
 
 Structured syntax suffixes are required to be registered before use by a media type registration; see {{suffix-procedures}}. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.
 
-Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry.
+Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry; see {{review}}.
 
 A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.
 
@@ -490,7 +490,7 @@ Provisional registrations can be updated or abandoned at any time. When the regi
 
 ## Review and Approval {#review}
 
-With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. Designated Expert(s) examine registration requests to make sure they meet the requirements set forth in this document.
+With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see {{suffixes}}). The Designated Expert(s) will examine registration requests to make sure they meet the requirements set forth in this document.
 
 Decisions made by the Designated Expert(s) may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
 
