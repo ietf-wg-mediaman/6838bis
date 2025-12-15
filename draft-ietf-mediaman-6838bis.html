@@ -1044,11 +1044,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Media Type Registration</td>
-<td class="right">November 2025</td>
+<td class="right">December 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham &amp; Resnick</td>
-<td class="center">Expires 11 May 2026</td>
+<td class="center">Expires 18 June 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1064,12 +1064,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc[6838" class="eref">[6838</a>, <a href="https://www.rfc-editor.org/rfc/rfc9694]" class="eref">9694]</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-11-07" class="published">7 November 2025</time>
+<time datetime="2025-12-15" class="published">15 December 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-05-11">11 May 2026</time></dd>
+<dd class="expires"><time datetime="2026-06-18">18 June 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1119,7 +1119,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 11 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 18 June 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1817,7 +1817,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-4.2-2">A structured syntax suffix is defined as all of the characters to the right of the right-most "+" sign in a media type, including the right-most "+" sign itself. The structured syntax suffix MUST NOT contain more than one "+" sign.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.2-3">For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it nevertheless used, its suffix is "+baz".<a href="#section-4.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.2-4">Structured syntax suffixes are required to be registered before use by a media type registration; see <a href="#suffix-procedures" class="auto internal xref">Section 6</a>. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
-<p id="section-4.2-5">Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
+<p id="section-4.2-5">Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry; see <a href="#review" class="auto internal xref">Section 5.3</a>.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
 <p id="section-4.2-6">A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
 <div id="use-cases-for-structured-syntax-suffixes">
 <section id="section-4.2.1">
@@ -1934,7 +1934,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-review-and-approval">
 <a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-review-and-approval" class="section-name selfRef">Review and Approval</a>
         </h3>
-<p id="section-5.3-1">With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. Designated Expert(s) examine registration requests to make sure they meet the requirements set forth in this document.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-1">With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see <a href="#suffixes" class="auto internal xref">Section 4.2</a>). The Designated Expert(s) will examine registration requests to make sure they meet the requirements set forth in this document.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 <p id="section-5.3-2">Decisions made by the Designated Expert(s) may be appealed to the IESG using the procedure specified in <span><a href="https://rfc-editor.org/rfc/rfc2026#section-6.5.4" class="relref">Section 6.5.4</a> of [<a href="#RFC2026" class="cite xref">RFC2026</a>]</span>.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
 <p id="section-5.3-3">Once a media type registration has passed review, the IANA will register the media type and make the media type registration available to the community.<a href="#section-5.3-3" class="pilcrow">¶</a></p>
 <p id="section-5.3-4">In the case of standards-tree registrations from other standards-related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG needs to be obtained before a standards-tree registration can proceed.<a href="#section-5.3-4" class="pilcrow">¶</a></p>

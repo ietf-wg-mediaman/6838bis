@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 11 May 2026                                     7 November 2025
+Expires: 18 June 2026                                   15 December 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 May 2026.
+   This Internet-Draft will expire on 18 June 2026.
 
 Copyright Notice
 
@@ -863,7 +863,7 @@ Table of Contents
    "application/foo+baz", the expectation is that the semantics
    suggested by the subtype name "application/foo" are the same between
    both media types.  Registrations are expected to align with existing
-   subtype or suffix names in the media type registry.
+   subtype or suffix names in the media type registry; see Section 5.3.
 
    A party requesting registration of a media type that adds a suffix to
    an existing subtype is expected to coordinate with the change
@@ -1019,9 +1019,12 @@ Table of Contents
 
    With the exception of provisional standards-tree registrations,
    registrations submitted to the IANA will be first given to the
-   Designated Expert(s), who are appointed by the IESG.  Designated
-   Expert(s) examine registration requests to make sure they meet the
-   requirements set forth in this document.
+   Designated Expert(s), who are appointed by the IESG.  When a suffix
+   is present in a registration, IANA will inform the Designated
+   Expert(s) of any potentially clashing registrations (see
+   Section 4.2).  The Designated Expert(s) will examine registration
+   requests to make sure they meet the requirements set forth in this
+   document.
 
    Decisions made by the Designated Expert(s) may be appealed to the
    IESG using the procedure specified in Section 6.5.4 of [RFC2026].
