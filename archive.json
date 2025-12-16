@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-16T01:10:20.989067+00:00",
+  "timestamp": "2025-12-16T01:11:13.167881+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2174,7 +2174,7 @@
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2025-11-14T08:38:21Z",
+      "updatedAt": "2025-12-15T02:10:22Z",
       "closedAt": null,
       "comments": [
         {
@@ -2190,6 +2190,13 @@
           "body": "The [provisional registry](https://www.iana.org/assignments/provisional-standard-media-types/provisional-standard-media-types.xhtml).\n\nBreaking it down:\n\nThe following are all specified in recent Internet-Drafts and could be moved to early registrations:\n* application/cert-chain+cbor\n* application/cmw+cbor\n* application/ion\n* application/pkix-keyinfo\n* application/signed-exchange\n* application/voucher+cose\n* application/webbundle\n\nThe following are reasonably recent and defined by other SDOs, so could reasonably be moved to early registration provided that process could accommodate other SDOs:\n* application/CESR\n* text/asciidoc\n* text/cmcd\n* application/vec-package+gzip\n* application/vec-package+zip\n* application/3gpp-media-delivery-metrics-report+json\n* application/clf+xml\n\nThe following are older provisional registrations from other SDOs and need to be chased to determine their status:\n* application/rif+xml\n* application/akn+xml\n* application/netcdf\n* application/1ob\n* image/j2is\n* application/reports+json\n\nThe following _appear_ to be registrations by individuals, not SDOs.\n* application/won\n* text/nfo\n* application/odm+json\n* application/json-nd\n\nThe latter group leads me to think that if we keep provisional registrations, greater controls are needed; however moving to early allocation would cut off some potential abuses.\n",
           "createdAt": "2025-11-14T08:38:20Z",
           "updatedAt": "2025-11-14T08:38:20Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think we should disallow provisional registration in the standards tree, using the transition plan outlined above. @alvestrand ?",
+          "createdAt": "2025-12-15T02:10:22Z",
+          "updatedAt": "2025-12-15T02:10:22Z"
         }
       ]
     },
@@ -2457,15 +2464,15 @@
       "id": "I_kwDOMdBaOc7Ti2Fv",
       "title": "Who checks for semantical alignment of media types?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/83",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "aamelnikov",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "In Section 4.2 (\"Structured Syntax Suffixes\"), next to the last paragraph:\n\n   Media types that make use of a structured syntax, or similar\n   separator such as a dash \"-\", SHOULD be semantically aligned, from a\n   data model perspective, with existing subtype names in the media type\n   registry.\n\nUse of passive voice makes it unclear whose responsibility it is to check for this.\n\nI prefer for IANA to tell designated experts whether or not there are existing media types in the registry which might be related.\n",
       "createdAt": "2025-10-24T12:02:36Z",
-      "updatedAt": "2025-11-05T17:59:13Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-15T02:12:28Z",
+      "closedAt": "2025-12-15T02:12:28Z",
       "comments": [
         {
           "author": "mnot",
@@ -2519,9 +2526,17 @@
       "labels": [],
       "body": "We currently have (after a bit of editorial work):\n\n> Changes may be requested by the change controller, or by other parties if the Designated Expert(s) verify that the change controller approves the change.\n\nDoes the DE really need to do this, or is it IANA?",
       "createdAt": "2025-11-07T21:22:37Z",
-      "updatedAt": "2025-11-07T21:22:37Z",
+      "updatedAt": "2025-12-15T02:01:17Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@alvestrand could we ask the folks at IANA for an opinion here?",
+          "createdAt": "2025-12-15T02:01:17Z",
+          "updatedAt": "2025-12-15T02:01:17Z"
+        }
+      ]
     }
   ],
   "pulls": [
