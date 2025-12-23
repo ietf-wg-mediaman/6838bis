@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-16T01:11:13.167881+00:00",
+  "timestamp": "2025-12-23T01:10:05.842173+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2174,7 +2174,7 @@
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2025-12-15T02:10:22Z",
+      "updatedAt": "2025-12-22T19:35:05Z",
       "closedAt": null,
       "comments": [
         {
@@ -2197,6 +2197,13 @@
           "body": "I think we should disallow provisional registration in the standards tree, using the transition plan outlined above. @alvestrand ?",
           "createdAt": "2025-12-15T02:10:22Z",
           "updatedAt": "2025-12-15T02:10:22Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I would like to better understand how the early registration process could accommodate other SDOs. \nIn theory the provisional registration process already does (at least I understand how I would access it from the W3C, for example).\n\nThis is why I lean more toward keeping provisional (and making it a real and useful thing) over keeping early registration, but that may be because of my own limited understanding of how early registration would work as an equivalent process.",
+          "createdAt": "2025-12-22T19:35:05Z",
+          "updatedAt": "2025-12-22T19:35:05Z"
         }
       ]
     },
