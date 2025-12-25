@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-23T01:10:05.842173+00:00",
+  "timestamp": "2025-12-25T01:10:03.823042+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2174,7 +2174,7 @@
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2025-12-22T19:35:05Z",
+      "updatedAt": "2025-12-23T05:51:58Z",
       "closedAt": null,
       "comments": [
         {
@@ -2204,6 +2204,13 @@
           "body": "I would like to better understand how the early registration process could accommodate other SDOs. \nIn theory the provisional registration process already does (at least I understand how I would access it from the W3C, for example).\n\nThis is why I lean more toward keeping provisional (and making it a real and useful thing) over keeping early registration, but that may be because of my own limited understanding of how early registration would work as an equivalent process.",
           "createdAt": "2025-12-22T19:35:05Z",
           "updatedAt": "2025-12-22T19:35:05Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "7120 states:\n\n> The procedures in this document are intended to apply only to IETF Stream documents.\n\nSo it seems like we could do one of:\n\n1. Ask IANAbis to be expanded to include BCP100/7120 in its scope, to address this (and other?) issues\n2. Specify that early registration is to be used by sources on the IETF Stream, and provisional for other sources.\n\nIf we go with (2), some questions pop up:\n\n* What review process should provisional registrations have?\n* Should provisional registrations time out or otherwise be 'managed' so that they don't linger indefinitely?\n* Should provisional registrations be available to any party, or only select parties? (remembering that we're in the standards tree, and there is now the community process)\n",
+          "createdAt": "2025-12-23T05:51:58Z",
+          "updatedAt": "2025-12-23T05:51:58Z"
         }
       ]
     },
