@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-25T01:10:03.823042+00:00",
+  "timestamp": "2025-12-30T01:10:27.384996+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2170,11 +2170,12 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "Blocking Last Call"
+        "Blocking Last Call",
+        "Links to IANABIS"
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2025-12-23T05:51:58Z",
+      "updatedAt": "2025-12-29T23:07:53Z",
       "closedAt": null,
       "comments": [
         {
@@ -2211,6 +2212,34 @@
           "body": "7120 states:\n\n> The procedures in this document are intended to apply only to IETF Stream documents.\n\nSo it seems like we could do one of:\n\n1. Ask IANAbis to be expanded to include BCP100/7120 in its scope, to address this (and other?) issues\n2. Specify that early registration is to be used by sources on the IETF Stream, and provisional for other sources.\n\nIf we go with (2), some questions pop up:\n\n* What review process should provisional registrations have?\n* Should provisional registrations time out or otherwise be 'managed' so that they don't linger indefinitely?\n* Should provisional registrations be available to any party, or only select parties? (remembering that we're in the standards tree, and there is now the community process)\n",
           "createdAt": "2025-12-23T05:51:58Z",
           "updatedAt": "2025-12-23T05:51:58Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Please correct me if I still misunderstand:\nIf we elect to recommend early allocation as the method for drafts in progress to register code points,\nOption 1 means we Ask IANAbis to please make sure other SDOs can use it too\nOption 2 means we have two different tracks, one for IETF items and another for items from other SDOs\n\nIf that is correct, I really, really dislike option 2.",
+          "createdAt": "2025-12-29T20:44:45Z",
+          "updatedAt": "2025-12-29T20:44:45Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think you're correct. Note that option 2 is effectively the 'default' way forward -- 7120 is tightly scoped to standards track, and ianabis does not have it in its current path forward. I agree that having two paths is not a great outcome.\n\n@alvestrand can we escalate this with ADs / IANAbis?",
+          "createdAt": "2025-12-29T22:45:21Z",
+          "updatedAt": "2025-12-29T22:45:21Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@mnot am I also correctly understanding that one reason it may not make sense to encourage `provisional registration` over `early allocation` as the best path forward is because IANAbis \"owns\" `early allocation`. So even if we were to come out and say, \"`provisional registration` is the way to go,\" `early allocation` wouldn't be going anywhere and we'd still end up with two paths?",
+          "createdAt": "2025-12-29T23:04:53Z",
+          "updatedAt": "2025-12-29T23:04:53Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I *think* so - I'm not sure, but I suspect we can't opt out of early allocation for a single registry. ",
+          "createdAt": "2025-12-29T23:07:53Z",
+          "updatedAt": "2025-12-29T23:07:53Z"
         }
       ]
     },
