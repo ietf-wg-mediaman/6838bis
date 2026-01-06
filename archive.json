@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-30T01:10:27.384996+00:00",
+  "timestamp": "2026-01-06T01:11:55.451900+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2175,7 +2175,7 @@
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2025-12-29T23:07:53Z",
+      "updatedAt": "2026-01-05T17:55:46Z",
       "closedAt": null,
       "comments": [
         {
@@ -2240,6 +2240,13 @@
           "body": "I *think* so - I'm not sure, but I suspect we can't opt out of early allocation for a single registry. ",
           "createdAt": "2025-12-29T23:07:53Z",
           "updatedAt": "2025-12-29T23:07:53Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This has been on my mind a lot.\n\nIf we can get IANAbis to accept early allocation requests from stable references outside of IETF, then I think that is the best path forward, and then maybe provisional registration for media types can go away. If provisional registration goes away, the we should provide guidance for  folks on the new process (i.e., point them toward early allocation and maybe give some tips for navigating it)\n\nFor what it's worth, I'm doubtful that such a change to early allocation can be made. It feels out of sync with the whole vibe of early allocation, which relies on the existing IETF infrastructure of WGs, chairs, and ADs to \"have a minimal impact on IETF itself\" in order to be feasible. It doesn't seem like trying to expand early allocation beyond IETF will be possible while maintaining such minimal impact. Provisional registration also has the potential benefit of entries actually going away when they are no longer needed, which is something that seems much more difficult with early allocation.\n\nIn the meantime, could we \"clean up\" provisional registration so that it is actually functional?\nTo me that means:\n1. clarifying what provisional registration means and how it should impact regular registration of media types\n2. setting up reasonable expiry and rules for when entries will be removed from the provisional registry.\n3. cleaning up the existing provisional media types registry\n\nthoughts?",
+          "createdAt": "2026-01-05T17:55:46Z",
+          "updatedAt": "2026-01-05T17:55:46Z"
         }
       ]
     },
