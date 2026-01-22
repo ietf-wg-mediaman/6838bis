@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-06T01:11:55.451900+00:00",
+  "timestamp": "2026-01-22T01:14:40.993293+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2264,7 +2264,7 @@
       ],
       "body": "We've had discussions about what should be in the contact information field (may be a WG or a mailing list) and in the change controller fields (IESG or appropriate other standards body for standards tree). Should this guidance be captured?\n",
       "createdAt": "2025-10-02T11:10:09Z",
-      "updatedAt": "2025-10-23T10:45:31Z",
+      "updatedAt": "2026-01-20T02:47:40Z",
       "closedAt": null,
       "comments": [
         {
@@ -2280,6 +2280,13 @@
           "body": "https://www.ietf.org/archive/id/draft-baber-ianabis-rfc8126bis-02.html#name-contact-person-vs-assignee- explicitly punts all discussion of what the contact person is or should mean to the registry description. Not sure if that's a consensus discussion or just the status quo ante.\n\nIANABIS still doesn't seem to have an issue tracker up.\n",
           "createdAt": "2025-10-15T10:24:29Z",
           "updatedAt": "2025-10-15T10:24:29Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It sounds like they've agreed to that text but are open to suggestions.\n\nPerhaps we could try to follow the advice there and see if we're happy with where we end up.",
+          "createdAt": "2026-01-20T02:47:39Z",
+          "updatedAt": "2026-01-20T02:47:39Z"
         }
       ]
     },
