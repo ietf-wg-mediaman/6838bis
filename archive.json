@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-22T01:14:40.993293+00:00",
+  "timestamp": "2026-01-29T01:23:32.518602+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1983,7 +1983,7 @@
       ],
       "body": "In the case of registering audio/SCIP and video/SCIP, there was a long debate about whether the specification was readily enough available.\nIn the end, \"anyone can get a copy by requesting one from the listed address\" was seen as \"available enough\".\n\nShould we incorporate this into section 2.1.1 \"Specification availability\" somehow?\n",
       "createdAt": "2025-10-02T10:50:45Z",
-      "updatedAt": "2025-11-07T21:28:27Z",
+      "updatedAt": "2026-01-29T00:31:47Z",
       "closedAt": null,
       "comments": [
         {
@@ -2006,6 +2006,13 @@
           "body": "Discussed in Montreal; sense of the room is to point to 8126bis (normative reference) and ask IANATRANS to ensure that the text allows us to just point to it and say nothing more.\n",
           "createdAt": "2025-11-05T17:27:38Z",
           "updatedAt": "2025-11-05T17:27:38Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Our spec:\n\n> A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree.\n\nianabis:\n> the values and their meanings must be documented in a permanent and readily available public specification, in sufficient detail so that interoperability between independent implementations is possible.\n[...]\n> The intention behind \"permanent and readily available\" is that a document can reasonably be expected to be findable and retrievable long after IANA assignment of the requested value.\n\nRather than doing it by reference (and creating a dependency upon IANABIS for a very small snippet of text), should we just copy that later statement in?",
+          "createdAt": "2026-01-29T00:31:47Z",
+          "updatedAt": "2026-01-29T00:31:47Z"
         }
       ]
     },
@@ -2175,7 +2182,7 @@
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2026-01-05T17:55:46Z",
+      "updatedAt": "2026-01-29T00:25:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -2247,6 +2254,13 @@
           "body": "This has been on my mind a lot.\n\nIf we can get IANAbis to accept early allocation requests from stable references outside of IETF, then I think that is the best path forward, and then maybe provisional registration for media types can go away. If provisional registration goes away, the we should provide guidance for  folks on the new process (i.e., point them toward early allocation and maybe give some tips for navigating it)\n\nFor what it's worth, I'm doubtful that such a change to early allocation can be made. It feels out of sync with the whole vibe of early allocation, which relies on the existing IETF infrastructure of WGs, chairs, and ADs to \"have a minimal impact on IETF itself\" in order to be feasible. It doesn't seem like trying to expand early allocation beyond IETF will be possible while maintaining such minimal impact. Provisional registration also has the potential benefit of entries actually going away when they are no longer needed, which is something that seems much more difficult with early allocation.\n\nIn the meantime, could we \"clean up\" provisional registration so that it is actually functional?\nTo me that means:\n1. clarifying what provisional registration means and how it should impact regular registration of media types\n2. setting up reasonable expiry and rules for when entries will be removed from the provisional registry.\n3. cleaning up the existing provisional media types registry\n\nthoughts?",
           "createdAt": "2026-01-05T17:55:46Z",
           "updatedAt": "2026-01-05T17:55:46Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It seems like IANABIS is amenable to extending early allocation to other SDOs. ",
+          "createdAt": "2026-01-29T00:25:18Z",
+          "updatedAt": "2026-01-29T00:25:18Z"
         }
       ]
     },
@@ -2264,7 +2278,7 @@
       ],
       "body": "We've had discussions about what should be in the contact information field (may be a WG or a mailing list) and in the change controller fields (IESG or appropriate other standards body for standards tree). Should this guidance be captured?\n",
       "createdAt": "2025-10-02T11:10:09Z",
-      "updatedAt": "2026-01-20T02:47:40Z",
+      "updatedAt": "2026-01-29T00:23:50Z",
       "closedAt": null,
       "comments": [
         {
@@ -2287,6 +2301,13 @@
           "body": "It sounds like they've agreed to that text but are open to suggestions.\n\nPerhaps we could try to follow the advice there and see if we're happy with where we end up.",
           "createdAt": "2026-01-20T02:47:39Z",
           "updatedAt": "2026-01-20T02:47:39Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "So, we already have this in the template:\n\n* Person & email address to contact for further information\n* Author\n* Change controller\n\nI could see adding a section after 2.8 called something like \"Contacts\" that says something like:\n\nThe registration template contains distinct fields for contact information:\n\n* The \"Person to contact for further information\" is intended to be used by those with questions about the media type and its use. This might be an individual with technical knowledge or a support address.\n* The \"Author\" is the person(s) to be attributed with creation of the media type specification. \n* The \"Change controller\" is the party who will authorise any future changes to the status or details of the registration.\n\nEach should contain a name (of a person or other entity) and e-mail address. Optionally, they may also include a URL.\n\nAll three are required for permanent registrations; only the change controller is required for provisional registrations.\n\n\n",
+          "createdAt": "2026-01-29T00:23:50Z",
+          "updatedAt": "2026-01-29T00:23:50Z"
         }
       ]
     },
