@@ -6,7 +6,7 @@ Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 18 June 2026                                   15 December 2025
+Expires: 21 August 2026                                 17 February 2026
 
 
          Media Type Specifications and Registration Procedures
@@ -46,11 +46,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 June 2026.
+   This Internet-Draft will expire on 21 August 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1081,28 +1081,28 @@ Table of Contents
 
 5.6.  Registration Template
 
-   Type name:
+   Type name: [see Section 2.3]
 
    Subtype name:
 
-   Required parameters:
+   Required parameters: [see Section 2.4]
 
    Optional parameters:
 
-   Encoding considerations:
+   Encoding considerations: [see Section 2.5]
 
-   Security considerations:
+   Security considerations: [see Section 2.7]
 
-   Interoperability considerations:
+   Interoperability considerations: [see Section 2.2]
 
-   Published specification:
+   Published specification: [see Section 2.1.1]
 
    Applications that use this media type:
 
-   Fragment identifier considerations:
+   Fragment identifier considerations: [see Section 2.6]
 
-   Additional information:
-      Deprecated alias names for this type:
+   Additional information: [see Section 2.8]
+      Deprecated alias names for this type: [see Section 2.3.1]
 
       Magic number(s):
 

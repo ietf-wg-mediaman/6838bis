@@ -18,14 +18,14 @@
     Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
-    intervaltree 3.1.0
+    intervaltree 3.2.1
     Jinja2 3.1.6
-    lxml 5.3.1
-    platformdirs 4.5.0
+    lxml 6.0.2
+    platformdirs 4.5.1
     pycountry 24.6.1
-    PyYAML 6.0.2
+    PyYAML 6.0.3
     requests 2.32.5
-    wcwidth 0.2.14
+    wcwidth 0.3.0
 -->
 <link href="draft-ietf-mediaman-6838bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -166,7 +166,7 @@
   font-weight: 400;
   font-display: swap;
   src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
   font-family: 'Oxygen Mono';
@@ -174,7 +174,8 @@
   font-weight: 400;
   font-display: swap;
   src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 }
 
 @font-face {
@@ -566,6 +567,7 @@ aside, blockquote {
 }
 blockquote {
   margin: 1em 0;
+  border-left: 2px var(--pilcrow-strong) solid;
 }
 cite {
   display: block;
@@ -636,7 +638,7 @@ a.pilcrow {
   }
 }
 @media not print {
-  :hover > a.pilcrow {
+  :hover > a.pilcrow, a.pilcrow:focus {
     opacity: 1;
   }
   a.pilcrow[href]:hover {
@@ -1044,11 +1046,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Media Type Registration</td>
-<td class="right">December 2025</td>
+<td class="right">February 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham &amp; Resnick</td>
-<td class="center">Expires 18 June 2026</td>
+<td class="center">Expires 21 August 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1064,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc[6838" class="eref">[6838</a>, <a href="https://www.rfc-editor.org/rfc/rfc9694]" class="eref">9694]</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-12-15" class="published">15 December 2025</time>
+<time datetime="2026-02-17" class="published">17 February 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-06-18">18 June 2026</time></dd>
+<dd class="expires"><time datetime="2026-08-21">21 August 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1119,7 +1121,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 18 June 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 21 August 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1128,7 +1130,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2025 IETF Trust and the persons identified as the
+            Copyright (c) 2026 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1387,7 +1389,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-2.1-1">Media types MUST function as actual media formats. Registration of things that are better thought of as a transfer encoding, as a charset, or as a collection of separate entities of another type, is not allowed. For example, although applications exist to decode the base64 transfer encoding <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span>, base64 cannot be registered as a media type.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
 <p id="section-2.1-2">This requirement applies regardless of the registration tree involved.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
-<div id="specification-availability">
+<div id="spec">
 <section id="section-2.1.1">
           <h4 id="name-specification-availability">
 <a href="#section-2.1.1" class="section-number selfRef">2.1.1. </a><a href="#name-specification-availability" class="section-name selfRef">Specification Availability</a>
@@ -1408,7 +1410,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </div>
 </section>
 </div>
-<div id="canonicalization-and-interoperability">
+<div id="interop">
 <section id="section-2.2">
         <h3 id="name-canonicalization-and-intero">
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-canonicalization-and-intero" class="section-name selfRef">Canonicalization and Interoperability</a>
@@ -1510,7 +1512,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-2.5-4">Additional restrictions on 7bit and 8bit text are given in <span><a href="https://rfc-editor.org/rfc/rfc2046#section-4.1.1" class="relref">Section 4.1.1</a> of [<a href="#RFC2046" class="cite xref">RFC2046</a>]</span>.<a href="#section-2.5-4" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="fragment-identifiers">
+<div id="fragments">
 <section id="section-2.6">
         <h3 id="name-fragment-identifiers">
 <a href="#section-2.6" class="section-number selfRef">2.6. </a><a href="#name-fragment-identifiers" class="section-name selfRef">Fragment Identifiers</a>
@@ -1548,7 +1550,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </ul>
 </section>
 </div>
-<div id="additional-information">
+<div id="additional">
 <section id="section-2.8">
         <h3 id="name-additional-information">
 <a href="#section-2.8" class="section-number selfRef">2.8. </a><a href="#name-additional-information" class="section-name selfRef">Additional Information</a>
@@ -1967,7 +1969,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-5.6" class="section-number selfRef">5.6. </a><a href="#name-registration-template" class="section-name selfRef">Registration Template</a>
         </h3>
 <span class="break"></span><dl class="dlNewline" id="section-5.6-1">
-          <dt id="section-5.6-1.1">Type name:</dt>
+          <dt id="section-5.6-1.1">Type name: [see <a href="#naming" class="auto internal xref">Section 2.3</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.2">
             <p id="section-5.6-1.2.1"></p><a href="#section-5.6-1.2" class="pilcrow">¶</a>
 </dd>
@@ -1977,7 +1979,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-5.6-1.4.1"></p><a href="#section-5.6-1.4" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.5">Required parameters:</dt>
+<dt id="section-5.6-1.5">Required parameters: [see <a href="#parameters" class="auto internal xref">Section 2.4</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.6">
             <p id="section-5.6-1.6.1"></p><a href="#section-5.6-1.6" class="pilcrow">¶</a>
 </dd>
@@ -1987,22 +1989,22 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-5.6-1.8.1"></p><a href="#section-5.6-1.8" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.9">Encoding considerations:</dt>
+<dt id="section-5.6-1.9">Encoding considerations: [see <a href="#encoding" class="auto internal xref">Section 2.5</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.10">
             <p id="section-5.6-1.10.1"></p><a href="#section-5.6-1.10" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.11">Security considerations:</dt>
+<dt id="section-5.6-1.11">Security considerations: [see <a href="#secreq" class="auto internal xref">Section 2.7</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.12">
             <p id="section-5.6-1.12.1"></p><a href="#section-5.6-1.12" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.13">Interoperability considerations:</dt>
+<dt id="section-5.6-1.13">Interoperability considerations: [see <a href="#interop" class="auto internal xref">Section 2.2</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.14">
             <p id="section-5.6-1.14.1"></p><a href="#section-5.6-1.14" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.15">Published specification:</dt>
+<dt id="section-5.6-1.15">Published specification: [see <a href="#spec" class="auto internal xref">Section 2.1.1</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.16">
             <p id="section-5.6-1.16.1"></p><a href="#section-5.6-1.16" class="pilcrow">¶</a>
 </dd>
@@ -2012,14 +2014,14 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-5.6-1.18.1"></p><a href="#section-5.6-1.18" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.19">Fragment identifier considerations:</dt>
+<dt id="section-5.6-1.19">Fragment identifier considerations: [see <a href="#fragments" class="auto internal xref">Section 2.6</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.20">
             <p id="section-5.6-1.20.1"></p><a href="#section-5.6-1.20" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.21">Additional information:</dt>
+<dt id="section-5.6-1.21">Additional information: [see <a href="#additional" class="auto internal xref">Section 2.8</a>]</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.22">
-            <p id="section-5.6-1.22.1">Deprecated alias names for this type:<a href="#section-5.6-1.22.1" class="pilcrow">¶</a></p>
+            <p id="section-5.6-1.22.1">Deprecated alias names for this type: [see <a href="#deprecated-aliases" class="auto internal xref">Section 2.3.1</a>]<a href="#section-5.6-1.22.1" class="pilcrow">¶</a></p>
 <p id="section-5.6-1.22.2">Magic number(s):<a href="#section-5.6-1.22.2" class="pilcrow">¶</a></p>
 <p id="section-5.6-1.22.3">File name extension(s):<a href="#section-5.6-1.22.3" class="pilcrow">¶</a></p>
 <p id="section-5.6-1.22.4">macOS Uniform Type Identifier(s):<a href="#section-5.6-1.22.4" class="pilcrow">¶</a></p>
