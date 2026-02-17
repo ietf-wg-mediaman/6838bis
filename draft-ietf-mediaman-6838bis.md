@@ -92,7 +92,7 @@ Media types MUST function as actual media formats. Registration of things that a
 
 This requirement applies regardless of the registration tree involved.
 
-### Specification Availability
+### Specification Availability {#spec}
 
 A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification needs provide sufficient detail so that interoperability between independent implementations using the media type is possible. If not part of the media type registration proposal, this specification needs to be referenced by it.
 
@@ -106,7 +106,7 @@ Intellectual Property Rights (IPR) disclosures for registrations in the vendor a
 
 Copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
 
-## Canonicalization and Interoperability
+## Canonicalization and Interoperability {#interop}
 
 All registered media types MUST employ a single, canonical data format, regardless of registration tree.
 
@@ -116,7 +116,7 @@ Universal interoperability of media types is not required, but known interoperab
 
 The recommendations in this subsection apply regardless of the registration tree involved.
 
-## Naming
+## Naming {#naming}
 
 All registered media types MUST be assigned top-level type and subtype names. The combination of these names serves to uniquely identify the media type, and the subtype name facet (or the absence of one) identifies the registration tree. Both top-level type and subtype names are case-insensitive.
 
@@ -150,7 +150,7 @@ These requirements apply regardless of the registration tree involved.
 
 In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications are required to use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.
 
-## Parameters
+## Parameters {#parameters}
 
 Media types can be defined to allow or require use of media type parameters. Additionally, some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes.
 
@@ -196,7 +196,7 @@ framed:
 
 Additional restrictions on 7bit and 8bit text are given in {{Section 4.1.1 of !RFC2046}}.
 
-## Fragment Identifiers
+## Fragment Identifiers {#fragments}
 
 Media type registrations can specify how applications should interpret fragment identifiers (specified in {{Section 3.5 of !RFC3986}}) associated with the media type.
 
@@ -225,7 +225,7 @@ Issues that need to be described in a security analysis of a media type include:
 * A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types should always document whether or not they need such services in their security considerations.
 
 
-## Additional Information
+## Additional Information {#additional}
 
 The following optional information should be included in the specification of a media type if it is available:
 
@@ -520,18 +520,18 @@ If the Designated Expert(s) find that the change controller is unresponsive or u
 ## Registration Template
 
 {:vspace}
-Type name:
+Type name: [see {{naming}}]
 Subtype name:
-Required parameters:
+Required parameters: [see {{parameters}}]
 Optional parameters:
-Encoding considerations:
-Security considerations:
-Interoperability considerations:
-Published specification:
+Encoding considerations: [see {{encoding}}]
+Security considerations: [see {{secreq}}]
+Interoperability considerations: [see {{interop}}]
+Published specification: [see {{spec}}]
 Applications that use this media type:
-Fragment identifier considerations:
-Additional information:
-: Deprecated alias names for this type:
+Fragment identifier considerations: [see {{fragments}}]
+Additional information: [see {{additional}}]
+: Deprecated alias names for this type: [see {{deprecated-aliases}}]
 
   Magic number(s):
 
