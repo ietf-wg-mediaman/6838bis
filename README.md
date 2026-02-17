@@ -1,3 +1,5 @@
+<!-- regenerate: on (set to off if you edit this file) -->
+
 # Media Type Specifications and Registration Procedures
 
 This is the working area for the IETF [MEDIAMAN Working Group](https://datatracker.ietf.org/group/mediaman/documents/) Internet-Draft, "Media Type Specifications and Registration Procedures".
@@ -13,9 +15,8 @@ This is the working area for the IETF [MEDIAMAN Working Group](https://datatrack
 See the
 [guidelines for contributions](https://github.com/ietf-wg-mediaman/6838bis/blob/main/CONTRIBUTING.md).
 
-Contributions can be made by creating pull requests.
-The GitHub interface supports creating pull requests using the Edit (✏) button.
-
+The contributing file also has tips on how to make contributions, if you
+don't already know how to do that.
 
 ## Command Line Usage
 
