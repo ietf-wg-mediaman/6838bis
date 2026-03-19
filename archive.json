@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-15T01:49:12.368228+00:00",
+  "timestamp": "2026-03-19T01:44:34.023774+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1983,7 +1983,7 @@
       ],
       "body": "In the case of registering audio/SCIP and video/SCIP, there was a long debate about whether the specification was readily enough available.\nIn the end, \"anyone can get a copy by requesting one from the listed address\" was seen as \"available enough\".\n\nShould we incorporate this into section 2.1.1 \"Specification availability\" somehow?\n",
       "createdAt": "2025-10-02T10:50:45Z",
-      "updatedAt": "2026-01-29T00:31:47Z",
+      "updatedAt": "2026-03-18T04:00:57Z",
       "closedAt": null,
       "comments": [
         {
@@ -2013,6 +2013,13 @@
           "body": "Our spec:\n\n> A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree.\n\nianabis:\n> the values and their meanings must be documented in a permanent and readily available public specification, in sufficient detail so that interoperability between independent implementations is possible.\n[...]\n> The intention behind \"permanent and readily available\" is that a document can reasonably be expected to be findable and retrievable long after IANA assignment of the requested value.\n\nRather than doing it by reference (and creating a dependency upon IANABIS for a very small snippet of text), should we just copy that later statement in?",
           "createdAt": "2026-01-29T00:31:47Z",
           "updatedAt": "2026-01-29T00:31:47Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussion in Shenzhen: Keep referring to IANABIS, evaluate again when IANABIS text is stable.\n\n",
+          "createdAt": "2026-03-18T04:00:57Z",
+          "updatedAt": "2026-03-18T04:00:57Z"
         }
       ]
     },
@@ -2182,7 +2189,7 @@
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2026-03-14T06:01:49Z",
+      "updatedAt": "2026-03-18T03:49:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -2275,6 +2282,13 @@
           "body": "I agree that if IANAbis extends early allocation to other SDOs we should simply reference that instead of having a parallel provisional registration just for media types.",
           "createdAt": "2026-03-14T06:01:49Z",
           "updatedAt": "2026-03-14T06:01:49Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussion in Shenzhen: Need to do some more research on the status of the current provisional registries, they should either be made permanent or deleted. Those that are not SDO associated need to be adopted or deleted.\n",
+          "createdAt": "2026-03-18T03:49:31Z",
+          "updatedAt": "2026-03-18T03:49:31Z"
         }
       ]
     },
@@ -2292,7 +2306,7 @@
       ],
       "body": "We've had discussions about what should be in the contact information field (may be a WG or a mailing list) and in the change controller fields (IESG or appropriate other standards body for standards tree). Should this guidance be captured?\n",
       "createdAt": "2025-10-02T11:10:09Z",
-      "updatedAt": "2026-01-29T00:23:50Z",
+      "updatedAt": "2026-03-18T03:58:38Z",
       "closedAt": null,
       "comments": [
         {
@@ -2322,6 +2336,13 @@
           "body": "So, we already have this in the template:\n\n* Person & email address to contact for further information\n* Author\n* Change controller\n\nI could see adding a section after 2.8 called something like \"Contacts\" that says something like:\n\nThe registration template contains distinct fields for contact information:\n\n* The \"Person to contact for further information\" is intended to be used by those with questions about the media type and its use. This might be an individual with technical knowledge or a support address.\n* The \"Author\" is the person(s) to be attributed with creation of the media type specification. \n* The \"Change controller\" is the party who will authorise any future changes to the status or details of the registration.\n\nEach should contain a name (of a person or other entity) and e-mail address. Optionally, they may also include a URL.\n\nAll three are required for permanent registrations; only the change controller is required for provisional registrations.\n\n\n",
           "createdAt": "2026-01-29T00:23:50Z",
           "updatedAt": "2026-01-29T00:23:50Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "shenzhen discussion: Proposal in Jan 29 comment seems OK.\n",
+          "createdAt": "2026-03-18T03:58:38Z",
+          "updatedAt": "2026-03-18T03:58:38Z"
         }
       ]
     },
@@ -2420,15 +2441,15 @@
       "id": "I_kwDOMdBaOc7Rkh_S",
       "title": "Provisional Media Types URL",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/78",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "From IANA:\n\nSection 5.2:\n\nIf you want to add the URL: https://www.iana.org/assignments/provisional-standard-media-types\n\nShould the provisional registration option be mentioned in Section 4.1.1's discussion of early allocation?\n",
       "createdAt": "2025-10-15T01:21:43Z",
-      "updatedAt": "2025-11-07T21:08:49Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-18T03:50:20Z",
+      "closedAt": "2026-03-18T03:50:20Z",
       "comments": [
         {
           "author": "CxRes",
@@ -2443,6 +2464,13 @@
           "body": "Depends on #70.",
           "createdAt": "2025-11-07T21:08:49Z",
           "updatedAt": "2025-11-07T21:08:49Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Given the desire to get rid of provisional media types, this issue can be closed.\n",
+          "createdAt": "2026-03-18T03:50:20Z",
+          "updatedAt": "2026-03-18T03:50:20Z"
         }
       ]
     },
@@ -2482,7 +2510,7 @@
       "labels": [],
       "body": "From IANA:\n\n\"Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization. Note that in both cases, the early allocation process described in [RFC7120] is available\": The last sentence isn't correct. The RFC 7120 process is available for Specification Required registrations, but only when that specification is an I-D in the IETF stream.\n\nHowever, we are planning to specify in 8126bis that a kind of early allocation is possible for SDO specs, although we haven't worked out the details. (We would prefer to avoid an overhead-heavy 7120-style process that involves multiple approvals, monthly expiration reports, escalation to the IESG after a certain number of renewals [or perhaps renewals at all], etc.)\n\nIt might be worth noting RFC 8392 gets around the absence of any current text to that effect by saying, \"to allow for the allocation of values prior to publication, the Designated Experts may approve registration once they are satisfied that such a specification will be published.\"\n\nCould an SDO use the community format (it wouldn't conflict with SDO work, presumably) and modify the registration later to add itself as a change controller?\n\nNote: I couldn't tell you whether the experts have approved media types associated with specs that were available online, but not yet published in their final form. The reason I haven't tracked it is that we haven't made a practice of copying URLs from the registration template into the registry's \"Reference\" field. Do you want to use the IANA Considerations section to tell IANA to populate registry fields in a specific way, or to add fields? (We have a couple of thousand somewhat-free-form registration templates, so we might not be able to populate these fields immediately upon document approval.)",
       "createdAt": "2025-10-15T01:24:52Z",
-      "updatedAt": "2026-03-12T13:33:41Z",
+      "updatedAt": "2026-03-18T03:42:00Z",
       "closedAt": null,
       "comments": [
         {
@@ -2498,6 +2526,13 @@
           "body": "This may be solved by replacing our early allocation procedure with a reference to https://www.ietf.org/archive/id/draft-ietf-ianabis-rfc7120bis-01.html, if the WG decides that this is appropriate.\n\n",
           "createdAt": "2026-03-12T13:33:41Z",
           "updatedAt": "2026-03-12T13:33:41Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Shenzhen meeting: For the standards tree, we want to depend on 7120bis.\nFor the other trees, we may want to dispense with it altogether (permanent registration is easy enough).\n",
+          "createdAt": "2026-03-18T03:41:59Z",
+          "updatedAt": "2026-03-18T03:41:59Z"
         }
       ]
     },
@@ -2515,7 +2550,7 @@
       ],
       "body": "What should be the use of namespaces (microsoft- or vnd.goog.) in type names? Should namespaces be registered?\r\n",
       "createdAt": "2022-11-30T13:19:36Z",
-      "updatedAt": "2025-11-05T17:18:52Z",
+      "updatedAt": "2026-03-18T04:06:00Z",
       "closedAt": null,
       "comments": [
         {
@@ -2524,6 +2559,13 @@
           "body": "Discussed in Montreal: may need to create a registry / procedures -- check with IANA.",
           "createdAt": "2025-11-05T17:18:52Z",
           "updatedAt": "2025-11-05T17:18:52Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "There seems to be no appetite for making more process here. Closing the issue as \"does not need formalization\".\n",
+          "createdAt": "2026-03-18T04:06:00Z",
+          "updatedAt": "2026-03-18T04:06:00Z"
         }
       ]
     },
@@ -2625,7 +2667,7 @@
       "labels": [],
       "body": "We currently have (after a bit of editorial work):\n\n> Changes may be requested by the change controller, or by other parties if the Designated Expert(s) verify that the change controller approves the change.\n\nDoes the DE really need to do this, or is it IANA?",
       "createdAt": "2025-11-07T21:22:37Z",
-      "updatedAt": "2026-02-25T19:29:43Z",
+      "updatedAt": "2026-03-18T03:55:33Z",
       "closedAt": null,
       "comments": [
         {
@@ -2634,6 +2676,13 @@
           "body": "@alvestrand could we ask the folks at IANA for an opinion here?",
           "createdAt": "2025-12-15T02:01:17Z",
           "updatedAt": "2025-12-15T02:01:17Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "From IANA via email to the list:\n\"I think this version pre-dates the relevant IANABIS thread, but this should say \u201cif IANA or the Designated Expert(s) verify [...].\u201d IANA generally handles requests to update contact/change controller information for various registries without requesting expert input, and has processes for doing so, but does sometimes ask experts to assist.\"\n\nWe may not need to say anything here, or we may be able to point to 8160bis for the process.\n",
+          "createdAt": "2026-03-18T03:55:32Z",
+          "updatedAt": "2026-03-18T03:55:32Z"
         }
       ]
     },
@@ -2651,9 +2700,17 @@
       ],
       "body": "In the current draft of draft-ietf-ianabis-rfc7120bis, it is clear that only registered organizations can get preliminary allocations.\nThis makes sense to me.\nThis issue is filed just to make sure we're OK with this.",
       "createdAt": "2026-03-12T14:20:59Z",
-      "updatedAt": "2026-03-12T14:21:11Z",
+      "updatedAt": "2026-03-18T03:53:07Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This is now an issue about whether 7120bis early allocation is available to the community process. This is still something the MEDIAMAN WG needs to discuss.\n\nGiven that the community process is intended to register well-established formats, the combination of a format that is both preliminary and well established seems unlikely to occur in practice.\n\n",
+          "createdAt": "2026-03-18T03:53:07Z",
+          "updatedAt": "2026-03-18T03:53:07Z"
+        }
+      ]
     }
   ],
   "pulls": [
