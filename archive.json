@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-19T01:44:34.023774+00:00",
+  "timestamp": "2026-03-24T01:25:19.110366+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2711,6 +2711,22 @@
           "updatedAt": "2026-03-18T03:53:07Z"
         }
       ]
+    },
+    {
+      "number": 87,
+      "id": "I_kwDOMdBaOc71a0eW",
+      "title": "IANA feedback: clashing registrations",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/87",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Section 5.3:\n\nAbout this text:\n\n\u201cWhen a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see Section 4.2)\u201d\n\nWhat does \u201cclash\u201d mean in this context? Section 4.2 describes several possible issues. Does this just mean checking whether a suffix has been registered? If so, can you confirm that you don\u2019t want us to ask the requester whether they want to withdraw the request or change the name, but instead let the know that it\u2019s an issue and send the request to the experts as-is, with a note about the suffix? Is there anything else we should be checking concerning suffixes?",
+      "createdAt": "2026-03-23T00:08:48Z",
+      "updatedAt": "2026-03-23T00:08:48Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
