@@ -171,7 +171,7 @@ Some parameters are reused across multiple media type definitions to provide com
 
 Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. MIME {{!RFC2045}} {{?RFC2231}} allows binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible. For example, HTTP obsoletes field values containing characters outside the ASCII range ({{Section 5.5 of !RFC9110}}), requiring field definitions to use encoding mechanisms like {{?RFC8187}} to support other characters.
 
-Types already registered in the standards tree should not have new functionality added through the definition of new parameters subsequent to the original registration. New parameters can be used to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.
+Media types registered in the standards tree MUST NOT subsequently add backwards-incompatible functionality through the addition of parameters. New parameters MAY be used to convey additional information so long as its processing is backwards-compatible, so that existing implementations can still handle the message successfully. Media types registered in the vendor and personal trees SHOULD NOT violate this requirement.
 
 Changes to parameters (including the introduction of new ones) is managed in the same manner as other changes to the media type; see {{change}}.
 
