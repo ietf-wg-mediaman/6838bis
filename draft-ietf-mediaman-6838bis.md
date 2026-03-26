@@ -478,19 +478,10 @@ Registration requests can be sent to iana@iana.org. A web form for registration 
 
 > https://www.iana.org/form/media-types
 
-### Provisional Registrations {#provisional}
-
-Standardization processes often take considerable time to complete. In order to facilitate prototyping and testing, it is often helpful to assign media types early in the process. This way, identifiers used during standards development can remain unchanged once the process is complete, and implementations and documentation do not have to be updated.
-
-Accordingly, registrants can submit provisional registrations of media type names in the standards tree to IANA. The only required fields in such registrations are the media type name and contact information (including the standards-related organization name).
-
-Upon receipt of a provisional registration, IANA will check the name and contact information, then publish the registration in a distinct, publicly-visible provisional registration list.
-
-Provisional registrations can be updated or abandoned at any time. When the registration is abandoned, the media type is no longer registered in any sense; it can subsequently be registered just like any other unassigned media type name.
 
 ## Review and Approval {#review}
 
-With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see {{suffixes}}). The Designated Expert(s) will examine registration requests to make sure they meet the requirements set forth in this document.
+Registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see {{suffixes}}). The Designated Expert(s) will examine registration requests to make sure they meet the requirements set forth in this document.
 
 Decisions made by the Designated Expert(s) may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
 
@@ -550,8 +541,6 @@ Restrictions on usage:
 {:vspace}
 Author:
 Change controller:
-Provisional registration? (standards tree only):
-: Yes/No
 
 (Any other information that the author deems interesting may be added below this line.)
 
@@ -639,6 +628,9 @@ In the Top-Level Media Types registry, IANA should link the reference field for 
 
 IANA should notify recognized standards organisations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration procedure (see eg <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
 
+## Provisional Registrations
+
+This revision removes provisional registrations from the standards tree. Accordingly, IANA should remove that information from the registry and work with the Experts and the IESG as appropriate to identify an appropriate disposition for registrations that are marked as 'provisional'.
 
 #  Acknowledgments
 
