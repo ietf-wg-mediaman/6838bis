@@ -389,11 +389,11 @@ Table of Contents
    interpret fragment identifiers (specified in Section 3.5 of
    [RFC3986]) associated with the media type.
 
+   Media types that use a structured syntax suffix MUST follow any
+   fragment identifier rules specified for it.
+
    Media types are encouraged to adopt fragment identifier schemes that
-   are used with semantically similar media types.  In particular, media
-   types that use a structured syntax with a registered "+suffix" MUST
-   follow whatever fragment identifier rules are given in the structured
-   syntax suffix registration.
+   are used with semantically similar media types.
 
 2.7.  Security
 
