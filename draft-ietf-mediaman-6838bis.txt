@@ -76,7 +76,9 @@ Table of Contents
      2.5.  Encoding
      2.6.  Fragment Identifiers
      2.7.  Security
-     2.8.  Additional Information
+     2.8.  Intended Usage
+     2.9.  Contact Information
+     2.10. Additional Information
    3.  Top-Level Media Types
      3.1.  Additional Top-Level Types
        3.1.1.  Required Criteria
@@ -447,7 +449,45 @@ Table of Contents
       whether or not they need such services in their security
       considerations.
 
-2.8.  Additional Information
+2.8.  Intended Usage
+
+   The "Intended usage" field in the registration template MUST contain
+   one of "COMMON", "LIMITED USE", or "OBSOLETE".
+
+   Registrations intended for general use should be registered as
+   COMMON.  LIMITED USE accommodates media types that are only intended
+   to be used in closed or specialized systems.  OBSOLETE indicates that
+   the media type should no longer be used.
+
+   Limited-use media types should also note in the applications list
+   whether or not that list is exhaustive.
+
+   The "Restrictions on usage" field can convey additional information
+   about restrictions on where the media type can be used.
+
+2.9.  Contact Information
+
+   The registration template contains distinct fields for contact
+   information:
+
+   *  The "Person to contact for further information" is intended to be
+      used by those with questions about the media type and its use.
+      This might be an individual with technical knowledge or a support
+      address.
+
+   *  The "Author" is the person(s) to be attributed with creation of
+      the media type specification.
+
+   *  The "Change controller" is the party who will authorise any future
+      changes to the status or details of the registration.
+
+   Each should contain a name (of a person or other entity) and e-mail
+   address.  Optionally, they may also include a URL.
+
+   All three are required for permanent registrations; only the change
+   controller is required for provisional registrations.
+
+2.10.  Additional Information
 
    The following optional information should be included in the
    specification of a media type if it is available:
@@ -478,10 +518,6 @@ Table of Contents
       as copy-and-paste or drag-and-drop on Microsoft Windows and
       related platforms (see [windowsClipboardNames] for definitions and
       syntax).
-
-   *  A media type intended for limited use should note this in its
-      registration.  The "Restrictions on Usage" field is provided for
-      this purpose.
 
    When registering a media type in the standards tree, specification
    authors can provide this information in the formal specification of
@@ -1022,7 +1058,7 @@ Table of Contents
 
    Media type registrations may not be deleted; media types that are no
    longer believed appropriate for use can be declared OBSOLETE by a
-   change to their "intended use" field.
+   change to their "intended use" field (see Section 2.8).
 
    Significant changes to a media type's definition should be requested
    only when there are serious omissions or errors in the published
@@ -1041,27 +1077,36 @@ Table of Contents
 
 5.6.  Registration Template
 
-   Type name: [see Section 2.3]
+   Type name:
+      [see Section 2.3]
 
    Subtype name:
+      [see Section 2.3]
 
-   Required parameters: [see Section 2.4]
+   Required parameters:
+      [see Section 2.4]
 
    Optional parameters:
+      [see Section 2.4]
 
-   Encoding considerations: [see Section 2.5]
+   Encoding considerations:
+      [see Section 2.5]
 
-   Security considerations: [see Section 2.7]
+   Security considerations:
+      [see Section 2.7]
 
-   Interoperability considerations: [see Section 2.2]
+   Interoperability considerations:
+      [see Section 2.2]
 
-   Published specification: [see Section 2.1.1]
+   Published specification:
+      [see Section 2.1.1]
 
    Applications that use this media type:
 
-   Fragment identifier considerations: [see Section 2.6]
+   Fragment identifier considerations:
+      [see Section 2.6]
 
-   Additional information: [see Section 2.8]
+   Additional information: [see Section 2.10]
       Deprecated alias names for this type:
 
       Magic number(s):
@@ -1073,14 +1118,19 @@ Table of Contents
       Windows clipboard name(s):
 
    Person & email address to contact for further information:
+      [see Section 2.9]
 
    Intended usage:
-      (One of COMMON, LIMITED USE, or OBSOLETE.)
+      [see Section 2.8]
 
    Restrictions on usage:
-      (Any restrictions on where the media type can be used go here.)
+      [see Section 2.8]
 
-   Author: Change controller:
+   Author:
+      [see Section 2.9]
+
+   Change controller:
+      [see Section 2.9]
 
    (Any other information that the author deems interesting may be added
    below this line.)
@@ -1089,9 +1139,6 @@ Table of Contents
    to emphasize the fact that it does not apply or that the question was
    not omitted by accident.  Do not use 'none' or other words that could
    be mistaken for a response.
-
-   Limited-use media types should also note in the applications list
-   whether or not that list is exhaustive.
 
 6.  Structured Syntax Suffix Registration Procedures
 
@@ -1433,8 +1480,7 @@ Appendix A.  Historical Note
    It may be desirable to restrict the use of media types to specific
    environments or to prohibit their use in other environments.  This
    specification incorporates such restrictions into media type
-   registrations in a systematic way.  See the "Restrictions on Usage"
-   field in Section 2.8.
+   registrations in a systematic way.  See Section 2.8.
 
 Appendix B.  Legacy Media Types
 

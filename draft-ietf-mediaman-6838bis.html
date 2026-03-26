@@ -1191,7 +1191,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.2.2.7.1"><a href="#section-2.7" class="auto internal xref">2.7</a>.  <a href="#name-security" class="internal xref">Security</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.8">
-                <p id="section-toc.1-1.2.2.8.1"><a href="#section-2.8" class="auto internal xref">2.8</a>.  <a href="#name-additional-information" class="internal xref">Additional Information</a></p>
+                <p id="section-toc.1-1.2.2.8.1"><a href="#section-2.8" class="auto internal xref">2.8</a>.  <a href="#name-intended-usage" class="internal xref">Intended Usage</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.9">
+                <p id="section-toc.1-1.2.2.9.1"><a href="#section-2.9" class="auto internal xref">2.9</a>.  <a href="#name-contact-information" class="internal xref">Contact Information</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.10">
+                <p id="section-toc.1-1.2.2.10.1"><a href="#section-2.10" class="auto internal xref">2.10</a>. <a href="#name-additional-information" class="internal xref">Additional Information</a></p>
 </li>
             </ul>
 </li>
@@ -1537,33 +1543,62 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
         </ul>
 </section>
 </div>
-<div id="additional">
+<div id="usage">
 <section id="section-2.8">
-        <h3 id="name-additional-information">
-<a href="#section-2.8" class="section-number selfRef">2.8. </a><a href="#name-additional-information" class="section-name selfRef">Additional Information</a>
+        <h3 id="name-intended-usage">
+<a href="#section-2.8" class="section-number selfRef">2.8. </a><a href="#name-intended-usage" class="section-name selfRef">Intended Usage</a>
         </h3>
-<p id="section-2.8-1">The following optional information should be included in the specification of a media type if it is available:<a href="#section-2.8-1" class="pilcrow">¶</a></p>
+<p id="section-2.8-1">The "Intended usage" field in the registration template <span class="bcp14">MUST</span> contain one of "COMMON", "LIMITED USE", or "OBSOLETE".<a href="#section-2.8-1" class="pilcrow">¶</a></p>
+<p id="section-2.8-2">Registrations intended for general use should be registered as COMMON. LIMITED USE accommodates media types that are only intended to be used in closed or specialized systems. OBSOLETE indicates that the media type should no longer be used.<a href="#section-2.8-2" class="pilcrow">¶</a></p>
+<p id="section-2.8-3">Limited-use media types should also note in the applications list whether or not that list is exhaustive.<a href="#section-2.8-3" class="pilcrow">¶</a></p>
+<p id="section-2.8-4">The "Restrictions on usage" field can convey additional information about restrictions on where the media type can be used.<a href="#section-2.8-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="contacts">
+<section id="section-2.9">
+        <h3 id="name-contact-information">
+<a href="#section-2.9" class="section-number selfRef">2.9. </a><a href="#name-contact-information" class="section-name selfRef">Contact Information</a>
+        </h3>
+<p id="section-2.9-1">The registration template contains distinct fields for contact information:<a href="#section-2.9-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2.8-2.1">
-            <p id="section-2.8-2.1.1">Deprecated Aliases. In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name <span class="bcp14">MUST</span> be chosen for the media type, and applications are required to use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.<a href="#section-2.8-2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-2.9-2.1">
+            <p id="section-2.9-2.1.1">The "Person to contact for further information" is intended to be used by those with questions about the media type and its use. This might be an individual with technical knowledge or a support address.<a href="#section-2.9-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-2.8-2.2">
-            <p id="section-2.8-2.2.1">Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file, and can be used to identify it as being of a given media type.<a href="#section-2.8-2.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-2.9-2.2">
+            <p id="section-2.9-2.2.1">The "Author" is the person(s) to be attributed with creation of the media type specification.<a href="#section-2.9-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-2.8-2.3">
-            <p id="section-2.8-2.3.1">File name extension(s) commonly used on one or more platforms to indicate that some file contains a given media type.<a href="#section-2.8-2.3.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.8-2.4">
-            <p id="section-2.8-2.4.1">macOS Uniform Type Identifier (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on macOS and related platforms (see <span>[<a href="#MacOSUTIs" class="cite xref">MacOSUTIs</a>]</span> for definitions and syntax).<a href="#section-2.8-2.4.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.8-2.5">
-            <p id="section-2.8-2.5.1">Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see <span>[<a href="#windowsClipboardNames" class="cite xref">windowsClipboardNames</a>]</span> for definitions and syntax).<a href="#section-2.8-2.5.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.8-2.6">
-            <p id="section-2.8-2.6.1">A media type intended for limited use should note this in its registration. The "Restrictions on Usage" field is provided for this purpose.<a href="#section-2.8-2.6.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-2.9-2.3">
+            <p id="section-2.9-2.3.1">The "Change controller" is the party who will authorise any future changes to the status or details of the registration.<a href="#section-2.9-2.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-2.8-3">When registering a media type in the standards tree, specification authors can provide this information in the formal specification of the format, by incorporating the IANA media type registration form into the specification itself.<a href="#section-2.8-3" class="pilcrow">¶</a></p>
+<p id="section-2.9-3">Each should contain a name (of a person or other entity) and e-mail address. Optionally, they may also include a URL.<a href="#section-2.9-3" class="pilcrow">¶</a></p>
+<p id="section-2.9-4">All three are required for permanent registrations; only the change controller is required for provisional registrations.<a href="#section-2.9-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="additional">
+<section id="section-2.10">
+        <h3 id="name-additional-information">
+<a href="#section-2.10" class="section-number selfRef">2.10. </a><a href="#name-additional-information" class="section-name selfRef">Additional Information</a>
+        </h3>
+<p id="section-2.10-1">The following optional information should be included in the specification of a media type if it is available:<a href="#section-2.10-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2.10-2.1">
+            <p id="section-2.10-2.1.1">Deprecated Aliases. In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name <span class="bcp14">MUST</span> be chosen for the media type, and applications are required to use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.<a href="#section-2.10-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.10-2.2">
+            <p id="section-2.10-2.2.1">Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file, and can be used to identify it as being of a given media type.<a href="#section-2.10-2.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.10-2.3">
+            <p id="section-2.10-2.3.1">File name extension(s) commonly used on one or more platforms to indicate that some file contains a given media type.<a href="#section-2.10-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.10-2.4">
+            <p id="section-2.10-2.4.1">macOS Uniform Type Identifier (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on macOS and related platforms (see <span>[<a href="#MacOSUTIs" class="cite xref">MacOSUTIs</a>]</span> for definitions and syntax).<a href="#section-2.10-2.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.10-2.5">
+            <p id="section-2.10-2.5.1">Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see <span>[<a href="#windowsClipboardNames" class="cite xref">windowsClipboardNames</a>]</span> for definitions and syntax).<a href="#section-2.10-2.5.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-2.10-3">When registering a media type in the standards tree, specification authors can provide this information in the formal specification of the format, by incorporating the IANA media type registration form into the specification itself.<a href="#section-2.10-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1931,7 +1966,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-change-procedures" class="section-name selfRef">Change Procedures</a>
         </h3>
 <p id="section-5.5-1">When a change to a media type registration is requested, the applicable registration procedure for that media type's tree is used to process the request. Changes may be requested by the change controller, or by other parties if IANA verifies that the change controller approves the change.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
-<p id="section-5.5-2">Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field.<a href="#section-5.5-2" class="pilcrow">¶</a></p>
+<p id="section-5.5-2">Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field (see <a href="#usage" class="auto internal xref">Section 2.8</a>).<a href="#section-5.5-2" class="pilcrow">¶</a></p>
 <p id="section-5.5-3">Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.<a href="#section-5.5-3" class="pilcrow">¶</a></p>
 <p id="section-5.5-4">The change controller of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.<a href="#section-5.5-4" class="pilcrow">¶</a></p>
 <p id="section-5.5-5">If the Designated Expert(s) find that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated.<a href="#section-5.5-5" class="pilcrow">¶</a></p>
@@ -1943,90 +1978,91 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <a href="#section-5.6" class="section-number selfRef">5.6. </a><a href="#name-registration-template" class="section-name selfRef">Registration Template</a>
         </h3>
 <span class="break"></span><dl class="dlNewline" id="section-5.6-1">
-          <dt id="section-5.6-1.1">Type name: [see <a href="#naming" class="auto internal xref">Section 2.3</a>]</dt>
+          <dt id="section-5.6-1.1">Type name:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.2">
-            <p id="section-5.6-1.2.1"></p><a href="#section-5.6-1.2" class="pilcrow">¶</a>
+            <p id="section-5.6-1.2.1">[see <a href="#naming" class="auto internal xref">Section 2.3</a>]<a href="#section-5.6-1.2.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-5.6-1.3">Subtype name:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.4">
-            <p id="section-5.6-1.4.1"></p><a href="#section-5.6-1.4" class="pilcrow">¶</a>
+            <p id="section-5.6-1.4.1">[see <a href="#naming" class="auto internal xref">Section 2.3</a>]<a href="#section-5.6-1.4.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.5">Required parameters: [see <a href="#parameters" class="auto internal xref">Section 2.4</a>]</dt>
+<dt id="section-5.6-1.5">Required parameters:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.6">
-            <p id="section-5.6-1.6.1"></p><a href="#section-5.6-1.6" class="pilcrow">¶</a>
+            <p id="section-5.6-1.6.1">[see <a href="#parameters" class="auto internal xref">Section 2.4</a>]<a href="#section-5.6-1.6.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-5.6-1.7">Optional parameters:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.8">
-            <p id="section-5.6-1.8.1"></p><a href="#section-5.6-1.8" class="pilcrow">¶</a>
+            <p id="section-5.6-1.8.1">[see <a href="#parameters" class="auto internal xref">Section 2.4</a>]<a href="#section-5.6-1.8.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.9">Encoding considerations: [see <a href="#encoding" class="auto internal xref">Section 2.5</a>]</dt>
+<dt id="section-5.6-1.9">Encoding considerations:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.10">
-            <p id="section-5.6-1.10.1"></p><a href="#section-5.6-1.10" class="pilcrow">¶</a>
+            <p id="section-5.6-1.10.1">[see <a href="#encoding" class="auto internal xref">Section 2.5</a>]<a href="#section-5.6-1.10.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.11">Security considerations: [see <a href="#secreq" class="auto internal xref">Section 2.7</a>]</dt>
+<dt id="section-5.6-1.11">Security considerations:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.12">
-            <p id="section-5.6-1.12.1"></p><a href="#section-5.6-1.12" class="pilcrow">¶</a>
+            <p id="section-5.6-1.12.1">[see <a href="#secreq" class="auto internal xref">Section 2.7</a>]<a href="#section-5.6-1.12.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.13">Interoperability considerations: [see <a href="#interop" class="auto internal xref">Section 2.2</a>]</dt>
+<dt id="section-5.6-1.13">Interoperability considerations:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.14">
-            <p id="section-5.6-1.14.1"></p><a href="#section-5.6-1.14" class="pilcrow">¶</a>
+            <p id="section-5.6-1.14.1">[see <a href="#interop" class="auto internal xref">Section 2.2</a>]<a href="#section-5.6-1.14.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.6-1.15">Published specification: [see <a href="#spec" class="auto internal xref">Section 2.1.1</a>]</dt>
+<dt id="section-5.6-1.15">Published specification:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-1.16">
-            <p id="section-5.6-1.16.1"></p><a href="#section-5.6-1.16" class="pilcrow">¶</a>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.6-1.17">Applications that use this media type:</dt>
-          <dd style="margin-left: 1.5em" id="section-5.6-1.18">
-            <p id="section-5.6-1.18.1"></p><a href="#section-5.6-1.18" class="pilcrow">¶</a>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.6-1.19">Fragment identifier considerations: [see <a href="#fragments" class="auto internal xref">Section 2.6</a>]</dt>
-          <dd style="margin-left: 1.5em" id="section-5.6-1.20">
-            <p id="section-5.6-1.20.1"></p><a href="#section-5.6-1.20" class="pilcrow">¶</a>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.6-1.21">Additional information: [see <a href="#additional" class="auto internal xref">Section 2.8</a>]</dt>
-          <dd style="margin-left: 1.5em" id="section-5.6-1.22">
-            <p id="section-5.6-1.22.1">Deprecated alias names for this type:<a href="#section-5.6-1.22.1" class="pilcrow">¶</a></p>
-<p id="section-5.6-1.22.2">Magic number(s):<a href="#section-5.6-1.22.2" class="pilcrow">¶</a></p>
-<p id="section-5.6-1.22.3">File name extension(s):<a href="#section-5.6-1.22.3" class="pilcrow">¶</a></p>
-<p id="section-5.6-1.22.4">macOS Uniform Type Identifier(s):<a href="#section-5.6-1.22.4" class="pilcrow">¶</a></p>
-<p id="section-5.6-1.22.5">Windows clipboard name(s):<a href="#section-5.6-1.22.5" class="pilcrow">¶</a></p>
+            <p id="section-5.6-1.16.1">[see <a href="#spec" class="auto internal xref">Section 2.1.1</a>]<a href="#section-5.6-1.16.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
-<span class="break"></span><dl class="dlNewline" id="section-5.6-2">
-          <dt id="section-5.6-2.1">Person &amp; email address to contact for further information:</dt>
-          <dd style="margin-left: 1.5em" id="section-5.6-2.2">
-            <p id="section-5.6-2.2.1"></p><a href="#section-5.6-2.2" class="pilcrow">¶</a>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.6-2.3">Intended usage:</dt>
-          <dd style="margin-left: 1.5em" id="section-5.6-2.4">
-            <p id="section-5.6-2.4.1">(One of COMMON, LIMITED USE, or OBSOLETE.)<a href="#section-5.6-2.4.1" class="pilcrow">¶</a></p>
-</dd>
-        <dd class="break"></dd>
-</dl>
+<p id="section-5.6-2">Applications that use this media type:<a href="#section-5.6-2" class="pilcrow">¶</a></p>
 <span class="break"></span><dl class="dlNewline" id="section-5.6-3">
-          <dt id="section-5.6-3.1">Restrictions on usage:</dt>
+          <dt id="section-5.6-3.1">Fragment identifier considerations:</dt>
           <dd style="margin-left: 1.5em" id="section-5.6-3.2">
-            <p id="section-5.6-3.2.1">(Any restrictions on where the media type can be used go here.)<a href="#section-5.6-3.2.1" class="pilcrow">¶</a></p>
+            <p id="section-5.6-3.2.1">[see <a href="#fragments" class="auto internal xref">Section 2.6</a>]<a href="#section-5.6-3.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.6-3.3">Additional information: [see <a href="#additional" class="auto internal xref">Section 2.10</a>]</dt>
+          <dd style="margin-left: 1.5em" id="section-5.6-3.4">
+            <p id="section-5.6-3.4.1">Deprecated alias names for this type:<a href="#section-5.6-3.4.1" class="pilcrow">¶</a></p>
+<p id="section-5.6-3.4.2">Magic number(s):<a href="#section-5.6-3.4.2" class="pilcrow">¶</a></p>
+<p id="section-5.6-3.4.3">File name extension(s):<a href="#section-5.6-3.4.3" class="pilcrow">¶</a></p>
+<p id="section-5.6-3.4.4">macOS Uniform Type Identifier(s):<a href="#section-5.6-3.4.4" class="pilcrow">¶</a></p>
+<p id="section-5.6-3.4.5">Windows clipboard name(s):<a href="#section-5.6-3.4.5" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.6-3.5">Person &amp; email address to contact for further information:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.6-3.6">
+            <p id="section-5.6-3.6.1">[see <a href="#contacts" class="auto internal xref">Section 2.9</a>]<a href="#section-5.6-3.6.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.6-3.7">Intended usage:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.6-3.8">
+            <p id="section-5.6-3.8.1">[see <a href="#usage" class="auto internal xref">Section 2.8</a>]<a href="#section-5.6-3.8.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.6-3.9">Restrictions on usage:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.6-3.10">
+            <p id="section-5.6-3.10.1">[see <a href="#usage" class="auto internal xref">Section 2.8</a>]<a href="#section-5.6-3.10.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.6-3.11">Author:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.6-3.12">
+            <p id="section-5.6-3.12.1">[see <a href="#contacts" class="auto internal xref">Section 2.9</a>]<a href="#section-5.6-3.12.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.6-3.13">Change controller:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.6-3.14">
+            <p id="section-5.6-3.14.1">[see <a href="#contacts" class="auto internal xref">Section 2.9</a>]<a href="#section-5.6-3.14.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
-<p id="section-5.6-4">Author:
-Change controller:<a href="#section-5.6-4" class="pilcrow">¶</a></p>
-<p id="section-5.6-5">(Any other information that the author deems interesting may be added below this line.)<a href="#section-5.6-5" class="pilcrow">¶</a></p>
-<p id="section-5.6-6">"N/A", written exactly that way, can be used in any field if desired to emphasize the fact that it does not apply or that the question was not omitted by accident. Do not use 'none' or other words that could be mistaken for a response.<a href="#section-5.6-6" class="pilcrow">¶</a></p>
-<p id="section-5.6-7">Limited-use media types should also note in the applications list whether or not that list is exhaustive.<a href="#section-5.6-7" class="pilcrow">¶</a></p>
+<p id="section-5.6-4">(Any other information that the author deems interesting may be added below this line.)<a href="#section-5.6-4" class="pilcrow">¶</a></p>
+<p id="section-5.6-5">"N/A", written exactly that way, can be used in any field if desired to emphasize the fact that it does not apply or that the question was not omitted by accident. Do not use 'none' or other words that could be mistaken for a response.<a href="#section-5.6-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2362,7 +2398,7 @@ URI: https://www.sw.it.aoyama.ac.jp/Dürst/<a href="#section-10-5" class="pilcro
 <a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-historical-note" class="section-name selfRef">Historical Note</a>
       </h2>
 <p id="appendix-A-1">The media type registration process was initially defined for registering media types for use in the context of the asynchronous Internet mail environment. In this mail environment, there is a need to limit the number of possible media types, to increase the likelihood of interoperability when the capabilities of the remote mail system are not known. As media types are used in new environments in which the proliferation of media types is not a hindrance to interoperability, the original procedure proved excessively restrictive and had to be generalized. This was initially done in <span>[<a href="#RFC2048" class="cite xref">RFC2048</a>]</span>, but the procedure defined there was still part of the MIME document set. The media type specification and registration procedure is now a separate document, to make it clear that it is independent of MIME.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
-<p id="appendix-A-2">It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See the "Restrictions on Usage" field in <a href="#additional" class="auto internal xref">Section 2.8</a>.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
+<p id="appendix-A-2">It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See <a href="#usage" class="auto internal xref">Section 2.8</a>.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="legacy">
