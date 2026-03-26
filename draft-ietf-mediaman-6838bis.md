@@ -474,7 +474,7 @@ An attacker might append structured syntax suffixes in order to trick processors
 Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Processing of media types based only on the presence of a structured syntax suffix needs to ensure that further processing does not blindly trust the decoded data. For example,  proper magic header or file structure checking could mitigate this attack.
 
 
-#  Media Type Registration Procedure {#procedures}
+#  Media Type Registration Procedures {#procedures}
 
 The media type registration procedure is not a formal standards process, but rather an administrative procedure intended to allow community comment and sanity checking without excessive time delay.
 
@@ -605,15 +605,15 @@ Someone wishing to define a "+suffix" name for a structured syntax for use with 
 
 1. Check IANA's registry of media type name suffixes to see whether or not there is already an entry for that well-defined structured syntax.
 
-2. If there is no entry for their suffix scheme, fill out the template (specified in {{suffix-template}}) and include that with the media type registration. The template may be contained in an Internet Draft, alone or as part of some other protocol specification. The template may also be submitted in some other form (as part of another document or as a stand-alone document), but the contents will be treated as an "IETF Contribution" under the guidelines of BCP 78 {{!RFC5378}}.
+2. If there is no corresponding entry, fill out the template (see {{suffix-template}}) and include that with the media type registration request. The template may be contained in an Internet Draft, alone or as part of some other protocol specification. The template may also be submitted in some other form, but the contents will be treated as an "IETF Contribution" under the guidelines of BCP 78 {{!RFC5378}}.
 
-3. Send a copy of the template or a pointer to the containing document (with specific reference to the section with the template) to the mailing list media-types@ietf.org, requesting review. This may be combined with a request to review the media type registration. Allow a reasonable time for discussion and comments.
+3. Send a copy of the template or a pointer to the containing document (with specific reference to the section with the template) to the mailing list media-types@ietf.org, requesting review. This may be combined with a request to review the media type registration.
 
-4. Respond to review comments and make revisions to the proposed registration as needed to bring it into line with the guidelines given in this document.
+4. Respond to review comments and make revisions to the proposed registration as needed.
 
 5. Submit the (possibly updated) registration template (or pointer to the document containing it) to IANA at iana@iana.org.
 
-Upon receipt of a structured syntax suffix registration request,
+Upon receipt of a structured syntax suffix registration request:
 
 1. IANA checks the submission for completeness; if sections are missing or citations are not correct, IANA rejects the registration request.
 
@@ -631,37 +631,37 @@ The initial registry content specification {{?RFC6839}} provides examples of str
 
 Registrations may be updated in each registry by the same mechanism as required for an initial registration. In cases where the original definition of the scheme is contained in an IESG-approved document, update of the specification also requires IESG approval.
 
-## Structured Syntax Suffix Registration Template {#suffix-template}
+## Registration Template {#suffix-template}
 
 This template describes the fields that must be supplied in a structured syntax suffix registration request:
 
 {:vspace}
 Name
-: Full name of the well-defined structured syntax.
+: Full name of the well-defined structured syntax. Required.
 
 +suffix
-: Suffix used to indicate conformance to the syntax.
+: Suffix used to indicate conformance to the syntax. Required.
 
 References
-: Include full citations for all specifications necessary to understand the structured syntax.
+: A citation for all specifications necessary to understand the structured syntax. Required.
 
 Encoding considerations
-: A full citation to a section in a specification that provides general guidance regarding encoding considerations for any type employing this syntax. The same requirements for media type encoding considerations given in {{encoding}} apply here.
+: A citation to a section in a specification that provides general guidance regarding encoding considerations for any type employing this syntax. The requirements for media type encoding considerations given in {{encoding}} apply.
 
 Interoperability considerations
-: A full citation to a section in a specification that documents any issues regarding the interoperable use of types employing this structured syntax should be given here. Examples would include the existence of incompatible versions of the syntax, issues combining certain charsets with the syntax, or incompatibilities with other types or protocols.
+: A citation to a section in a specification that documents any issues regarding the interoperable use of types employing this structured syntax. For example, the existence of incompatible versions of the syntax, issues combining certain charsets with the syntax, or incompatibilities with other types or protocols.
 
 Fragment identifier considerations
-: A full citation to a section in a specification that documents the generic processing rules of fragment identifiers for any type employing this syntax should be described here.
+: A citation to a section in a specification that documents the generic processing rules of fragment identifiers for any type employing this syntax.
 
 Security considerations
-: A full citation to a section in a specification that provides security considerations shared by media types employing this structured syntax must be specified here. The same requirements for media type security considerations given in {{secreq}} apply here, with the exception that the option of not assessing the security considerations is not available for suffix registrations.
+: A citation to a section in a specification that provides security considerations shared by media types employing this structured syntax. The security considerations for a media type registration in the standards tree (per {{secreq}}) apply. Required.
 
 Contact
 : Person (including contact information) to contact for further information.
 
 Author/Change controller.
-: Person (including contact information) authorized to change this suffix registration.
+: Person (including contact information) authorized to change this suffix registration. Required.
 
 
 # Security Considerations
