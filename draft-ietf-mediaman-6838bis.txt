@@ -94,7 +94,7 @@ Table of Contents
        4.2.2.  Fragment Identifiers and Structured Syntax Suffixes
        4.2.3.  Security Considerations for Structured Syntax Suffix
                Processing
-   5.  Media Type Registration Procedures
+   5.  Media Type Registration Procedure
      5.1.  Preliminary Community Review
      5.2.  Submit Request to IANA
      5.3.  Review and Approval
@@ -930,7 +930,7 @@ Table of Contents
    data.  For example, proper magic header or file structure checking
    could mitigate this attack.
 
-5.  Media Type Registration Procedures
+5.  Media Type Registration Procedure
 
    The media type registration procedure is not a formal standards
    process, but rather an administrative procedure intended to allow
@@ -945,6 +945,7 @@ Table of Contents
 
    Notice of a potential media type registration in the standards tree
    MUST be sent to the media-types@ietf.org mailing list for review.
+
    Registrations in other trees can be sent to the list for review as
    well; doing so is entirely optional, but is strongly encouraged.
 
@@ -953,21 +954,25 @@ Table of Contents
    with respect to versions and external profiling information, and a
    review of any interoperability or security considerations.  The
    submitter may submit a revised registration proposal or abandon the
-   registration completely and at any time.
+   registration at any time.
 
 5.2.  Submit Request to IANA
 
-   Media types registered in the standards tree by the IETF itself are
-   reviewed and approved by the IESG as part of the normal standards
-   process.
+   Standards tree registrations by the IETF itself are submitted by the
+   IESG as part of the normal standards process.
 
    Standards-tree registrations by recognized standards-related
-   organizations as well as registrations in the vendor and personal
-   trees are submitted directly to the IANA, unless other arrangements
-   were made as part of a liaison agreement.
+   organizations are submitted directly to the IANA, unless other
+   arrangements were made as part of a liaison agreement.
 
-   Registration requests can be sent to iana@iana.org.  A web form for
-   registration requests is also available at:
+   Standards-tree registrations using the community format process
+   (Section 4.1.1.1) are submitted by the Designated Expert(s) to IANA.
+
+   Registrations in the vendor and personal trees are submitted directly
+   to the IANA.
+
+   Registration requests can be submitted to iana@iana.org.  A web form
+   for registration request submission is also available at:
 
       https://www.iana.org/form/media-types
 
@@ -975,18 +980,9 @@ Table of Contents
 
    Registrations submitted to the IANA will be first given to the
    Designated Expert(s), who are appointed by the IESG.  When a suffix
-   is present in a registration, IANA will inform the Designated
+   is present in a registration, IANA will also inform the Designated
    Expert(s) of any potentially clashing registrations (see
-   Section 4.2).  The Designated Expert(s) will examine registration
-   requests to make sure they meet the requirements set forth in this
-   document.
-
-   Decisions made by the Designated Expert(s) may be appealed to the
-   IESG using the procedure specified in Section 6.5.4 of [RFC2026].
-
-   Once a media type registration has passed review, the IANA will
-   register the media type and make the media type registration
-   available to the community.
+   Section 4.2).
 
    In the case of standards-tree registrations from other standards-
    related organizations, IANA will also check that the submitter is in
@@ -994,6 +990,15 @@ Table of Contents
    is not currently recognized as such, the IESG will be asked to
    confirm their status.  Recognition from the IESG needs to be obtained
    before a standards-tree registration can proceed.
+
+   The Designated Expert(s) will examine registration requests to make
+   sure they meet the requirements set forth in this document.
+   Decisions made by the Designated Expert(s) may be appealed to the
+   IESG using the procedure specified in Section 6.5.4 of [RFC2026].
+
+   Once a media type registration has passed review, the IANA will
+   register the media type and make the media type registration
+   available to the community.
 
 5.4.  Comments on Media Type Registrations
 
@@ -1010,10 +1015,10 @@ Table of Contents
 5.5.  Change Procedures
 
    When a change to a media type registration is requested, the
-   applicable procedure for that media type's tree is used to process
-   the request.  Changes may be requested by the change controller, or
-   by other parties if IANA verifies that the change controller approves
-   the change.
+   applicable registration procedure for that media type's tree is used
+   to process the request.  Changes may be requested by the change
+   controller, or by other parties if IANA verifies that the change
+   controller approves the change.
 
    Media type registrations may not be deleted; media types that are no
    longer believed appropriate for use can be declared OBSOLETE by a
