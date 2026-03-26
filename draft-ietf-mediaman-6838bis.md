@@ -497,7 +497,7 @@ Submitters of comments may request that their comment be attached to the media t
 
 ## Change Procedures {#change}
 
-When a change to a media type registration is requested, the applicable procedure for that media type's tree is used to process the request. Changes may be requested by the change controller, or by other parties if the Designated Expert(s) verify that the change controller approves the change.
+When a change to a media type registration is requested, the applicable procedure for that media type's tree is used to process the request. Changes may be requested by the change controller, or by other parties if IANA verifies that the change controller approves the change.
 
 Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field.
 
