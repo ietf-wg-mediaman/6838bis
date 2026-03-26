@@ -114,6 +114,8 @@ Ideally, media types will be defined so they interoperate across as many systems
 
 Universal interoperability of media types is not required, but known interoperability issues should be identified whenever possible. Publication of a media type does not require an exhaustive review of interoperability, and the interoperability considerations section is subject to continuing evaluation.
 
+Universal support and implementation of a media type are NOT a requirement for registration.
+
 The recommendations in this subsection apply regardless of the registration tree involved.
 
 ## Naming {#naming}
@@ -146,9 +148,6 @@ While it is possible for a given media type to be assigned more than one name, t
 
 These requirements apply regardless of the registration tree involved.
 
-### Aliases {#deprecated-aliases}
-
-In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications are required to use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.
 
 ## Parameters {#parameters}
 
@@ -231,7 +230,9 @@ Issues that need to be described in a security analysis of a media type include:
 
 The following optional information should be included in the specification of a media type if it is available:
 
-* Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file and thus can be used to identify entities as being of a given media type.
+* Deprecated Aliases. In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications are required to use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known can be supplied as additional information in order to assist applications in processing the media type properly.
+
+* Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file, and can be used to identify it as being of a given media type.
 
 * File name extension(s) commonly used on one or more platforms to indicate that some file contains a given media type.
 
@@ -239,17 +240,9 @@ The following optional information should be included in the specification of a 
 
 * Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see {{windowsClipboardNames}} for definitions and syntax).
 
+* A media type intended for limited use should note this in its registration. The "Restrictions on Usage" field is provided for this purpose.
+
 When registering a media type in the standards tree, specification authors can provide this information in the formal specification of the format, by incorporating the IANA media type registration form into the specification itself.
-
-## Non-Requirements {#non-requirements}
-
-Universal support and implementation of a media type are NOT a requirement for registration.
-
-In some environments such as mail, information on the capabilities of the remote mail agent is frequently not available to the sender. When this is the case, maximum interoperability might be attained by restricting the media types used to those "common" formats expected to be widely implemented.
-
-In the past, this reasoning was used to limit the number of possible media types, and resulted in a registration process with a significant hurdle and delay for those registering media types. However, the need for "common" media types does not require limiting the registration of new media types. If a limited set of media types is recommended for a particular application, that should be asserted by a separate applicability statement specific for that environment.
-
-A media type intended for limited use should note this in its registration. The "Restrictions on Usage" field is provided for this purpose.
 
 
 # Top-Level Media Types {#top-level}
@@ -524,7 +517,7 @@ Published specification: [see {{spec}}]
 Applications that use this media type:
 Fragment identifier considerations: [see {{fragments}}]
 Additional information: [see {{additional}}]
-: Deprecated alias names for this type: [see {{deprecated-aliases}}]
+: Deprecated alias names for this type:
 
   Magic number(s):
 
@@ -675,7 +668,7 @@ URI: https://www.sw.it.aoyama.ac.jp/Dürst/
 
 The media type registration process was initially defined for registering media types for use in the context of the asynchronous Internet mail environment. In this mail environment, there is a need to limit the number of possible media types, to increase the likelihood of interoperability when the capabilities of the remote mail system are not known. As media types are used in new environments in which the proliferation of media types is not a hindrance to interoperability, the original procedure proved excessively restrictive and had to be generalized. This was initially done in {{?RFC2048}}, but the procedure defined there was still part of the MIME document set. The media type specification and registration procedure is now a separate document, to make it clear that it is independent of MIME.
 
-It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See {{non-requirements}} for additional discussion.
+It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See the "Restrictions on Usage" field in {{additional}}.
 
 # Legacy Media Types {#legacy}
 
