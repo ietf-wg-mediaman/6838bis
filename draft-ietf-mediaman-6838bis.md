@@ -200,7 +200,9 @@ Additional restrictions on 7bit and 8bit text are given in {{Section 4.1.1 of !R
 
 Media type registrations can specify how applications should interpret fragment identifiers (specified in {{Section 3.5 of !RFC3986}}) associated with the media type.
 
-Media types are encouraged to adopt fragment identifier schemes that are used with semantically similar media types. In particular, media types that use a structured syntax with a registered "+suffix" MUST follow whatever fragment identifier rules are given in the structured syntax suffix registration.
+Media types that use a structured syntax suffix MUST follow any fragment identifier rules specified for it.
+
+Media types are encouraged to adopt fragment identifier schemes that are used with semantically similar media types.
 
 ## Security {#secreq}
 
