@@ -96,7 +96,7 @@ Table of Contents
        4.2.2.  Fragment Identifiers and Structured Syntax Suffixes
        4.2.3.  Security Considerations for Structured Syntax Suffix
                Processing
-   5.  Media Type Registration Procedure
+   5.  Media Type Registration Procedures
      5.1.  Preliminary Community Review
      5.2.  Submit Request to IANA
      5.3.  Review and Approval
@@ -105,7 +105,7 @@ Table of Contents
      5.6.  Registration Template
    6.  Structured Syntax Suffix Registration Procedures
      6.1.  Change Procedures
-     6.2.  Structured Syntax Suffix Registration Template
+     6.2.  Registration Template
    7.  Security Considerations
    8.  IANA Considerations
      8.1.  Top-Level Types Registry
@@ -962,7 +962,7 @@ Table of Contents
    data.  For example, proper magic header or file structure checking
    could mitigate this attack.
 
-5.  Media Type Registration Procedure
+5.  Media Type Registration Procedures
 
    The media type registration procedure is not a formal standards
    process, but rather an administrative procedure intended to allow
@@ -1150,30 +1150,27 @@ Table of Contents
        or not there is already an entry for that well-defined structured
        syntax.
 
-   2.  If there is no entry for their suffix scheme, fill out the
-       template (specified in Section 6.2) and include that with the
-       media type registration.  The template may be contained in an
-       Internet Draft, alone or as part of some other protocol
-       specification.  The template may also be submitted in some other
-       form (as part of another document or as a stand-alone document),
-       but the contents will be treated as an "IETF Contribution" under
-       the guidelines of BCP 78 [RFC5378].
+   2.  If there is no corresponding entry, fill out the template (see
+       Section 6.2) and include that with the media type registration
+       request.  The template may be contained in an Internet Draft,
+       alone or as part of some other protocol specification.  The
+       template may also be submitted in some other form, but the
+       contents will be treated as an "IETF Contribution" under the
+       guidelines of BCP 78 [RFC5378].
 
    3.  Send a copy of the template or a pointer to the containing
        document (with specific reference to the section with the
        template) to the mailing list media-types@ietf.org, requesting
        review.  This may be combined with a request to review the media
-       type registration.  Allow a reasonable time for discussion and
-       comments.
+       type registration.
 
    4.  Respond to review comments and make revisions to the proposed
-       registration as needed to bring it into line with the guidelines
-       given in this document.
+       registration as needed.
 
    5.  Submit the (possibly updated) registration template (or pointer
        to the document containing it) to IANA at iana@iana.org.
 
-   Upon receipt of a structured syntax suffix registration request,
+   Upon receipt of a structured syntax suffix registration request:
 
    1.  IANA checks the submission for completeness; if sections are
        missing or citations are not correct, IANA rejects the
@@ -1201,47 +1198,44 @@ Table of Contents
    definition of the scheme is contained in an IESG-approved document,
    update of the specification also requires IESG approval.
 
-6.2.  Structured Syntax Suffix Registration Template
+6.2.  Registration Template
 
    This template describes the fields that must be supplied in a
    structured syntax suffix registration request:
 
    Name
-      Full name of the well-defined structured syntax.
+      Full name of the well-defined structured syntax.  Required.
 
    +suffix
-      Suffix used to indicate conformance to the syntax.
+      Suffix used to indicate conformance to the syntax.  Required.
 
    References
-      Include full citations for all specifications necessary to
-      understand the structured syntax.
+      A citation for all specifications necessary to understand the
+      structured syntax.  Required.
 
    Encoding considerations
-      A full citation to a section in a specification that provides
-      general guidance regarding encoding considerations for any type
-      employing this syntax.  The same requirements for media type
-      encoding considerations given in Section 2.5 apply here.
+      A citation to a section in a specification that provides general
+      guidance regarding encoding considerations for any type employing
+      this syntax.  The requirements for media type encoding
+      considerations given in Section 2.5 apply.
 
    Interoperability considerations
-      A full citation to a section in a specification that documents any
+      A citation to a section in a specification that documents any
       issues regarding the interoperable use of types employing this
-      structured syntax should be given here.  Examples would include
-      the existence of incompatible versions of the syntax, issues
-      combining certain charsets with the syntax, or incompatibilities
-      with other types or protocols.
+      structured syntax.  For example, the existence of incompatible
+      versions of the syntax, issues combining certain charsets with the
+      syntax, or incompatibilities with other types or protocols.
 
    Fragment identifier considerations
-      A full citation to a section in a specification that documents the
+      A citation to a section in a specification that documents the
       generic processing rules of fragment identifiers for any type
-      employing this syntax should be described here.
+      employing this syntax.
 
    Security considerations
-      A full citation to a section in a specification that provides
-      security considerations shared by media types employing this
-      structured syntax must be specified here.  The same requirements
-      for media type security considerations given in Section 2.7 apply
-      here, with the exception that the option of not assessing the
-      security considerations is not available for suffix registrations.
+      A citation to a section in a specification that provides security
+      considerations shared by media types employing this structured
+      syntax.  The security considerations for a media type registration
+      in the standards tree (per Section 2.7) apply.  Required.
 
    Contact
       Person (including contact information) to contact for further
@@ -1249,7 +1243,7 @@ Table of Contents
 
    Author/Change controller.
       Person (including contact information) authorized to change this
-      suffix registration.
+      suffix registration.  Required.
 
 7.  Security Considerations
 
