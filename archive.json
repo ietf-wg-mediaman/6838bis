@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-24T01:25:19.110366+00:00",
+  "timestamp": "2026-03-26T01:48:32.604560+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2541,7 +2541,7 @@
       "id": "I_kwDOMdBaOc7TP9A4",
       "title": "Registration rules for namespaces?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/81",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2550,8 +2550,8 @@
       ],
       "body": "What should be the use of namespaces (microsoft- or vnd.goog.) in type names? Should namespaces be registered?\r\n",
       "createdAt": "2022-11-30T13:19:36Z",
-      "updatedAt": "2026-03-18T04:06:00Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-25T01:13:11Z",
+      "closedAt": "2026-03-25T01:13:11Z",
       "comments": [
         {
           "author": "mnot",
@@ -2691,7 +2691,7 @@
       "id": "I_kwDOMdBaOc7yS18F",
       "title": "Provisional registrations not available to the Community Process?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/86",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2700,8 +2700,8 @@
       ],
       "body": "In the current draft of draft-ietf-ianabis-rfc7120bis, it is clear that only registered organizations can get preliminary allocations.\nThis makes sense to me.\nThis issue is filed just to make sure we're OK with this.",
       "createdAt": "2026-03-12T14:20:59Z",
-      "updatedAt": "2026-03-18T03:53:07Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-25T01:14:35Z",
+      "closedAt": "2026-03-25T01:14:35Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -2709,6 +2709,13 @@
           "body": "This is now an issue about whether 7120bis early allocation is available to the community process. This is still something the MEDIAMAN WG needs to discuss.\n\nGiven that the community process is intended to register well-established formats, the combination of a format that is both preliminary and well established seems unlikely to occur in practice.\n\n",
           "createdAt": "2026-03-18T03:53:07Z",
           "updatedAt": "2026-03-18T03:53:07Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closing based upon discussion in Shenzhen",
+          "createdAt": "2026-03-25T01:14:35Z",
+          "updatedAt": "2026-03-25T01:14:35Z"
         }
       ]
     },
