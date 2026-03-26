@@ -117,7 +117,6 @@ Table of Contents
      11.1.  Normative References
      11.2.  Informative References
    Appendix A.  Historical Note
-   Appendix B.  Legacy Media Types
    Authors' Addresses
 
 1.  Introduction
@@ -670,9 +669,6 @@ Table of Contents
    in the vendor tree, and so its subtype name would begin with a "vnd."
    prefix.
 
-   Note that some previously defined media types do not conform to the
-   naming conventions described below; see Appendix B.
-
 4.1.1.  Standards Tree
 
    The standards tree is intended for those media types that require a
@@ -713,9 +709,7 @@ Table of Contents
    both cases, the early allocation process described in [RFC7120] is
    available.
 
-   Media types in the standards tree do not have faceted subtype names,
-   unless they are given legacy status using the process described in
-   Appendix B.
+   Media types in the standards tree do not have faceted subtype names.
 
    The change controller of a media type registered in the standards
    tree is assumed to be the standards-related organization itself.  In
@@ -836,7 +830,7 @@ Table of Contents
    considered to be members of this tree (see [RFC6648]).  Also note
    that if a generally useful and widely deployed type incorrectly uses
    an "x-" subtype name prefix, it can be registered in an alternative
-   tree by following the procedure defined in Appendix B.
+   tree by following the procedure defined in Section 4.1.1.1.
 
 4.1.5.  Additional Registration Trees
 
@@ -1484,21 +1478,6 @@ Appendix A.  Historical Note
    environments or to prohibit their use in other environments.  This
    specification incorporates such restrictions into media type
    registrations in a systematic way.  See Section 2.8.
-
-Appendix B.  Legacy Media Types
-
-   Some media types registered prior to 1996 with unfaceted subtype
-   names, would, if registered under the guidelines in this document, be
-   given a faceted name and placed into either the vendor or personal
-   trees.  Reregistration of those types to reflect the appropriate
-   trees is encouraged but not required.  Ownership and change control
-   principles outlined in this document apply to those types as if they
-   had been registered in those trees.
-
-   There may also be cases where a media type with an unfaceted subtype
-   name has been widely deployed without being registered.  In these
-   cases, the community format registration process (Section 4.1.1.1)
-   ought to be considered.
 
 Authors' Addresses
 
