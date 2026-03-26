@@ -861,11 +861,10 @@ Table of Contents
    foo+bar+baz" is not registrable, but if it nevertheless used, its
    suffix is "+baz".
 
-   Structured syntax suffixes MUST be registered before inclusion in a
-   media type registration; see Section 6.  Media types that make use of
-   a structured syntax SHOULD use the appropriate suffix, and MUST NOT
-   use suffixes for structured syntaxes that they do not actually
-   employ.
+   Structured syntax suffixes MUST be registered before use; see
+   Section 6.  Media types that make use of a structured syntax SHOULD
+   use the appropriate suffix, and MUST NOT use suffixes for structured
+   syntaxes that they do not actually employ.
 
    Media types that make use of a structured syntax, or similar
    separator such as a dash "-", SHOULD be semantically aligned, from a
