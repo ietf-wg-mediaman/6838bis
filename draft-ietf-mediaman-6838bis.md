@@ -208,7 +208,7 @@ Media types are encouraged to adopt fragment identifier schemes that are used wi
 
 All registrations of types in the standards tree MUST include an analysis of security issues. A similar analysis for media types registered in the vendor or personal trees is encouraged but not required.
 
-All descriptions of security issues need to be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree can say that "the security issues associated with this type have not been assessed".
+All descriptions of security issues need to be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree MAY say that "the security issues associated with this type have not been assessed".
 
 There is no requirement that media types registered in any tree be secure or completely free from risks. Nevertheless, all known security risks need to be identified in the registration of a media type, again regardless of registration tree.
 
@@ -216,7 +216,7 @@ The security considerations section of all registrations is subject to continuin
 
 Issues that need to be described in a security analysis of a media type include:
 
-* Processing of complex media types might institute actions on a recipient's files or other resources. If it is possible to specify arbitrary actions in an unrestricted fashion, it could have devastating effects. See the registration of the application/postscript media type in {{!RFC2046}} for an example of description and handling of these issues.
+* Processing of complex media types might modify or delete a recipient's files or trigger actions on other resources. If unrestricted, this could have devastating effects. See the registration of the application/postscript media type in {{!RFC2046}} for an example of description and handling of these issues.
 
 * Any security analysis MUST state whether or not the format employs such "active content"; if it does, it MUST state what steps have been taken (or are required be taken by applications) of the media type to protect users of the media type.
 
@@ -224,7 +224,7 @@ Issues that need to be described in a security analysis of a media type include:
 
 * A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types should state whether or not they employ compression; if they do, they should discuss what steps need to be taken to avoid such attacks.
 
-* A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types should always document whether or not they need such services in their security considerations.
+* A media type might be designed for applications that require an assurance of security without providing that assurance. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types should always document whether or not they need such services in their security considerations.
 
 
 ## Additional Information {#additional}
