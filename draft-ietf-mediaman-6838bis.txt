@@ -324,9 +324,12 @@ Table of Contents
 
    Note that a protocol can impose further restrictions on parameter
    value syntax, depending on how it chooses to represent parameters.
-   Both MIME [RFC2045] [RFC2231] and HTTP [RFC9110] [RFC8187] allow
-   binary parameters as well as parameter values expressed in a specific
-   charset, but other protocols may be less flexible.
+   MIME [RFC2045] [RFC2231] allows binary parameters as well as
+   parameter values expressed in a specific charset, but other protocols
+   may be less flexible.  For example, HTTP obsoletes field values
+   containing characters outside the ASCII range (Section 5.5 of
+   [RFC9110]), requiring field definitions to use encoding mechanisms
+   like [RFC8187] to support other characters.
 
    Types already registered in the standards tree should not have new
    functionality added through the definition of new parameters
