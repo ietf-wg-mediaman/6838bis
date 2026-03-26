@@ -72,13 +72,11 @@ Table of Contents
        2.1.2.  Intellectual Property
      2.2.  Canonicalization and Interoperability
      2.3.  Naming
-       2.3.1.  Aliases
      2.4.  Parameters
      2.5.  Encoding
      2.6.  Fragment Identifiers
      2.7.  Security
      2.8.  Additional Information
-     2.9.  Non-Requirements
    3.  Top-Level Media Types
      3.1.  Additional Top-Level Types
        3.1.1.  Required Criteria
@@ -233,6 +231,9 @@ Table of Contents
    interoperability, and the interoperability considerations section is
    subject to continuing evaluation.
 
+   Universal support and implementation of a media type are NOT a
+   requirement for registration.
+
    The recommendations in this subsection apply regardless of the
    registration tree involved.
 
@@ -280,16 +281,6 @@ Table of Contents
 
    These requirements apply regardless of the registration tree
    involved.
-
-2.3.1.  Aliases
-
-   In some cases, a single media type may have been widely deployed
-   using multiple names prior to registration.  In such cases, a
-   preferred name MUST be chosen for the media type, and applications
-   are required to use this to be compliant with the type's
-   registration.  However, a list of deprecated aliases by which the
-   type is known can be supplied as additional information in order to
-   assist applications in processing the media type properly.
 
 2.4.  Parameters
 
@@ -461,10 +452,18 @@ Table of Contents
    The following optional information should be included in the
    specification of a media type if it is available:
 
+   *  Deprecated Aliases.  In some cases, a single media type may have
+      been widely deployed using multiple names prior to registration.
+      In such cases, a preferred name MUST be chosen for the media type,
+      and applications are required to use this to be compliant with the
+      type's registration.  However, a list of deprecated aliases by
+      which the type is known can be supplied as additional information
+      in order to assist applications in processing the media type
+      properly.
+
    *  Magic number(s) (length, octet values).  Magic numbers are byte
-      sequences that are always present at a given place in the file and
-      thus can be used to identify entities as being of a given media
-      type.
+      sequences that are always present at a given place in the file,
+      and can be used to identify it as being of a given media type.
 
    *  File name extension(s) commonly used on one or more platforms to
       indicate that some file contains a given media type.
@@ -480,33 +479,14 @@ Table of Contents
       related platforms (see [windowsClipboardNames] for definitions and
       syntax).
 
+   *  A media type intended for limited use should note this in its
+      registration.  The "Restrictions on Usage" field is provided for
+      this purpose.
+
    When registering a media type in the standards tree, specification
    authors can provide this information in the formal specification of
    the format, by incorporating the IANA media type registration form
    into the specification itself.
-
-2.9.  Non-Requirements
-
-   Universal support and implementation of a media type are NOT a
-   requirement for registration.
-
-   In some environments such as mail, information on the capabilities of
-   the remote mail agent is frequently not available to the sender.
-   When this is the case, maximum interoperability might be attained by
-   restricting the media types used to those "common" formats expected
-   to be widely implemented.
-
-   In the past, this reasoning was used to limit the number of possible
-   media types, and resulted in a registration process with a
-   significant hurdle and delay for those registering media types.
-   However, the need for "common" media types does not require limiting
-   the registration of new media types.  If a limited set of media types
-   is recommended for a particular application, that should be asserted
-   by a separate applicability statement specific for that environment.
-
-   A media type intended for limited use should note this in its
-   registration.  The "Restrictions on Usage" field is provided for this
-   purpose.
 
 3.  Top-Level Media Types
 
@@ -1077,7 +1057,7 @@ Table of Contents
    Fragment identifier considerations: [see Section 2.6]
 
    Additional information: [see Section 2.8]
-      Deprecated alias names for this type: [see Section 2.3.1]
+      Deprecated alias names for this type:
 
       Magic number(s):
 
@@ -1448,8 +1428,8 @@ Appendix A.  Historical Note
    It may be desirable to restrict the use of media types to specific
    environments or to prohibit their use in other environments.  This
    specification incorporates such restrictions into media type
-   registrations in a systematic way.  See Section 2.9 for additional
-   discussion.
+   registrations in a systematic way.  See the "Restrictions on Usage"
+   field in Section 2.8.
 
 Appendix B.  Legacy Media Types
 
