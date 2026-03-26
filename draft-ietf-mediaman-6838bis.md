@@ -451,7 +451,7 @@ An attacker might append structured syntax suffixes in order to trick processors
 Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Processing of media types based only on the presence of a structured syntax suffix needs to ensure that further processing does not blindly trust the decoded data. For example,  proper magic header or file structure checking could mitigate this attack.
 
 
-#  Media Type Registration Procedures {#procedures}
+#  Media Type Registration Procedure {#procedures}
 
 The media type registration procedure is not a formal standards process, but rather an administrative procedure intended to allow community comment and sanity checking without excessive time delay.
 
@@ -459,30 +459,36 @@ Normal IETF processes need to be followed for all IETF registrations in the stan
 
 ##  Preliminary Community Review {#preliminary-review}
 
-Notice of a potential media type registration in the standards tree MUST be sent to the media-types@ietf.org mailing list for review. Registrations in other trees can be sent to the list for review as well; doing so is entirely optional, but is strongly encouraged.
+Notice of a potential media type registration in the standards tree MUST be sent to the media-types@ietf.org mailing list for review.
 
-The purpose of this notification is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.
+Registrations in other trees can be sent to the list for review as well; doing so is entirely optional, but is strongly encouraged.
+
+The purpose of this notification is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration at any time.
 
 ## Submit Request to IANA
 
-Media types registered in the standards tree by the IETF itself are reviewed and approved by the IESG as part of the normal standards process.
+Standards tree registrations by the IETF itself are submitted by the IESG as part of the normal standards process.
 
-Standards-tree registrations by recognized standards-related organizations as well as registrations in the vendor and personal trees are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement.
+Standards-tree registrations by recognized standards-related organizations are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement.
 
-Registration requests can be sent to iana@iana.org. A web form for registration requests is also available at:
+Standards-tree registrations using the community format process ({{community}}) are submitted by the Designated Expert(s) to IANA.
+
+Registrations in the vendor and personal trees are submitted directly to the IANA.
+
+Registration requests can be submitted to iana@iana.org. A web form for registration request submission is also available at:
 
 > https://www.iana.org/form/media-types
 
 
 ## Review and Approval {#review}
 
-Registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see {{suffixes}}). The Designated Expert(s) will examine registration requests to make sure they meet the requirements set forth in this document.
-
-Decisions made by the Designated Expert(s) may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
-
-Once a media type registration has passed review, the IANA will register the media type and make the media type registration available to the community.
+Registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will also inform the Designated Expert(s) of any potentially clashing registrations (see {{suffixes}}).
 
 In the case of standards-tree registrations from other standards-related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG needs to be obtained before a standards-tree registration can proceed.
+
+The Designated Expert(s) will examine registration requests to make sure they meet the requirements set forth in this document. Decisions made by the Designated Expert(s) may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
+
+Once a media type registration has passed review, the IANA will register the media type and make the media type registration available to the community.
 
 ## Comments on Media Type Registrations {#comments}
 
@@ -492,7 +498,7 @@ Submitters of comments may request that their comment be attached to the media t
 
 ## Change Procedures {#change}
 
-When a change to a media type registration is requested, the applicable procedure for that media type's tree is used to process the request. Changes may be requested by the change controller, or by other parties if IANA verifies that the change controller approves the change.
+When a change to a media type registration is requested, the applicable registration procedure for that media type's tree is used to process the request. Changes may be requested by the change controller, or by other parties if IANA verifies that the change controller approves the change.
 
 Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field.
 
