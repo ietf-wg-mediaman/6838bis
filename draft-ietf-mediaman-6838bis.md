@@ -226,6 +226,32 @@ Issues that need to be described in a security analysis of a media type include:
 * A media type might be designed for applications that require an assurance of security without providing that assurance. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types should always document whether or not they need such services in their security considerations.
 
 
+## Intended Usage {#usage}
+
+The "Intended usage" field in the registration template MUST contain one of "COMMON", "LIMITED USE", or "OBSOLETE".
+
+Registrations intended for general use should be registered as COMMON. LIMITED USE accommodates media types that are only intended to be used in closed or specialized systems. OBSOLETE indicates that the media type should no longer be used.
+
+Limited-use media types should also note in the applications list whether or not that list is exhaustive.
+
+The "Restrictions on usage" field can convey additional information about restrictions on where the media type can be used.
+
+
+## Contact Information {#contacts}
+
+The registration template contains distinct fields for contact information:
+
+* The "Person to contact for further information" is intended to be used by those with questions about the media type and its use. This might be an individual with technical knowledge or a support address.
+
+* The "Author" is the person(s) to be attributed with creation of the media type specification.
+
+* The "Change controller" is the party who will authorise any future changes to the status or details of the registration.
+
+Each should contain a name (of a person or other entity) and e-mail address. Optionally, they may also include a URL.
+
+All three are required for permanent registrations; only the change controller is required for provisional registrations.
+
+
 ## Additional Information {#additional}
 
 The following optional information should be included in the specification of a media type if it is available:
@@ -239,8 +265,6 @@ The following optional information should be included in the specification of a 
 * macOS Uniform Type Identifier (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on macOS and related platforms (see {{MacOSUTIs}} for definitions and syntax).
 
 * Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see {{windowsClipboardNames}} for definitions and syntax).
-
-* A media type intended for limited use should note this in its registration. The "Restrictions on Usage" field is provided for this purpose.
 
 When registering a media type in the standards tree, specification authors can provide this information in the formal specification of the format, by incorporating the IANA media type registration form into the specification itself.
 
@@ -500,7 +524,7 @@ Submitters of comments may request that their comment be attached to the media t
 
 When a change to a media type registration is requested, the applicable registration procedure for that media type's tree is used to process the request. Changes may be requested by the change controller, or by other parties if IANA verifies that the change controller approves the change.
 
-Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field.
+Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field (see {{usage}}).
 
 Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
@@ -512,16 +536,36 @@ If the Designated Expert(s) find that the change controller is unresponsive or u
 ## Registration Template
 
 {:vspace}
-Type name: [see {{naming}}]
+Type name:
+: [see {{naming}}]
+
 Subtype name:
-Required parameters: [see {{parameters}}]
+: [see {{naming}}]
+
+Required parameters:
+: [see {{parameters}}]
+
 Optional parameters:
-Encoding considerations: [see {{encoding}}]
-Security considerations: [see {{secreq}}]
-Interoperability considerations: [see {{interop}}]
-Published specification: [see {{spec}}]
+: [see {{parameters}}]
+
+Encoding considerations:
+: [see {{encoding}}]
+
+Security considerations:
+: [see {{secreq}}]
+
+Interoperability considerations:
+: [see {{interop}}]
+
+Published specification:
+: [see {{spec}}]
+
 Applications that use this media type:
-Fragment identifier considerations: [see {{fragments}}]
+
+{:vspace}
+Fragment identifier considerations:
+: [see {{fragments}}]
+
 Additional information: [see {{additional}}]
 : Deprecated alias names for this type:
 
@@ -532,22 +576,27 @@ Additional information: [see {{additional}}]
   macOS Uniform Type Identifier(s):
 
   Windows clipboard name(s):
+
 {:vspace}
 Person & email address to contact for further information:
+: [see {{contacts}}]
+
 Intended usage:
-: (One of COMMON, LIMITED USE, or OBSOLETE.)
-{:vspace}
+: [see {{usage}}]
+
 Restrictions on usage:
-: (Any restrictions on where the media type can be used go here.)
-{:vspace}
+: [see {{usage}}]
+
 Author:
+: [see {{contacts}}]
+
 Change controller:
+: [see {{contacts}}]
 
 (Any other information that the author deems interesting may be added below this line.)
 
 "N/A", written exactly that way, can be used in any field if desired to emphasize the fact that it does not apply or that the question was not omitted by accident. Do not use 'none' or other words that could be mistaken for a response.
 
-Limited-use media types should also note in the applications list whether or not that list is exhaustive.
 
 # Structured Syntax Suffix Registration Procedures {#suffix-procedures}
 
@@ -674,7 +723,7 @@ URI: https://www.sw.it.aoyama.ac.jp/Dürst/
 
 The media type registration process was initially defined for registering media types for use in the context of the asynchronous Internet mail environment. In this mail environment, there is a need to limit the number of possible media types, to increase the likelihood of interoperability when the capabilities of the remote mail system are not known. As media types are used in new environments in which the proliferation of media types is not a hindrance to interoperability, the original procedure proved excessively restrictive and had to be generalized. This was initially done in {{?RFC2048}}, but the procedure defined there was still part of the MIME document set. The media type specification and registration procedure is now a separate document, to make it clear that it is independent of MIME.
 
-It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See the "Restrictions on Usage" field in {{additional}}.
+It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See {{usage}}.
 
 # Legacy Media Types {#legacy}
 
