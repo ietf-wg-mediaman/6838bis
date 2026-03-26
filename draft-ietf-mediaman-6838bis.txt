@@ -92,7 +92,7 @@ Table of Contents
        4.1.4.  Unregistered x.  Tree
        4.1.5.  Additional Registration Trees
      4.2.  Structured Syntax Suffixes
-       4.2.1.  Use Cases for Structured Syntax Suffixes
+       4.2.1.  Use Cases
        4.2.2.  Fragment Identifiers and Structured Syntax Suffixes
        4.2.3.  Security Considerations for Structured Syntax Suffix
                Processing
@@ -848,11 +848,11 @@ Table of Contents
 4.2.  Structured Syntax Suffixes
 
    Media types can be identified as using a well-known structured syntax
-   (for example, XML or JSON) using use a "+suffix" convention.
+   (for example, XML or JSON) with a "+suffix" convention.
 
    A structured syntax suffix is defined as all of the characters to the
    right of the right-most "+" sign in a media type, including the
-   right-most "+" sign itself.  The structured syntax suffix MUST NOT
+   right-most "+" sign itself.  A structured syntax suffix MUST NOT
    contain more than one "+" sign.
 
    For example, in the "application/foo+bar" media type "application" is
@@ -861,11 +861,11 @@ Table of Contents
    foo+bar+baz" is not registrable, but if it nevertheless used, its
    suffix is "+baz".
 
-   Structured syntax suffixes are required to be registered before use
-   by a media type registration; see Section 6.  Media types that make
-   use of a structured syntax SHOULD use the appropriate suffix, and
-   MUST NOT use suffixes for structured syntaxes that they do not
-   actually employ.
+   Structured syntax suffixes MUST be registered before inclusion in a
+   media type registration; see Section 6.  Media types that make use of
+   a structured syntax SHOULD use the appropriate suffix, and MUST NOT
+   use suffixes for structured syntaxes that they do not actually
+   employ.
 
    Media types that make use of a structured syntax, or similar
    separator such as a dash "-", SHOULD be semantically aligned, from a
@@ -880,7 +880,7 @@ Table of Contents
    an existing subtype is expected to coordinate with the change
    controller(s) for the already registered media type.
 
-4.2.1.  Use Cases for Structured Syntax Suffixes
+4.2.1.  Use Cases
 
    Common use cases for media types that employ structured syntax
    suffixes include:
@@ -893,19 +893,19 @@ Table of Contents
    *  Flagging encoding in a digital signature format such as "+jwt" or
       "+cose"
 
-   While it might be desirable to indicate multiple use cases
-   simultaneously using a compound suffix (e.g., "+xml+zip"), experience
-   shows that suffixes are a poor basis for this; the combinations of
+   While it might be desirable to use a compound suffix (e.g.,
+   "+xml+zip"), experience shows that suffixes are a poor means of
+   indicating more than one such convention; the combinations of
    suffixes quickly multiply, and there is not a well-specified
    processing model that can handle them safely.  Therefore, multiple
    suffixes are disallowed from use.
 
 4.2.2.  Fragment Identifiers and Structured Syntax Suffixes
 
-   Structured syntax suffixes are able to specify fragment identifier
-   handling for all subtypes that utilise them, as indicated in the
-   "Fragment Identifier Considerations" column of the Structured Syntax
-   Suffixes registry.
+   Structured syntax suffixes can specify fragment identifier handling
+   for all subtypes that utilise them, as indicated in the "Fragment
+   Identifier Considerations" column of the Structured Syntax Suffixes
+   registry.
 
    Individual subtypes can specify additional handling.  To ensure
    consistent processing, precedence is determined by the following
@@ -920,8 +920,8 @@ Table of Contents
 
 4.2.3.  Security Considerations for Structured Syntax Suffix Processing
 
-   Processors that utilise the information in structured syntax suffixes
-   encounter the following security considerations.
+   Processors of the information in structured syntax suffixes encounter
+   the following security considerations.
 
 4.2.3.1.  Relationships Between Types
 
@@ -1253,8 +1253,9 @@ Table of Contents
 
 7.  Security Considerations
 
-   Security requirements for both media type and media type suffix
-   registrations are discussed in Section 2.7.
+   Security considerations for media types are discussed in Section 2.7.
+   Considerations for structured suffix registrations are discussed in
+   Section 4.2.3.
 
 8.  IANA Considerations
 

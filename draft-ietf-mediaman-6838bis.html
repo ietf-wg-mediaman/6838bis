@@ -1247,7 +1247,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-structured-syntax-suffixes" class="internal xref">Structured Syntax Suffixes</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2.2.1">
-                    <p id="section-toc.1-1.4.2.2.2.1.1"><a href="#section-4.2.1" class="auto internal xref">4.2.1</a>.  <a href="#name-use-cases-for-structured-sy" class="internal xref">Use Cases for Structured Syntax Suffixes</a></p>
+                    <p id="section-toc.1-1.4.2.2.2.1.1"><a href="#section-4.2.1" class="auto internal xref">4.2.1</a>.  <a href="#name-use-cases" class="internal xref">Use Cases</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2.2.2">
                     <p id="section-toc.1-1.4.2.2.2.2.1"><a href="#section-4.2.2" class="auto internal xref">4.2.2</a>.  <a href="#name-fragment-identifiers-and-st" class="internal xref">Fragment Identifiers and Structured Syntax Suffixes</a></p>
@@ -1828,16 +1828,16 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
         <h3 id="name-structured-syntax-suffixes">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-structured-syntax-suffixes" class="section-name selfRef">Structured Syntax Suffixes</a>
         </h3>
-<p id="section-4.2-1">Media types can be identified as using a well-known structured syntax (for example, XML or JSON) using use a "+suffix" convention.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.2-2">A structured syntax suffix is defined as all of the characters to the right of the right-most "+" sign in a media type, including the right-most "+" sign itself. The structured syntax suffix <span class="bcp14">MUST NOT</span> contain more than one "+" sign.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.2-1">Media types can be identified as using a well-known structured syntax (for example, XML or JSON) with a "+suffix" convention.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">A structured syntax suffix is defined as all of the characters to the right of the right-most "+" sign in a media type, including the right-most "+" sign itself. A structured syntax suffix <span class="bcp14">MUST NOT</span> contain more than one "+" sign.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.2-3">For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it nevertheless used, its suffix is "+baz".<a href="#section-4.2-3" class="pilcrow">¶</a></p>
-<p id="section-4.2-4">Structured syntax suffixes are required to be registered before use by a media type registration; see <a href="#suffix-procedures" class="auto internal xref">Section 6</a>. Media types that make use of a structured syntax <span class="bcp14">SHOULD</span> use the appropriate suffix, and <span class="bcp14">MUST NOT</span> use suffixes for structured syntaxes that they do not actually employ.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
+<p id="section-4.2-4">Structured syntax suffixes <span class="bcp14">MUST</span> be registered before inclusion in a media type registration; see <a href="#suffix-procedures" class="auto internal xref">Section 6</a>. Media types that make use of a structured syntax <span class="bcp14">SHOULD</span> use the appropriate suffix, and <span class="bcp14">MUST NOT</span> use suffixes for structured syntaxes that they do not actually employ.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.2-5">Media types that make use of a structured syntax, or similar separator such as a dash "-", <span class="bcp14">SHOULD</span> be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry; see <a href="#review" class="auto internal xref">Section 5.3</a>.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
 <p id="section-4.2-6">A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
-<div id="use-cases-for-structured-syntax-suffixes">
+<div id="use-cases">
 <section id="section-4.2.1">
-          <h4 id="name-use-cases-for-structured-sy">
-<a href="#section-4.2.1" class="section-number selfRef">4.2.1. </a><a href="#name-use-cases-for-structured-sy" class="section-name selfRef">Use Cases for Structured Syntax Suffixes</a>
+          <h4 id="name-use-cases">
+<a href="#section-4.2.1" class="section-number selfRef">4.2.1. </a><a href="#name-use-cases" class="section-name selfRef">Use Cases</a>
           </h4>
 <p id="section-4.2.1-1">Common use cases for media types that employ structured syntax suffixes include:<a href="#section-4.2.1-1" class="pilcrow">¶</a></p>
 <ul class="normal">
@@ -1851,7 +1851,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
               <p id="section-4.2.1-2.3.1">Flagging encoding in a digital signature format such as "+jwt" or "+cose"<a href="#section-4.2.1-2.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
-<p id="section-4.2.1-3">While it might be desirable to indicate multiple use cases simultaneously using a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor basis for this; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.<a href="#section-4.2.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.2.1-3">While it might be desirable to use a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor means of indicating more than one such convention; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.<a href="#section-4.2.1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="suffix-frag">
@@ -1859,7 +1859,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
           <h4 id="name-fragment-identifiers-and-st">
 <a href="#section-4.2.2" class="section-number selfRef">4.2.2. </a><a href="#name-fragment-identifiers-and-st" class="section-name selfRef">Fragment Identifiers and Structured Syntax Suffixes</a>
           </h4>
-<p id="section-4.2.2-1">Structured syntax suffixes are able to specify fragment identifier handling for all subtypes that utilise them, as indicated in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.<a href="#section-4.2.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.2-1">Structured syntax suffixes can specify fragment identifier handling for all subtypes that utilise them, as indicated in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.<a href="#section-4.2.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.2.2-2">Individual subtypes can specify additional handling. To ensure consistent processing, precedence is determined by the following rules (first match winning):<a href="#section-4.2.2-2" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-4.2.2-3">
 <li id="section-4.2.2-3.1">
@@ -1871,12 +1871,12 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
           </ol>
 </section>
 </div>
-<div id="security-considerations-for-structured-syntax-suffix-processing">
+<div id="suffix-sec">
 <section id="section-4.2.3">
           <h4 id="name-security-considerations-for">
 <a href="#section-4.2.3" class="section-number selfRef">4.2.3. </a><a href="#name-security-considerations-for" class="section-name selfRef">Security Considerations for Structured Syntax Suffix Processing</a>
           </h4>
-<p id="section-4.2.3-1">Processors that utilise the information in structured syntax suffixes encounter the following security considerations.<a href="#section-4.2.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.3-1">Processors of the information in structured syntax suffixes encounter the following security considerations.<a href="#section-4.2.3-1" class="pilcrow">¶</a></p>
 <div id="relationships-between-types">
 <section id="section-4.2.3.1">
             <h5 id="name-relationships-between-types">
@@ -2176,7 +2176,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
       <h2 id="name-security-considerations">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-7-1">Security requirements for both media type and media type suffix registrations are discussed in <a href="#secreq" class="auto internal xref">Section 2.7</a>.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-1">Security considerations for media types are discussed in <a href="#secreq" class="auto internal xref">Section 2.7</a>. Considerations for structured suffix registrations are discussed in <a href="#suffix-sec" class="auto internal xref">Section 4.2.3</a>.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
