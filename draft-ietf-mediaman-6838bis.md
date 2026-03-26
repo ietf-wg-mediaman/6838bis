@@ -74,7 +74,7 @@ Those labels are known as media types. A media type consists of a top-level type
 
 ## Conventions Used in This Document
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in {{!RFC2119}} when they appear in ALL CAPS. They may also appear in lower or mixed case as plain English words, without any normative meaning.
+{::boilerplate bcp14-tagged}
 
 This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234}} notation, including the core rules defined in Appendix B of that document.
 
