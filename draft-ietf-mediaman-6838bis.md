@@ -424,19 +424,19 @@ When the IETF performs such review, it needs to consider the greater expertise o
 
 ## Structured Syntax Suffixes {#suffixes}
 
-Media types can be identified as using a well-known structured syntax (for example, XML or JSON) using use a "+suffix" convention.
+Media types can be identified as using a well-known structured syntax (for example, XML or JSON) with a "+suffix" convention.
 
-A structured syntax suffix is defined as all of the characters to the right of the right-most "+" sign in a media type, including the right-most "+" sign itself. The structured syntax suffix MUST NOT contain more than one "+" sign.
+A structured syntax suffix is defined as all of the characters to the right of the right-most "+" sign in a media type, including the right-most "+" sign itself. A structured syntax suffix MUST NOT contain more than one "+" sign.
 
 For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it nevertheless used, its suffix is "+baz".
 
-Structured syntax suffixes are required to be registered before use by a media type registration; see {{suffix-procedures}}. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.
+Structured syntax suffixes MUST be registered before inclusion in a media type registration; see {{suffix-procedures}}. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.
 
 Media types that make use of a structured syntax, or similar separator such as a dash "-", SHOULD be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry; see {{review}}.
 
 A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.
 
-### Use Cases for Structured Syntax Suffixes
+### Use Cases
 
 Common use cases for media types that employ structured syntax suffixes include:
 
@@ -444,20 +444,20 @@ Common use cases for media types that employ structured syntax suffixes include:
 * Flagging compression with a format such as "+zip" or "+gzip"
 * Flagging encoding in a digital signature format such as "+jwt" or "+cose"
 
-While it might be desirable to indicate multiple use cases simultaneously using a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor basis for this; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.
+While it might be desirable to use a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor means of indicating more than one such convention; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.
 
 ### Fragment Identifiers and Structured Syntax Suffixes {#suffix-frag}
 
-Structured syntax suffixes are able to specify fragment identifier handling for all subtypes that utilise them, as indicated in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.
+Structured syntax suffixes can specify fragment identifier handling for all subtypes that utilise them, as indicated in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.
 
 Individual subtypes can specify additional handling. To ensure consistent processing, precedence is determined by the following rules (first match winning):
 
 1. When the structured syntax suffix defines fragment identifier handling and it successfully resolves the fragment identifier, that determines fragment identifier handling;
 2. Otherwise, the specific media type determines fragment identifier handling.
 
-### Security Considerations for Structured Syntax Suffix Processing
+### Security Considerations for Structured Syntax Suffix Processing {#suffix-sec}
 
-Processors that utilise the information in structured syntax suffixes encounter the following security considerations.
+Processors of the information in structured syntax suffixes encounter the following security considerations.
 
 #### Relationships Between Types
 
@@ -663,9 +663,11 @@ Contact
 Author/Change controller.
 : Person (including contact information) authorized to change this suffix registration.
 
+
 # Security Considerations
 
-Security requirements for both media type and media type suffix registrations are discussed in {{secreq}}.
+Security considerations for media types are discussed in {{secreq}}. Considerations for structured suffix registrations are discussed in {{suffix-sec}}.
+
 
 # IANA Considerations
 
