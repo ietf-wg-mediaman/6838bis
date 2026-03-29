@@ -217,7 +217,7 @@ Issues that need to be described in a security analysis of a media type include:
 
 * Processing of complex media types might modify or delete a recipient's files or trigger actions on other resources. If unrestricted, this could have devastating effects. See the registration of the application/postscript media type in {{!RFC2046}} for an example of description and handling of these issues.
 
-* Any security analysis MUST state whether or not the format employs such "active content"; if it does, it MUST state what steps have been taken (or are required be taken by applications) of the media type to protect users of the media type.
+* Any security analysis MUST state whether or not the format employs such "active content"; if it does, it MUST state what steps have been taken (or are required to be taken by applications) to protect users of the media type.
 
 * Processing of complex media types might institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/postscript media type illustrates how such directives can be handled.
 
