@@ -726,3 +726,14 @@ The media type registration process was initially defined for registering media 
 
 It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See {{usage}}.
 
+# Changes from RFC 6838
+
+This document incorporates the following significant changes:
+
+* **Incorporation of RFC 9694**: This revision obsoletes RFC 9694 and integrates its requirements into the media type registration template. This includes the addition of fields for **macOS Uniform Type Identifiers** and **Windows clipboard names** ([#additional](#additional)).
+* **Removal of Provisional Registrations**: This revision removes the concept of "provisional registrations" from the standards tree.
+* **Expansion of the Standards Tree (Community Formats)**: A new process is defined allowing the Designated Expert(s) to approve registrations in the standards tree for "community formats." ([#community](#community)).
+* **Strict Suffix Constraints**: This revision updates structured syntax suffixes to disallow those containing more than one "+" character ([#suffixes](#suffixes)).
+* **Suffix Precedence for Fragment Identifiers**: New rules establish that if a structured syntax suffix defines fragment identifier handling and successfully resolves it, that handling takes precedence over rules defined by the specific media type ([#suffix-frag](#suffix-frag)).
+* **Change Controller Updates**: In cases where a change controller is unresponsive or uncontactable, this revision empowers the Designated Expert(s) to recommend to the IESG that the change controller be updated ([#change](#change)).
+* **Top-Level Type Guidance**: This revision adds criteria for evaluating the creation of new top-level types ([#top-level](#top-level)).
