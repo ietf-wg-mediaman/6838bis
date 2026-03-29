@@ -165,7 +165,7 @@ Note that this syntax is more restrictive than what is allowed by the ABNF in {{
 
 Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.
 
-There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary valued parameters, while permitted in some protocols, are best avoided.
+There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary-valued parameters, while permitted in some protocols, are best avoided.
 
 Some parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for "Bucket" Media Types {{?RFC6381}} identify media codecs used inside the container and their parameters. RTP payload formats have several common parameters: see {{?RFC4855}}, and {{?RFC8851}}.
 
