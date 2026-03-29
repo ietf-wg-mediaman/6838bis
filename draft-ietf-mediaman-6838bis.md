@@ -505,7 +505,7 @@ Registration requests can be submitted to iana@iana.org. A web form for registra
 
 ## Review and Approval {#review}
 
-Registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will also inform the Designated Expert(s) of any potentially clashing registrations (see {{suffixes}}).
+Registrations submitted to the IANA will be first given to the Designated Expert(s), who are appointed by the IESG. When a suffix is present in a registration, IANA will also inform the Designated Expert(s) of any potentially potentially misaligned registrations (see {{suffixes}}).
 
 In the case of standards-tree registrations from other standards-related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG needs to be obtained before a standards-tree registration can proceed.
 
