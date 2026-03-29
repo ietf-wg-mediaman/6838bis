@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-26T01:48:32.604560+00:00",
+  "timestamp": "2026-03-29T01:51:07.189182+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2179,7 +2179,7 @@
       "id": "I_kwDOMdBaOc7PQC1z",
       "title": "Effect of a provisional registration is not specified",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/70",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2189,8 +2189,8 @@
       ],
       "body": "In section 5.2.1, we specify registration procedures for provisional registrations, but don't specify the effect of registering something there.\n\nSuggested addition, something like:\n\nThe Designated Expert will check submissions for registration of names in the provisional registration list to verify that it has been adequately coordinated with the person or body referenced in the contact information of the provisional registration.\n\n",
       "createdAt": "2025-10-02T11:06:38Z",
-      "updatedAt": "2026-03-18T03:49:31Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-26T02:25:50Z",
+      "closedAt": "2026-03-26T02:25:50Z",
       "comments": [
         {
           "author": "mnot",
@@ -2297,7 +2297,7 @@
       "id": "I_kwDOMdBaOc7PQFok",
       "title": "Guidance on contact information (and possibly other fields)",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/71",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2306,8 +2306,8 @@
       ],
       "body": "We've had discussions about what should be in the contact information field (may be a WG or a mailing list) and in the change controller fields (IESG or appropriate other standards body for standards tree). Should this guidance be captured?\n",
       "createdAt": "2025-10-02T11:10:09Z",
-      "updatedAt": "2026-03-18T03:58:38Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-26T03:46:19Z",
+      "closedAt": "2026-03-26T03:46:19Z",
       "comments": [
         {
           "author": "mnot",
@@ -2343,6 +2343,13 @@
           "body": "shenzhen discussion: Proposal in Jan 29 comment seems OK.\n",
           "createdAt": "2026-03-18T03:58:38Z",
           "updatedAt": "2026-03-18T03:58:38Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Incorporated into 3bfbe7157",
+          "createdAt": "2026-03-26T03:46:19Z",
+          "updatedAt": "2026-03-26T03:46:19Z"
         }
       ]
     },
@@ -2503,15 +2510,15 @@
       "id": "I_kwDOMdBaOc7RkjJN",
       "title": "Early Allocation",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/80",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "From IANA:\n\n\"Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization. Note that in both cases, the early allocation process described in [RFC7120] is available\": The last sentence isn't correct. The RFC 7120 process is available for Specification Required registrations, but only when that specification is an I-D in the IETF stream.\n\nHowever, we are planning to specify in 8126bis that a kind of early allocation is possible for SDO specs, although we haven't worked out the details. (We would prefer to avoid an overhead-heavy 7120-style process that involves multiple approvals, monthly expiration reports, escalation to the IESG after a certain number of renewals [or perhaps renewals at all], etc.)\n\nIt might be worth noting RFC 8392 gets around the absence of any current text to that effect by saying, \"to allow for the allocation of values prior to publication, the Designated Experts may approve registration once they are satisfied that such a specification will be published.\"\n\nCould an SDO use the community format (it wouldn't conflict with SDO work, presumably) and modify the registration later to add itself as a change controller?\n\nNote: I couldn't tell you whether the experts have approved media types associated with specs that were available online, but not yet published in their final form. The reason I haven't tracked it is that we haven't made a practice of copying URLs from the registration template into the registry's \"Reference\" field. Do you want to use the IANA Considerations section to tell IANA to populate registry fields in a specific way, or to add fields? (We have a couple of thousand somewhat-free-form registration templates, so we might not be able to populate these fields immediately upon document approval.)",
       "createdAt": "2025-10-15T01:24:52Z",
-      "updatedAt": "2026-03-18T03:42:00Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-26T02:25:13Z",
+      "closedAt": "2026-03-26T02:25:12Z",
       "comments": [
         {
           "author": "mnot",
@@ -2533,6 +2540,13 @@
           "body": "Shenzhen meeting: For the standards tree, we want to depend on 7120bis.\nFor the other trees, we may want to dispense with it altogether (permanent registration is easy enough).\n",
           "createdAt": "2026-03-18T03:41:59Z",
           "updatedAt": "2026-03-18T03:41:59Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think this can be closed without action - this is already reflected in the draft.",
+          "createdAt": "2026-03-26T02:25:12Z",
+          "updatedAt": "2026-03-26T02:25:12Z"
         }
       ]
     },
@@ -2660,15 +2674,15 @@
       "id": "I_kwDOMdBaOc7WszxT",
       "title": "DE or IANA verifies change controller approval?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/85",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "We currently have (after a bit of editorial work):\n\n> Changes may be requested by the change controller, or by other parties if the Designated Expert(s) verify that the change controller approves the change.\n\nDoes the DE really need to do this, or is it IANA?",
       "createdAt": "2025-11-07T21:22:37Z",
-      "updatedAt": "2026-03-18T03:55:33Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-26T02:27:25Z",
+      "closedAt": "2026-03-26T02:27:25Z",
       "comments": [
         {
           "author": "mnot",
@@ -2731,8 +2745,87 @@
       "labels": [],
       "body": "Section 5.3:\n\nAbout this text:\n\n\u201cWhen a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see Section 4.2)\u201d\n\nWhat does \u201cclash\u201d mean in this context? Section 4.2 describes several possible issues. Does this just mean checking whether a suffix has been registered? If so, can you confirm that you don\u2019t want us to ask the requester whether they want to withdraw the request or change the name, but instead let the know that it\u2019s an issue and send the request to the experts as-is, with a note about the suffix? Is there anything else we should be checking concerning suffixes?",
       "createdAt": "2026-03-23T00:08:48Z",
-      "updatedAt": "2026-03-23T00:08:48Z",
+      "updatedAt": "2026-03-26T04:41:00Z",
       "closedAt": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "What's desired here is a list of any registrations that share the same type/subtype _without_ the suffix.\n\nFor example, if `foo/bar` and/or `foo/bar+abc` are registered, they would potentially clash with a request to register `foo/bar+xyz`.\n\nI think it's just notify the expert(s) -- they need to judge whether it's a problem or not.",
+          "createdAt": "2026-03-26T03:50:33Z",
+          "updatedAt": "2026-03-26T03:50:33Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The issue here may be with the word 'clashing'  -- [Section 4.2](https://ietf-wg-mediaman.github.io/6838bis/draft-ietf-mediaman-6838bis.html#name-structured-syntax-suffixes) talks about 'semantically aligned', so perhaps just 'potentially misaligned'.",
+          "createdAt": "2026-03-26T04:41:00Z",
+          "updatedAt": "2026-03-26T04:41:00Z"
+        }
+      ]
+    },
+    {
+      "number": 88,
+      "id": "I_kwDOMdBaOc72w3n8",
+      "title": "Binary parameters",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/88",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> Both MIME {{!RFC2045}} {{?RFC2231}} and HTTP {{!RFC9110}} {{?RFC8187}} allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.\n\nOh really?",
+      "createdAt": "2026-03-26T02:35:53Z",
+      "updatedAt": "2026-03-26T03:55:32Z",
+      "closedAt": "2026-03-26T03:55:32Z",
+      "comments": []
+    },
+    {
+      "number": 89,
+      "id": "I_kwDOMdBaOc72w9Ak",
+      "title": "Adding parameters",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/89",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> Types already registered in the standards tree should not have new functionality added through the definition of new parameters subsequent to the original registration. New parameters can be used to convey additional information that does not otherwise change existing functionality. An example of this would be a \"revision\" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.\n\nis confusingly worded, and 'revision' is a bad example here (adding a revision parameter later isn't backwards-compatible because old processors don't know about it). Suggest:\n\nMedia types registered in the standards tree MUST NOT subsequently add backwards-incompatible functionality through the addition of parameters. New parameters MAY be used to convey additional information so long as its processing is backwards-compatible, so that existing implementations can still handle the message successfully. Media types registered in the vendor and personal trees SHOULD NOT violate this requirement.\n",
+      "createdAt": "2026-03-26T02:41:09Z",
+      "updatedAt": "2026-03-26T03:58:20Z",
+      "closedAt": "2026-03-26T03:58:20Z",
+      "comments": []
+    },
+    {
+      "number": 90,
+      "id": "I_kwDOMdBaOc72xVCJ",
+      "title": "Legacy Media Types",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/90",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I suspect this appendix can be completely removed.",
+      "createdAt": "2026-03-26T03:05:57Z",
+      "updatedAt": "2026-03-26T03:57:11Z",
+      "closedAt": "2026-03-26T03:57:11Z",
+      "comments": []
+    },
+    {
+      "number": 91,
+      "id": "I_kwDOMdBaOc72xwZJ",
+      "title": "Intended usage",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/91",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Should have its own description",
+      "createdAt": "2026-03-26T03:36:10Z",
+      "updatedAt": "2026-03-26T03:57:22Z",
+      "closedAt": "2026-03-26T03:57:22Z",
       "comments": []
     }
   ],
