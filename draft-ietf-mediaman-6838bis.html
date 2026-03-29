@@ -1050,7 +1050,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham &amp; Resnick</td>
-<td class="center">Expires 27 September 2026</td>
+<td class="center">Expires 30 September 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc[6838" class="eref">[6838</a>, <a href="https://www.rfc-editor.org/rfc/rfc9694]" class="eref">9694]</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-03-26" class="published">26 March 2026</time>
+<time datetime="2026-03-29" class="published">29 March 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-09-27">27 September 2026</time></dd>
+<dd class="expires"><time datetime="2026-09-30">30 September 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1121,7 +1121,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 27 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 30 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1441,7 +1441,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 </pre><a href="#section-2.3-3" class="pilcrow">¶</a>
 </div>
 <p id="section-2.3-4">Note that this syntax is more restrictive than what is allowed by <span><a href="https://rfc-editor.org/rfc/rfc2045#section-5.1" class="relref">Section 5.1</a> of [<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> or <span><a href="https://rfc-editor.org/rfc/rfc4288#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC4288" class="cite xref">RFC4288</a>]</span>. Also note that while this syntax allows type and subtype names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' <span class="bcp14">SHOULD</span> be limited to 64 characters.<a href="#section-2.3-4" class="pilcrow">¶</a></p>
-<p id="section-2.3-5">Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means that facet-less standards tree registrations cannot use periods in the subtype name.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
+<p id="section-2.3-5">Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means facet-less standards tree registrations cannot use periods in the subtype name.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
 <p id="section-2.3-6">Similarly, the final "+" in a subtype name introduces a structured syntax specifier suffix. Structured syntax suffix requirements are specified in <a href="#suffixes" class="auto internal xref">Section 4.2</a>.<a href="#section-2.3-6" class="pilcrow">¶</a></p>
 <p id="section-2.3-7">While it is possible for a given media type to be assigned more than one name, the use of different names to identify the same media type is discouraged.<a href="#section-2.3-7" class="pilcrow">¶</a></p>
 <p id="section-2.3-8">These requirements apply regardless of the registration tree involved.<a href="#section-2.3-8" class="pilcrow">¶</a></p>
@@ -1462,7 +1462,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 </div>
 <p id="section-2.4-5">Note that this syntax is more restrictive than what is allowed by the ABNF in <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> and amended by <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span>.<a href="#section-2.4-5" class="pilcrow">¶</a></p>
 <p id="section-2.4-6">Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.<a href="#section-2.4-6" class="pilcrow">¶</a></p>
-<p id="section-2.4-7">There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary valued parameters, while permitted in some protocols, are best avoided.<a href="#section-2.4-7" class="pilcrow">¶</a></p>
+<p id="section-2.4-7">There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary-valued parameters, while permitted in some protocols, are best avoided.<a href="#section-2.4-7" class="pilcrow">¶</a></p>
 <p id="section-2.4-8">Some parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for "Bucket" Media Types <span>[<a href="#RFC6381" class="cite xref">RFC6381</a>]</span> identify media codecs used inside the container and their parameters. RTP payload formats have several common parameters: see <span>[<a href="#RFC4855" class="cite xref">RFC4855</a>]</span>, and <span>[<a href="#RFC8851" class="cite xref">RFC8851</a>]</span>.<a href="#section-2.4-8" class="pilcrow">¶</a></p>
 <p id="section-2.4-9">Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. MIME <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span> allows binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible. For example, HTTP obsoletes field values containing characters outside the ASCII range (<span><a href="https://rfc-editor.org/rfc/rfc9110#section-5.5" class="relref">Section 5.5</a> of [<a href="#RFC9110" class="cite xref">RFC9110</a>]</span>), requiring field definitions to use encoding mechanisms like <span>[<a href="#RFC8187" class="cite xref">RFC8187</a>]</span> to support other characters.<a href="#section-2.4-9" class="pilcrow">¶</a></p>
 <p id="section-2.4-10">Media types registered in the standards tree <span class="bcp14">MUST NOT</span> subsequently add backwards-incompatible functionality through the addition of parameters. New parameters <span class="bcp14">MAY</span> be used to convey additional information so long as its processing is backwards-compatible, so that existing implementations can still handle the message successfully. Media types registered in the vendor and personal trees <span class="bcp14">SHOULD NOT</span> violate this requirement.<a href="#section-2.4-10" class="pilcrow">¶</a></p>
@@ -1475,7 +1475,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-encoding" class="section-name selfRef">Encoding</a>
         </h3>
 <p id="section-2.5-1">Some transports impose restrictions on the type of data they can carry. For example, Internet mail traditionally was limited to 7bit US-ASCII text. Encoding schemes are often used to work around such transport limitations.<a href="#section-2.5-1" class="pilcrow">¶</a></p>
-<p id="section-2.5-2">An "encoding considerations" field is provided to note what sort of data a media type can consist of as part of its registration. Possible values of this field are:<a href="#section-2.5-2" class="pilcrow">¶</a></p>
+<p id="section-2.5-2">An "encoding considerations" field is provided to specify the nature of the data a media type contains as part of its registration. Possible values of this field are:<a href="#section-2.5-2" class="pilcrow">¶</a></p>
 <span class="break"></span><dl class="dlParallel" id="section-2.5-3">
           <dt id="section-2.5-3.1">7bit:</dt>
           <dd style="margin-left: 1.5em" id="section-2.5-3.2">
@@ -1526,7 +1526,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
             <p id="section-2.7-6.1.1">Processing of complex media types might modify or delete a recipient's files or trigger actions on other resources. If unrestricted, this could have devastating effects. See the registration of the application/postscript media type in <span>[<a href="#RFC2046" class="cite xref">RFC2046</a>]</span> for an example of description and handling of these issues.<a href="#section-2.7-6.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.7-6.2">
-            <p id="section-2.7-6.2.1">Any security analysis <span class="bcp14">MUST</span> state whether or not the format employs such "active content"; if it does, it <span class="bcp14">MUST</span> state what steps have been taken (or are required be taken by applications) of the media type to protect users of the media type.<a href="#section-2.7-6.2.1" class="pilcrow">¶</a></p>
+            <p id="section-2.7-6.2.1">Any security analysis <span class="bcp14">MUST</span> state whether or not the format employs such "active content"; if it does, it <span class="bcp14">MUST</span> state what steps have been taken (or are required to be taken by applications) to protect users of the media type.<a href="#section-2.7-6.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.7-6.3">
             <p id="section-2.7-6.3.1">Processing of complex media types might institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/postscript media type illustrates how such directives can be handled.<a href="#section-2.7-6.3.1" class="pilcrow">¶</a></p>
@@ -1658,7 +1658,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
               <p id="section-3.1.2-2.2.1">Use of an IETF Working Group to define a new top-level type is not needed, but may be advisable in some cases. There are examples of new top-level type definitions without a Working Group (<span>[<a href="#RFC2077" class="cite xref">RFC2077</a>]</span>), with a short, dedicated WG (<span>[<a href="#RFC8081" class="cite xref">RFC8081</a>]</span>), and with a Working Group that included other related work (<span>[<a href="#RFC9695" class="cite xref">RFC9695</a>]</span>).<a href="#section-3.1.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-3.1.2-2.3">
-              <p id="section-3.1.2-2.3.1">The document defining the new top-level type should include initial registrations of actual subtypes. The exception may be a top-level type similar to 'example'. This will help to show the need for the new top-level type, will allow checking the appropriateness of the definition of the new top-level type, will avoid separate work for registering an initial slate of subtypes, and will provide examples of what is considered a valid subtype for future subtype registrations.<a href="#section-3.1.2-2.3.1" class="pilcrow">¶</a></p>
+              <p id="section-3.1.2-2.3.1">The document defining the new top-level type should include initial registrations of actual subtypes. The exception may be a top-level type similar to 'example'. This will help to show the need for the new top-level type, allow for checking the appropriateness of the new top-level type's definition, avoid redundant work in registering an initial slate of subtypes, and provide examples of valid subtypes for future registrations.<a href="#section-3.1.2-2.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-3.1.2-2.4">
               <p id="section-3.1.2-2.4.1">The registration and actual use of a certain number of subtypes under the new top-level type should be expected. The existence of a single subtype should not be enough; it should be clear that new similar types may appear in the future. Otherwise, the creation of a new top-level type is likely unjustified.<a href="#section-3.1.2-2.4.1" class="pilcrow">¶</a></p>
@@ -1829,8 +1829,8 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-structured-syntax-suffixes" class="section-name selfRef">Structured Syntax Suffixes</a>
         </h3>
 <p id="section-4.2-1">Media types can be identified as using a well-known structured syntax (for example, XML or JSON) with a "+suffix" convention.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.2-2">A structured syntax suffix is defined as all of the characters to the right of the right-most "+" sign in a media type, including the right-most "+" sign itself. A structured syntax suffix <span class="bcp14">MUST NOT</span> contain more than one "+" sign.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
-<p id="section-4.2-3">For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it nevertheless used, its suffix is "+baz".<a href="#section-4.2-3" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">A structured syntax suffix is defined as all of the characters to the right of the right-most "+" character in a media type, including the right-most "+" character itself. A structured syntax suffix <span class="bcp14">MUST NOT</span> contain more than one "+" character.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.2-3">For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it is nevertheless used, its suffix is "+baz".<a href="#section-4.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.2-4">Structured syntax suffixes <span class="bcp14">MUST</span> be registered before use; see <a href="#suffix-procedures" class="auto internal xref">Section 6</a>. Media types that make use of a structured syntax <span class="bcp14">SHOULD</span> use the appropriate suffix, and <span class="bcp14">MUST NOT</span> use suffixes for structured syntaxes that they do not actually employ.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.2-5">Media types that make use of a structured syntax, or similar separator such as a dash "-", <span class="bcp14">SHOULD</span> be semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. Registrations are expected to align with existing subtype or suffix names in the media type registry; see <a href="#review" class="auto internal xref">Section 5.3</a>.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
 <p id="section-4.2-6">A party requesting registration of a media type that adds a suffix to an existing subtype is expected to coordinate with the change controller(s) for the already registered media type.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
@@ -2072,7 +2072,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <p id="section-6-2">Someone wishing to define a "+suffix" name for a structured syntax for use with a new media type registration should:<a href="#section-6-2" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-6-3">
 <li id="section-6-3.1">
-          <p id="section-6-3.1.1">Check IANA's registry of media type name suffixes to see whether or not there is already an entry for that well-defined structured syntax.<a href="#section-6-3.1.1" class="pilcrow">¶</a></p>
+          <p id="section-6-3.1.1">Check the IANA registry of media type name suffixes to determine if an entry already exists for that structured syntax.<a href="#section-6-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-6-3.2">
           <p id="section-6-3.2.1">If there is no corresponding entry, fill out the template (see <a href="#suffix-template" class="auto internal xref">Section 6.2</a>) and include that with the media type registration request. The template may be contained in an Internet Draft, alone or as part of some other protocol specification. The template may also be submitted in some other form, but the contents will be treated as an "IETF Contribution" under the guidelines of BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span>.<a href="#section-6-3.2.1" class="pilcrow">¶</a></p>
