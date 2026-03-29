@@ -1011,8 +1011,8 @@ Table of Contents
    Registrations submitted to the IANA will be first given to the
    Designated Expert(s), who are appointed by the IESG.  When a suffix
    is present in a registration, IANA will also inform the Designated
-   Expert(s) of any potentially clashing registrations (see
-   Section 4.2).
+   Expert(s) of any potentially potentially misaligned registrations
+   (see Section 4.2).
 
    In the case of standards-tree registrations from other standards-
    related organizations, IANA will also check that the submitter is in
