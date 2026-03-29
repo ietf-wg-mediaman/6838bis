@@ -179,7 +179,7 @@ Changes to parameters (including the introduction of new ones) is managed in the
 
 Some transports impose restrictions on the type of data they can carry. For example, Internet mail traditionally was limited to 7bit US-ASCII text. Encoding schemes are often used to work around such transport limitations.
 
-An "encoding considerations" field is provided to note what sort of data a media type can consist of as part of its registration. Possible values of this field are:
+An "encoding considerations" field is provided to specify the nature of the data a media type contains as part of its registration. Possible values of this field are:
 
 7bit:
 : The content of the media type consists solely of CRLF- delimited 7bit US-ASCII text.
