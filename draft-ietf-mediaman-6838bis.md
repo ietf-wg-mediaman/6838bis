@@ -140,7 +140,7 @@ Type and subtype names MUST conform to the following ABNF:
 
 Note that this syntax is more restrictive than what is allowed by {{Section 5.1 of !RFC2045}} or {{Section 4.2 of ?RFC4288}}. Also note that while this syntax allows type and subtype names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.
 
-Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means that facet-less standards tree registrations cannot use periods in the subtype name.
+Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means facet-less standards tree registrations cannot use periods in the subtype name.
 
 Similarly, the final "+" in a subtype name introduces a structured syntax specifier suffix. Structured syntax suffix requirements are specified in {{suffixes}}.
 
