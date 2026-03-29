@@ -428,7 +428,7 @@ Media types can be identified as using a well-known structured syntax (for examp
 
 A structured syntax suffix is defined as all of the characters to the right of the right-most "+" character in a media type, including the right-most "+" character itself. A structured syntax suffix MUST NOT contain more than one "+" character.
 
-For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it nevertheless used, its suffix is "+baz".
+For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it is nevertheless used, its suffix is "+baz".
 
 Structured syntax suffixes MUST be registered before use; see {{suffix-procedures}}. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.
 
