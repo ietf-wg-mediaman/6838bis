@@ -603,7 +603,7 @@ Structured syntax suffixes must be described by a readily available description,
 
 Someone wishing to define a "+suffix" name for a structured syntax for use with a new media type registration should:
 
-1. Check IANA's registry of media type name suffixes to see whether or not there is already an entry for that well-defined structured syntax.
+1. Check the IANA registry of media type name suffixes to determine if an entry already exists for that structured syntax.
 
 2. If there is no corresponding entry, fill out the template (see {{suffix-template}}) and include that with the media type registration request. The template may be contained in an Internet Draft, alone or as part of some other protocol specification. The template may also be submitted in some other form, but the contents will be treated as an "IETF Contribution" under the guidelines of BCP 78 {{!RFC5378}}.
 
