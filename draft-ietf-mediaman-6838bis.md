@@ -305,7 +305,7 @@ Additional considerations for the definition of a new top-level type include:
 
 * Use of an IETF Working Group to define a new top-level type is not needed, but may be advisable in some cases. There are examples of new top-level type definitions without a Working Group ({{?RFC2077}}), with a short, dedicated WG ({{?RFC8081}}), and with a Working Group that included other related work ({{?RFC9695}}).
 
-* The document defining the new top-level type should include initial registrations of actual subtypes. The exception may be a top-level type similar to 'example'. This will help to show the need for the new top-level type, will allow checking the appropriateness of the definition of the new top-level type, will avoid separate work for registering an initial slate of subtypes, and will provide examples of what is considered a valid subtype for future subtype registrations.
+* The document defining the new top-level type should include initial registrations of actual subtypes. The exception may be a top-level type similar to 'example'. This will help to show the need for the new top-level type, allow for checking the appropriateness of the new top-level type's definition, avoid redundant work in registering an initial slate of subtypes, and provide examples of valid subtypes for future registrations.
 
 * The registration and actual use of a certain number of subtypes under the new top-level type should be expected. The existence of a single subtype should not be enough; it should be clear that new similar types may appear in the future. Otherwise, the creation of a new top-level type is likely unjustified.
 
