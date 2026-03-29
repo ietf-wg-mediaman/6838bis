@@ -426,7 +426,7 @@ When the IETF performs such review, it needs to consider the greater expertise o
 
 Media types can be identified as using a well-known structured syntax (for example, XML or JSON) with a "+suffix" convention.
 
-A structured syntax suffix is defined as all of the characters to the right of the right-most "+" sign in a media type, including the right-most "+" sign itself. A structured syntax suffix MUST NOT contain more than one "+" sign.
+A structured syntax suffix is defined as all of the characters to the right of the right-most "+" character in a media type, including the right-most "+" character itself. A structured syntax suffix MUST NOT contain more than one "+" character.
 
 For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable, but if it nevertheless used, its suffix is "+baz".
 
