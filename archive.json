@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-29T01:51:07.189182+00:00",
+  "timestamp": "2026-03-31T01:49:39.756717+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2738,15 +2738,15 @@
       "id": "I_kwDOMdBaOc71a0eW",
       "title": "IANA feedback: clashing registrations",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/87",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Section 5.3:\n\nAbout this text:\n\n\u201cWhen a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see Section 4.2)\u201d\n\nWhat does \u201cclash\u201d mean in this context? Section 4.2 describes several possible issues. Does this just mean checking whether a suffix has been registered? If so, can you confirm that you don\u2019t want us to ask the requester whether they want to withdraw the request or change the name, but instead let the know that it\u2019s an issue and send the request to the experts as-is, with a note about the suffix? Is there anything else we should be checking concerning suffixes?",
       "createdAt": "2026-03-23T00:08:48Z",
-      "updatedAt": "2026-03-26T04:41:00Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-29T21:09:13Z",
+      "closedAt": "2026-03-29T21:09:13Z",
       "comments": [
         {
           "author": "mnot",
@@ -2826,6 +2826,24 @@
       "createdAt": "2026-03-26T03:36:10Z",
       "updatedAt": "2026-03-26T03:57:22Z",
       "closedAt": "2026-03-26T03:57:22Z",
+      "comments": []
+    },
+    {
+      "number": 92,
+      "id": "I_kwDOMdBaOc74TV0o",
+      "title": "Changes from 6838",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/92",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "",
+      "createdAt": "2026-03-29T21:14:50Z",
+      "updatedAt": "2026-03-29T21:14:50Z",
+      "closedAt": null,
       "comments": []
     }
   ],
