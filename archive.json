@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-31T01:49:39.756717+00:00",
+  "timestamp": "2026-05-14T02:33:52.978904+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2833,7 +2833,7 @@
       "id": "I_kwDOMdBaOc74TV0o",
       "title": "Changes from 6838",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/92",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -2842,9 +2842,17 @@
       ],
       "body": "",
       "createdAt": "2026-03-29T21:14:50Z",
-      "updatedAt": "2026-03-29T21:14:50Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-05-13T04:07:50Z",
+      "closedAt": "2026-05-13T04:07:50Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This is in; we'll update as we go.",
+          "createdAt": "2026-05-13T04:07:50Z",
+          "updatedAt": "2026-05-13T04:07:50Z"
+        }
+      ]
     }
   ],
   "pulls": [
