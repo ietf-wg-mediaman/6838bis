@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-14T02:33:52.978904+00:00",
+  "timestamp": "2026-06-14T02:56:20.954197+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1983,7 +1983,7 @@
       ],
       "body": "In the case of registering audio/SCIP and video/SCIP, there was a long debate about whether the specification was readily enough available.\nIn the end, \"anyone can get a copy by requesting one from the listed address\" was seen as \"available enough\".\n\nShould we incorporate this into section 2.1.1 \"Specification availability\" somehow?\n",
       "createdAt": "2025-10-02T10:50:45Z",
-      "updatedAt": "2026-03-18T04:00:57Z",
+      "updatedAt": "2026-06-11T12:01:08Z",
       "closedAt": null,
       "comments": [
         {
@@ -2020,6 +2020,13 @@
           "body": "Discussion in Shenzhen: Keep referring to IANABIS, evaluate again when IANABIS text is stable.\n\n",
           "createdAt": "2026-03-18T04:00:57Z",
           "updatedAt": "2026-03-18T04:00:57Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Status update: Current section link is https://www.ietf.org/archive/id/draft-ietf-ianabis-rfc8126bis-01.html#name-specification-required\n\nThere are still \"questions\" in the section, but only in the \"Internet-Drafts as specifications\", which shouldn't be a problem that we depend on the solution to.\n",
+          "createdAt": "2026-06-11T11:59:23Z",
+          "updatedAt": "2026-06-11T12:01:08Z"
         }
       ]
     },
