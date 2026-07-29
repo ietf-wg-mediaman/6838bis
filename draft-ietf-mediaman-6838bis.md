@@ -368,15 +368,15 @@ Modification or alteration of the specification uses the same level of processin
 
 Some formats are interoperable (i.e., they are supported by more than one implementation), but their specifications are not published by a recognized standards-related organization. To accommodate these cases, the Designated Expert(s) are empowered to approve registrations in the standards tree that meet the following criteria:
 
-- There is a well-defined specification for the format
-- That specification is not tied to or heavily associated with one implementation
-- The specification is freely available at a stable location
-- There are multiple interoperable implementations of the specification, or they are likely to emerge
-- The requested media type name is appropriate to the use case, and not so generic that it may be considered 'squatting'
-- There is no conflict with IETF work or work at other recognised SDOs (present or future)
-- There is evidence of broad adoption
+-  The specification is well-defined and complete
+-  The specification is freely available to the public at a permanent and readily available location
+-  The specification is not tied to or heavily associated with one implementation
+-  There are multiple interoperable implementations of the specification, or such implementations are likely to emerge
+-  There is evidence of broad adoption
+-  The use case addressed by the specification is using media types appropriately
+-  The requested value is appropriate to the use case, and not so generic that it may be considered 'squatting'
 
-The Designated Expert(s) have discretion in applying these criteria; in rare cases, they might judge it best to register an entry that fails one or more. The intent is to assure that successfully deployed community formats have registered media types. As such, the criteria above are designed to preclude anticipatory registrations.
+The Designated Expert(s) have discretion in applying these criteria; in some cases, they might judge it best to register an entry that fails one or more. The intent is to assure that successfully deployed community formats have registered media types. As such, the criteria above are designed to preclude anticipatory registrations.
 
 Note that such registrations still go through preliminary community review ({{preliminary-review}}), and decisions can be appealed ({{review}}).
 
