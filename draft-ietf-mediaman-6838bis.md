@@ -35,6 +35,10 @@ author:
     organization: Episteme Technology Consulting
     email: resnick@episteme.net
 
+normative:
+  IANA-GUIDELINES: I-D.ietf-ianabis-rfc8126bis
+  EARLY-ALLOCATION: I-D.ietf-ianabis-rfc7120bis
+
 informative:
   MacOSUTIs:
     title: "Framework: Uniform Type Identifiers"
@@ -287,7 +291,7 @@ Registration of a new top-level type requires Standards Action in the IETF and, 
 
 Definitions of new top-level types are required to fulfil the following criteria:
 
-* The top-level type is defined in a Standards Track RFC (see {{Section 4.9 of !RFC8126}}). This will make sure there is sufficient community interest, review, and consensus.
+* The top-level type is defined in a Standards Track RFC (see {{Section 2.3.9 of IANA-GUIDELINES}}). This will make sure there is sufficient community interest, review, and consensus.
 
 * The IANA Considerations section of that RFC requests that IANA add this new top-level type to the registry of top-level types.
 
@@ -346,7 +350,7 @@ Registrations in the standards tree are either:
 
 1. approved directly by the IESG, or
 
-2. registered by a recognized standards-related organization using the "Specification Required" IANA registration policy {{Section 4.6 of !RFC8126}} (which implies Expert Review), or
+2. registered by a recognized standards-related organization using the "Specification Required" IANA registration policy {{Section 2.3.6 of IANA-GUIDELINES}} (which implies Expert Review), or
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
@@ -356,7 +360,7 @@ In the second case, the IESG makes a one-time decision on whether the registrati
 
 The third case is described in {{community}}.
 
-Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization. Note that in both cases, the early allocation process described in {{!RFC7120}} is available.
+Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization. Note that in both cases, the early allocation process described in {{EARLY-ALLOCATION}} is available.
 
 Media types in the standards tree do not have faceted subtype names.
 
@@ -392,7 +396,7 @@ Vendor tree registrations are distinguished by the leading facet "vnd.". That ma
 
 While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.
 
-Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
+Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 2.3.5 of IANA-GUIDELINES}} prior to approval.
 
 ### Personal Tree
 
@@ -404,7 +408,7 @@ The change controller of a "personal" registration is the person or entity makin
 
 While public exposure and review of media types to be registered in the personal tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.
 
-Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
+Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 2.3.5 of IANA-GUIDELINES}} prior to approval.
 
 ### Unregistered x. Tree
 
