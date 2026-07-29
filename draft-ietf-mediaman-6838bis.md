@@ -100,6 +100,8 @@ This requirement applies regardless of the registration tree involved.
 
 A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification needs provide sufficient detail so that interoperability between independent implementations using the media type is possible. If not part of the media type registration proposal, this specification needs to be referenced by it.
 
+See {{Section 2.3.6 of IANA-GUIDELINES}} for further discussion of "permanent and readily available."
+
 A specification need not be publicly available for media types registered in the vendor and personal trees. Note, however, that the public availability of a specification will often make the difference between having a name reserved and having the potential for useful interoperation.
 
 ### Intellectual Property
