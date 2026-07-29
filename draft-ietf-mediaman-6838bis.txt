@@ -193,6 +193,9 @@ Table of Contents
    registration proposal, this specification needs to be referenced by
    it.
 
+   See Section 2.3.6 of [IANA-GUIDELINES] for further discussion of
+   "permanent and readily available."
+
    A specification need not be publicly available for media types
    registered in the vendor and personal trees.  Note, however, that the
    public availability of a specification will often make the difference
