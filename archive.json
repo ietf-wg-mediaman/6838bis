@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-14T02:56:20.954197+00:00",
+  "timestamp": "2026-07-30T01:48:37.757987+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1974,7 +1974,7 @@
       "id": "I_kwDOMdBaOc7PP2mH",
       "title": "Do we need to define \"readily available\"?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/63",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1983,8 +1983,8 @@
       ],
       "body": "In the case of registering audio/SCIP and video/SCIP, there was a long debate about whether the specification was readily enough available.\nIn the end, \"anyone can get a copy by requesting one from the listed address\" was seen as \"available enough\".\n\nShould we incorporate this into section 2.1.1 \"Specification availability\" somehow?\n",
       "createdAt": "2025-10-02T10:50:45Z",
-      "updatedAt": "2026-06-11T12:01:08Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-29T11:01:40Z",
+      "closedAt": "2026-07-29T11:01:40Z",
       "comments": [
         {
           "author": "mnot",
