@@ -4,7 +4,7 @@ abbrev: Media Type Registration
 docname: draft-ietf-mediaman-6838bis-latest
 date:
 category: bcp
-obsoletes: [6838, 9694]
+obsoletes: 6838, 9694
 
 ipr: trust200902
 keyword: Internet-Draft
@@ -13,7 +13,10 @@ stand_alone: yes
 smart_quotes: no
 pi: [toc, tocindent, sortrefs, symrefs, strict, compact, comments, inline]
 
+workgroup: Media Type Maintenance
+
 venue:
+  group: Media Type Maintenance
   home: "https://datatracker.ietf.org/wg/mediaman/about/"
   repo: "https://github.com/ietf-wg-mediaman/6838bis/"
 
@@ -547,36 +550,36 @@ If the Designated Expert(s) find that the change controller is unresponsive or u
 
 {:vspace}
 Type name:
-: [see {{naming}}]
+: \[see {{naming}}\]
 
 Subtype name:
-: [see {{naming}}]
+: \[see {{naming}}\]
 
 Required parameters:
-: [see {{parameters}}]
+: \[see {{parameters}}\]
 
 Optional parameters:
-: [see {{parameters}}]
+: \[see {{parameters}}\]
 
 Encoding considerations:
-: [see {{encoding}}]
+: \[see {{encoding}}\]
 
 Security considerations:
-: [see {{secreq}}]
+: \[see {{secreq}}\]
 
 Interoperability considerations:
-: [see {{interop}}]
+: \[see {{interop}}\]
 
 Published specification:
-: [see {{spec}}]
+: \[see {{spec}}\]
 
 Applications that use this media type:
 
 {:vspace}
 Fragment identifier considerations:
-: [see {{fragments}}]
+: \[see {{fragments}}\]
 
-Additional information: [see {{additional}}]
+Additional information: \[see {{additional}}\]
 : Deprecated alias names for this type:
 
   Magic number(s):
@@ -589,19 +592,19 @@ Additional information: [see {{additional}}]
 
 {:vspace}
 Person & email address to contact for further information:
-: [see {{contacts}}]
+: \[see {{contacts}}\]
 
 Intended usage:
-: [see {{usage}}]
+: \[see {{usage}}\]
 
 Restrictions on usage:
-: [see {{usage}}]
+: \[see {{usage}}\]
 
 Author:
-: [see {{contacts}}]
+: \[see {{contacts}}\]
 
 Change controller:
-: [see {{contacts}}]
+: \[see {{contacts}}\]
 
 (Any other information that the author deems interesting may be added below this line.)
 
