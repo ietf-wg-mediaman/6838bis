@@ -53,7 +53,7 @@ informative:
     target: https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats
     author:
      -
-       org: MicroSoft Inc.
+       org: Microsoft Corporation
     date: August 2020
 
 --- abstract
@@ -98,7 +98,7 @@ This requirement applies regardless of the registration tree involved.
 
 ### Specification Availability {#spec}
 
-A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification needs provide sufficient detail so that interoperability between independent implementations using the media type is possible. If not part of the media type registration proposal, this specification needs to be referenced by it.
+A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification needs to provide sufficient detail so that interoperability between independent implementations using the media type is possible. If not part of the media type registration proposal, this specification needs to be referenced by it.
 
 See {{Section 2.3.6 of IANA-GUIDELINES}} for further discussion of "permanent and readily available."
 
@@ -120,7 +120,7 @@ Ideally, media types will be defined so they interoperate across as many systems
 
 Universal interoperability of media types is not required, but known interoperability issues should be identified whenever possible. Publication of a media type does not require an exhaustive review of interoperability, and the interoperability considerations section is subject to continuing evaluation.
 
-Universal support and implementation of a media type are NOT a requirement for registration.
+Universal support and implementation of a media type are not a requirement for registration.
 
 The recommendations in this subsection apply regardless of the registration tree involved.
 
@@ -161,7 +161,7 @@ Media types can be defined to allow or require use of media type parameters. Add
 
 In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and should be specified as completely as possible when media types are registered in the vendor or personal trees.
 
-Parameter names have the same syntax as media type names and values:
+Parameter names have the same syntax as media type names:
 
 ~~~ abnf
     parameter-name = restricted-name
@@ -171,13 +171,13 @@ Note that this syntax is more restrictive than what is allowed by the ABNF in {{
 
 Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.
 
-There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary-valued parameters, while permitted in some protocols, are best avoided.
+There is no defined syntax for parameter values; therefore, it needs to be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs to be taken to limit the use of potentially problematic syntaxes; for example, binary-valued parameters, while permitted in some protocols, are best avoided.
 
 Some parameters are reused across multiple media type definitions to provide common functionality. For example, the 'Codecs' and 'Profiles' Parameters for "Bucket" Media Types {{?RFC6381}} identify media codecs used inside the container and their parameters. RTP payload formats have several common parameters: see {{?RFC4855}}, and {{?RFC8851}}.
 
 Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. MIME {{!RFC2045}} {{?RFC2231}} allows binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible. For example, HTTP obsoletes field values containing characters outside the ASCII range ({{Section 5.5 of !RFC9110}}), requiring field definitions to use encoding mechanisms like {{?RFC8187}} to support other characters.
 
-Media types registered in the standards tree MUST NOT subsequently add backwards-incompatible functionality through the addition of parameters. New parameters MAY be used to convey additional information so long as its processing is backwards-compatible, so that existing implementations can still handle the message successfully. Media types registered in the vendor and personal trees SHOULD NOT violate this requirement.
+Media types registered in the standards tree MUST NOT subsequently add backwards-incompatible functionality through the addition of parameters. New parameters MAY be used to convey additional information so long as their processing is backwards-compatible, so that existing implementations can still handle the message successfully. Media types registered in the vendor and personal trees SHOULD NOT violate this requirement.
 
 Changes to parameters (including the introduction of new ones) is managed in the same manner as other changes to the media type; see {{change}}.
 
@@ -398,7 +398,7 @@ Vendor tree registrations are distinguished by the leading facet "vnd.". That ma
 
 While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.
 
-Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 2.3.5 of IANA-GUIDELINES}} prior to approval.
+Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review per {{Section 2.3.5 of IANA-GUIDELINES}} prior to approval.
 
 ### Personal Tree
 
@@ -410,7 +410,7 @@ The change controller of a "personal" registration is the person or entity makin
 
 While public exposure and review of media types to be registered in the personal tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.
 
-Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 2.3.5 of IANA-GUIDELINES}} prior to approval.
+Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review per {{Section 2.3.5 of IANA-GUIDELINES}} prior to approval.
 
 ### Unregistered x. Tree
 
@@ -534,7 +534,7 @@ Submitters of comments may request that their comment be attached to the media t
 
 When a change to a media type registration is requested, the applicable registration procedure for that media type's tree is used to process the request. Changes may be requested by the change controller, or by other parties if IANA verifies that the change controller approves the change.
 
-Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field (see {{usage}}).
+Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "Intended usage" field (see {{usage}}).
 
 Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
@@ -671,7 +671,7 @@ Security considerations
 Contact
 : Person (including contact information) to contact for further information.
 
-Author/Change controller.
+Author/Change controller
 : Person (including contact information) authorized to change this suffix registration. Required.
 
 
@@ -686,9 +686,9 @@ Security considerations for media types are discussed in {{secreq}}. Considerati
 
 In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
 
-## Recognized Standards Organisations
+## Recognized Standards-Related Organizations
 
-IANA should notify recognized standards organisations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration procedure (see eg <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
+IANA should notify recognized standards-related organizations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration procedure (see, e.g., <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
 
 ## Provisional Registrations
 
