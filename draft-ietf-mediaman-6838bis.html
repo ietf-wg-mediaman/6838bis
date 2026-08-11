@@ -1619,6 +1619,8 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
         </h3>
 <p id="section-3.1-1">In some cases, a new media type may not be easily classified under any currently defined top-level type names. Such cases are expected to be quite rare. However, if such a case does arise, a new top-level type can be defined to accommodate it.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1-2">Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+<p id="section-3.1-3">For formats that do not fit below any other top-level type, the 'application' top-level type can always be used.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
+<p id="section-3.1-4">The main function of media types and subtypes is the dispatch of data formats to application code. In most cases, this requires and is done using the full type (i.e., including the subtype, and often some parameters). The top-level type can occasionally serve as a fallback for the tentative dispatch to applications handling a very wide range of related formats.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
 <div id="required-criteria">
 <section id="section-3.1.1">
           <h4 id="name-required-criteria">
@@ -1816,9 +1818,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
           <h4 id="name-additional-registration-tre">
 <a href="#section-4.1.5" class="section-number selfRef">4.1.5. </a><a href="#name-additional-registration-tre" class="section-name selfRef">Additional Registration Trees</a>
           </h4>
-<p id="section-4.1.5-1">New top-level registration trees may be created by IETF Standards Action.<a href="#section-4.1.5-1" class="pilcrow">¶</a></p>
-<p id="section-4.1.5-2">In general, the quality of review of specifications for one of these additional registration trees is expected to be equivalent to registrations in the standards tree by a recognized standards-related organization.<a href="#section-4.1.5-2" class="pilcrow">¶</a></p>
-<p id="section-4.1.5-3">When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.<a href="#section-4.1.5-3" class="pilcrow">¶</a></p>
+<p id="section-4.1.5-1">New registration trees may be created by IETF Standards Action. No such new registrations are currently envisioned.<a href="#section-4.1.5-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2414,25 +2414,31 @@ URI: https://www.sw.it.aoyama.ac.jp/Dürst/<a href="#section-10-5" class="pilcro
 <p id="appendix-B-1">This document incorporates the following significant changes:<a href="#appendix-B-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-2.1">
-          <p id="appendix-B-2.1.1"><strong>Incorporation of RFC 9694</strong>: This revision obsoletes RFC 9694 and integrates its requirements into the media type registration template. This includes the addition of fields for <strong>macOS Uniform Type Identifiers</strong> and <strong>Windows clipboard names</strong> (<a href="#additional" class="auto internal xref">Section 2.10</a>).<a href="#appendix-B-2.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.1.1"><strong>Incorporation of RFC 9694</strong>: This revision obsoletes RFC 9694 and integrates its requirements into the media type registration template.<a href="#appendix-B-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.2">
-          <p id="appendix-B-2.2.1"><strong>Removal of Provisional Registrations</strong>: This revision removes the concept of "provisional registrations" from the standards tree.<a href="#appendix-B-2.2.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.2.1">RFC 6838's "Macintosh file type code(s)" template field is now "macOS Uniform Type Identifier(s)" (<a href="#registration-template" class="auto internal xref">Section 5.6</a>).<a href="#appendix-B-2.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.3">
-          <p id="appendix-B-2.3.1"><strong>Expansion of the Standards Tree (Community Formats)</strong>: A new process is defined allowing the Designated Expert(s) to approve registrations in the standards tree for "community formats." (<a href="#community" class="auto internal xref">Section 4.1.1.1</a>).<a href="#appendix-B-2.3.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.3.1">The notice requirement in <a href="#preliminary-review" class="auto internal xref">Section 5.1</a> went from <span class="bcp14">SHOULD</span> to <span class="bcp14">MUST</span>.<a href="#appendix-B-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.4">
-          <p id="appendix-B-2.4.1"><strong>Strict Suffix Constraints</strong>: This revision updates structured syntax suffixes to disallow those containing more than one "+" character (<a href="#suffixes" class="auto internal xref">Section 4.2</a>).<a href="#appendix-B-2.4.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.4.1"><strong>Removal of Provisional Registrations</strong>: This revision removes the concept of "provisional registrations" from the standards tree.<a href="#appendix-B-2.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.5">
-          <p id="appendix-B-2.5.1"><strong>Suffix Precedence for Fragment Identifiers</strong>: New rules establish that if a structured syntax suffix defines fragment identifier handling and successfully resolves it, that handling takes precedence over rules defined by the specific media type (<a href="#suffix-frag" class="auto internal xref">Section 4.2.2</a>).<a href="#appendix-B-2.5.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.5.1"><strong>Expansion of the Standards Tree (Community Formats)</strong>: A new process is defined allowing the Designated Expert(s) to approve registrations in the standards tree for "community formats." (<a href="#community" class="auto internal xref">Section 4.1.1.1</a>).<a href="#appendix-B-2.5.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.6">
-          <p id="appendix-B-2.6.1"><strong>Change Controller Updates</strong>: In cases where a change controller is unresponsive or uncontactable, this revision empowers the Designated Expert(s) to recommend to the IESG that the change controller be updated (<a href="#change" class="auto internal xref">Section 5.5</a>).<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.6.1"><strong>Strict Suffix Constraints</strong>: This revision updates structured syntax suffixes to disallow those containing more than one "+" character (<a href="#suffixes" class="auto internal xref">Section 4.2</a>).<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.7">
-          <p id="appendix-B-2.7.1"><strong>Top-Level Type Guidance</strong>: This revision adds criteria for evaluating the creation of new top-level types (<a href="#top-level" class="auto internal xref">Section 3</a>).<a href="#appendix-B-2.7.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.7.1"><strong>Suffix Precedence for Fragment Identifiers</strong>: New rules establish that if a structured syntax suffix defines fragment identifier handling and successfully resolves it, that handling takes precedence over rules defined by the specific media type (<a href="#suffix-frag" class="auto internal xref">Section 4.2.2</a>).<a href="#appendix-B-2.7.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-2.8">
+          <p id="appendix-B-2.8.1"><strong>Change Controller Updates</strong>: In cases where a change controller is unresponsive or uncontactable, this revision empowers the Designated Expert(s) to recommend to the IESG that the change controller be updated (<a href="#change" class="auto internal xref">Section 5.5</a>).<a href="#appendix-B-2.8.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-2.9">
+          <p id="appendix-B-2.9.1"><strong>Top-Level Type Guidance</strong>: This revision adds criteria for evaluating the creation of new top-level types (<a href="#top-level" class="auto internal xref">Section 3</a>).<a href="#appendix-B-2.9.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
