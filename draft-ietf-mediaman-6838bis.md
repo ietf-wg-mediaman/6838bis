@@ -125,7 +125,7 @@ Universal interoperability of media types is not required, but known interoperab
 
 Universal support and implementation of a media type are not a requirement for registration.
 
-The recommendations in this subsection apply regardless of the registration tree involved.
+The requirement and recommendations in this subsection apply regardless of the registration tree involved.
 
 ## Naming {#naming}
 
@@ -365,7 +365,7 @@ Registrations in the standards tree are either:
 
 The first procedure is used for registrations from IETF consensus documents on the IETF stream, and can be used for RFCs from other streams.
 
-In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}. The format is required to be described by a formal specification produced by the submitting standards-related organization.
+In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}.
 
 The third case is described in {{community}}.
 
