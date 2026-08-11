@@ -546,7 +546,7 @@ The change controller of a media type may pass responsibility to another person 
 If the Designated Expert(s) find that the change controller is unresponsive or uncontactable for a reasonable period of time and reasonable efforts have been made to contact the change controller, they may recommend to the IESG that the change controller be updated.
 
 
-## Registration Template
+## Registration Template {#registration-template}
 
 {:vspace}
 Type name:
@@ -744,7 +744,9 @@ It may be desirable to restrict the use of media types to specific environments 
 
 This document incorporates the following significant changes:
 
-* **Incorporation of RFC 9694**: This revision obsoletes RFC 9694 and integrates its requirements into the media type registration template. This includes the addition of fields for **macOS Uniform Type Identifiers** and **Windows clipboard names** ({{additional}}).
+* **Incorporation of RFC 9694**: This revision obsoletes RFC 9694 and integrates its requirements into the media type registration template.
+* RFC 6838's "Macintosh file type code(s)" template field is now "macOS Uniform Type Identifier(s)" ({{registration-template}}).
+* The notice requirement in {{preliminary-review}} went from SHOULD to MUST.
 * **Removal of Provisional Registrations**: This revision removes the concept of "provisional registrations" from the standards tree.
 * **Expansion of the Standards Tree (Community Formats)**: A new process is defined allowing the Designated Expert(s) to approve registrations in the standards tree for "community formats." ({{community}}).
 * **Strict Suffix Constraints**: This revision updates structured syntax suffixes to disallow those containing more than one "+" character ({{suffixes}}).
