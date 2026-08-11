@@ -651,13 +651,13 @@ This template describes the fields that must be supplied in a structured syntax 
 
 {:vspace}
 Name
-: Full name of the well-defined structured syntax. Required.
+: Full name of the well-defined structured syntax.
 
 +suffix
-: Suffix used to indicate conformance to the syntax. Required.
+: Suffix used to indicate conformance to the syntax.
 
 References
-: A citation for all specifications necessary to understand the structured syntax. Required.
+: A citation for all specifications necessary to understand the structured syntax.
 
 Encoding considerations
 : A citation to a section in a specification that provides general guidance regarding encoding considerations for any type employing this syntax. The requirements for media type encoding considerations given in {{encoding}} apply.
@@ -669,13 +669,13 @@ Fragment identifier considerations
 : A citation to a section in a specification that documents the generic processing rules of fragment identifiers for any type employing this syntax.
 
 Security considerations
-: A citation to a section in a specification that provides security considerations shared by media types employing this structured syntax. The security considerations for a media type registration in the standards tree (per {{secreq}}) apply. Required.
+: A citation to a section in a specification that provides security considerations shared by media types employing this structured syntax. The security considerations for a media type registration in the standards tree (per {{secreq}}) apply.
 
 Contact
 : Person (including contact information) to contact for further information.
 
 Author/Change controller
-: Person (including contact information) authorized to change this suffix registration. Required.
+: Person (including contact information) authorized to change this suffix registration.
 
 
 # Security Considerations
