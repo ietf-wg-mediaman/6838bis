@@ -1255,8 +1255,8 @@ Table of Contents
 7.  Security Considerations
 
    Security considerations for media types are discussed in Section 2.7.
-   Considerations for structured suffix registrations are discussed in
-   Section 4.2.3.
+   Security Considerations for structured suffix processing is discussed
+   in Section 4.2.3.
 
 8.  IANA Considerations
 
