@@ -371,7 +371,7 @@ The third case is described in {{community}}.
 
 Media types registered by the IETF in the standards tree MUST be published as RFCs. Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization. Note that in both cases, the early allocation process described in {{EARLY-ALLOCATION}} is available.
 
-Media types in the standards tree do not have faceted subtype names.
+Media types cannot be registered in the standards tree with faceted subtype names, but note that some pre-existing types do use them.
 
 The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. In the case of IETF standards and community formats (see {{community}}), the change controller is normally the IETF.
 
