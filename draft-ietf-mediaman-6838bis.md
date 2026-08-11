@@ -520,8 +520,10 @@ Registrations submitted to the IANA will be first given to the Designated Expert
 
 When a suffix is present in a registration, IANA will inform the expert:
 
-* If the suffix is not registered
+* If the suffix is not registered, noting whether a suffix registration request accompanies the media type registration (see {{suffix-procedures}})
 * Of any registered media types that have the same type and subtype with a different suffix, including those where the proposed suffix is absent (see {{suffixes}} for an example)
+
+Because structured syntax suffixes are required to be registered before use ({{suffixes}}), a media type registration whose suffix is unregistered cannot be approved. When a suffix registration request accompanies it, the Designated Expert(s) are expected to hold the media type registration until the suffix is registered; otherwise, they are expected to ask the requester to register the suffix, choose a different subtype name, or withdraw the request.
 
 In the case of standards-tree registrations from other standards-related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG needs to be obtained before a standards-tree registration can proceed.
 
