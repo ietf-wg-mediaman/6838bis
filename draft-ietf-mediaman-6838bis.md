@@ -680,7 +680,7 @@ Author/Change controller
 
 # Security Considerations
 
-Security considerations for media types are discussed in {{secreq}}. Considerations for structured suffix registrations are discussed in {{suffix-sec}}.
+Security considerations for media types are discussed in {{secreq}}. Security Considerations for structured suffix processing is discussed in {{suffix-sec}}.
 
 
 # IANA Considerations
