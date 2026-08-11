@@ -6,7 +6,7 @@ Media Type Maintenance                                     M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838, 9694 (if approved)                           P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 11 February 2027                                 10 August 2026
+Expires: 12 February 2027                                 11 August 2026
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 February 2027.
+   This Internet-Draft will expire on 12 February 2027.
 
 Copyright Notice
 
@@ -489,8 +489,7 @@ Table of Contents
    Each should contain a name (of a person or other entity) and e-mail
    address.  Optionally, they may also include a URL.
 
-   All three are required for permanent registrations; only the change
-   controller is required for provisional registrations.
+   All three are required.
 
 2.10.  Additional Information
 
@@ -1068,9 +1067,9 @@ Table of Contents
 
    Significant changes to a media type's definition should be requested
    only when there are serious omissions or errors in the published
-   specification.  When review is required, a change request may be
-   denied if it renders entities that were valid under the previous
-   definition invalid under the new definition.
+   specification.  A change request may be denied if it renders entities
+   that were valid under the previous definition invalid under the new
+   definition.
 
    The change controller of a media type may pass responsibility to
    another person or agency by informing the IANA; this can be done
