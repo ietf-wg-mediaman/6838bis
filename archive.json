@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-30T01:48:37.757987+00:00",
+  "timestamp": "2026-08-11T01:09:47.468076+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1337,7 +1337,7 @@
       "id": "I_kwDOMdBaOc614UYP",
       "title": "Review and maybe delete old top level type descriptions",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/29",
-      "state": "CLOSED",
+      "state": "OPEN",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1346,8 +1346,8 @@
       ],
       "body": "The old top level descriptions (text, application and so on) are referenced in the IANA registry at https://www.iana.org/assignments/top-level-media-types/top-level-media-types.xhtml as being defined in RFC 2026.\n\nTheir description is copied in the text of RFC 6838, and so far in 6838bis.\n\nIt would make for a shorter document if we could delete them and just say that 2026 is the normative reference for them, but before doing that, we need to verify that there are no changes to the description between 2026 and 6838 that we want to make normative.\n",
       "createdAt": "2025-05-09T08:36:06Z",
-      "updatedAt": "2025-06-18T01:08:23Z",
-      "closedAt": "2025-06-18T01:08:23Z",
+      "updatedAt": "2026-08-10T05:46:23Z",
+      "closedAt": null,
       "comments": [
         {
           "author": "mnot",
@@ -1362,6 +1362,13 @@
           "body": "PTAL at #36.",
           "createdAt": "2025-05-27T02:53:08Z",
           "updatedAt": "2025-05-27T02:53:08Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nReopening: the verification this was conditioned on has two gaps, and the discoverability mitigation didn't land either.\n\nRFC 6838 \u00a74.2.1, on text/\\*: \"If a 'charset' parameter is defined for a particular subtype of text, it MUST be used to specify a charset name defined in accordance to the procedures laid out in [RFC2978]\", and \"Regardless of what approach is chosen, all new text/\\* registrations MUST clearly specify how the charset is determined.\"\n\nRFC 6838 \u00a74.2.6: \"All subtypes of multipart and message MUST conform to the syntax rules and other requirements specified in [RFC2046] and amended by Section 3.5 of [RFC6532].\"\n\nBoth point at RFCs published after RFC 2046, so neither can be in it \u2014 which makes them the changes between 2046 and 6838 that we said we needed to check for before deleting. In the current text \"charset\" appears three times, none of them normative and none about text/\\*, and RFC 6532 isn't cited at all.\n\nWhat stands in their place is \u00a73:\n\n> Top-level types can place various restrictions on the media types that use them.  New media types MUST conform to the restrictions (if any) of their top-level type.\n\nwhich points at the top-level types registry. Its Comments entry is \"requires CRLF for newlines\" for `text` and empty for `multipart` and `message`, and its Reference column is a bare [RFC2046] with no section numbers \u2014 so the discoverability changes proposed above are still open too.\n\nThat column is the right home for them, so \u00a78 should tell IANA to populate it. Suggested starting text:\n\n- `text` \u2014 append to the existing comment: \"new registrations must specify how the charset is determined; where a charset parameter is defined it must name a charset registered per RFC 2978; UTF-8 is the recommended default\"\n- `multipart` and `message` \u2014 \"subtypes must conform to the syntax rules and other requirements of RFC 2046, as amended by Section 3.5 of RFC 6532\"\n\nand the Reference column for `multipart` and `message` gains RFC 6532.\n",
+          "createdAt": "2026-08-10T05:46:23Z",
+          "updatedAt": "2026-08-10T05:46:23Z"
         }
       ]
     },
@@ -1852,17 +1859,17 @@
       "id": "I_kwDOMdBaOc7LB0Jm",
       "title": "2119 language - need to restore some?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/59",
-      "state": "CLOSED",
+      "state": "OPEN",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "Ready to close"
+        "editorial"
       ],
       "body": "This is raised to address concerns with https://github.com/ietf-wg-mediaman/6838bis/pull/34, which removed many occurences of 2119 language.\n\nI think we should put a statement under \"Conventions\" saying that RFC 2119 language is  used to describe the requirements put on the registrant in the registration process. The other parties (reviewer, IANA, IESG) are governed by other types of agreements, and don't need to have their responsibilities codified using 2119 language.\n\nIn particular, notes from PR 34:\n\n2.1.2 - \"Copyright on the registration template MUST allow the IANA to copy it\". While the whole paragraph seems a bit silly to me, this is a hard requirement on the registrant, and MUST is appropriate.\n\n2.4 - \"Media types can be defined to allow...\" - suggest MAY is appropriate here.\n\"the names, values and meanings of any parameters are required to be fully specified....\" - MUST is appropriate here,\nlowercase \"are required\" is not clear enough.\n\n4.1.2 - \"when a third party register a type on behalf of someone else, both entities SHOULD be noted...\" - this is a requirement on the registrant, where 2119 is appropriate.\n\n5.1 - \"Notice of a potential media type registration in the standards tree should be sent...\" this is unclear about who is required to do the sending, I think the registrant is the right entity to send it, and it should be a MUST (was a SHOULD).\n\n5.2.1 - \"provisional registration ... can be submitted to IANA\". Here, I think MUST is appropriate - because you get a registration if you submit this to IANA, you don't get a registration otherwise (for instance by posting on media-types) - and the requirement is on the registrant.\n\nWhen reviewing for this language, I found a few places where it was unclear who does an action (too much passive voice). I'll raise a separate issue on that.\n\n",
       "createdAt": "2025-09-11T12:05:50Z",
-      "updatedAt": "2025-11-07T21:07:41Z",
-      "closedAt": "2025-11-07T21:07:41Z",
+      "updatedAt": "2026-08-10T06:59:21Z",
+      "closedAt": null,
       "comments": [
         {
           "author": "mnot",
@@ -1926,6 +1933,13 @@
           "body": "Wonder if it would be better to say \"Accordingly, registrants can submit provisional registrations of media type names in the standards tree to IANA\".\n\nThe \"can be submitted\" can be misinterpreted as \".... or they can submit them somewhere else\", which doesn't make sense.",
           "createdAt": "2025-10-15T10:58:41Z",
           "updatedAt": "2025-10-15T10:58:41Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nReopening: the de-2119 pass also reached \u00a73.1, which wasn't on the list above, and the Conventions statement asked for at the top of this issue didn't land.\n\nPR #12 brought RFC 9694 \u00a72.1 and \u00a72.3 across verbatim with keywords intact \u2014 \"Every new top-level type MUST be defined in a Standards Track RFC\", and four more MUSTs; the negative criteria as MUST NOTs. 1f7533d (\"Remove some extraneous 2119 terms\") stripped all of them. Today \u00a73.1.1 reads \"Definitions of new top-level types are required to fulfil the following criteria\" over five declaratives, and \u00a73.1.3's prohibitions are \"is not appropriate\", \"should not generate aliases\", and \"ought not be used\".\n\nSince we obsolete RFC 9694, the MUST versions will then be in force nowhere.\n\nThat interacts with \u00a75.3: \"The Designated Expert(s) will examine registration requests to make sure they meet the requirements set forth in this document.\" For a new top-level type, \u00a73.1 is what the DE has to work from.\n\nThese bind the party defining the type rather than a reviewer or IANA, which is the line proposed at the top of this issue, and they look like the case the AD described as fine for a process document. Suggest restoring \u00a73.1.1's five and \u00a73.1.3's, plus the Conventions statement.\n",
+          "createdAt": "2026-08-10T05:58:27Z",
+          "updatedAt": "2026-08-10T05:58:27Z"
         }
       ]
     },
@@ -2745,15 +2759,15 @@
       "id": "I_kwDOMdBaOc71a0eW",
       "title": "IANA feedback: clashing registrations",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/87",
-      "state": "CLOSED",
+      "state": "OPEN",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Section 5.3:\n\nAbout this text:\n\n\u201cWhen a suffix is present in a registration, IANA will inform the Designated Expert(s) of any potentially clashing registrations (see Section 4.2)\u201d\n\nWhat does \u201cclash\u201d mean in this context? Section 4.2 describes several possible issues. Does this just mean checking whether a suffix has been registered? If so, can you confirm that you don\u2019t want us to ask the requester whether they want to withdraw the request or change the name, but instead let the know that it\u2019s an issue and send the request to the experts as-is, with a note about the suffix? Is there anything else we should be checking concerning suffixes?",
       "createdAt": "2026-03-23T00:08:48Z",
-      "updatedAt": "2026-03-29T21:09:13Z",
-      "closedAt": "2026-03-29T21:09:13Z",
+      "updatedAt": "2026-08-10T06:04:39Z",
+      "closedAt": null,
       "comments": [
         {
           "author": "mnot",
@@ -2768,6 +2782,13 @@
           "body": "The issue here may be with the word 'clashing'  -- [Section 4.2](https://ietf-wg-mediaman.github.io/6838bis/draft-ietf-mediaman-6838bis.html#name-structured-syntax-suffixes) talks about 'semantically aligned', so perhaps just 'potentially misaligned'.",
           "createdAt": "2026-03-26T04:41:00Z",
           "updatedAt": "2026-03-26T04:41:00Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nReopening: the second question here didn't get answered for the bullet that came out of it.\n\n532acfb rewrote \u00a75.3 and split the notification in two:\n\n> When a suffix is present in a registration, IANA will inform the expert:\n>\n> *  If the suffix is not registered\n> *  Of any registered media types that have the same type and subtype with a different suffix, including those where the proposed suffix is absent\n\nThe second is the clash case, answered above \u2014 notify the expert, they judge. The first is separate, and it's the one IANA asked about: whether to ask the requester to withdraw or rename, or to pass the request through with a note. \u00a75.3 still doesn't say.\n\nIt matters more here than for the clash case, because \u00a74.2 makes this a violation rather than a judgement call: \"Structured syntax suffixes MUST be registered before use.\" And two different situations land on the same bullet \u2014 \u00a76 lets a suffix template be submitted alongside the media type registration, so \"not registered yet\" is the ordinary case for a new suffix, while \"not registered and nobody intends to\" is what \u00a74.2 is aimed at.\n\nCompare \u00a76, which does state a consequence: \"if sections are missing or citations are not correct, IANA rejects the registration request\".\n\nSuggest \u00a75.3 gives the expert's options and the default, and distinguishes the two cases.\n",
+          "createdAt": "2026-08-10T06:04:39Z",
+          "updatedAt": "2026-08-10T06:04:39Z"
         }
       ]
     },
@@ -2808,16 +2829,26 @@
       "id": "I_kwDOMdBaOc72xVCJ",
       "title": "Legacy Media Types",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/90",
-      "state": "CLOSED",
+      "state": "OPEN",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "editorial"
+      ],
       "body": "I suspect this appendix can be completely removed.",
       "createdAt": "2026-03-26T03:05:57Z",
-      "updatedAt": "2026-03-26T03:57:11Z",
-      "closedAt": "2026-03-26T03:57:11Z",
-      "comments": []
+      "updatedAt": "2026-08-10T06:58:15Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nReopening for one thing. Removing the appendix also removed RFC 6838 \u00a73's warning:\n\n> Note that some media types defined prior to this document do not conform to the\n> naming conventions described below.  See Appendix A for a discussion of them.\n\n\u00a74.1.1 now says flatly that \"Media types in the standards tree do not have faceted subtype names.\"\n\nCounting the IANA CSVs today, 17 registered names contain a period outside `vnd.`/`prs.`/`x.` Under \u00a72.3 the characters before the first \".\" are a facet, so each of them names a tree that doesn't exist. Ten are `application/EmergencyCallData.*`, IETF standards-tree registrations from the last decade; also `video/iso.segment` and `application/index.*` (4). The remaining two \u2014 `application/wordperfect5.1` and `audio/ip-mr_v2.5` \u2014 are version numbers rather than intended facets: same literal reading, weaker example.\n\nSo we state a naming rule that the registry contradicts, and no longer say anything about the exceptions. A sentence noting that names registered before these conventions may not conform would cover it.\n",
+          "createdAt": "2026-08-10T05:26:40Z",
+          "updatedAt": "2026-08-10T05:26:40Z"
+        }
+      ]
     },
     {
       "number": 91,
@@ -2860,6 +2891,188 @@
           "updatedAt": "2026-05-13T04:07:50Z"
         }
       ]
+    },
+    {
+      "number": 93,
+      "id": "I_kwDOMdBaOc8AAAABMGYeFg",
+      "title": "\u00a74.2.2 fragment identifier precedence depends on a runtime outcome",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/93",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\n\u00a74.2.2 makes which rule set governs depend on what happens when you apply it:\n\n> 1.  When the structured syntax suffix defines fragment identifier\n>     handling and it successfully resolves the fragment identifier,\n>     that determines fragment identifier handling;\n>\n> 2.  Otherwise, the specific media type determines fragment identifier\n>     handling.\n\nA processor can't know which applies until it has tried one. \"Successfully resolves\" isn't defined: a suffix's rules can fail because the syntax is wrong, because the syntax is fine but nothing matches, or because the processor doesn't implement them. Two implementations drawing that line differently resolve the same fragment against different rules on the same document, and both can claim conformance.\n\n\u00a72.6 states the relationship unconditionally:\n\n> Media types that use a structured syntax suffix MUST follow any fragment identifier rules specified for it.\n\nRead alone that's \"the suffix always wins\"; read with \u00a74.2.2 the suffix wins only when it resolves. RFC 6838 \u00a74.11 had no condition on it, so the condition is what's new here and \u00a72.6 is what carried over. One of the two has to give.\n\nThe second half is the time dimension. \u00a76.1 lets a suffix registration be updated \"by the same mechanism as required for an initial registration\". With \u00a74.2.2, altering the Fragment Identifier Considerations of `+bar` changes how fragments resolve for every already-registered `application/*+bar`. \u00a74.2 imposes a coordination duty in one direction only \u2014 the party adding a suffix coordinates with the base type's change controller \u2014 and nothing runs the other way, from a suffix's change controller to the types inheriting its rules.\n\nThis is live. Antonio Diaz Diaz asked on media-types (2026-07-14), about a real registration, whether `text/html+lzip` should follow `text/html`'s fragment rules, and got no reply: <https://mailarchive.ietf.org/arch/msg/media-types/wkwerYCRWrqddGGSbg8QJALBWdE>\n\n\u00a78 already describes the consequence, but as uncertainty to live with rather than something to close:\n\n> This uncertainty extends to fragment identifier processing: per the rules in Section 4.2.2, a fragment identifier that might be valid for an \"application/foo+bar\" document might not be applicable to another \"+bar\" document, because media-type specific fragment identifier resolution might be used.\n\nEither the precedence becomes static \u2014 decided at registration rather than at resolution time \u2014 or, if the conditional behaviour is wanted, \"successfully resolves\" needs defining against a stated failure taxonomy, \u00a72.6 needs recasting so it doesn't contradict \u00a74.2.2, and \u00a76.1 needs to say what a suffix update may do to types already registered under it.\n",
+      "createdAt": "2026-08-10T05:32:38Z",
+      "updatedAt": "2026-08-10T06:46:25Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Also worth settling in the same pass: \u00a72.6's addressee.\n\n> Media types that use a structured syntax suffix MUST follow any fragment identifier rules specified for it.\n\nA media type doesn't follow rules \u2014 is this binding the registrant (specify rules consistent with the suffix's) or the processor (resolve using the suffix's rules)? The answer differs depending on which way \u00a74.2.2 lands.\n",
+          "createdAt": "2026-08-10T06:46:25Z",
+          "updatedAt": "2026-08-10T06:46:25Z"
+        }
+      ]
+    },
+    {
+      "number": 94,
+      "id": "I_kwDOMdBaOc8AAAABMGaIdQ",
+      "title": "BCP 13 also contains RFC 4289, which this document never mentions",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/94",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nBCP 13 currently comprises RFC 4289, RFC 6838 and RFC 9694 (<https://www.rfc-editor.org/info/bcp13>). We obsolete the second and third:\n\n> Obsoletes: [6838, 9694] (if approved)\n\nRFC 4289 (\"MIME Part Four: Registration Procedures\", December 2005) is not obsoleted, not updated, not cited, and not named \u2014 \"4289\" appears nowhere in the draft. On publication BCP 13 would be this document plus a 2005 RFC whose relationship to it is unstated.\n\nRFC 4288, published the same month and obsoleted by RFC 6838, *is* cited twice \u2014 once substantively, in \u00a72.3: \"Note that this syntax is more restrictive than what is allowed by Section 5.1 of [RFC2045] or Section 4.2 of [RFC4288].\" So the gap looks like oversight rather than a decision to leave 4289 alone.\n\nNeeds a decision either way: is RFC 4289 obsoleted too, updated, or left standing? The document should say which, since a reader of BCP 13 will hold both.\n",
+      "createdAt": "2026-08-10T05:38:04Z",
+      "updatedAt": "2026-08-10T05:38:04Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 95,
+      "id": "I_kwDOMdBaOc8AAAABMGffTA",
+      "title": "RFC 9694's introduction was omitted from the incorporation and never taken up",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/95",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nPR #12 brought RFC 9694's criteria across as \u00a73.1.1\u2013\u00a73.1.3, and flagged what it left:\n\n> omitted history and introduction; should discuss whether they are necessary and how to incorporate if so\n\nIt merged \"After discussion in Bangkok\". The IETF 122 minutes don't record that discussion and no issue tracks it, so it's still open on the PR's own terms.\n\nTwo sentences from RFC 9694 \u00a71.1 didn't come across:\n\n> For formats that do not fit below any other top-level type, the 'application' top-level type can always be used.\n\n> The main function of media types and subtypes is the dispatch of data formats to application code.  In most cases, this requires and is done using the full type (i.e., including the subtype, and often some parameters).  The top-level type can occasionally serve as a fallback for the tentative dispatch to applications handling a very wide range of related formats.\n\nSince we obsolete RFC 9694, they'd then be in force nowhere. The first is the reason most candidate top-level types should never be minted \u2014 \u00a73.1 asserts the conclusion (\"Such cases are expected to be quite rare\") without the argument that supports it. The second is what tells a prospective author what a top-level type is actually for.\n\nSuggest \u00a73.1 gains both, ahead of the Required Criteria.\n",
+      "createdAt": "2026-08-10T05:53:38Z",
+      "updatedAt": "2026-08-10T06:50:37Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 96,
+      "id": "I_kwDOMdBaOc8AAAABMGnN9g",
+      "title": "\u00a74.1.5 refers to a \"requesting organization\" the section no longer introduces",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/96",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nTwo things in \u00a74.1.5, from the same root.\n\n#67 removed the rationale \u2014 \"It is explicitly assumed that these trees might be created for external registration and management by well-known permanent organizations; for example scientific societies might register media types specific to the sciences they cover\" \u2014 as speculative, since it had never occurred. But the two paragraphs left behind still depend on it:\n\n> In general, the quality of review of specifications for one of these additional registration trees is expected to be equivalent to registrations in the standards tree by a recognized standards-related organization.\n>\n> When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.\n\n\"the requesting organization\" now has no antecedent \u2014 the deleted sentence was what introduced them.\n\nSecond, Martin D\u00fcrst raised this section at WGLC and neither point was actioned or tracked: <https://mailarchive.ietf.org/arch/msg/media-types/Rqah6lHZHIKmLfX7VJIyOd3_P_g>\n\n> \"New top-level registration trees may be created by IETF Standards Action.\": Please remove the word \"top-level\" here. Despite the word \"tree\", which suggests a multi-level hierachy, media type registration trees have only a single level, and so \"top-level\" here is confusing.\n\nand proposing the section be cut to:\n\n> \"New registration trees may be created by IETF Standards Action. No such new registrations are currently envisioned.\"\n> We can go through an exercise similar to the one for RFC 9694 if ever a need for a new tree should show up.\n\nThat's the premise #67 already accepted, so the two go together. Suggest taking D\u00fcrst's text.\n",
+      "createdAt": "2026-08-10T06:14:32Z",
+      "updatedAt": "2026-08-10T06:50:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 97,
+      "id": "I_kwDOMdBaOc8AAAABMGu6jQ",
+      "title": "Two leftovers from removing provisional registrations",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/97",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\n#70 removed provisional registrations from the standards tree. Two sentences still assume they exist.\n\n\u00a72.9 ends:\n\n> All three are required for permanent registrations; only the change controller is required for provisional registrations.\n\nThere is no longer a second kind of registration to distinguish from, and \"permanent\" has nothing left to contrast with either.\n\n\u00a75.5, third paragraph:\n\n> When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.\n\n\u00a75.5 opens by sending every change through \"the applicable registration procedure for that media type's tree\", so review is always required. In RFC 6838 the condition had a case \u2014 provisional standards-tree registrations didn't go through the Expert. Now it has none.\n\nSuggest dropping \u00a72.9's second clause and \u00a75.5's condition.\n",
+      "createdAt": "2026-08-10T06:32:53Z",
+      "updatedAt": "2026-08-10T07:01:59Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 98,
+      "id": "I_kwDOMdBaOc8AAAABMGvkDA",
+      "title": "Appendix B credits RFC 9694 with template fields it doesn't contain",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/98",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nAppendix B says:\n\n> *Incorporation of RFC 9694*: This revision obsoletes RFC 9694 and integrates its requirements into the media type registration template. This includes the addition of fields for *macOS Uniform Type Identifiers* and *Windows clipboard names* (Section 2.10).\n\nRFC 9694 contains neither \u2014 no occurrence of \"clipboard\" or \"Uniform Type Identifier\". Those fields came from #5 and #73. RFC 9694's actual contribution is the top-level type material, which Appendix B already covers in its separate \"Top-Level Type Guidance\" bullet.\n\nTwo changes the appendix doesn't record:\n\n* RFC 6838's \"Macintosh file type code(s)\" template field is now \"macOS Uniform Type Identifier(s)\" (\u00a75.6).\n* \u00a75.1's notice requirement went from SHOULD to MUST.\n\n#92 closed with \"we'll update as we go\" and nothing tracks that since; this can be the place.\n",
+      "createdAt": "2026-08-10T06:34:34Z",
+      "updatedAt": "2026-08-10T07:02:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 99,
+      "id": "I_kwDOMdBaOc8AAAABMGwfYQ",
+      "title": "Three places where restructuring left the framing behind",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/99",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\n**\u00a72.2 closes as recommendations but contains a MUST.**\n\n> All registered media types MUST employ a single, canonical data format, regardless of registration tree.\n\nand it ends:\n\n> The recommendations in this subsection apply regardless of the registration tree involved.\n\n\u00a72.1 and \u00a72.3 end \"This requirement applies\u2026\" and \"These requirements apply\u2026\". \u00a72.2 merges RFC 6838 \u00a74.4 (the canonicalization MUST) with \u00a74.5 \"Interchange Recommendations\", and the closing sentence is \u00a74.5's.\n\n**\u00a72.10 puts a MUST inside a list of optional information.** The list is introduced:\n\n> The following optional information should be included in the specification of a media type if it is available:\n\nand its first bullet:\n\n> In such cases, a preferred name MUST be chosen for the media type, and applications are required to use this to be compliant with the type's registration.\n\nIn RFC 6838 this was its own section, \u00a74.2.9 \"Deprecated Aliases\", not an optional-information bullet.\n\n**\u00a74.1.1 states the SDO formal-specification rule twice**, five lines apart:\n\n> The format is required to be described by a formal specification produced by the submitting standards-related organization.\n\n> Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.\n\nThe first came from 1f7533d (\"Remove some extraneous 2119 terms\"), the second from 9c82ac7 (\"Rework Publication\") when the paragraph moved out of \u00a72.2 under #45.\n",
+      "createdAt": "2026-08-10T06:36:52Z",
+      "updatedAt": "2026-08-10T07:02:03Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 100,
+      "id": "I_kwDOMdBaOc8AAAABMGyv_w",
+      "title": "\u00a76.2 says every field must be supplied, then marks five of nine \"Required.\"",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/100",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\n\u00a76.2 opens:\n\n> This template describes the fields that must be supplied in a structured syntax suffix registration request:\n\nFive of the nine fields then carry \"Required.\" \u2014 Name, +suffix, References, Security considerations, Author/Change controller. Encoding considerations, Interoperability considerations, Fragment identifier considerations and Contact do not.\n\nSo either the introducer is wrong and four fields are optional, or the markers mean nothing. \u00a76 step 1 needs that answered: \"IANA checks the submission for completeness; if sections are missing or citations are not correct, IANA rejects the registration request.\"\n\nThe markers are new \u2014 RFC 6838's version of this template has none \u2014 and arrived with d0872e6 (\"Tidy up suffix procedures\"). \u00a75.6's media type template has no markers at all, so the two templates now describe completeness differently.\n\nSuggest dropping the markers, or marking all nine.\n",
+      "createdAt": "2026-08-10T06:42:31Z",
+      "updatedAt": "2026-08-10T06:51:28Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 101,
+      "id": "I_kwDOMdBaOc8AAAABMGzV7w",
+      "title": "\u00a77's cross-reference, and section-number citations into work in progress",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/101",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\n**\u00a77 points at the wrong section.**\n\n> Considerations for structured suffix registrations are discussed in Section 4.2.3.\n\n\u00a74.2.3 is \"Security Considerations for Structured Syntax Suffix Processing\", and opens \"Processors of the information in structured syntax suffixes encounter the following security considerations.\" That's the processor's side. What a suffix *registration* owes is \u00a76.2's Security considerations field, which routes to \u00a72.7. Either the pointer should be \u00a76.2, or \"registrations\" should be \"processing\".\n\n**Section-number citations into work in progress.** [IANA-GUIDELINES] and [EARLY-ALLOCATION] are normative references to draft-ietf-ianabis-rfc8126bis-03 and -rfc7120bis-03, and three citations give section numbers \u2014 \u00a72.3.6 in \u00a72.1.1 and \u00a74.1.1, \u00a72.3.9 in \u00a73.1.1. Section numbers move in a draft. Citing the policy by name \u2014 \"the Specification Required policy\", \"Standards Action\" \u2014 would survive renumbering.\n",
+      "createdAt": "2026-08-10T06:44:03Z",
+      "updatedAt": "2026-08-10T07:02:05Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 104,
+      "id": "I_kwDOMdBaOc8AAAABMG5X6g",
+      "title": "\u00a73.1.1 doesn't require a new top-level type to say how unknown subtypes are handled",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/104",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nRFC 2046 \u00a72 lists what the definition of a top-level media type consists of. Item (3):\n\n> how a user agent and/or gateway should handle unknown subtypes of this type\n\n\u00a73.1.1's Required Criteria don't ask for it. Of RFC 2046's five components they cover the first \u2014 \"The criteria for what types do and do not fall under the new top-level type are defined clearly\" \u2014 and none of the rest. Item (2), parameters defined across all subtypes of the type, is also unasked.\n\nItem (3) is the one that matters: it's what makes `multipart/*` and `image/*` useful generically, so a recipient that has never heard of `image/avif` still knows it is an image and roughly what to do with it. Without it a new top-level type is only a namespace.\n\nRFC 2046 isn't obsoleted here and the top-level types registry cites it as the reference for most entries, so the requirement is arguably still in force \u2014 but a reader treating \u00a73.1.1 as the checklist won't meet it, and nothing points at RFC 2046 \u00a72.\n\nThis is the concrete cost of what #95 describes: RFC 9694 \u00a71.1 called the top-level type \"a fallback for the tentative dispatch to applications handling a very wide range of related formats\", which is exactly what item (3) enables. The framing and the criterion went together.\n\nSuggest \u00a73.1.1 gains a criterion requiring the defining RFC to state how recipients handle unrecognised subtypes.\n",
+      "createdAt": "2026-08-10T06:59:19Z",
+      "updatedAt": "2026-08-10T06:59:19Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -4149,6 +4362,62 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 102,
+      "id": "PR_kwDOMdBaOc783o7j",
+      "title": "Editorial fixes",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/102",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nTwelve one-line fixes, no normative change:\n\n- \u00a72.1.1 \"needs provide\" and \u00a72.4 \"care needs be taken\" \u2014 missing \"to\"\n- \u00a72.4 \"so long as its processing\" \u2014 \"its\" had no antecedent; \"their\"\n- \u00a72.4 \"the same syntax as media type names and values:\" \u2014 \"and values\" is a leftover\n- \u00a74.1.1 and \u00a74.1.3 \"undergo Expert Review {{Section 2.3.5 of IANA-GUIDELINES}}\" \u2014 missing preposition\n- \u00a72.2 \"are NOT a requirement\" \u2014 capitalised NOT is not a BCP 14 keyword\n- \u00a75.5 \"intended use\" field \u2014 \u00a72.8 and \u00a75.6 call it \"Intended usage\"\n- \u00a76.2 \"Author/Change controller.\" \u2014 stray period, unlike every other field label\n- \u00a78.2 heading and body: \"Organisations\" against \"organization\" elsewhere, and the body dropped \"-related\", which is the defined term\n- \u00a78.2 \"(see eg\" \u2014 punctuation\n- \u00a711.2 [windowsClipboardNames] \"MicroSoft Inc.\" \u2014 Microsoft Corporation\n",
+      "createdAt": "2026-08-10T06:54:11Z",
+      "updatedAt": "2026-08-10T06:55:58Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "5ebb733f53f1d5841b685039fb51ec09fa7ad6b0",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "nits-prose",
+      "headRefOid": "8e694b14323674043f5050130547a91af57e2f7d",
+      "closedAt": "2026-08-10T06:55:57Z",
+      "mergedAt": "2026-08-10T06:55:57Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "d0f08187741a594dd51452f06ef2bede9704648a"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 103,
+      "id": "PR_kwDOMdBaOc783o--",
+      "title": "Fix front matter and template placeholder rendering",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/103",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nThree rendering bugs. No text change.\n\n**`obsoletes` renders as `[6838, 9694]`.** It was a YAML list, which kramdown stringifies with the brackets intact. A plain comma-separated value gives `obsoletes=\"6838, 9694\"`.\n\n**\"About This Document\" begins mid-sentence** \u2014 \"information can be found at https://datatracker.ietf.org/wg/mediaman/about/.\" The boilerplate is \"*&lt;group&gt;* Working Group information can be found at \u2026\" and there was no workgroup name to fill it.\n\n**15 build warnings from the registration templates.** `: [see {{usage}}]` is parsed as a reference-style link `[see {{usage}}]` with no matching definition, once per placeholder in \u00a75.6 and \u00a76.2:\n\n```\n- No link definition for link ID 'see {{naming}}' found on line 598\n  ... 15 of these\n```\n\nEscaping the brackets takes it to zero. I diffed the generated XML before and after: identical apart from the added workgroup name, so the placeholders still render as `[see Section 2.3]`.\n",
+      "createdAt": "2026-08-10T06:54:13Z",
+      "updatedAt": "2026-08-10T06:56:09Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "5ebb733f53f1d5841b685039fb51ec09fa7ad6b0",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "nits-rendering",
+      "headRefOid": "48368943f87678f44196468564aa2b94dceda980",
+      "closedAt": "2026-08-10T06:56:08Z",
+      "mergedAt": "2026-08-10T06:56:08Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "09a6a115d4bdbb9494e2b305eac8fda38c7f3816"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
