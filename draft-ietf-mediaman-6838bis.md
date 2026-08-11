@@ -258,7 +258,7 @@ The registration template contains distinct fields for contact information:
 
 Each should contain a name (of a person or other entity) and e-mail address. Optionally, they may also include a URL.
 
-All three are required for permanent registrations; only the change controller is required for provisional registrations.
+All three are required.
 
 
 ## Additional Information {#additional}
@@ -539,7 +539,7 @@ When a change to a media type registration is requested, the applicable registra
 
 Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "Intended usage" field (see {{usage}}).
 
-Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
+Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. A change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
 The change controller of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.
 
