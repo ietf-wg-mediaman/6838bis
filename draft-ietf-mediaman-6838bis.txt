@@ -152,6 +152,9 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
+   RFC 2119 language is used to describe the requirements placed upon
+   the registrant in the registration process.
+
    This specification makes use of the Augmented Backus-Naur Form (ABNF)
    [RFC5234] notation, including the core rules defined in Appendix B of
    that document.
@@ -561,8 +564,8 @@ Table of Contents
 
 3.1.1.  Required Criteria
 
-   Definitions of new top-level types are required to fulfil the
-   following criteria:
+   Definitions of new top-level types MUST fulfil the following
+   criteria:
 
    *  The top-level type is defined in a Standards Track RFC (see
       Section 2.3.9 of [IANA-GUIDELINES]).  This will make sure there is
@@ -651,7 +654,7 @@ Table of Contents
 
    *  Media types are not a general type system.  A top-level type whose
       main or only purpose is to map other type systems, protocol
-      elements, or registration spaces is not appropriate.  Examples of
+      elements, or registration spaces MUST NOT be defined.  Examples of
       such discouraged uses include mapping media types to programming
       language primitives, ontologies, object identifiers, URIs and URI
       schemes, and file extensions.  That said, media types can use
@@ -659,11 +662,11 @@ Table of Contents
       a file extension '.dcat' can be encoded as 'application/octet-
       string; filename=foo.dcat'.
 
-   *  A new top-level type should not generate aliases for existing
+   *  A new top-level type SHOULD NOT generate aliases for existing
       widely used types or subtypes.
 
    *  Top-level types with an "X-" prefix cannot be registered, and
-      ought not be used.  See [RFC6648].
+      SHOULD NOT be used.  See [RFC6648].
 
 4.  Media Subtypes
 
