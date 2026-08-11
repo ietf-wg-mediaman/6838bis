@@ -719,7 +719,8 @@ Table of Contents
    both cases, the early allocation process described in
    [EARLY-ALLOCATION] is available.
 
-   Media types in the standards tree do not have faceted subtype names.
+   Media types cannot be registered in the standards tree with faceted
+   subtype names, but note that some pre-existing types do use them.
 
    The change controller of a media type registered in the standards
    tree is assumed to be the standards-related organization itself.  In
