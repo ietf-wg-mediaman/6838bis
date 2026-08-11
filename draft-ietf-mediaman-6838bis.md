@@ -429,11 +429,7 @@ Note that types with subtype names beginning with "x-" are no longer considered 
 
 ### Additional Registration Trees
 
-New top-level registration trees may be created by IETF Standards Action.
-
-In general, the quality of review of specifications for one of these additional registration trees is expected to be equivalent to registrations in the standards tree by a recognized standards-related organization.
-
-When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.
+New registration trees may be created by IETF Standards Action. No such new registrations are currently envisioned.
 
 ## Structured Syntax Suffixes {#suffixes}
 
