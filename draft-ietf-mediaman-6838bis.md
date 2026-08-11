@@ -292,6 +292,10 @@ In some cases, a new media type may not be easily classified under any currently
 
 Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
 
+For formats that do not fit below any other top-level type, the 'application' top-level type can always be used.
+
+The main function of media types and subtypes is the dispatch of data formats to application code. In most cases, this requires and is done using the full type (i.e., including the subtype, and often some parameters). The top-level type can occasionally serve as a fallback for the tentative dispatch to applications handling a very wide range of related formats.
+
 ### Required Criteria
 
 Definitions of new top-level types are required to fulfil the following criteria:
