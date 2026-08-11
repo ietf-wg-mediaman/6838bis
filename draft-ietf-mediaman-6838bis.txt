@@ -1022,11 +1022,21 @@ Table of Contents
    When a suffix is present in a registration, IANA will inform the
    expert:
 
-   *  If the suffix is not registered
+   *  If the suffix is not registered, noting whether a suffix
+      registration request accompanies the media type registration (see
+      Section 6)
 
    *  Of any registered media types that have the same type and subtype
       with a different suffix, including those where the proposed suffix
       is absent (see Section 4.2 for an example)
+
+   Because structured syntax suffixes are required to be registered
+   before use (Section 4.2), a media type registration whose suffix is
+   unregistered cannot be approved.  When a suffix registration request
+   accompanies it, the Designated Expert(s) are expected to hold the
+   media type registration until the suffix is registered; otherwise,
+   they are expected to ask the requester to register the suffix, choose
+   a different subtype name, or withdraw the request.
 
    In the case of standards-tree registrations from other standards-
    related organizations, IANA will also check that the submitter is in
