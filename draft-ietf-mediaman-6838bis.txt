@@ -239,8 +239,8 @@ Table of Contents
    Universal support and implementation of a media type are not a
    requirement for registration.
 
-   The recommendations in this subsection apply regardless of the
-   registration tree involved.
+   The requirement and recommendations in this subsection apply
+   regardless of the registration tree involved.
 
 2.3.  Naming
 
@@ -708,9 +708,7 @@ Table of Contents
    In the second case, the IESG makes a one-time decision on whether the
    registration submitter represents a recognized standards-related
    organization; after that, registration requests are performed as
-   specified in Section 5.3.  The format is required to be described by
-   a formal specification produced by the submitting standards-related
-   organization.
+   specified in Section 5.3.
 
    The third case is described in Section 4.1.1.1.
 
@@ -1213,14 +1211,14 @@ Table of Contents
    structured syntax suffix registration request:
 
    Name
-      Full name of the well-defined structured syntax.  Required.
+      Full name of the well-defined structured syntax.
 
    +suffix
-      Suffix used to indicate conformance to the syntax.  Required.
+      Suffix used to indicate conformance to the syntax.
 
    References
       A citation for all specifications necessary to understand the
-      structured syntax.  Required.
+      structured syntax.
 
    Encoding considerations
       A citation to a section in a specification that provides general
@@ -1244,7 +1242,7 @@ Table of Contents
       A citation to a section in a specification that provides security
       considerations shared by media types employing this structured
       syntax.  The security considerations for a media type registration
-      in the standards tree (per Section 2.7) apply.  Required.
+      in the standards tree (per Section 2.7) apply.
 
    Contact
       Person (including contact information) to contact for further
@@ -1252,7 +1250,7 @@ Table of Contents
 
    Author/Change controller
       Person (including contact information) authorized to change this
-      suffix registration.  Required.
+      suffix registration.
 
 7.  Security Considerations
 
