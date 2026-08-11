@@ -83,6 +83,8 @@ Those labels are known as media types. A media type consists of a top-level type
 
 {::boilerplate bcp14-tagged}
 
+RFC 2119 language is used to describe the requirements placed upon the registrant in the registration process.
+
 This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234}} notation, including the core rules defined in Appendix B of that document.
 
 # Media Type Registration Requirements {#requirements}
@@ -298,7 +300,7 @@ The main function of media types and subtypes is the dispatch of data formats to
 
 ### Required Criteria
 
-Definitions of new top-level types are required to fulfil the following criteria:
+Definitions of new top-level types MUST fulfil the following criteria:
 
 * The top-level type is defined in a Standards Track RFC (see {{Section 2.3.9 of IANA-GUIDELINES}}). This will make sure there is sufficient community interest, review, and consensus.
 
@@ -336,11 +338,11 @@ Additional considerations for the definition of a new top-level type include:
 
 Negative indicators for creation of a new top-level type include:
 
-* Media types are not a general type system. A top-level type whose main or only purpose is to map other type systems, protocol elements, or registration spaces is not appropriate. Examples of such discouraged uses include mapping media types to programming language primitives, ontologies, object identifiers, URIs and URI schemes, and file extensions. That said, media types can use parameters to carry such information. For example, information on a file extension '.dcat' can be encoded as 'application/octet-string; filename=foo.dcat'.
+* Media types are not a general type system. A top-level type whose main or only purpose is to map other type systems, protocol elements, or registration spaces MUST NOT be defined. Examples of such discouraged uses include mapping media types to programming language primitives, ontologies, object identifiers, URIs and URI schemes, and file extensions. That said, media types can use parameters to carry such information. For example, information on a file extension '.dcat' can be encoded as 'application/octet-string; filename=foo.dcat'.
 
-* A new top-level type should not generate aliases for existing widely used types or subtypes.
+* A new top-level type SHOULD NOT generate aliases for existing widely used types or subtypes.
 
-* Top-level types with an "X-" prefix cannot be registered, and ought not be used. See {{!RFC6648}}.
+* Top-level types with an "X-" prefix cannot be registered, and SHOULD NOT be used. See {{!RFC6648}}.
 
 # Media Subtypes {#subtypes}
 
