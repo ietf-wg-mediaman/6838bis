@@ -210,7 +210,7 @@ Additional restrictions on 7bit and 8bit text are given in {{Section 4.1.1 of !R
 
 Media type registrations can specify how applications should interpret fragment identifiers (specified in {{Section 3.5 of !RFC3986}}) associated with the media type.
 
-Media types that use a structured syntax suffix MUST follow any fragment identifier rules specified for it.
+Requirements for media types that use a structured syntax suffix are given in {{suffix-frag}}.
 
 Media types are encouraged to adopt fragment identifier schemes that are used with semantically similar media types.
 
@@ -459,12 +459,11 @@ While it might be desirable to use a compound suffix (e.g., "+xml+zip"), experie
 
 ### Fragment Identifiers and Structured Syntax Suffixes {#suffix-frag}
 
-Structured syntax suffixes can specify fragment identifier handling for all subtypes that utilise them, as indicated in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.
+A structured syntax suffix registration can specify fragment identifier syntax and semantics, recorded in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.
 
-Individual subtypes can specify additional handling. To ensure consistent processing, precedence is determined by the following rules (first match winning):
+Where a suffix does so, a media type using that suffix MUST specify fragment identifier handling that is consistent with the suffix's, and MUST NOT disallow syntax that the suffix requires.
 
-1. When the structured syntax suffix defines fragment identifier handling and it successfully resolves the fragment identifier, that determines fragment identifier handling;
-2. Otherwise, the specific media type determines fragment identifier handling.
+Otherwise, fragment identifier handling is determined by the media type.
 
 ### Security Considerations for Structured Syntax Suffix Processing {#suffix-sec}
 
@@ -693,6 +692,14 @@ Security considerations for media types are discussed in {{secreq}}. Security Co
 
 In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
 
+## Structured Syntax Suffixes Registry
+
+Thirteen entries in the Structured Syntax Suffixes registry -- "+json", "+ber", "+cbor", "+der", "+fastinfoset", "+wbxml", "+zip", "+tlv", "+json-seq", "+sqlite3", "+jwt", "+gzip", and "+cbor-seq" -- describe fragment identifier processing with a three-case rule that has been copied between registrations since {{?RFC6839}}.
+
+Each of those entries also records that no fragment identifier syntax is defined for the suffix in question, so those cases cannot arise; {{suffix-frag}} now specifies how fragment identifiers interact with structured syntax suffixes.
+
+IANA should remove that three-case text from the "Fragment Identifier Considerations" field of those entries, retaining their remaining content, and work with the Experts and the IESG as appropriate.
+
 ## Recognized Standards-Related Organizations
 
 IANA should notify recognized standards-related organizations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration procedure (see, e.g., <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
@@ -754,6 +761,5 @@ This document incorporates the following significant changes:
 * **Removal of Provisional Registrations**: This revision removes the concept of "provisional registrations" from the standards tree.
 * **Expansion of the Standards Tree (Community Formats)**: A new process is defined allowing the Designated Expert(s) to approve registrations in the standards tree for "community formats." ({{community}}).
 * **Strict Suffix Constraints**: This revision updates structured syntax suffixes to disallow those containing more than one "+" character ({{suffixes}}).
-* **Suffix Precedence for Fragment Identifiers**: New rules establish that if a structured syntax suffix defines fragment identifier handling and successfully resolves it, that handling takes precedence over rules defined by the specific media type ({{suffix-frag}}).
 * **Change Controller Updates**: In cases where a change controller is unresponsive or uncontactable, this revision empowers the Designated Expert(s) to recommend to the IESG that the change controller be updated ({{change}}).
 * **Top-Level Type Guidance**: This revision adds criteria for evaluating the creation of new top-level types ({{top-level}}).
