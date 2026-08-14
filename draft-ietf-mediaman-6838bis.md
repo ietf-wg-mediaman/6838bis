@@ -693,6 +693,13 @@ Security considerations for media types are discussed in {{secreq}}. Security Co
 
 In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
 
+The following entries should have the corresponding comment edits:
+
+* text — append to the existing comment: "New registrations must specify how the charset is determined; where a charset parameter is defined it must name a charset registered per RFC 2978; UTF-8 is the recommended default."
+* multipart and message — "Subtypes must conform to the syntax rules and other requirements of RFC 2046, as amended by Section 3.5 of RFC 6532."
+
+Additionally, RFC 6532 should be added to the Reference column for multipart and message.
+
 ## Recognized Standards-Related Organizations
 
 IANA should notify recognized standards-related organizations when this document is published (where feasible), and highlight the need to consider how their processes interact with the registration procedure (see, e.g., <https://www.w3.org/guide/editor/mediatypes.html#registration-process>).
