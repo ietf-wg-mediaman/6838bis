@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-13T01:19:19.144314+00:00",
+  "timestamp": "2026-08-16T00:53:01.628865+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -2904,7 +2904,7 @@
       "labels": [],
       "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\n\u00a74.2.2 makes which rule set governs depend on what happens when you apply it:\n\n> 1.  When the structured syntax suffix defines fragment identifier\n>     handling and it successfully resolves the fragment identifier,\n>     that determines fragment identifier handling;\n>\n> 2.  Otherwise, the specific media type determines fragment identifier\n>     handling.\n\nA processor can't know which applies until it has tried one. \"Successfully resolves\" isn't defined: a suffix's rules can fail because the syntax is wrong, because the syntax is fine but nothing matches, or because the processor doesn't implement them. Two implementations drawing that line differently resolve the same fragment against different rules on the same document, and both can claim conformance.\n\n\u00a72.6 states the relationship unconditionally:\n\n> Media types that use a structured syntax suffix MUST follow any fragment identifier rules specified for it.\n\nRead alone that's \"the suffix always wins\"; read with \u00a74.2.2 the suffix wins only when it resolves. RFC 6838 \u00a74.11 had no condition on it, so the condition is what's new here and \u00a72.6 is what carried over. One of the two has to give.\n\nThe second half is the time dimension. \u00a76.1 lets a suffix registration be updated \"by the same mechanism as required for an initial registration\". With \u00a74.2.2, altering the Fragment Identifier Considerations of `+bar` changes how fragments resolve for every already-registered `application/*+bar`. \u00a74.2 imposes a coordination duty in one direction only \u2014 the party adding a suffix coordinates with the base type's change controller \u2014 and nothing runs the other way, from a suffix's change controller to the types inheriting its rules.\n\nThis is live. Antonio Diaz Diaz asked on media-types (2026-07-14), about a real registration, whether `text/html+lzip` should follow `text/html`'s fragment rules, and got no reply: <https://mailarchive.ietf.org/arch/msg/media-types/wkwerYCRWrqddGGSbg8QJALBWdE>\n\n\u00a78 already describes the consequence, but as uncertainty to live with rather than something to close:\n\n> This uncertainty extends to fragment identifier processing: per the rules in Section 4.2.2, a fragment identifier that might be valid for an \"application/foo+bar\" document might not be applicable to another \"+bar\" document, because media-type specific fragment identifier resolution might be used.\n\nEither the precedence becomes static \u2014 decided at registration rather than at resolution time \u2014 or, if the conditional behaviour is wanted, \"successfully resolves\" needs defining against a stated failure taxonomy, \u00a72.6 needs recasting so it doesn't contradict \u00a74.2.2, and \u00a76.1 needs to say what a suffix update may do to types already registered under it.\n",
       "createdAt": "2026-08-10T05:32:38Z",
-      "updatedAt": "2026-08-10T06:46:25Z",
+      "updatedAt": "2026-08-14T03:15:14Z",
       "closedAt": null,
       "comments": [
         {
@@ -2913,6 +2913,20 @@
           "body": "Also worth settling in the same pass: \u00a72.6's addressee.\n\n> Media types that use a structured syntax suffix MUST follow any fragment identifier rules specified for it.\n\nA media type doesn't follow rules \u2014 is this binding the registrant (specify rules consistent with the suffix's) or the processor (resolve using the suffix's rules)? The answer differs depending on which way \u00a74.2.2 lands.\n",
           "createdAt": "2026-08-10T06:46:25Z",
           "updatedAt": "2026-08-10T06:46:25Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Discussed in <https://github.com/ietf-wg-mediaman/suffixes/issues/6>. @alvestrand suggested:\n\n> a relevant fragment identifier needs to follow the rules for the 'inner' media type unless specifically overridden by processing rules for the 'outer' media type.\n\nSee also <https://mailarchive.ietf.org/arch/msg/media-types/hOynZrvmCIzXFcJHjB_d2hZzBFs/>. \n\n",
+          "createdAt": "2026-08-14T03:01:47Z",
+          "updatedAt": "2026-08-14T03:01:47Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "[AI-assisted: I directed the registry survey and checked the classification and citations before posting.]\n\nI went through all 24 entries in the Structured Syntax Suffixes registry (updated 2026-06-25). Two define fragment identifier syntax:\n\n- `+xml` \u2014 RFC 7303, Section 5, via XPointerFramework.\n- `+csv` \u2014 \"as specified for `text/csv`\", and RFC 7111 defines row/column/cell selectors for that.\n\nThe other 22 define none. Thirteen (`+json`, `+ber`, `+cbor`, `+der`, `+fastinfoset`, `+wbxml`, `+zip`, `+tlv`, `+json-seq`, `+sqlite3`, `+jwt`, `+gzip`, `+cbor-seq`) carry the three-case \"resolves / does not resolve\" boilerplate *and also* state that no fragment identification syntax is defined for the type they point at, so the first case can never apply to them. Six say `N/A` (`+cose`, `+sd-jwt`, `+uper`, `+jer`, `+jws`, `+sd-cwt`). `+zstd` and `+cwt` point at types with no fragment syntax. `+yaml` says the opposite outright: \"A specific xxx/yyy+yaml media type needs to define the syntax and semantics for fragment identifiers because the ones defined for application/yaml do not apply unless explicitly expressed.\"\n\nSo 4.2.2's first rule is unreachable for 22 of 24 suffixes, and the conditional it generalises is RFC 7303's, where \"resolves\" is a two-part test with XPointerFramework behind it.\n\nProposed replacement for 4.2.2:\n\n> A structured syntax suffix registration can specify fragment identifier syntax and semantics, recorded in the \"Fragment Identifier Considerations\" column of the Structured Syntax Suffixes registry.\n>\n> Where a suffix does so, a media type using that suffix MUST specify fragment identifier handling that is consistent with the suffix's, and MUST NOT disallow syntax that the suffix requires.\n>\n> Otherwise, fragment identifier handling is determined by the media type.\n\nThat's checked at registration rather than at resolution time, so it also disposes of the 6.1 half of this issue: updating a suffix registration can no longer change how fragments resolve for types already registered under it. It's registrant-directed, which answers my question above about 2.6's addressee \u2014 2.6 becomes redundant. The fragment sentence in Section 8 goes too.\n\nTwo things I can't settle from the registry:\n\n**1. +csv** (registered 2025-07-24) is the only entry where the conditional isn't vacuous, and it demonstrates the ambiguity. Its registration cites RFC 7111 directly. Take `#row=99` on a shorter file: RFC 7111 Section 4.2 says such a selection \"MUST be ignored\". Is that the `+csv` rules successfully resolving the fragment \u2014 in which case 4.2.2 rule 1 fires and RFC 7111 governs \u2014 or is it a failure to resolve, in which case rule 2 hands it to the media type and overrides that MUST? Both readings are available, and they differ on the same document. Separately: was the three-case boilerplate deliberate on that registration, or copied from the neighbouring entries?\n\n**2. The thirteen vacuous entries.** Leave them and let the spec govern, or mark them in the registry as superseded? Manu raised the same choice in [August 2024](https://mailarchive.ietf.org/arch/msg/media-types/2O55T9QPJi5KBAoIc0fev9O4Z5E) \u2014 \"or we should just leave things be and grandfather the old text in (and if so, clearly mark that we did so in the registry?)\" \u2014 and it wasn't settled.\n\n",
+          "createdAt": "2026-08-14T03:15:14Z",
+          "updatedAt": "2026-08-14T03:15:14Z"
         }
       ]
     },
@@ -2928,9 +2942,17 @@
       "labels": [],
       "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nBCP 13 currently comprises RFC 4289, RFC 6838 and RFC 9694 (<https://www.rfc-editor.org/info/bcp13>). We obsolete the second and third:\n\n> Obsoletes: [6838, 9694] (if approved)\n\nRFC 4289 (\"MIME Part Four: Registration Procedures\", December 2005) is not obsoleted, not updated, not cited, and not named \u2014 \"4289\" appears nowhere in the draft. On publication BCP 13 would be this document plus a 2005 RFC whose relationship to it is unstated.\n\nRFC 4288, published the same month and obsoleted by RFC 6838, *is* cited twice \u2014 once substantively, in \u00a72.3: \"Note that this syntax is more restrictive than what is allowed by Section 5.1 of [RFC2045] or Section 4.2 of [RFC4288].\" So the gap looks like oversight rather than a decision to leave 4289 alone.\n\nNeeds a decision either way: is RFC 4289 obsoleted too, updated, or left standing? The document should say which, since a reader of BCP 13 will hold both.\n",
       "createdAt": "2026-08-10T05:38:04Z",
-      "updatedAt": "2026-08-10T05:38:04Z",
+      "updatedAt": "2026-08-14T02:27:10Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Part of the problem here is that 4289's title makes it seem like it's covering more than it actually does. It's obviously not obsolete or updated, so it's left standing. Arguably it should be in a _different_ BCP, but it's probably too late for that.\n\nIf we want to do something to address this, a note in the abstract or intro might suffice; something like\n\n> Note that RFC4289 is also part of BCP 13; it addresses registration of MIME External Body Access Types and Transfer Encodings.",
+          "createdAt": "2026-08-14T02:27:10Z",
+          "updatedAt": "2026-08-14T02:27:10Z"
+        }
+      ]
     },
     {
       "number": 95,
@@ -4442,6 +4464,166 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 105,
+      "id": "PR_kwDOMdBaOc7-5RYM",
+      "title": "Add requirement for top-level types to document handling for unrecognised types",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/105",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\r\n\r\nFixes #104.",
+      "createdAt": "2026-08-14T02:32:48Z",
+      "updatedAt": "2026-08-14T17:23:15Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "7e1c4600866ac28a5e22bfba34947c4760cd7fb5",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/104",
+      "headRefOid": "c1e42839f0e4518b85b089875f36e46b0419d778",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc8AAAABJm2vrQ",
+          "commit": {
+            "abbreviatedOid": "c1e4283"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-14T17:23:15Z",
+          "updatedAt": "2026-08-14T17:23:15Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 106,
+      "id": "PR_kwDOMdBaOc7-5ZkU",
+      "title": "Add IANA instructions for top-level type details",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/106",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #29.",
+      "createdAt": "2026-08-14T02:40:27Z",
+      "updatedAt": "2026-08-14T17:25:06Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "7e1c4600866ac28a5e22bfba34947c4760cd7fb5",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/29b",
+      "headRefOid": "5a572046e06b8f896baa3b52611f2915a6afed56",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc8AAAABJm3fRQ",
+          "commit": {
+            "abbreviatedOid": "5a57204"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-14T17:25:06Z",
+          "updatedAt": "2026-08-14T17:25:06Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 107,
+      "id": "PR_kwDOMdBaOc7-5c0P",
+      "title": "Note relationships",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/107",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #94.",
+      "createdAt": "2026-08-14T02:43:18Z",
+      "updatedAt": "2026-08-14T17:25:45Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "7e1c4600866ac28a5e22bfba34947c4760cd7fb5",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/94",
+      "headRefOid": "aab3c1918c226f27cf24a7dccfad3b6304a1485b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc8AAAABJm3vjQ",
+          "commit": {
+            "abbreviatedOid": "aab3c19"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-14T17:25:45Z",
+          "updatedAt": "2026-08-14T17:25:45Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 108,
+      "id": "PR_kwDOMdBaOc7-6aJB",
+      "title": "Adjust structured suffix fragment handling",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/108",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #93.",
+      "createdAt": "2026-08-14T03:37:37Z",
+      "updatedAt": "2026-08-14T17:28:05Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "7e1c4600866ac28a5e22bfba34947c4760cd7fb5",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/93",
+      "headRefOid": "79bff789aa7e8a0e277021e27bd0f82c6c86efb4",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc8AAAABJm4vIA",
+          "commit": {
+            "abbreviatedOid": "79bff78"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-14T17:28:05Z",
+          "updatedAt": "2026-08-14T17:28:05Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
