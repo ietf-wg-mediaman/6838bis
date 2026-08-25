@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-16T00:53:01.628865+00:00",
+  "timestamp": "2026-08-25T00:52:06.363651+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -3117,6 +3117,22 @@
       "body": "[AI-assisted review of the editor's copy, reviewed by me before sending.]\n\nRFC 2046 \u00a72 lists what the definition of a top-level media type consists of. Item (3):\n\n> how a user agent and/or gateway should handle unknown subtypes of this type\n\n\u00a73.1.1's Required Criteria don't ask for it. Of RFC 2046's five components they cover the first \u2014 \"The criteria for what types do and do not fall under the new top-level type are defined clearly\" \u2014 and none of the rest. Item (2), parameters defined across all subtypes of the type, is also unasked.\n\nItem (3) is the one that matters: it's what makes `multipart/*` and `image/*` useful generically, so a recipient that has never heard of `image/avif` still knows it is an image and roughly what to do with it. Without it a new top-level type is only a namespace.\n\nRFC 2046 isn't obsoleted here and the top-level types registry cites it as the reference for most entries, so the requirement is arguably still in force \u2014 but a reader treating \u00a73.1.1 as the checklist won't meet it, and nothing points at RFC 2046 \u00a72.\n\nThis is the concrete cost of what #95 describes: RFC 9694 \u00a71.1 called the top-level type \"a fallback for the tentative dispatch to applications handling a very wide range of related formats\", which is exactly what item (3) enables. The framing and the criterion went together.\n\nSuggest \u00a73.1.1 gains a criterion requiring the defining RFC to state how recipients handle unrecognised subtypes.\n",
       "createdAt": "2026-08-10T06:59:19Z",
       "updatedAt": "2026-08-10T06:59:19Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 109,
+      "id": "I_kwDOMdBaOc8AAAABOFRKPg",
+      "title": "Please add primary file name extensions to additional information",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/109",
+      "state": "OPEN",
+      "author": "bdrung",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The media types have additional information in \u00a72.10 that include file name extensions. Could you add another entry in additional information to specify primary file name extensions? The primary file name extensions will be a subset of file name extensions with two restrictions:\n* they must be lowercase (for systems that are case insensitive)\n* only one type can claim the primary file name extension\n\nExample:\n- `application/xml` would declare `.xml`\n- `application/watcherinfo+xml` would declare `.wif` but not `.xml`\n- `text/html` would declare `.html` and `.htm`\n\nThis would allow user to generate files like `/etc/mime.types` from the data provided by the registry (see https://github.com/media-types/media-types how that would look like). Currently, I have to determine the primary file name extensions myself. Picking `text/html` for `.html` is easy, but there different types using the same extensions where it is not clear which media type should be preferred.",
+      "createdAt": "2026-08-24T22:23:18Z",
+      "updatedAt": "2026-08-24T22:23:18Z",
       "closedAt": null,
       "comments": []
     }
