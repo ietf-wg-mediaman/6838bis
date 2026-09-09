@@ -18,6 +18,10 @@ Abstract
    registration of media types for use in HTTP, MIME, and other Internet
    protocols.
 
+   It obsoletes [RFC6838] and [RFC9694].  Note that [RFC4289] is also
+   part of BCP 13, and addresses registration of MIME External Body
+   Access Types and Transfer Encodings.
+
 About This Document
 
    This note is to be removed before publishing as an RFC.
@@ -1453,6 +1457,11 @@ Table of Contents
    [RFC4288]  Freed, N. and J. Klensin, "Media Type Specifications and
               Registration Procedures", RFC 4288, DOI 10.17487/RFC4288,
               December 2005, <https://www.rfc-editor.org/rfc/rfc4288>.
+
+   [RFC4289]  Freed, N. and J. Klensin, "Multipurpose Internet Mail
+              Extensions (MIME) Part Four: Registration Procedures",
+              BCP 13, RFC 4289, DOI 10.17487/RFC4289, December 2005,
+              <https://www.rfc-editor.org/rfc/rfc4289>.
 
    [RFC6381]  Gellens, R., Singer, D., and P. Frojdh, "The 'Codecs' and
               'Profiles' Parameters for "Bucket" Media Types", RFC 6381,
