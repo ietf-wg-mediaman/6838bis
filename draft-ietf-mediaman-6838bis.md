@@ -63,6 +63,8 @@ informative:
 
 This document defines procedures for the specification and registration of media types for use in HTTP, MIME, and other Internet protocols.
 
+It obsoletes {{?RFC6838}} and {{?RFC9694}}. Note that {{?RFC4289}} is also part of BCP 13, and addresses registration of MIME External Body Access Types and Transfer Encodings.
+
 --- middle
 
 # Introduction
@@ -307,6 +309,8 @@ Definitions of new top-level types MUST fulfil the following criteria:
 * The IANA Considerations section of that RFC requests that IANA add this new top-level type to the registry of top-level types.
 
 * The criteria for what types do and do not fall under the new top-level type are defined clearly. This will help the Designated Expert(s) to evaluate whether a subtype belongs below the new type or not, and whether the registration template for a subtype contains the appropriate information. If the criteria cannot be defined clearly, this is a strong indication that whatever is being talked about is not suitable as a top-level type.
+
+* The RFC defining the top-level type states how recipients should handle unrecognised subtypes.
 
 * The RFC clearly documents security considerations applying to all or a significant subset of subtypes.
 
@@ -691,6 +695,13 @@ Security considerations for media types are discussed in {{secreq}}. Security Co
 ## Top-Level Types Registry
 
 In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
+
+The following entries should have the corresponding comment edits:
+
+* text — append to the existing comment: "New registrations must specify how the charset is determined; where a charset parameter is defined it must name a charset registered per RFC 2978; UTF-8 is the recommended default."
+* multipart and message — "Subtypes must conform to the syntax rules and other requirements of RFC 2046, as amended by Section 3.5 of RFC 6532."
+
+Additionally, RFC 6532 should be added to the Reference column for multipart and message.
 
 ## Structured Syntax Suffixes Registry
 
