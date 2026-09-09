@@ -9,24 +9,25 @@
 <meta content="Pete Resnick" name="author">
 <meta content="
        This document defines procedures for the specification and registration of media types for use in HTTP, MIME, and other Internet protocols. 
+       It obsoletes   and  . Note that   is also part of BCP 13, and addresses registration of MIME External Body Access Types and Transfer Encodings. 
     " name="description">
 <meta content="xml2rfc 3.34.0" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-ietf-mediaman-6838bis-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.34.0
-    Python 3.14.5
+    Python 3.14.7
     ConfigArgParse 1.7.5
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.11.0
+    platformdirs 4.11.7
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.2
+    wcwidth 0.8.3
 -->
 <link href="draft-ietf-mediaman-6838bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1042,11 +1043,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Media Type Registration</td>
-<td class="right">August 2026</td>
+<td class="right">September 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham &amp; Resnick</td>
-<td class="center">Expires 15 February 2027</td>
+<td class="center">Expires 13 March 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1062,12 +1063,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc6838" class="eref">6838</a>, <a href="https://www.rfc-editor.org/rfc/rfc9694" class="eref">9694</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-08-14" class="published">14 August 2026</time>
+<time datetime="2026-09-09" class="published">9 September 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-02-15">15 February 2027</time></dd>
+<dd class="expires"><time datetime="2027-03-13">13 March 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1085,6 +1086,7 @@ svg {
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document defines procedures for the specification and registration of media types for use in HTTP, MIME, and other Internet protocols.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-2">It obsoletes <span>[<a href="#RFC6838" class="cite xref">RFC6838</a>]</span> and <span>[<a href="#RFC9694" class="cite xref">RFC9694</a>]</span>. Note that <span>[<a href="#RFC4289" class="cite xref">RFC4289</a>]</span> is also part of BCP 13, and addresses registration of MIME External Body Access Types and Transfer Encodings.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1117,7 +1119,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 15 February 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 13 March 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1642,10 +1644,13 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
               <p id="section-3.1.1-2.3.1">The criteria for what types do and do not fall under the new top-level type are defined clearly. This will help the Designated Expert(s) to evaluate whether a subtype belongs below the new type or not, and whether the registration template for a subtype contains the appropriate information. If the criteria cannot be defined clearly, this is a strong indication that whatever is being talked about is not suitable as a top-level type.<a href="#section-3.1.1-2.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-3.1.1-2.4">
-              <p id="section-3.1.1-2.4.1">The RFC clearly documents security considerations applying to all or a significant subset of subtypes.<a href="#section-3.1.1-2.4.1" class="pilcrow">¶</a></p>
+              <p id="section-3.1.1-2.4.1">The RFC defining the top-level type states how recipients should handle unrecognised subtypes.<a href="#section-3.1.1-2.4.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-3.1.1-2.5">
-              <p id="section-3.1.1-2.5.1">At the minimum, one subtype (not including a potential 'example' subtype) is described. A top-level type without any subtype serves no purpose. The only exception is the 'example' top-level type, which disallows registration of subtypes.<a href="#section-3.1.1-2.5.1" class="pilcrow">¶</a></p>
+              <p id="section-3.1.1-2.5.1">The RFC clearly documents security considerations applying to all or a significant subset of subtypes.<a href="#section-3.1.1-2.5.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3.1.1-2.6">
+              <p id="section-3.1.1-2.6.1">At the minimum, one subtype (not including a potential 'example' subtype) is described. A top-level type without any subtype serves no purpose. The only exception is the 'example' top-level type, which disallows registration of subtypes.<a href="#section-3.1.1-2.6.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -2197,6 +2202,16 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <a href="#section-8.1" class="section-number selfRef">8.1. </a><a href="#name-top-level-types-registry" class="section-name selfRef">Top-Level Types Registry</a>
         </h3>
 <p id="section-8.1-1">In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.<a href="#section-8.1-1" class="pilcrow">¶</a></p>
+<p id="section-8.1-2">The following entries should have the corresponding comment edits:<a href="#section-8.1-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-8.1-3.1">
+            <p id="section-8.1-3.1.1">text — append to the existing comment: "New registrations must specify how the charset is determined; where a charset parameter is defined it must name a charset registered per RFC 2978; UTF-8 is the recommended default."<a href="#section-8.1-3.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-8.1-3.2">
+            <p id="section-8.1-3.2.1">multipart and message — "Subtypes must conform to the syntax rules and other requirements of RFC 2046, as amended by Section 3.5 of RFC 6532."<a href="#section-8.1-3.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-8.1-4">Additionally, RFC 6532 should be added to the Reference column for multipart and message.<a href="#section-8.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="structured-syntax-suffixes-registry">
@@ -2363,6 +2378,10 @@ URI: https://www.sw.it.aoyama.ac.jp/Dürst/<a href="#section-10-5" class="pilcro
 <dt id="RFC4288">[RFC4288]</dt>
         <dd>
 <span class="refAuthor">Freed, N.</span> and <span class="refAuthor">J. Klensin</span>, <span class="refTitle">"Media Type Specifications and Registration Procedures"</span>, <span class="seriesInfo">RFC 4288</span>, <span class="seriesInfo">DOI 10.17487/RFC4288</span>, <time datetime="2005-12" class="refDate">December 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4288">https://www.rfc-editor.org/rfc/rfc4288</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC4289">[RFC4289]</dt>
+        <dd>
+<span class="refAuthor">Freed, N.</span> and <span class="refAuthor">J. Klensin</span>, <span class="refTitle">"Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures"</span>, <span class="seriesInfo">BCP 13</span>, <span class="seriesInfo">RFC 4289</span>, <span class="seriesInfo">DOI 10.17487/RFC4289</span>, <time datetime="2005-12" class="refDate">December 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4289">https://www.rfc-editor.org/rfc/rfc4289</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6381">[RFC6381]</dt>
         <dd>

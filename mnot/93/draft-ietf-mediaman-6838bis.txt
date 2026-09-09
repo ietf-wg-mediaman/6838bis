@@ -6,7 +6,7 @@ Media Type Maintenance                                     M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838, 9694 (if approved)                           P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 15 February 2027                                 14 August 2026
+Expires: 13 March 2027                                  9 September 2026
 
 
          Media Type Specifications and Registration Procedures
@@ -17,6 +17,10 @@ Abstract
    This document defines procedures for the specification and
    registration of media types for use in HTTP, MIME, and other Internet
    protocols.
+
+   It obsoletes [RFC6838] and [RFC9694].  Note that [RFC4289] is also
+   part of BCP 13, and addresses registration of MIME External Body
+   Access Types and Transfer Encodings.
 
 About This Document
 
@@ -46,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 February 2027.
+   This Internet-Draft will expire on 13 March 2027.
 
 Copyright Notice
 
@@ -582,6 +586,9 @@ Table of Contents
       contains the appropriate information.  If the criteria cannot be
       defined clearly, this is a strong indication that whatever is
       being talked about is not suitable as a top-level type.
+
+   *  The RFC defining the top-level type states how recipients should
+      handle unrecognised subtypes.
 
    *  The RFC clearly documents security considerations applying to all
       or a significant subset of subtypes.
@@ -1276,6 +1283,20 @@ Table of Contents
    field for each top-level type to the specific subsection in question,
    rather than just the relevant RFC.
 
+   The following entries should have the corresponding comment edits:
+
+   *  text — append to the existing comment: "New registrations must
+      specify how the charset is determined; where a charset parameter
+      is defined it must name a charset registered per RFC 2978; UTF-8
+      is the recommended default."
+
+   *  multipart and message — "Subtypes must conform to the syntax rules
+      and other requirements of RFC 2046, as amended by Section 3.5 of
+      RFC 6532."
+
+   Additionally, RFC 6532 should be added to the Reference column for
+   multipart and message.
+
 8.2.  Structured Syntax Suffixes Registry
 
    Thirteen entries in the Structured Syntax Suffixes registry --
@@ -1449,6 +1470,11 @@ Table of Contents
    [RFC4288]  Freed, N. and J. Klensin, "Media Type Specifications and
               Registration Procedures", RFC 4288, DOI 10.17487/RFC4288,
               December 2005, <https://www.rfc-editor.org/rfc/rfc4288>.
+
+   [RFC4289]  Freed, N. and J. Klensin, "Multipurpose Internet Mail
+              Extensions (MIME) Part Four: Registration Procedures",
+              BCP 13, RFC 4289, DOI 10.17487/RFC4289, December 2005,
+              <https://www.rfc-editor.org/rfc/rfc4289>.
 
    [RFC6381]  Gellens, R., Singer, D., and P. Frojdh, "The 'Codecs' and
               'Profiles' Parameters for "Bucket" Media Types", RFC 6381,
