@@ -63,6 +63,8 @@ informative:
 
 This document defines procedures for the specification and registration of media types for use in HTTP, MIME, and other Internet protocols.
 
+It obsoletes {{?RFC6838}} and {{?RFC9694}}. Note that {{?RFC4289}} is also part of BCP 13, and addresses registration of MIME External Body Access Types and Transfer Encodings.
+
 --- middle
 
 # Introduction
