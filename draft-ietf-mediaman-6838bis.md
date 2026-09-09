@@ -308,6 +308,8 @@ Definitions of new top-level types MUST fulfil the following criteria:
 
 * The criteria for what types do and do not fall under the new top-level type are defined clearly. This will help the Designated Expert(s) to evaluate whether a subtype belongs below the new type or not, and whether the registration template for a subtype contains the appropriate information. If the criteria cannot be defined clearly, this is a strong indication that whatever is being talked about is not suitable as a top-level type.
 
+* The RFC defining the top-level type states how recipients should handle unrecognised subtypes.
+
 * The RFC clearly documents security considerations applying to all or a significant subset of subtypes.
 
 * At the minimum, one subtype (not including a potential 'example' subtype) is described. A top-level type without any subtype serves no purpose. The only exception is the 'example' top-level type, which disallows registration of subtypes.
