@@ -113,8 +113,9 @@ Table of Contents
    7.  Security Considerations
    8.  IANA Considerations
      8.1.  Top-Level Types Registry
-     8.2.  Recognized Standards-Related Organizations
-     8.3.  Provisional Registrations
+     8.2.  Structured Syntax Suffixes Registry
+     8.3.  Recognized Standards-Related Organizations
+     8.4.  Provisional Registrations
    9.  Acknowledgments
    10. Contributors
    11. References
@@ -394,8 +395,8 @@ Table of Contents
    interpret fragment identifiers (specified in Section 3.5 of
    [RFC3986]) associated with the media type.
 
-   Media types that use a structured syntax suffix MUST follow any
-   fragment identifier rules specified for it.
+   Requirements for media types that use a structured syntax suffix are
+   given in Section 4.2.2.
 
    Media types are encouraged to adopt fragment identifier schemes that
    are used with semantically similar media types.
@@ -915,21 +916,16 @@ Table of Contents
 
 4.2.2.  Fragment Identifiers and Structured Syntax Suffixes
 
-   Structured syntax suffixes can specify fragment identifier handling
-   for all subtypes that utilise them, as indicated in the "Fragment
-   Identifier Considerations" column of the Structured Syntax Suffixes
-   registry.
+   A structured syntax suffix registration can specify fragment
+   identifier syntax and semantics, recorded in the "Fragment Identifier
+   Considerations" column of the Structured Syntax Suffixes registry.
 
-   Individual subtypes can specify additional handling.  To ensure
-   consistent processing, precedence is determined by the following
-   rules (first match winning):
+   Where a suffix does so, a media type using that suffix MUST specify
+   fragment identifier handling that is consistent with the suffix's,
+   and MUST NOT disallow syntax that the suffix requires.
 
-   1.  When the structured syntax suffix defines fragment identifier
-       handling and it successfully resolves the fragment identifier,
-       that determines fragment identifier handling;
-
-   2.  Otherwise, the specific media type determines fragment identifier
-       handling.
+   Otherwise, fragment identifier handling is determined by the media
+   type.
 
 4.2.3.  Security Considerations for Structured Syntax Suffix Processing
 
@@ -1301,7 +1297,24 @@ Table of Contents
    Additionally, RFC 6532 should be added to the Reference column for
    multipart and message.
 
-8.2.  Recognized Standards-Related Organizations
+8.2.  Structured Syntax Suffixes Registry
+
+   Thirteen entries in the Structured Syntax Suffixes registry --
+   "+json", "+ber", "+cbor", "+der", "+fastinfoset", "+wbxml", "+zip",
+   "+tlv", "+json-seq", "+sqlite3", "+jwt", "+gzip", and "+cbor-seq" --
+   describe fragment identifier processing with a three-case rule that
+   has been copied between registrations since [RFC6839].
+
+   Each of those entries also records that no fragment identifier syntax
+   is defined for the suffix in question, so those cases cannot arise;
+   Section 4.2.2 now specifies how fragment identifiers interact with
+   structured syntax suffixes.
+
+   IANA should remove that three-case text from the "Fragment Identifier
+   Considerations" field of those entries, retaining their remaining
+   content, and work with the Experts and the IESG as appropriate.
+
+8.3.  Recognized Standards-Related Organizations
 
    IANA should notify recognized standards-related organizations when
    this document is published (where feasible), and highlight the need
@@ -1311,7 +1324,7 @@ Table of Contents
    (https://www.w3.org/guide/editor/mediatypes.html#registration-
    process)).
 
-8.3.  Provisional Registrations
+8.4.  Provisional Registrations
 
    This revision removes provisional registrations from the standards
    tree.  Accordingly, IANA should remove that information from the
@@ -1550,12 +1563,6 @@ Appendix B.  Changes from RFC 6838
    *  *Strict Suffix Constraints*: This revision updates structured
       syntax suffixes to disallow those containing more than one "+"
       character (Section 4.2).
-
-   *  *Suffix Precedence for Fragment Identifiers*: New rules establish
-      that if a structured syntax suffix defines fragment identifier
-      handling and successfully resolves it, that handling takes
-      precedence over rules defined by the specific media type
-      (Section 4.2.2).
 
    *  *Change Controller Updates*: In cases where a change controller is
       unresponsive or uncontactable, this revision empowers the
