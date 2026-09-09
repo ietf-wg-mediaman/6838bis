@@ -6,7 +6,7 @@ Media Type Maintenance                                     M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838, 9694 (if approved)                           P. Resnick
 Intended status: Best Current Practice    Episteme Technology Consulting
-Expires: 12 February 2027                                 11 August 2026
+Expires: 13 March 2027                                  9 September 2026
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 February 2027.
+   This Internet-Draft will expire on 13 March 2027.
 
 Copyright Notice
 
@@ -581,6 +581,9 @@ Table of Contents
       contains the appropriate information.  If the criteria cannot be
       defined clearly, this is a strong indication that whatever is
       being talked about is not suitable as a top-level type.
+
+   *  The RFC defining the top-level type states how recipients should
+      handle unrecognised subtypes.
 
    *  The RFC clearly documents security considerations applying to all
       or a significant subset of subtypes.
